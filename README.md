@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-11-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-12-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -30,6 +30,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | --- | --- |
 | [Distributed Scientific Analysis](./distributed_science_agent_lab) | Specialist workers, parallel execution, holdout verification, and the cost of scientific investigation. |
 | [AI Agent Cost Optimization](./agent_cost_optimization_lab) | Token-level accounting, prompt-cache simulations, workflow overhead, and quality-aware optimization. |
+| [SpikeGuard Bounded Agent Lab](./spikelab_bounded_agent_lab) | Bounded tool contracts, spike-timing tiling (STTC), surrogate statistics, and independent scientific evaluation. |
 | [Frontier Model Monitoring](./frontier_monitor_lab) | Layered monitors, independent telemetry, escalation thresholds, and failure under distribution shift. |
 | [Spotify Shunt Routing](./spotify_shunt_routing_lab) | Delegating context-heavy tasks to cheaper workers, with token, latency, and information-loss tradeoffs. |
 
@@ -123,6 +124,7 @@ Medium-Implementations/
 ├── llm_steering_interpretability_lab/
 ├── qwenputer_educational_lab/
 ├── sleep_framework_lab/
+├── spikelab_bounded_agent_lab/
 ├── spotify_shunt_routing_lab/
 ├── timesfm3_forecasting_lab/
 └── vit_patch_lab/
