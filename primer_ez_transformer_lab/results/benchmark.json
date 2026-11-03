@@ -1,0 +1,1291 @@
+{
+  "protocol": {
+    "seeds": 3,
+    "start_seed": 0,
+    "steps": 260,
+    "batch_size": 32,
+    "context": 24,
+    "period_train": 4,
+    "period_shift": 6,
+    "vocab_size": 16,
+    "noise": 0.025,
+    "dataset": "synthetic periodic motif",
+    "device": "CPU",
+    "torch": "2.10.0+cpu",
+    "eval_batches": 4,
+    "notes": "Timing is environment-specific, not hardware-controlled. These are not the official Primer/Google benchmarks."
+  },
+  "trials": [
+    {
+      "name": "baseline_relu",
+      "seed": 0,
+      "parameters": 49248,
+      "training_seconds": 2.0325824290000014,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 98239.55828361628,
+      "in_distribution": {
+        "nll": 1.6133835315704346,
+        "perplexity": 5.019767066695662,
+        "accuracy": 0.3346354166666667,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.1195868849754333,
+        "perplexity": 8.327696480434634,
+        "accuracy": 0.21998355263157895,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 42.0661506652832
+        },
+        {
+          "step": 65,
+          "loss": 2.6482994556427
+        },
+        {
+          "step": 130,
+          "loss": 2.1580898761749268
+        },
+        {
+          "step": 260,
+          "loss": 1.9284874200820923
+        }
+      ]
+    },
+    {
+      "name": "squared_relu_only",
+      "seed": 0,
+      "parameters": 49248,
+      "training_seconds": 2.092386690000012,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 95431.69097486413,
+      "in_distribution": {
+        "nll": 1.6185938119888306,
+        "perplexity": 5.045989715101722,
+        "accuracy": 0.33240327380952384,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.0948264598846436,
+        "perplexity": 8.124031002595844,
+        "accuracy": 0.22388980263157895,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.712890625
+        },
+        {
+          "step": 65,
+          "loss": 2.5464634895324707
+        },
+        {
+          "step": 130,
+          "loss": 2.1502606868743896
+        },
+        {
+          "step": 260,
+          "loss": 1.925209403038025
+        }
+      ]
+    },
+    {
+      "name": "dconv_only",
+      "seed": 0,
+      "parameters": 49536,
+      "training_seconds": 3.268999044999987,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 61082.9178140677,
+      "in_distribution": {
+        "nll": 0.22285940498113632,
+        "perplexity": 1.2496448675408407,
+        "accuracy": 0.9650297619047619,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 6.19568133354187,
+        "perplexity": 490.62561083105516,
+        "accuracy": 0.0727796052631579,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.85305404663086
+        },
+        {
+          "step": 65,
+          "loss": 2.6184380054473877
+        },
+        {
+          "step": 130,
+          "loss": 0.6749134659767151
+        },
+        {
+          "step": 260,
+          "loss": 0.6049581170082092
+        }
+      ]
+    },
+    {
+      "name": "primer_ez",
+      "seed": 0,
+      "parameters": 49536,
+      "training_seconds": 3.047458387000006,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 65523.45418457706,
+      "in_distribution": {
+        "nll": 0.21669048070907593,
+        "perplexity": 1.2419596321756912,
+        "accuracy": 0.9644717261904762,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 5.902613520622253,
+        "perplexity": 365.99274859468017,
+        "accuracy": 0.07421875,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.74014663696289
+        },
+        {
+          "step": 65,
+          "loss": 2.5413694381713867
+        },
+        {
+          "step": 130,
+          "loss": 0.6540995836257935
+        },
+        {
+          "step": 260,
+          "loss": 0.6055150628089905
+        }
+      ]
+    },
+    {
+      "name": "gelu_baseline",
+      "seed": 0,
+      "parameters": 49248,
+      "training_seconds": 2.0547366710000006,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 97180.33596140551,
+      "in_distribution": {
+        "nll": 1.6010574400424957,
+        "perplexity": 4.9582727293783115,
+        "accuracy": 0.35379464285714285,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.1250336170196533,
+        "perplexity": 8.373178964717853,
+        "accuracy": 0.21669407894736842,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 42.30403518676758
+        },
+        {
+          "step": 65,
+          "loss": 2.6653683185577393
+        },
+        {
+          "step": 130,
+          "loss": 2.1615617275238037
+        },
+        {
+          "step": 260,
+          "loss": 1.9433153867721558
+        }
+      ]
+    },
+    {
+      "name": "primer_per_head",
+      "seed": 0,
+      "parameters": 50400,
+      "training_seconds": 2.860600974000022,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 69803.51395209951,
+      "in_distribution": {
+        "nll": 0.24373352900147438,
+        "perplexity": 1.2760042670517808,
+        "accuracy": 0.9605654761904762,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 4.304885387420654,
+        "perplexity": 74.06072667548504,
+        "accuracy": 0.14905427631578946,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.84458541870117
+        },
+        {
+          "step": 65,
+          "loss": 2.7172720432281494
+        },
+        {
+          "step": 130,
+          "loss": 0.9530017971992493
+        },
+        {
+          "step": 260,
+          "loss": 0.6273275017738342
+        }
+      ]
+    },
+    {
+      "name": "baseline_relu",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 2.0878771099999653,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 95637.81270632509,
+      "in_distribution": {
+        "nll": 1.6120941042900085,
+        "perplexity": 5.013298613294836,
+        "accuracy": 0.3405877976190476,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.182696282863617,
+        "perplexity": 8.87019058767621,
+        "accuracy": 0.20703125,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.12809753417969
+        },
+        {
+          "step": 65,
+          "loss": 2.6839168071746826
+        },
+        {
+          "step": 130,
+          "loss": 2.1499783992767334
+        },
+        {
+          "step": 260,
+          "loss": 1.8209952116012573
+        }
+      ]
+    },
+    {
+      "name": "squared_relu_only",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 2.1969135660000347,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 90891.149788638,
+      "in_distribution": {
+        "nll": 1.5982043743133545,
+        "perplexity": 4.9441466123308,
+        "accuracy": 0.34858630952380953,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.145799398422241,
+        "perplexity": 8.548872461653108,
+        "accuracy": 0.20476973684210525,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.361297607421875
+        },
+        {
+          "step": 65,
+          "loss": 2.664717435836792
+        },
+        {
+          "step": 130,
+          "loss": 2.0143330097198486
+        },
+        {
+          "step": 260,
+          "loss": 1.7109931707382202
+        }
+      ]
+    },
+    {
+      "name": "dconv_only",
+      "seed": 1,
+      "parameters": 49536,
+      "training_seconds": 3.3405191449999734,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 59775.1401302032,
+      "in_distribution": {
+        "nll": 0.2709859237074852,
+        "perplexity": 1.3112566126230387,
+        "accuracy": 0.9534970238095238,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 6.157054662704468,
+        "perplexity": 472.03572095173894,
+        "accuracy": 0.07010690789473684,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.145057678222656
+        },
+        {
+          "step": 65,
+          "loss": 2.7235279083251953
+        },
+        {
+          "step": 130,
+          "loss": 0.8181656002998352
+        },
+        {
+          "step": 260,
+          "loss": 0.6298556923866272
+        }
+      ]
+    },
+    {
+      "name": "primer_ez",
+      "seed": 1,
+      "parameters": 49536,
+      "training_seconds": 3.224744227999963,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 61921.18998654497,
+      "in_distribution": {
+        "nll": 0.25279588997364044,
+        "perplexity": 1.2876204337704125,
+        "accuracy": 0.9568452380952381,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 6.114372253417969,
+        "perplexity": 452.3120209070644,
+        "accuracy": 0.06476151315789473,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.0989990234375
+        },
+        {
+          "step": 65,
+          "loss": 2.6921370029449463
+        },
+        {
+          "step": 130,
+          "loss": 0.704594075679779
+        },
+        {
+          "step": 260,
+          "loss": 0.6210845708847046
+        }
+      ]
+    },
+    {
+      "name": "gelu_baseline",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 2.2547701330000223,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 88558.91652880877,
+      "in_distribution": {
+        "nll": 1.6080587804317474,
+        "perplexity": 4.993109092815758,
+        "accuracy": 0.33872767857142855,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.182660162448883,
+        "perplexity": 8.869870198499745,
+        "accuracy": 0.22039473684210525,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.96962356567383
+        },
+        {
+          "step": 65,
+          "loss": 2.720219612121582
+        },
+        {
+          "step": 130,
+          "loss": 2.1628572940826416
+        },
+        {
+          "step": 260,
+          "loss": 1.8025199174880981
+        }
+      ]
+    },
+    {
+      "name": "primer_per_head",
+      "seed": 1,
+      "parameters": 50400,
+      "training_seconds": 2.8364039340000318,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 70398.99980620947,
+      "in_distribution": {
+        "nll": 0.2434346154332161,
+        "perplexity": 1.2756229090625817,
+        "accuracy": 0.9603794642857143,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 4.821678638458252,
+        "perplexity": 124.17335810255128,
+        "accuracy": 0.07606907894736842,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.16117477416992
+        },
+        {
+          "step": 65,
+          "loss": 2.666522264480591
+        },
+        {
+          "step": 130,
+          "loss": 0.7284976840019226
+        },
+        {
+          "step": 260,
+          "loss": 0.6272882223129272
+        }
+      ]
+    },
+    {
+      "name": "baseline_relu",
+      "seed": 2,
+      "parameters": 49248,
+      "training_seconds": 2.1273081940000225,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 93865.10171078572,
+      "in_distribution": {
+        "nll": 1.6203332245349884,
+        "perplexity": 5.054774410810037,
+        "accuracy": 0.3523065476190476,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.1257176995277405,
+        "perplexity": 8.378908869625109,
+        "accuracy": 0.22923519736842105,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 40.12715148925781
+        },
+        {
+          "step": 65,
+          "loss": 2.6748342514038086
+        },
+        {
+          "step": 130,
+          "loss": 2.2837471961975098
+        },
+        {
+          "step": 260,
+          "loss": 1.884010672569275
+        }
+      ]
+    },
+    {
+      "name": "squared_relu_only",
+      "seed": 2,
+      "parameters": 49248,
+      "training_seconds": 2.0638284010000234,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 96752.2299350302,
+      "in_distribution": {
+        "nll": 1.5758798718452454,
+        "perplexity": 4.83499392211866,
+        "accuracy": 0.36235119047619047,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.094516098499298,
+        "perplexity": 8.121510008309166,
+        "accuracy": 0.22923519736842105,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 40.13282012939453
+        },
+        {
+          "step": 65,
+          "loss": 2.6831047534942627
+        },
+        {
+          "step": 130,
+          "loss": 2.04546856880188
+        },
+        {
+          "step": 260,
+          "loss": 1.8349195718765259
+        }
+      ]
+    },
+    {
+      "name": "dconv_only",
+      "seed": 2,
+      "parameters": 49536,
+      "training_seconds": 2.8124540989999787,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 70998.4920539681,
+      "in_distribution": {
+        "nll": 0.28022612631320953,
+        "perplexity": 1.323429040634219,
+        "accuracy": 0.9521949404761905,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 5.793962478637695,
+        "perplexity": 328.31137714805914,
+        "accuracy": 0.08223684210526316,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 38.97813415527344
+        },
+        {
+          "step": 65,
+          "loss": 2.7636091709136963
+        },
+        {
+          "step": 130,
+          "loss": 0.8401961922645569
+        },
+        {
+          "step": 260,
+          "loss": 0.5664056539535522
+        }
+      ]
+    },
+    {
+      "name": "primer_ez",
+      "seed": 2,
+      "parameters": 49536,
+      "training_seconds": 2.9852784340000085,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 66888.23317979305,
+      "in_distribution": {
+        "nll": 0.282662570476532,
+        "perplexity": 1.3266574328975393,
+        "accuracy": 0.9508928571428571,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 5.631468296051025,
+        "perplexity": 279.0715766498972,
+        "accuracy": 0.0844983552631579,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.35163879394531
+        },
+        {
+          "step": 65,
+          "loss": 2.7649648189544678
+        },
+        {
+          "step": 130,
+          "loss": 0.8121896386146545
+        },
+        {
+          "step": 260,
+          "loss": 0.5712304711341858
+        }
+      ]
+    },
+    {
+      "name": "gelu_baseline",
+      "seed": 2,
+      "parameters": 49248,
+      "training_seconds": 1.93612514900002,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 103133.82897956352,
+      "in_distribution": {
+        "nll": 1.5684475898742676,
+        "perplexity": 4.799192093408601,
+        "accuracy": 0.3684895833333333,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.104645252227783,
+        "perplexity": 8.20419207444121,
+        "accuracy": 0.2411595394736842,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 40.59736633300781
+        },
+        {
+          "step": 65,
+          "loss": 2.6922662258148193
+        },
+        {
+          "step": 130,
+          "loss": 2.1746857166290283
+        },
+        {
+          "step": 260,
+          "loss": 1.8540716171264648
+        }
+      ]
+    },
+    {
+      "name": "primer_per_head",
+      "seed": 2,
+      "parameters": 50400,
+      "training_seconds": 3.0026285889999826,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 66501.73142676393,
+      "in_distribution": {
+        "nll": 0.29209136217832565,
+        "perplexity": 1.3392253665969363,
+        "accuracy": 0.9525669642857143,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 3.927653670310974,
+        "perplexity": 50.7876731347368,
+        "accuracy": 0.18441611842105263,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.43116760253906
+        },
+        {
+          "step": 65,
+          "loss": 2.71860408782959
+        },
+        {
+          "step": 130,
+          "loss": 0.7252303957939148
+        },
+        {
+          "step": 260,
+          "loss": 0.572713315486908
+        }
+      ]
+    },
+    {
+      "name": "q_only",
+      "seed": 0,
+      "parameters": 49344,
+      "training_seconds": 2.6731893120000336,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 74697.29102373334,
+      "in_distribution": {
+        "nll": 0.5330952033400536,
+        "perplexity": 1.7041989961043642,
+        "accuracy": 0.8934151785714286,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.7514623403549194,
+        "perplexity": 15.665523469614794,
+        "accuracy": 0.29708059210526316,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.219425201416016
+        },
+        {
+          "step": 65,
+          "loss": 2.6738786697387695
+        },
+        {
+          "step": 130,
+          "loss": 1.4965485334396362
+        },
+        {
+          "step": 260,
+          "loss": 0.9560043215751648
+        }
+      ]
+    },
+    {
+      "name": "k_only",
+      "seed": 0,
+      "parameters": 49344,
+      "training_seconds": 2.6547049060000063,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 75217.39969994221,
+      "in_distribution": {
+        "nll": 0.5983617901802063,
+        "perplexity": 1.819136231182995,
+        "accuracy": 0.8245907738095238,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 0.7508334964513779,
+        "perplexity": 2.1187652641756825,
+        "accuracy": 0.7611019736842105,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.284507751464844
+        },
+        {
+          "step": 65,
+          "loss": 2.6118385791778564
+        },
+        {
+          "step": 130,
+          "loss": 1.146512746810913
+        },
+        {
+          "step": 260,
+          "loss": 0.9365267157554626
+        }
+      ]
+    },
+    {
+      "name": "v_only",
+      "seed": 0,
+      "parameters": 49344,
+      "training_seconds": 2.4393668140000386,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 81857.30774641785,
+      "in_distribution": {
+        "nll": 0.8644072413444519,
+        "perplexity": 2.3735986977246624,
+        "accuracy": 0.734375,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.349887490272522,
+        "perplexity": 10.484390062498376,
+        "accuracy": 0.3268914473684211,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 42.14767837524414
+        },
+        {
+          "step": 65,
+          "loss": 2.7541306018829346
+        },
+        {
+          "step": 130,
+          "loss": 1.6427937746047974
+        },
+        {
+          "step": 260,
+          "loss": 1.2227106094360352
+        }
+      ]
+    },
+    {
+      "name": "q_only",
+      "seed": 1,
+      "parameters": 49344,
+      "training_seconds": 2.678291809999962,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 74554.98286424691,
+      "in_distribution": {
+        "nll": 0.5256238728761673,
+        "perplexity": 1.691513808849266,
+        "accuracy": 0.8971354166666666,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.626085042953491,
+        "perplexity": 13.81956087114181,
+        "accuracy": 0.31476151315789475,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 38.96141815185547
+        },
+        {
+          "step": 65,
+          "loss": 2.7583343982696533
+        },
+        {
+          "step": 130,
+          "loss": 1.5720473527908325
+        },
+        {
+          "step": 260,
+          "loss": 1.0294898748397827
+        }
+      ]
+    },
+    {
+      "name": "k_only",
+      "seed": 1,
+      "parameters": 49344,
+      "training_seconds": 2.817518053000015,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 70870.88573838463,
+      "in_distribution": {
+        "nll": 0.5524174124002457,
+        "perplexity": 1.7374480737526585,
+        "accuracy": 0.8463541666666666,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 0.7424121052026749,
+        "perplexity": 2.1009972336987652,
+        "accuracy": 0.7833059210526315,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.0138053894043
+        },
+        {
+          "step": 65,
+          "loss": 2.69130802154541
+        },
+        {
+          "step": 130,
+          "loss": 1.218415379524231
+        },
+        {
+          "step": 260,
+          "loss": 0.969836413860321
+        }
+      ]
+    },
+    {
+      "name": "v_only",
+      "seed": 1,
+      "parameters": 49344,
+      "training_seconds": 2.65828572099997,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 75116.07891603396,
+      "in_distribution": {
+        "nll": 0.876719743013382,
+        "perplexity": 2.403004292384331,
+        "accuracy": 0.7496279761904762,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.3209965229034424,
+        "perplexity": 10.185819652772906,
+        "accuracy": 0.35074013157894735,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 38.71249008178711
+        },
+        {
+          "step": 65,
+          "loss": 2.775662422180176
+        },
+        {
+          "step": 130,
+          "loss": 1.8035167455673218
+        },
+        {
+          "step": 260,
+          "loss": 1.2492073774337769
+        }
+      ]
+    },
+    {
+      "name": "q_only",
+      "seed": 2,
+      "parameters": 49344,
+      "training_seconds": 2.616507824999985,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 76315.46066559198,
+      "in_distribution": {
+        "nll": 0.6003677546977997,
+        "perplexity": 1.8227890163692855,
+        "accuracy": 0.8779761904761905,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.4495533108711243,
+        "perplexity": 11.583171486668382,
+        "accuracy": 0.32051809210526316,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 40.9758415222168
+        },
+        {
+          "step": 65,
+          "loss": 2.702747106552124
+        },
+        {
+          "step": 130,
+          "loss": 1.2726119756698608
+        },
+        {
+          "step": 260,
+          "loss": 0.9544603824615479
+        }
+      ]
+    },
+    {
+      "name": "k_only",
+      "seed": 2,
+      "parameters": 49344,
+      "training_seconds": 2.536270931000047,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 78729.75933263823,
+      "in_distribution": {
+        "nll": 0.5966544449329376,
+        "perplexity": 1.8160329874925702,
+        "accuracy": 0.8346354166666666,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 0.7916014194488525,
+        "perplexity": 2.2069278150090903,
+        "accuracy": 0.770764802631579,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.07019805908203
+        },
+        {
+          "step": 65,
+          "loss": 2.682802438735962
+        },
+        {
+          "step": 130,
+          "loss": 1.0977553129196167
+        },
+        {
+          "step": 260,
+          "loss": 1.0403660535812378
+        }
+      ]
+    },
+    {
+      "name": "v_only",
+      "seed": 2,
+      "parameters": 49344,
+      "training_seconds": 2.6546023820000073,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 75220.30468817663,
+      "in_distribution": {
+        "nll": 0.8936507850885391,
+        "perplexity": 2.4440360340619796,
+        "accuracy": 0.7624627976190477,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.227370023727417,
+        "perplexity": 9.275439786720804,
+        "accuracy": 0.3511513157894737,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 40.775028228759766
+        },
+        {
+          "step": 65,
+          "loss": 2.7193193435668945
+        },
+        {
+          "step": 130,
+          "loss": 1.6621721982955933
+        },
+        {
+          "step": 260,
+          "loss": 1.212544322013855
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "baseline_relu": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.6152702867984772,
+        "sample_std": 0.004431778375631933
+      },
+      "id_accuracy": {
+        "mean": 0.34250992063492064,
+        "sample_std": 0.008991003000230867
+      },
+      "ood_nll": {
+        "mean": 2.1426669557889304,
+        "sample_std": 0.03480168086900227
+      },
+      "ood_accuracy": {
+        "mean": 0.21875,
+        "sample_std": 0.011153253281265494
+      },
+      "time_seconds": {
+        "mean": 2.0825892443333296,
+        "sample_std": 0.04758375543387776
+      },
+      "tokens_per_second": {
+        "mean": 95914.15756690902,
+        "sample_std": 2200.28235423854
+      }
+    },
+    "dconv_only": {
+      "parameters": 49536,
+      "id_nll": {
+        "mean": 0.25802381833394367,
+        "sample_std": 0.030801742010542702
+      },
+      "id_accuracy": {
+        "mean": 0.9569072420634921,
+        "sample_std": 0.007064371994777909
+      },
+      "ood_nll": {
+        "mean": 6.048899491628011,
+        "sample_std": 0.2216250558247275
+      },
+      "ood_accuracy": {
+        "mean": 0.07504111842105263,
+        "sample_std": 0.0063733552631579
+      },
+      "time_seconds": {
+        "mean": 3.1406574296666463,
+        "sample_std": 0.28647312416965487
+      },
+      "tokens_per_second": {
+        "mean": 63952.18333274634,
+        "sample_std": 6137.216027131353
+      }
+    },
+    "gelu_baseline": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.5925212701161702,
+        "sample_std": 0.021140275591949434
+      },
+      "id_accuracy": {
+        "mean": 0.3536706349206349,
+        "sample_std": 0.014881339900708206
+      },
+      "ood_nll": {
+        "mean": 2.137446343898773,
+        "sample_std": 0.04046156689542913
+      },
+      "ood_accuracy": {
+        "mean": 0.22608278508771928,
+        "sample_std": 0.013187308645986252
+      },
+      "time_seconds": {
+        "mean": 2.081877317666681,
+        "sample_std": 0.16104694186231733
+      },
+      "tokens_per_second": {
+        "mean": 96291.0271565926,
+        "sample_std": 7328.0400414797
+      }
+    },
+    "k_only": {
+      "parameters": 49344,
+      "id_nll": {
+        "mean": 0.5824778825044632,
+        "sample_std": 0.026047123720542728
+      },
+      "id_accuracy": {
+        "mean": 0.8351934523809523,
+        "sample_std": 0.010892422598182521
+      },
+      "ood_nll": {
+        "mean": 0.7616156737009684,
+        "sample_std": 0.026307578160740978
+      },
+      "ood_accuracy": {
+        "mean": 0.7717242324561403,
+        "sample_std": 0.011133022899289125
+      },
+      "time_seconds": {
+        "mean": 2.669497963333356,
+        "sample_std": 0.14120591990871714
+      },
+      "tokens_per_second": {
+        "mean": 74939.34825698836,
+        "sample_std": 3936.8080974706736
+      }
+    },
+    "primer_ez": {
+      "parameters": 49536,
+      "id_nll": {
+        "mean": 0.25071631371974945,
+        "sample_std": 0.033035172696962406
+      },
+      "id_accuracy": {
+        "mean": 0.9574032738095238,
+        "sample_std": 0.006806612523635419
+      },
+      "ood_nll": {
+        "mean": 5.8828180233637495,
+        "sample_std": 0.2420598155290284
+      },
+      "ood_accuracy": {
+        "mean": 0.07449287280701754,
+        "sample_std": 0.009871276085543227
+      },
+      "time_seconds": {
+        "mean": 3.085827016333326,
+        "sample_std": 0.12425812010365944
+      },
+      "tokens_per_second": {
+        "mean": 64777.62578363836,
+        "sample_std": 2566.140004682737
+      }
+    },
+    "primer_per_head": {
+      "parameters": 50400,
+      "id_nll": {
+        "mean": 0.25975316887100536,
+        "sample_std": 0.02800609571355016
+      },
+      "id_accuracy": {
+        "mean": 0.9578373015873016,
+        "sample_std": 0.004565193485664662
+      },
+      "ood_nll": {
+        "mean": 4.35140589872996,
+        "sample_std": 0.448824330219569
+      },
+      "ood_accuracy": {
+        "mean": 0.13651315789473684,
+        "sample_std": 0.05525151562732167
+      },
+      "time_seconds": {
+        "mean": 2.8998778323333454,
+        "sample_std": 0.08980346698688839
+      },
+      "tokens_per_second": {
+        "mean": 68901.41506169098,
+        "sample_std": 2099.4075381911334
+      }
+    },
+    "q_only": {
+      "parameters": 49344,
+      "id_nll": {
+        "mean": 0.5530289436380068,
+        "sample_std": 0.04116646048837843
+      },
+      "id_accuracy": {
+        "mean": 0.8895089285714286,
+        "sample_std": 0.010159383783051616
+      },
+      "ood_nll": {
+        "mean": 2.6090335647265115,
+        "sample_std": 0.15167508102274296
+      },
+      "ood_accuracy": {
+        "mean": 0.31078673245614036,
+        "sample_std": 0.012213855361137175
+      },
+      "time_seconds": {
+        "mean": 2.6559963156666604,
+        "sample_std": 0.03429306843676844
+      },
+      "tokens_per_second": {
+        "mean": 75189.24485119074,
+        "sample_std": 977.9235391990944
+      }
+    },
+    "squared_relu_only": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.59755935271581,
+        "sample_std": 0.02136427415788842
+      },
+      "id_accuracy": {
+        "mean": 0.34778025793650796,
+        "sample_std": 0.014990220730177584
+      },
+      "ood_nll": {
+        "mean": 2.111713985602061,
+        "sample_std": 0.029519241290876023
+      },
+      "ood_accuracy": {
+        "mean": 0.21929824561403508,
+        "sample_std": 0.012862794664270915
+      },
+      "time_seconds": {
+        "mean": 2.117709552333357,
+        "sample_std": 0.07006319150120985
+      },
+      "tokens_per_second": {
+        "mean": 94358.35689951078,
+        "sample_std": 3074.426718689879
+      }
+    },
+    "v_only": {
+      "parameters": 49344,
+      "id_nll": {
+        "mean": 0.8782592564821243,
+        "sample_std": 0.014682431303037487
+      },
+      "id_accuracy": {
+        "mean": 0.7488219246031746,
+        "sample_std": 0.01406123689947611
+      },
+      "ood_nll": {
+        "mean": 2.299418012301127,
+        "sample_std": 0.06404573750077677
+      },
+      "ood_accuracy": {
+        "mean": 0.34292763157894735,
+        "sample_std": 0.013889264600373775
+      },
+      "time_seconds": {
+        "mean": 2.5840849723333386,
+        "sample_std": 0.12534313208183265
+      },
+      "tokens_per_second": {
+        "mean": 77397.89711687615,
+        "sample_std": 3862.3144777512375
+      }
+    }
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "protocol": {
+    "seeds": 1,
+    "start_seed": 1,
+    "steps": 260,
+    "batch_size": 32,
+    "context": 24,
+    "period_train": 4,
+    "period_shift": 6,
+    "vocab_size": 16,
+    "noise": 0.025,
+    "dataset": "synthetic periodic motif",
+    "device": "CPU",
+    "torch": "2.10.0+cpu",
+    "eval_batches": 4,
+    "notes": "Timing is environment-specific, not hardware-controlled. These are not the official Primer/Google benchmarks."
+  },
+  "trials": [
+    {
+      "name": "baseline_relu",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 2.0878771099999653,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 95637.81270632509,
+      "in_distribution": {
+        "nll": 1.6120941042900085,
+        "perplexity": 5.013298613294836,
+        "accuracy": 0.3405877976190476,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.182696282863617,
+        "perplexity": 8.87019058767621,
+        "accuracy": 0.20703125,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.12809753417969
+        },
+        {
+          "step": 65,
+          "loss": 2.6839168071746826
+        },
+        {
+          "step": 130,
+          "loss": 2.1499783992767334
+        },
+        {
+          "step": 260,
+          "loss": 1.8209952116012573
+        }
+      ]
+    },
+    {
+      "name": "squared_relu_only",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 2.1969135660000347,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 90891.149788638,
+      "in_distribution": {
+        "nll": 1.5982043743133545,
+        "perplexity": 4.9441466123308,
+        "accuracy": 0.34858630952380953,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.145799398422241,
+        "perplexity": 8.548872461653108,
+        "accuracy": 0.20476973684210525,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.361297607421875
+        },
+        {
+          "step": 65,
+          "loss": 2.664717435836792
+        },
+        {
+          "step": 130,
+          "loss": 2.0143330097198486
+        },
+        {
+          "step": 260,
+          "loss": 1.7109931707382202
+        }
+      ]
+    },
+    {
+      "name": "dconv_only",
+      "seed": 1,
+      "parameters": 49536,
+      "training_seconds": 3.3405191449999734,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 59775.1401302032,
+      "in_distribution": {
+        "nll": 0.2709859237074852,
+        "perplexity": 1.3112566126230387,
+        "accuracy": 0.9534970238095238,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 6.157054662704468,
+        "perplexity": 472.03572095173894,
+        "accuracy": 0.07010690789473684,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.145057678222656
+        },
+        {
+          "step": 65,
+          "loss": 2.7235279083251953
+        },
+        {
+          "step": 130,
+          "loss": 0.8181656002998352
+        },
+        {
+          "step": 260,
+          "loss": 0.6298556923866272
+        }
+      ]
+    },
+    {
+      "name": "primer_ez",
+      "seed": 1,
+      "parameters": 49536,
+      "training_seconds": 3.224744227999963,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 61921.18998654497,
+      "in_distribution": {
+        "nll": 0.25279588997364044,
+        "perplexity": 1.2876204337704125,
+        "accuracy": 0.9568452380952381,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 6.114372253417969,
+        "perplexity": 452.3120209070644,
+        "accuracy": 0.06476151315789473,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 39.0989990234375
+        },
+        {
+          "step": 65,
+          "loss": 2.6921370029449463
+        },
+        {
+          "step": 130,
+          "loss": 0.704594075679779
+        },
+        {
+          "step": 260,
+          "loss": 0.6210845708847046
+        }
+      ]
+    },
+    {
+      "name": "gelu_baseline",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 2.2547701330000223,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 88558.91652880877,
+      "in_distribution": {
+        "nll": 1.6080587804317474,
+        "perplexity": 4.993109092815758,
+        "accuracy": 0.33872767857142855,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.182660162448883,
+        "perplexity": 8.869870198499745,
+        "accuracy": 0.22039473684210525,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.96962356567383
+        },
+        {
+          "step": 65,
+          "loss": 2.720219612121582
+        },
+        {
+          "step": 130,
+          "loss": 2.1628572940826416
+        },
+        {
+          "step": 260,
+          "loss": 1.8025199174880981
+        }
+      ]
+    },
+    {
+      "name": "primer_per_head",
+      "seed": 1,
+      "parameters": 50400,
+      "training_seconds": 2.8364039340000318,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 70398.99980620947,
+      "in_distribution": {
+        "nll": 0.2434346154332161,
+        "perplexity": 1.2756229090625817,
+        "accuracy": 0.9603794642857143,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 4.821678638458252,
+        "perplexity": 124.17335810255128,
+        "accuracy": 0.07606907894736842,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.16117477416992
+        },
+        {
+          "step": 65,
+          "loss": 2.666522264480591
+        },
+        {
+          "step": 130,
+          "loss": 0.7284976840019226
+        },
+        {
+          "step": 260,
+          "loss": 0.6272882223129272
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "baseline_relu": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.6120941042900085,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.3405877976190476,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 2.182696282863617,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.20703125,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.0878771099999653,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 95637.81270632509,
+        "sample_std": 0.0
+      }
+    },
+    "dconv_only": {
+      "parameters": 49536,
+      "id_nll": {
+        "mean": 0.2709859237074852,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.9534970238095238,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 6.157054662704468,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.07010690789473684,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 3.3405191449999734,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 59775.1401302032,
+        "sample_std": 0.0
+      }
+    },
+    "gelu_baseline": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.6080587804317474,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.33872767857142855,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 2.182660162448883,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.22039473684210525,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.2547701330000223,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 88558.91652880877,
+        "sample_std": 0.0
+      }
+    },
+    "primer_ez": {
+      "parameters": 49536,
+      "id_nll": {
+        "mean": 0.25279588997364044,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.9568452380952381,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 6.114372253417969,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.06476151315789473,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 3.224744227999963,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 61921.18998654497,
+        "sample_std": 0.0
+      }
+    },
+    "primer_per_head": {
+      "parameters": 50400,
+      "id_nll": {
+        "mean": 0.2434346154332161,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.9603794642857143,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 4.821678638458252,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.07606907894736842,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.8364039340000318,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 70398.99980620947,
+        "sample_std": 0.0
+      }
+    },
+    "squared_relu_only": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.5982043743133545,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.34858630952380953,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 2.145799398422241,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.20476973684210525,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.1969135660000347,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 90891.149788638,
+        "sample_std": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "protocol": {
+    "seeds": 1,
+    "start_seed": 0,
+    "steps": 260,
+    "batch_size": 32,
+    "context": 24,
+    "period_train": 4,
+    "period_shift": 6,
+    "vocab_size": 16,
+    "noise": 0.025,
+    "dataset": "synthetic periodic motif",
+    "device": "CPU",
+    "torch": "2.10.0+cpu",
+    "eval_batches": 4,
+    "notes": "Timing is environment-specific, not hardware-controlled. These are not the official Primer/Google benchmarks."
+  },
+  "trials": [
+    {
+      "name": "q_only",
+      "seed": 0,
+      "parameters": 49344,
+      "training_seconds": 2.6731893120000336,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 74697.29102373334,
+      "in_distribution": {
+        "nll": 0.5330952033400536,
+        "perplexity": 1.7041989961043642,
+        "accuracy": 0.8934151785714286,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.7514623403549194,
+        "perplexity": 15.665523469614794,
+        "accuracy": 0.29708059210526316,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.219425201416016
+        },
+        {
+          "step": 65,
+          "loss": 2.6738786697387695
+        },
+        {
+          "step": 130,
+          "loss": 1.4965485334396362
+        },
+        {
+          "step": 260,
+          "loss": 0.9560043215751648
+        }
+      ]
+    },
+    {
+      "name": "k_only",
+      "seed": 0,
+      "parameters": 49344,
+      "training_seconds": 2.6547049060000063,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 75217.39969994221,
+      "in_distribution": {
+        "nll": 0.5983617901802063,
+        "perplexity": 1.819136231182995,
+        "accuracy": 0.8245907738095238,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 0.7508334964513779,
+        "perplexity": 2.1187652641756825,
+        "accuracy": 0.7611019736842105,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 41.284507751464844
+        },
+        {
+          "step": 65,
+          "loss": 2.6118385791778564
+        },
+        {
+          "step": 130,
+          "loss": 1.146512746810913
+        },
+        {
+          "step": 260,
+          "loss": 0.9365267157554626
+        }
+      ]
+    },
+    {
+      "name": "v_only",
+      "seed": 0,
+      "parameters": 49344,
+      "training_seconds": 2.4393668140000386,
+      "training_tokens": 199680,
+      "train_tokens_per_second": 81857.30774641785,
+      "in_distribution": {
+        "nll": 0.8644072413444519,
+        "perplexity": 2.3735986977246624,
+        "accuracy": 0.734375,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.349887490272522,
+        "perplexity": 10.484390062498376,
+        "accuracy": 0.3268914473684211,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 42.14767837524414
+        },
+        {
+          "step": 65,
+          "loss": 2.7541306018829346
+        },
+        {
+          "step": 130,
+          "loss": 1.6427937746047974
+        },
+        {
+          "step": 260,
+          "loss": 1.2227106094360352
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "k_only": {
+      "parameters": 49344,
+      "id_nll": {
+        "mean": 0.5983617901802063,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.8245907738095238,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 0.7508334964513779,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.7611019736842105,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.6547049060000063,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 75217.39969994221,
+        "sample_std": 0.0
+      }
+    },
+    "q_only": {
+      "parameters": 49344,
+      "id_nll": {
+        "mean": 0.5330952033400536,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.8934151785714286,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 2.7514623403549194,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.29708059210526316,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.6731893120000336,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 74697.29102373334,
+        "sample_std": 0.0
+      }
+    },
+    "v_only": {
+      "parameters": 49344,
+      "id_nll": {
+        "mean": 0.8644072413444519,
+        "sample_std": 0.0
+      },
+      "id_accuracy": {
+        "mean": 0.734375,
+        "sample_std": 0.0
+      },
+      "ood_nll": {
+        "mean": 2.349887490272522,
+        "sample_std": 0.0
+      },
+      "ood_accuracy": {
+        "mean": 0.3268914473684211,
+        "sample_std": 0.0
+      },
+      "time_seconds": {
+        "mean": 2.4393668140000386,
+        "sample_std": 0.0
+      },
+      "tokens_per_second": {
+        "mean": 81857.30774641785,
+        "sample_std": 0.0
+      }
+    }
+  }
+}

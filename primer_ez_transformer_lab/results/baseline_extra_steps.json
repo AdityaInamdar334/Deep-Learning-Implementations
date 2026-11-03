@@ -1,0 +1,163 @@
+{
+  "protocol": {
+    "seeds": 3,
+    "start_seed": 0,
+    "steps": 390,
+    "batch_size": 32,
+    "context": 24,
+    "period_train": 4,
+    "period_shift": 6,
+    "vocab_size": 16,
+    "noise": 0.025,
+    "dataset": "synthetic periodic motif",
+    "device": "CPU",
+    "torch": "2.10.0+cpu",
+    "eval_batches": 4,
+    "notes": "Timing is environment-specific, not hardware-controlled. These are not the official Primer/Google benchmarks."
+  },
+  "trials": [
+    {
+      "name": "baseline_relu",
+      "seed": 0,
+      "parameters": 49248,
+      "training_seconds": 3.269914854000035,
+      "training_tokens": 299520,
+      "train_tokens_per_second": 91598.71537131982,
+      "in_distribution": {
+        "nll": 1.4976559281349182,
+        "perplexity": 4.471195972173012,
+        "accuracy": 0.3627232142857143,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.0184170603752136,
+        "perplexity": 7.5264016598209,
+        "accuracy": 0.2275904605263158,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 42.0661506652832
+        },
+        {
+          "step": 97,
+          "loss": 2.318270683288574
+        },
+        {
+          "step": 195,
+          "loss": 1.8995383977890015
+        },
+        {
+          "step": 390,
+          "loss": 1.7201213836669922
+        }
+      ]
+    },
+    {
+      "name": "baseline_relu",
+      "seed": 1,
+      "parameters": 49248,
+      "training_seconds": 3.237280530000021,
+      "training_tokens": 299520,
+      "train_tokens_per_second": 92522.10218556439,
+      "in_distribution": {
+        "nll": 1.5064629316329956,
+        "perplexity": 4.510747721290225,
+        "accuracy": 0.3528645833333333,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.0877203345298767,
+        "perplexity": 8.066505254566719,
+        "accuracy": 0.22964638157894737,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 37.12809753417969
+        },
+        {
+          "step": 97,
+          "loss": 2.383212089538574
+        },
+        {
+          "step": 195,
+          "loss": 2.019608736038208
+        },
+        {
+          "step": 390,
+          "loss": 1.7823734283447266
+        }
+      ]
+    },
+    {
+      "name": "baseline_relu",
+      "seed": 2,
+      "parameters": 49248,
+      "training_seconds": 3.3880022729999837,
+      "training_tokens": 299520,
+      "train_tokens_per_second": 88406.08000383164,
+      "in_distribution": {
+        "nll": 1.4876627922058105,
+        "perplexity": 4.426737214243617,
+        "accuracy": 0.36049107142857145,
+        "evaluated_tokens": 5376
+      },
+      "shifted_period": {
+        "nll": 2.109939157962799,
+        "perplexity": 8.247739460089749,
+        "accuracy": 0.2372532894736842,
+        "evaluated_tokens": 4864
+      },
+      "training_curve": [
+        {
+          "step": 1,
+          "loss": 40.12715148925781
+        },
+        {
+          "step": 97,
+          "loss": 2.516555070877075
+        },
+        {
+          "step": 195,
+          "loss": 1.8698230981826782
+        },
+        {
+          "step": 390,
+          "loss": 1.6566877365112305
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "baseline_relu": {
+      "parameters": 49248,
+      "id_nll": {
+        "mean": 1.4972605506579082,
+        "sample_std": 0.009406303903893106
+      },
+      "id_accuracy": {
+        "mean": 0.35869295634920634,
+        "sample_std": 0.005169435601958034
+      },
+      "ood_nll": {
+        "mean": 2.0720255176226297,
+        "sample_std": 0.04773697775332956
+      },
+      "ood_accuracy": {
+        "mean": 0.2314967105263158,
+        "sample_std": 0.005090221382870042
+      },
+      "time_seconds": {
+        "mean": 3.298399219000013,
+        "sample_std": 0.0792955247181434
+      },
+      "tokens_per_second": {
+        "mean": 90842.29918690528,
+        "sample_std": 2159.753164869125
+      }
+    }
+  }
+}
