@@ -1,0 +1,609 @@
+{
+  "metadata": {
+    "independent_synthetic_benchmark": true,
+    "not_an_llm_experiment": true,
+    "seeds": 5,
+    "readings_per_axis_per_seed": 60,
+    "holdout_samples_per_policy": 3000,
+    "navigation_episodes_per_policy": 300,
+    "random_seed_start": 0,
+    "architectural_prior": "Know input coordinate meaning and action index 2 means stall",
+    "no_gradient_edits": true
+  },
+  "summary": {
+    "readers": {
+      "naive": {
+        "mean": 0.3811111111111111,
+        "sample_sd": 0.018257418583505533
+      },
+      "permutation_invariant": {
+        "mean": 1.0,
+        "sample_sd": 0.0
+      }
+    },
+    "policies": {
+      "original": {
+        "accuracy": {
+          "mean": 0.29833332896232606,
+          "sample_sd": 0.01151568975362846
+        },
+        "shift_accuracy": {
+          "mean": 0.12313333302736282,
+          "sample_sd": 0.006379653143154835
+        },
+        "stall_rate": {
+          "mean": 0.7016666531562805,
+          "sample_sd": 0.011515697948892607
+        },
+        "shift_stall_rate": {
+          "mean": 0.8768666625022888,
+          "sample_sd": 0.006379645435247053
+        },
+        "navigation_success": {
+          "mean": 0.3,
+          "sample_sd": 0.027888665888843322
+        },
+        "changed_weights": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        }
+      },
+      "semantic": {
+        "accuracy": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "shift_accuracy": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "stall_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "shift_stall_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "navigation_success": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "changed_weights": {
+          "mean": 2.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.015267175572519083,
+          "sample_sd": 0.0
+        }
+      },
+      "half_semantic": {
+        "accuracy": {
+          "mean": 0.6483333230018615,
+          "sample_sd": 0.010292945793936442
+        },
+        "shift_accuracy": {
+          "mean": 0.5588000059127808,
+          "sample_sd": 0.006926600518863642
+        },
+        "stall_rate": {
+          "mean": 0.35166666507720945,
+          "sample_sd": 0.010292926732429175
+        },
+        "shift_stall_rate": {
+          "mean": 0.4411999940872192,
+          "sample_sd": 0.006926600518863642
+        },
+        "navigation_success": {
+          "mean": 0.9586666584014892,
+          "sample_sd": 0.013864429019242236
+        },
+        "changed_weights": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.007633587786259542,
+          "sample_sd": 0.0
+        }
+      },
+      "top_magnitude": {
+        "accuracy": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "shift_accuracy": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "stall_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "shift_stall_rate": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "navigation_success": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "changed_weights": {
+          "mean": 2.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.015267175572519083,
+          "sample_sd": 0.0
+        }
+      },
+      "random_two": {
+        "accuracy": {
+          "mean": 0.3797333300113678,
+          "sample_sd": 0.4232141170768035
+        },
+        "shift_accuracy": {
+          "mean": 0.3580666661262512,
+          "sample_sd": 0.41986349828440794
+        },
+        "stall_rate": {
+          "mean": 0.5692666649818421,
+          "sample_sd": 0.42948421331508774
+        },
+        "shift_stall_rate": {
+          "mean": 0.5901999950408936,
+          "sample_sd": 0.42146224462409887
+        },
+        "navigation_success": {
+          "mean": 0.5079999983310699,
+          "sample_sd": 0.43828326094089193
+        },
+        "changed_weights": {
+          "mean": 2.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.015267175572519083,
+          "sample_sd": 0.0
+        }
+      },
+      "global_shrink": {
+        "accuracy": {
+          "mean": 0.29833332896232606,
+          "sample_sd": 0.01151568975362846
+        },
+        "shift_accuracy": {
+          "mean": 0.12313333302736282,
+          "sample_sd": 0.006379653143154835
+        },
+        "stall_rate": {
+          "mean": 0.7016666531562805,
+          "sample_sd": 0.011515697948892607
+        },
+        "shift_stall_rate": {
+          "mean": 0.8768666625022888,
+          "sample_sd": 0.006379645435247053
+        },
+        "navigation_success": {
+          "mean": 0.3,
+          "sample_sd": 0.027888665888843322
+        },
+        "changed_weights": {
+          "mean": 4.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.030534351145038167,
+          "sample_sd": 0.0
+        }
+      },
+      "wrong_path": {
+        "accuracy": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "shift_accuracy": {
+          "mean": 0.0,
+          "sample_sd": 0.0
+        },
+        "stall_rate": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "shift_stall_rate": {
+          "mean": 1.0,
+          "sample_sd": 0.0
+        },
+        "navigation_success": {
+          "mean": 0.06999999955296517,
+          "sample_sd": 0.012247448693638207
+        },
+        "changed_weights": {
+          "mean": 2.0,
+          "sample_sd": 0.0
+        },
+        "changed_fraction": {
+          "mean": 0.015267175572519083,
+          "sample_sd": 0.0
+        }
+      }
+    }
+  },
+  "trials": [
+    {
+      "seed": 0,
+      "readers": {
+        "naive": 0.35555555555555557,
+        "permutation_invariant": 1.0
+      },
+      "replicas": 180,
+      "write_xor_correct": true,
+      "policies": {
+        "original": {
+          "accuracy": 0.31299999356269836,
+          "shift_accuracy": 0.12433333694934845,
+          "stall_rate": 0.6869999766349792,
+          "shift_stall_rate": 0.8756666779518127,
+          "navigation_success": 0.2933333218097687,
+          "changed_weights": 0,
+          "changed_fraction": 0.0
+        },
+        "semantic": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "half_semantic": {
+          "accuracy": 0.6579999923706055,
+          "shift_accuracy": 0.5690000057220459,
+          "stall_rate": 0.34200000762939453,
+          "shift_stall_rate": 0.4309999942779541,
+          "navigation_success": 0.9399999976158142,
+          "changed_weights": 1,
+          "changed_fraction": 0.007633587786259542
+        },
+        "top_magnitude": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "random_two": {
+          "accuracy": 0.31966665387153625,
+          "shift_accuracy": 0.26499998569488525,
+          "stall_rate": 0.42533332109451294,
+          "shift_stall_rate": 0.4763333201408386,
+          "navigation_success": 0.4866666793823242,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "global_shrink": {
+          "accuracy": 0.31299999356269836,
+          "shift_accuracy": 0.12433333694934845,
+          "stall_rate": 0.6869999766349792,
+          "shift_stall_rate": 0.8756666779518127,
+          "navigation_success": 0.2933333218097687,
+          "changed_weights": 4,
+          "changed_fraction": 0.030534351145038167
+        },
+        "wrong_path": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.07333333045244217,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "readers": {
+        "naive": 0.37777777777777777,
+        "permutation_invariant": 1.0
+      },
+      "replicas": 180,
+      "write_xor_correct": true,
+      "policies": {
+        "original": {
+          "accuracy": 0.30266666412353516,
+          "shift_accuracy": 0.12333333492279053,
+          "stall_rate": 0.6973333358764648,
+          "shift_stall_rate": 0.8766666650772095,
+          "navigation_success": 0.3466666638851166,
+          "changed_weights": 0,
+          "changed_fraction": 0.0
+        },
+        "semantic": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "half_semantic": {
+          "accuracy": 0.6566666960716248,
+          "shift_accuracy": 0.5566666722297668,
+          "stall_rate": 0.34333333373069763,
+          "shift_stall_rate": 0.44333332777023315,
+          "navigation_success": 0.9766666889190674,
+          "changed_weights": 1,
+          "changed_fraction": 0.007633587786259542
+        },
+        "top_magnitude": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "random_two": {
+          "accuracy": 0.5789999961853027,
+          "shift_accuracy": 0.5253333449363708,
+          "stall_rate": 0.42100000381469727,
+          "shift_stall_rate": 0.47466665506362915,
+          "navigation_success": 0.8999999761581421,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "global_shrink": {
+          "accuracy": 0.30266666412353516,
+          "shift_accuracy": 0.12333333492279053,
+          "stall_rate": 0.6973333358764648,
+          "shift_stall_rate": 0.8766666650772095,
+          "navigation_success": 0.3466666638851166,
+          "changed_weights": 4,
+          "changed_fraction": 0.030534351145038167
+        },
+        "wrong_path": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.07333333045244217,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "readers": {
+        "naive": 0.3888888888888889,
+        "permutation_invariant": 1.0
+      },
+      "replicas": 180,
+      "write_xor_correct": true,
+      "policies": {
+        "original": {
+          "accuracy": 0.281333327293396,
+          "shift_accuracy": 0.11233333498239517,
+          "stall_rate": 0.718666672706604,
+          "shift_stall_rate": 0.887666642665863,
+          "navigation_success": 0.30000001192092896,
+          "changed_weights": 0,
+          "changed_fraction": 0.0
+        },
+        "semantic": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "half_semantic": {
+          "accuracy": 0.640999972820282,
+          "shift_accuracy": 0.562333345413208,
+          "stall_rate": 0.35899999737739563,
+          "shift_stall_rate": 0.437666654586792,
+          "navigation_success": 0.9666666388511658,
+          "changed_weights": 1,
+          "changed_fraction": 0.007633587786259542
+        },
+        "top_magnitude": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "random_two": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.07000000029802322,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "global_shrink": {
+          "accuracy": 0.281333327293396,
+          "shift_accuracy": 0.11233333498239517,
+          "stall_rate": 0.718666672706604,
+          "shift_stall_rate": 0.887666642665863,
+          "navigation_success": 0.30000001192092896,
+          "changed_weights": 4,
+          "changed_fraction": 0.030534351145038167
+        },
+        "wrong_path": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.07000000029802322,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "readers": {
+        "naive": 0.40555555555555556,
+        "permutation_invariant": 1.0
+      },
+      "replicas": 180,
+      "write_xor_correct": true,
+      "policies": {
+        "original": {
+          "accuracy": 0.29899999499320984,
+          "shift_accuracy": 0.12833333015441895,
+          "stall_rate": 0.7009999752044678,
+          "shift_stall_rate": 0.871666669845581,
+          "navigation_success": 0.2866666615009308,
+          "changed_weights": 0,
+          "changed_fraction": 0.0
+        },
+        "semantic": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "half_semantic": {
+          "accuracy": 0.6516666412353516,
+          "shift_accuracy": 0.5543333292007446,
+          "stall_rate": 0.34833332896232605,
+          "shift_stall_rate": 0.44566667079925537,
+          "navigation_success": 0.9566666483879089,
+          "changed_weights": 1,
+          "changed_fraction": 0.007633587786259542
+        },
+        "top_magnitude": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "random_two": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.0833333358168602,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "global_shrink": {
+          "accuracy": 0.29899999499320984,
+          "shift_accuracy": 0.12833333015441895,
+          "stall_rate": 0.7009999752044678,
+          "shift_stall_rate": 0.871666669845581,
+          "navigation_success": 0.2866666615009308,
+          "changed_weights": 4,
+          "changed_fraction": 0.030534351145038167
+        },
+        "wrong_path": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.0833333358168602,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "readers": {
+        "naive": 0.37777777777777777,
+        "permutation_invariant": 1.0
+      },
+      "replicas": 180,
+      "write_xor_correct": true,
+      "policies": {
+        "original": {
+          "accuracy": 0.2956666648387909,
+          "shift_accuracy": 0.12733332812786102,
+          "stall_rate": 0.7043333053588867,
+          "shift_stall_rate": 0.8726666569709778,
+          "navigation_success": 0.273333340883255,
+          "changed_weights": 0,
+          "changed_fraction": 0.0
+        },
+        "semantic": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "half_semantic": {
+          "accuracy": 0.6343333125114441,
+          "shift_accuracy": 0.5516666769981384,
+          "stall_rate": 0.3656666576862335,
+          "shift_stall_rate": 0.4483333230018616,
+          "navigation_success": 0.95333331823349,
+          "changed_weights": 1,
+          "changed_fraction": 0.007633587786259542
+        },
+        "top_magnitude": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "random_two": {
+          "accuracy": 1.0,
+          "shift_accuracy": 1.0,
+          "stall_rate": 0.0,
+          "shift_stall_rate": 0.0,
+          "navigation_success": 1.0,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        },
+        "global_shrink": {
+          "accuracy": 0.2956666648387909,
+          "shift_accuracy": 0.12733332812786102,
+          "stall_rate": 0.7043333053588867,
+          "shift_stall_rate": 0.8726666569709778,
+          "navigation_success": 0.273333340883255,
+          "changed_weights": 4,
+          "changed_fraction": 0.030534351145038167
+        },
+        "wrong_path": {
+          "accuracy": 0.0,
+          "shift_accuracy": 0.0,
+          "stall_rate": 1.0,
+          "shift_stall_rate": 1.0,
+          "navigation_success": 0.05000000074505806,
+          "changed_weights": 2,
+          "changed_fraction": 0.015267175572519083
+        }
+      }
+    }
+  ]
+}

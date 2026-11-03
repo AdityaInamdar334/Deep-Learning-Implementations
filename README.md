@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-13-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-14-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -42,6 +42,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [gMLP and Spatial Gating](./gmlp_spatial_gating_lab) | Attention-free token mixing, causal masking, and generalization to unseen token positions. |
 | [Vision Transformers](./vit_patch_lab) | Patch embedding, learned positional encodings, classification tokens, and CNN comparisons. |
 | [Activation Steering and Interpretability](./llm_steering_interpretability_lab) | Residual-stream steering, neuron interventions, projection edits, and KL-based damage checks. |
+| [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
 
 ### Learning, memory, and forecasting
@@ -129,7 +130,8 @@ Medium-Implementations/
 ├── spikelab_bounded_agent_lab/
 ├── spotify_shunt_routing_lab/
 ├── timesfm3_forecasting_lab/
-└── vit_patch_lab/
+├── vit_patch_lab/
+└── weight_space_programming_lab/
 ```
 
 Individual labs generally contain a Python package or scripts, a `tests/` directory, `requirements.txt`, and their own `README.md`. Some also include benchmark artifacts and a companion article. The specific layout is documented inside each folder.
