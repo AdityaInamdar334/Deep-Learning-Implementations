@@ -1,0 +1,5 @@
+# Optional dependencies for figure plotting
+# Core lab runs on Python standard library only (no external API calls or models)
+matplotlib>=3.7.0
+numpy>=1.22.0
+
