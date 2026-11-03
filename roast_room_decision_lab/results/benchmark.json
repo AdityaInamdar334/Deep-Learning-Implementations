@@ -1,0 +1,612 @@
+{
+  "metadata": {
+    "seeds": 5,
+    "cases_per_seed": 600,
+    "dataset": "synthetic case generator with known oracle",
+    "agents": "scripted statistical simulations, no LLM calls",
+    "cost": "fictional proxy tokens; NOT actual API usage",
+    "source_relationship": "inspired by Roast Room; not an implementation or reproduction"
+  },
+  "means": {
+    "solo_generalist": {
+      "oracle_choice_accuracy": {
+        "mean": 0.54,
+        "sample_std": 0.015942605391424156
+      },
+      "mean_regret": {
+        "mean": 0.6108701024917338,
+        "sample_std": 0.029437093819069473
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.077,
+        "sample_std": 0.00923459678479671
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.13833333333333334,
+        "sample_std": 0.007905694150420948
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.03,
+        "sample_std": 0.006236095644623235
+      },
+      "mean_spread": {
+        "mean": 0.0,
+        "sample_std": 0.0
+      },
+      "mean_calls": {
+        "mean": 1.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 915.0,
+        "sample_std": 0.0
+      }
+    },
+    "quick_four": {
+      "oracle_choice_accuracy": {
+        "mean": 0.7356666666666667,
+        "sample_std": 0.01315505817378075
+      },
+      "mean_regret": {
+        "mean": 0.19644834145060291,
+        "sample_std": 0.010413797541441847
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.04466666666666667,
+        "sample_std": 0.009888264649460885
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.137,
+        "sample_std": 0.010697871023920811
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.037,
+        "sample_std": 0.007207249436813217
+      },
+      "mean_spread": {
+        "mean": 4.752222466666663,
+        "sample_std": 0.10523699870869574
+      },
+      "mean_calls": {
+        "mean": 4.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 3000.0,
+        "sample_std": 0.0
+      }
+    },
+    "seven_independent": {
+      "oracle_choice_accuracy": {
+        "mean": 0.8173333333333334,
+        "sample_std": 0.008944271909999125
+      },
+      "mean_regret": {
+        "mean": 0.10285154402246316,
+        "sample_std": 0.011846988373782974
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.028333333333333335,
+        "sample_std": 0.0020412414523193153
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.12733333333333333,
+        "sample_std": 0.00838318422663953
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.04033333333333333,
+        "sample_std": 0.006055300708194983
+      },
+      "mean_spread": {
+        "mean": 6.142172333333335,
+        "sample_std": 0.10333458632325061
+      },
+      "mean_calls": {
+        "mean": 7.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 5085.0,
+        "sample_std": 0.0
+      }
+    },
+    "seven_correlated": {
+      "oracle_choice_accuracy": {
+        "mean": 0.602,
+        "sample_std": 0.01773258143769383
+      },
+      "mean_regret": {
+        "mean": 0.44362840841636086,
+        "sample_std": 0.04182806515145771
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.058,
+        "sample_std": 0.006810938913900849
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.13466666666666666,
+        "sample_std": 0.009958246164193104
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.03,
+        "sample_std": 0.008897565210026092
+      },
+      "mean_spread": {
+        "mean": 5.648367133333331,
+        "sample_std": 0.03967371412752118
+      },
+      "mean_calls": {
+        "mean": 7.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 5085.0,
+        "sample_std": 0.0
+      }
+    },
+    "debate_no_evidence": {
+      "oracle_choice_accuracy": {
+        "mean": 0.5973333333333334,
+        "sample_std": 0.018050854088749745
+      },
+      "mean_regret": {
+        "mean": 0.4531517704095538,
+        "sample_std": 0.0390748557729463
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.05433333333333333,
+        "sample_std": 0.006302556800396345
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.13,
+        "sample_std": 0.010000000000000005
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.027,
+        "sample_std": 0.005055250296034367
+      },
+      "mean_spread": {
+        "mean": 2.7035119,
+        "sample_std": 0.017137876996260095
+      },
+      "mean_calls": {
+        "mean": 21.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 14185.0,
+        "sample_std": 0.0
+      }
+    },
+    "audited_specialists": {
+      "oracle_choice_accuracy": {
+        "mean": 0.866,
+        "sample_std": 0.013519533193782176
+      },
+      "mean_regret": {
+        "mean": 0.04495916839691046,
+        "sample_std": 0.002925425319274052
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.029,
+        "sample_std": 0.004503085362035433
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.12833333333333333,
+        "sample_std": 0.00889756521002609
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.03766666666666667,
+        "sample_std": 0.004801620096962643
+      },
+      "mean_spread": {
+        "mean": 5.4942241,
+        "sample_std": 0.09823838457099979
+      },
+      "mean_calls": {
+        "mean": 14.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 9635.0,
+        "sample_std": 0.0
+      }
+    },
+    "audited_with_ruin_cap": {
+      "oracle_choice_accuracy": {
+        "mean": 0.866,
+        "sample_std": 0.013519533193782176
+      },
+      "mean_regret": {
+        "mean": 0.04495916839691046,
+        "sample_std": 0.002925425319274052
+      },
+      "unsafe_go_rate_per_case": {
+        "mean": 0.0,
+        "sample_std": 0.0
+      },
+      "risky_recommendation_rate": {
+        "mean": 0.12833333333333333,
+        "sample_std": 0.00889756521002609
+      },
+      "risk_held_rate_per_case": {
+        "mean": 0.12833333333333333,
+        "sample_std": 0.00889756521002609
+      },
+      "mean_spread": {
+        "mean": 5.4942241,
+        "sample_std": 0.09823838457099979
+      },
+      "mean_calls": {
+        "mean": 14.0,
+        "sample_std": 0.0
+      },
+      "mean_proxy_tokens": {
+        "mean": 9635.0,
+        "sample_std": 0.0
+      }
+    }
+  },
+  "trials": [
+    {
+      "solo_generalist": {
+        "oracle_choice_accuracy": 0.515,
+        "mean_regret": 0.6173606008729551,
+        "unsafe_go_rate_per_case": 0.06666666666666667,
+        "risky_recommendation_rate": 0.14833333333333334,
+        "risk_held_rate_per_case": 0.03833333333333333,
+        "mean_spread": 0.0,
+        "mean_calls": 1.0,
+        "mean_proxy_tokens": 915.0
+      },
+      "quick_four": {
+        "oracle_choice_accuracy": 0.755,
+        "mean_regret": 0.19751135914306622,
+        "unsafe_go_rate_per_case": 0.051666666666666666,
+        "risky_recommendation_rate": 0.14166666666666666,
+        "risk_held_rate_per_case": 0.045,
+        "mean_spread": 4.715757499999995,
+        "mean_calls": 4.0,
+        "mean_proxy_tokens": 3000.0
+      },
+      "seven_independent": {
+        "oracle_choice_accuracy": 0.8133333333333334,
+        "mean_regret": 0.10687731204322005,
+        "unsafe_go_rate_per_case": 0.028333333333333332,
+        "risky_recommendation_rate": 0.13166666666666665,
+        "risk_held_rate_per_case": 0.043333333333333335,
+        "mean_spread": 6.1831715,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "seven_correlated": {
+        "oracle_choice_accuracy": 0.5816666666666667,
+        "mean_regret": 0.48226339580650496,
+        "unsafe_go_rate_per_case": 0.06,
+        "risky_recommendation_rate": 0.14833333333333334,
+        "risk_held_rate_per_case": 0.03666666666666667,
+        "mean_spread": 5.659217166666665,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "debate_no_evidence": {
+        "oracle_choice_accuracy": 0.5833333333333334,
+        "mean_regret": 0.485981174171941,
+        "unsafe_go_rate_per_case": 0.056666666666666664,
+        "risky_recommendation_rate": 0.13833333333333334,
+        "risk_held_rate_per_case": 0.03166666666666667,
+        "mean_spread": 2.7071853333333356,
+        "mean_calls": 21.0,
+        "mean_proxy_tokens": 14185.0
+      },
+      "audited_specialists": {
+        "oracle_choice_accuracy": 0.8483333333333334,
+        "mean_regret": 0.04843659086293887,
+        "unsafe_go_rate_per_case": 0.028333333333333332,
+        "risky_recommendation_rate": 0.12666666666666668,
+        "risk_held_rate_per_case": 0.041666666666666664,
+        "mean_spread": 5.445469166666665,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      },
+      "audited_with_ruin_cap": {
+        "oracle_choice_accuracy": 0.8483333333333334,
+        "mean_regret": 0.04843659086293887,
+        "unsafe_go_rate_per_case": 0.0,
+        "risky_recommendation_rate": 0.12666666666666668,
+        "risk_held_rate_per_case": 0.12666666666666668,
+        "mean_spread": 5.445469166666665,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      }
+    },
+    {
+      "solo_generalist": {
+        "oracle_choice_accuracy": 0.5416666666666666,
+        "mean_regret": 0.5839950357781313,
+        "unsafe_go_rate_per_case": 0.07833333333333334,
+        "risky_recommendation_rate": 0.135,
+        "risk_held_rate_per_case": 0.028333333333333332,
+        "mean_spread": 0.0,
+        "mean_calls": 1.0,
+        "mean_proxy_tokens": 915.0
+      },
+      "quick_four": {
+        "oracle_choice_accuracy": 0.725,
+        "mean_regret": 0.1884815983210835,
+        "unsafe_go_rate_per_case": 0.045,
+        "risky_recommendation_rate": 0.14333333333333334,
+        "risk_held_rate_per_case": 0.03666666666666667,
+        "mean_spread": 4.8255846666666695,
+        "mean_calls": 4.0,
+        "mean_proxy_tokens": 3000.0
+      },
+      "seven_independent": {
+        "oracle_choice_accuracy": 0.81,
+        "mean_regret": 0.11783115448987698,
+        "unsafe_go_rate_per_case": 0.028333333333333332,
+        "risky_recommendation_rate": 0.13,
+        "risk_held_rate_per_case": 0.04666666666666667,
+        "mean_spread": 6.151264999999999,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "seven_correlated": {
+        "oracle_choice_accuracy": 0.6,
+        "mean_regret": 0.45152873617766953,
+        "unsafe_go_rate_per_case": 0.06,
+        "risky_recommendation_rate": 0.12666666666666668,
+        "risk_held_rate_per_case": 0.02,
+        "mean_spread": 5.579906499999997,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "debate_no_evidence": {
+        "oracle_choice_accuracy": 0.5916666666666667,
+        "mean_regret": 0.4695802696384233,
+        "unsafe_go_rate_per_case": 0.058333333333333334,
+        "risky_recommendation_rate": 0.12833333333333333,
+        "risk_held_rate_per_case": 0.02,
+        "mean_spread": 2.6734349999999973,
+        "mean_calls": 21.0,
+        "mean_proxy_tokens": 14185.0
+      },
+      "audited_specialists": {
+        "oracle_choice_accuracy": 0.8583333333333333,
+        "mean_regret": 0.04686157325607728,
+        "unsafe_go_rate_per_case": 0.02666666666666667,
+        "risky_recommendation_rate": 0.12333333333333334,
+        "risk_held_rate_per_case": 0.03166666666666667,
+        "mean_spread": 5.669800500000002,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      },
+      "audited_with_ruin_cap": {
+        "oracle_choice_accuracy": 0.8583333333333333,
+        "mean_regret": 0.04686157325607728,
+        "unsafe_go_rate_per_case": 0.0,
+        "risky_recommendation_rate": 0.12333333333333334,
+        "risk_held_rate_per_case": 0.12333333333333334,
+        "mean_spread": 5.669800500000002,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      }
+    },
+    {
+      "solo_generalist": {
+        "oracle_choice_accuracy": 0.55,
+        "mean_regret": 0.5971078548999328,
+        "unsafe_go_rate_per_case": 0.075,
+        "risky_recommendation_rate": 0.13,
+        "risk_held_rate_per_case": 0.03333333333333333,
+        "mean_spread": 0.0,
+        "mean_calls": 1.0,
+        "mean_proxy_tokens": 915.0
+      },
+      "quick_four": {
+        "oracle_choice_accuracy": 0.725,
+        "mean_regret": 0.21292947219316832,
+        "unsafe_go_rate_per_case": 0.045,
+        "risky_recommendation_rate": 0.13333333333333333,
+        "risk_held_rate_per_case": 0.028333333333333332,
+        "mean_spread": 4.889249166666661,
+        "mean_calls": 4.0,
+        "mean_proxy_tokens": 3000.0
+      },
+      "seven_independent": {
+        "oracle_choice_accuracy": 0.8233333333333334,
+        "mean_regret": 0.08575975145484897,
+        "unsafe_go_rate_per_case": 0.02666666666666667,
+        "risky_recommendation_rate": 0.135,
+        "risk_held_rate_per_case": 0.043333333333333335,
+        "mean_spread": 6.0397675000000035,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "seven_correlated": {
+        "oracle_choice_accuracy": 0.6283333333333333,
+        "mean_regret": 0.37221607906113274,
+        "unsafe_go_rate_per_case": 0.058333333333333334,
+        "risky_recommendation_rate": 0.13666666666666666,
+        "risk_held_rate_per_case": 0.025,
+        "mean_spread": 5.6549201666666615,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "debate_no_evidence": {
+        "oracle_choice_accuracy": 0.6266666666666667,
+        "mean_regret": 0.385667125549998,
+        "unsafe_go_rate_per_case": 0.055,
+        "risky_recommendation_rate": 0.135,
+        "risk_held_rate_per_case": 0.023333333333333334,
+        "mean_spread": 2.7085236666666663,
+        "mean_calls": 21.0,
+        "mean_proxy_tokens": 14185.0
+      },
+      "audited_specialists": {
+        "oracle_choice_accuracy": 0.8816666666666667,
+        "mean_regret": 0.041031098864490606,
+        "unsafe_go_rate_per_case": 0.035,
+        "risky_recommendation_rate": 0.14166666666666666,
+        "risk_held_rate_per_case": 0.043333333333333335,
+        "mean_spread": 5.450394333333332,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      },
+      "audited_with_ruin_cap": {
+        "oracle_choice_accuracy": 0.8816666666666667,
+        "mean_regret": 0.041031098864490606,
+        "unsafe_go_rate_per_case": 0.0,
+        "risky_recommendation_rate": 0.14166666666666666,
+        "risk_held_rate_per_case": 0.14166666666666666,
+        "mean_spread": 5.450394333333332,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      }
+    },
+    {
+      "solo_generalist": {
+        "oracle_choice_accuracy": 0.5566666666666666,
+        "mean_regret": 0.5968841140310388,
+        "unsafe_go_rate_per_case": 0.09166666666666666,
+        "risky_recommendation_rate": 0.145,
+        "risk_held_rate_per_case": 0.021666666666666667,
+        "mean_spread": 0.0,
+        "mean_calls": 1.0,
+        "mean_proxy_tokens": 915.0
+      },
+      "quick_four": {
+        "oracle_choice_accuracy": 0.73,
+        "mean_regret": 0.19674386427887253,
+        "unsafe_go_rate_per_case": 0.028333333333333332,
+        "risky_recommendation_rate": 0.12,
+        "risk_held_rate_per_case": 0.043333333333333335,
+        "mean_spread": 4.708193666666662,
+        "mean_calls": 4.0,
+        "mean_proxy_tokens": 3000.0
+      },
+      "seven_independent": {
+        "oracle_choice_accuracy": 0.83,
+        "mean_regret": 0.09823082437830012,
+        "unsafe_go_rate_per_case": 0.02666666666666667,
+        "risky_recommendation_rate": 0.11333333333333333,
+        "risk_held_rate_per_case": 0.03666666666666667,
+        "mean_spread": 6.288938666666671,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "seven_correlated": {
+        "oracle_choice_accuracy": 0.6083333333333333,
+        "mean_regret": 0.46019710958745835,
+        "unsafe_go_rate_per_case": 0.04666666666666667,
+        "risky_recommendation_rate": 0.12333333333333334,
+        "risk_held_rate_per_case": 0.041666666666666664,
+        "mean_spread": 5.6653796666666665,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "debate_no_evidence": {
+        "oracle_choice_accuracy": 0.6016666666666667,
+        "mean_regret": 0.46670517090510477,
+        "unsafe_go_rate_per_case": 0.043333333333333335,
+        "risky_recommendation_rate": 0.11333333333333333,
+        "risk_held_rate_per_case": 0.03,
+        "mean_spread": 2.715389500000001,
+        "mean_calls": 21.0,
+        "mean_proxy_tokens": 14185.0
+      },
+      "audited_specialists": {
+        "oracle_choice_accuracy": 0.865,
+        "mean_regret": 0.04524257423319512,
+        "unsafe_go_rate_per_case": 0.023333333333333334,
+        "risky_recommendation_rate": 0.11833333333333333,
+        "risk_held_rate_per_case": 0.035,
+        "mean_spread": 5.4568601666666705,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      },
+      "audited_with_ruin_cap": {
+        "oracle_choice_accuracy": 0.865,
+        "mean_regret": 0.04524257423319512,
+        "unsafe_go_rate_per_case": 0.0,
+        "risky_recommendation_rate": 0.11833333333333333,
+        "risk_held_rate_per_case": 0.11833333333333333,
+        "mean_spread": 5.4568601666666705,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      }
+    },
+    {
+      "solo_generalist": {
+        "oracle_choice_accuracy": 0.5366666666666666,
+        "mean_regret": 0.6590029068766109,
+        "unsafe_go_rate_per_case": 0.07333333333333333,
+        "risky_recommendation_rate": 0.13333333333333333,
+        "risk_held_rate_per_case": 0.028333333333333332,
+        "mean_spread": 0.0,
+        "mean_calls": 1.0,
+        "mean_proxy_tokens": 915.0
+      },
+      "quick_four": {
+        "oracle_choice_accuracy": 0.7433333333333333,
+        "mean_regret": 0.186575413316824,
+        "unsafe_go_rate_per_case": 0.05333333333333334,
+        "risky_recommendation_rate": 0.14666666666666667,
+        "risk_held_rate_per_case": 0.03166666666666667,
+        "mean_spread": 4.62232733333333,
+        "mean_calls": 4.0,
+        "mean_proxy_tokens": 3000.0
+      },
+      "seven_independent": {
+        "oracle_choice_accuracy": 0.81,
+        "mean_regret": 0.10555867774606964,
+        "unsafe_go_rate_per_case": 0.03166666666666667,
+        "risky_recommendation_rate": 0.12666666666666668,
+        "risk_held_rate_per_case": 0.03166666666666667,
+        "mean_spread": 6.047719000000001,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "seven_correlated": {
+        "oracle_choice_accuracy": 0.5916666666666667,
+        "mean_regret": 0.4519367214490386,
+        "unsafe_go_rate_per_case": 0.065,
+        "risky_recommendation_rate": 0.13833333333333334,
+        "risk_held_rate_per_case": 0.02666666666666667,
+        "mean_spread": 5.682412166666666,
+        "mean_calls": 7.0,
+        "mean_proxy_tokens": 5085.0
+      },
+      "debate_no_evidence": {
+        "oracle_choice_accuracy": 0.5833333333333334,
+        "mean_regret": 0.4578251117823019,
+        "unsafe_go_rate_per_case": 0.058333333333333334,
+        "risky_recommendation_rate": 0.135,
+        "risk_held_rate_per_case": 0.03,
+        "mean_spread": 2.7130260000000006,
+        "mean_calls": 21.0,
+        "mean_proxy_tokens": 14185.0
+      },
+      "audited_specialists": {
+        "oracle_choice_accuracy": 0.8766666666666667,
+        "mean_regret": 0.043224004767850426,
+        "unsafe_go_rate_per_case": 0.03166666666666667,
+        "risky_recommendation_rate": 0.13166666666666665,
+        "risk_held_rate_per_case": 0.03666666666666667,
+        "mean_spread": 5.448596333333332,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      },
+      "audited_with_ruin_cap": {
+        "oracle_choice_accuracy": 0.8766666666666667,
+        "mean_regret": 0.043224004767850426,
+        "unsafe_go_rate_per_case": 0.0,
+        "risky_recommendation_rate": 0.13166666666666665,
+        "risk_held_rate_per_case": 0.13166666666666665,
+        "mean_spread": 5.448596333333332,
+        "mean_calls": 14.0,
+        "mean_proxy_tokens": 9635.0
+      }
+    }
+  ]
+}

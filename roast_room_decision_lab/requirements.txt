@@ -1,0 +1,2 @@
+# The core benchmark uses only the Python standard library (Python >=3.10).
+# Optional charts: matplotlib>=3.7
