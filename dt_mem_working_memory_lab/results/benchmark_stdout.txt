@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "synthetic": true,
+    "paper_reproduction": false,
+    "seeds": 5,
+    "heldout_tasks_per_seed": 100,
+    "queries_per_task": 64,
+    "baseline_training_steps": 180,
+    "torch_version": "2.10.0+cpu",
+    "elapsed_seconds": 4.658
+  },
+  "configurations": {
+    "baseline_no_memory": {
+      "mean_accuracy": 0.24818749999999998,
+      "sample_sd": 0.010113250319815574,
+      "per_seed_accuracy": [
+        0.2428125,
+        0.2640625,
+        0.23953125,
+        0.25234375,
+        0.2421875
+      ],
+      "mean_seen_accuracy": null,
+      "mean_unseen_accuracy": 0.24818749999999998
+    },
+    "memory_8_slots_support_16": {
+      "mean_accuracy": 0.9174375,
+      "sample_sd": 0.006497633283069319,
+      "per_seed_accuracy": [
+        0.90859375,
+        0.92265625,
+        0.9125,
+        0.9228125,
+        0.920625
+      ],
+      "mean_seen_accuracy": 1.0,
+      "mean_unseen_accuracy": 0.22618054823487035
+    },
+    "memory_8_slots_support_4": {
+      "mean_accuracy": 0.55515625,
+      "sample_sd": 0.012695252403703903,
+      "per_seed_accuracy": [
+        0.54484375,
+        0.5653125,
+        0.53828125,
+        0.5653125,
+        0.56203125
+      ],
+      "mean_seen_accuracy": 1.0,
+      "mean_unseen_accuracy": 0.2437105531140727
+    },
+    "memory_8_slots_support_32": {
+      "mean_accuracy": 0.9911875,
+      "sample_sd": 0.005005612084825412,
+      "per_seed_accuracy": [
+        0.985625,
+        0.9959375,
+        0.99359375,
+        0.99484375,
+        0.9859375
+      ],
+      "mean_seen_accuracy": 1.0,
+      "mean_unseen_accuracy": 0.31136161049485034
+    },
+    "memory_4_slots_support_16": {
+      "mean_accuracy": 0.5731875,
+      "sample_sd": 0.013949896392984412,
+      "per_seed_accuracy": [
+        0.56453125,
+        0.573125,
+        0.56609375,
+        0.59734375,
+        0.56484375
+      ],
+      "mean_seen_accuracy": 0.6236538751903855,
+      "mean_unseen_accuracy": 0.1528162542452401
+    },
+    "memory_2_slots_support_16": {
+      "mean_accuracy": 0.37871875,
+      "sample_sd": 0.011568516171326823,
+      "per_seed_accuracy": [
+        0.37546875,
+        0.365,
+        0.37171875,
+        0.3903125,
+        0.39109375
+      ],
+      "mean_seen_accuracy": 0.4123318568018607,
+      "mean_unseen_accuracy": 0.09734458536917943
+    },
+    "memory_8_slots_corrupt_25pct": {
+      "mean_accuracy": 0.73553125,
+      "sample_sd": 0.008476904514989572,
+      "per_seed_accuracy": [
+        0.72125,
+        0.73421875,
+        0.7403125,
+        0.74046875,
+        0.74140625
+      ],
+      "mean_seen_accuracy": 0.796315715925282,
+      "mean_unseen_accuracy": 0.22618054823487035
+    },
+    "memory_8_slots_shuffled_labels": {
+      "mean_accuracy": 0.27071875,
+      "sample_sd": 0.022669877367196993,
+      "per_seed_accuracy": [
+        0.26953125,
+        0.2359375,
+        0.26828125,
+        0.29703125,
+        0.2828125
+      ],
+      "mean_seen_accuracy": 0.2759169159919842,
+      "mean_unseen_accuracy": 0.22618054823487035
+    }
+  }
+}
+
+Saved to results/benchmark.json

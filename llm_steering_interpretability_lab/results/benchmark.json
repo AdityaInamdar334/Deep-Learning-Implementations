@@ -1,0 +1,620 @@
+{
+  "metadata": {
+    "educational": true,
+    "pretrained_llm": false,
+    "target_model": "Synthetic supervised residual SwiGLU dual-head classifier",
+    "seeds": 5,
+    "training_steps": 160,
+    "eval_size": 512,
+    "note": "These are not Qwen or Neuron Explorer measurements."
+  },
+  "summary": {
+    "baseline": {
+      "mood_accuracy": {
+        "mean": 0.910546875,
+        "std": 0.05460722344652823
+      },
+      "topic_accuracy": {
+        "mean": 0.81484375,
+        "std": 0.13581172342161776
+      },
+      "sad_probability": {
+        "mean": 0.4682733237743378,
+        "std": 0.06254253716745635
+      },
+      "mood_kl": {
+        "mean": 0.0,
+        "std": 0.0
+      },
+      "topic_kl": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "mood_0.5": {
+      "mood_accuracy": {
+        "mean": 0.928515625,
+        "std": 0.04013659994660033
+      },
+      "topic_accuracy": {
+        "mean": 0.8078125,
+        "std": 0.1419856052893215
+      },
+      "sad_probability": {
+        "mean": 0.5011699795722961,
+        "std": 0.05777551650472433
+      },
+      "mood_kl": {
+        "mean": 0.026869132556021212,
+        "std": 0.014921057250498457
+      },
+      "topic_kl": {
+        "mean": 0.002780294741387479,
+        "std": 0.0028979693558089476
+      }
+    },
+    "mood_1": {
+      "mood_accuracy": {
+        "mean": 0.918359375,
+        "std": 0.05974455817432507
+      },
+      "topic_accuracy": {
+        "mean": 0.80390625,
+        "std": 0.14607756009891842
+      },
+      "sad_probability": {
+        "mean": 0.5365421295166015,
+        "std": 0.056410486308478225
+      },
+      "mood_kl": {
+        "mean": 0.10999351814389229,
+        "std": 0.0651543152508208
+      },
+      "topic_kl": {
+        "mean": 0.010578517790418119,
+        "std": 0.010881339841605902
+      }
+    },
+    "mood_2": {
+      "mood_accuracy": {
+        "mean": 0.900390625,
+        "std": 0.09019335850795951
+      },
+      "topic_accuracy": {
+        "mean": 0.801171875,
+        "std": 0.14765418318659312
+      },
+      "sad_probability": {
+        "mean": 0.606663453578949,
+        "std": 0.0837207946893522
+      },
+      "mood_kl": {
+        "mean": 0.4252237617969513,
+        "std": 0.2939999066581236
+      },
+      "topic_kl": {
+        "mean": 0.037754433276131746,
+        "std": 0.039096359284059586
+      }
+    },
+    "mood_4": {
+      "mood_accuracy": {
+        "mean": 0.78671875,
+        "std": 0.1773443953044427
+      },
+      "topic_accuracy": {
+        "mean": 0.8046875,
+        "std": 0.13761564073605628
+      },
+      "sad_probability": {
+        "mean": 0.7249955177307129,
+        "std": 0.1630770213548503
+      },
+      "mood_kl": {
+        "mean": 1.3779530584812165,
+        "std": 1.1584569515698373
+      },
+      "topic_kl": {
+        "mean": 0.10420425317715853,
+        "std": 0.11324395286412
+      }
+    },
+    "random_2": {
+      "mood_accuracy": {
+        "mean": 0.926953125,
+        "std": 0.027642066896393393
+      },
+      "topic_accuracy": {
+        "mean": 0.8328125,
+        "std": 0.10981531070766186
+      },
+      "sad_probability": {
+        "mean": 0.48454113602638244,
+        "std": 0.05506693657447873
+      },
+      "mood_kl": {
+        "mean": 0.033149407245218754,
+        "std": 0.035508738222634215
+      },
+      "topic_kl": {
+        "mean": 0.02847023061476648,
+        "std": 0.030039938782105348
+      }
+    },
+    "topic_2": {
+      "mood_accuracy": {
+        "mean": 0.916796875,
+        "std": 0.04049144211763302
+      },
+      "topic_accuracy": {
+        "mean": 0.807421875,
+        "std": 0.10477564502791488
+      },
+      "sad_probability": {
+        "mean": 0.4696479618549347,
+        "std": 0.06018613007516839
+      },
+      "mood_kl": {
+        "mean": 0.021712083416059614,
+        "std": 0.019427409527452415
+      },
+      "topic_kl": {
+        "mean": 0.3614290066063404,
+        "std": 0.2311733288693004
+      }
+    },
+    "negative_mood_2": {
+      "mood_accuracy": {
+        "mean": 0.8171875,
+        "std": 0.09380694884891924
+      },
+      "topic_accuracy": {
+        "mean": 0.829296875,
+        "std": 0.13074709502105702
+      },
+      "sad_probability": {
+        "mean": 0.3485565364360809,
+        "std": 0.09310535563926928
+      },
+      "mood_kl": {
+        "mean": 0.3489291787147522,
+        "std": 0.16753050958387083
+      },
+      "topic_kl": {
+        "mean": 0.03569288207218051,
+        "std": 0.03290561297619605
+      }
+    },
+    "top_neuron_5": {
+      "mood_accuracy": {
+        "mean": 0.887890625,
+        "std": 0.12295848759988699
+      },
+      "topic_accuracy": {
+        "mean": 0.775390625,
+        "std": 0.13514016116306687
+      },
+      "sad_probability": {
+        "mean": 0.6175332903862,
+        "std": 0.12681450647835932
+      },
+      "mood_kl": {
+        "mean": 0.464748677611351,
+        "std": 0.5453461356545846
+      },
+      "topic_kl": {
+        "mean": 0.1551806055009365,
+        "std": 0.12453451287978555
+      }
+    },
+    "projection_edit": {
+      "mood_accuracy": {
+        "mean": 0.91640625,
+        "std": 0.059903970801387096
+      },
+      "topic_accuracy": {
+        "mean": 0.804296875,
+        "std": 0.14267441098118513
+      },
+      "sad_probability": {
+        "mean": 0.4563206613063812,
+        "std": 0.058911652225481136
+      },
+      "mood_kl": {
+        "mean": 0.06604919508099556,
+        "std": 0.03626592843173969
+      },
+      "topic_kl": {
+        "mean": 0.03240652878303081,
+        "std": 0.055790434101507795
+      }
+    }
+  },
+  "runs": [
+    {
+      "seed": 0,
+      "layer": 2,
+      "selected_neuron": 9,
+      "conditions": {
+        "baseline": {
+          "mood_accuracy": 0.923828125,
+          "topic_accuracy": 0.896484375,
+          "sad_probability": 0.45973825454711914,
+          "mood_kl": 0.0,
+          "topic_kl": 0.0
+        },
+        "mood_0.5": {
+          "mood_accuracy": 0.94140625,
+          "topic_accuracy": 0.89453125,
+          "sad_probability": 0.49656376242637634,
+          "mood_kl": 0.0370117723941803,
+          "topic_kl": 0.0004697605618275702
+        },
+        "mood_1": {
+          "mood_accuracy": 0.955078125,
+          "topic_accuracy": 0.892578125,
+          "sad_probability": 0.5342684984207153,
+          "mood_kl": 0.1447753608226776,
+          "topic_kl": 0.0019664515275508165
+        },
+        "mood_2": {
+          "mood_accuracy": 0.935546875,
+          "topic_accuracy": 0.896484375,
+          "sad_probability": 0.5900255441665649,
+          "mood_kl": 0.4883357286453247,
+          "topic_kl": 0.007884714752435684
+        },
+        "mood_4": {
+          "mood_accuracy": 0.81640625,
+          "topic_accuracy": 0.896484375,
+          "sad_probability": 0.7129849195480347,
+          "mood_kl": 1.4089593887329102,
+          "topic_kl": 0.019917195662856102
+        },
+        "random_2": {
+          "mood_accuracy": 0.921875,
+          "topic_accuracy": 0.88671875,
+          "sad_probability": 0.4835361838340759,
+          "mood_kl": 0.022648129612207413,
+          "topic_kl": 0.022125767543911934
+        },
+        "topic_2": {
+          "mood_accuracy": 0.92578125,
+          "topic_accuracy": 0.7734375,
+          "sad_probability": 0.46222060918807983,
+          "mood_kl": 0.01902930997312069,
+          "topic_kl": 0.5232107043266296
+        },
+        "negative_mood_2": {
+          "mood_accuracy": 0.796875,
+          "topic_accuracy": 0.92578125,
+          "sad_probability": 0.32268330454826355,
+          "mood_kl": 0.4994852542877197,
+          "topic_kl": 0.013414282351732254
+        },
+        "top_neuron_5": {
+          "mood_accuracy": 0.97265625,
+          "topic_accuracy": 0.80078125,
+          "sad_probability": 0.5350379943847656,
+          "mood_kl": 0.19335675239562988,
+          "topic_kl": 0.3548066020011902
+        },
+        "projection_edit": {
+          "mood_accuracy": 0.951171875,
+          "topic_accuracy": 0.90234375,
+          "sad_probability": 0.49005281925201416,
+          "mood_kl": 0.05716214329004288,
+          "topic_kl": 0.00791250355541706
+        }
+      }
+    },
+    {
+      "seed": 1,
+      "layer": 2,
+      "selected_neuron": 14,
+      "conditions": {
+        "baseline": {
+          "mood_accuracy": 0.966796875,
+          "topic_accuracy": 0.9921875,
+          "sad_probability": 0.4759228825569153,
+          "mood_kl": 0.0,
+          "topic_kl": 0.0
+        },
+        "mood_0.5": {
+          "mood_accuracy": 0.966796875,
+          "topic_accuracy": 0.990234375,
+          "sad_probability": 0.49272143840789795,
+          "mood_kl": 0.009225216694176197,
+          "topic_kl": 0.00010686465247999877
+        },
+        "mood_1": {
+          "mood_accuracy": 0.962890625,
+          "topic_accuracy": 0.990234375,
+          "sad_probability": 0.5072306394577026,
+          "mood_kl": 0.035423822700977325,
+          "topic_kl": 0.00029572536004707217
+        },
+        "mood_2": {
+          "mood_accuracy": 0.984375,
+          "topic_accuracy": 0.998046875,
+          "sad_probability": 0.5302240252494812,
+          "mood_kl": 0.12402606010437012,
+          "topic_kl": 0.0006157218012958765
+        },
+        "mood_4": {
+          "mood_accuracy": 0.966796875,
+          "topic_accuracy": 1.0,
+          "sad_probability": 0.5598381757736206,
+          "mood_kl": 0.367552250623703,
+          "topic_kl": 0.0018361940747126937
+        },
+        "random_2": {
+          "mood_accuracy": 0.9609375,
+          "topic_accuracy": 0.986328125,
+          "sad_probability": 0.48505082726478577,
+          "mood_kl": 0.00790325552225113,
+          "topic_kl": 0.004325535148382187
+        },
+        "topic_2": {
+          "mood_accuracy": 0.97265625,
+          "topic_accuracy": 0.984375,
+          "sad_probability": 0.4806130826473236,
+          "mood_kl": 0.0029544804710894823,
+          "topic_kl": 0.03666189685463905
+        },
+        "negative_mood_2": {
+          "mood_accuracy": 0.87890625,
+          "topic_accuracy": 0.994140625,
+          "sad_probability": 0.38791272044181824,
+          "mood_kl": 0.14574271440505981,
+          "topic_kl": 0.0025308742187917233
+        },
+        "top_neuron_5": {
+          "mood_accuracy": 0.974609375,
+          "topic_accuracy": 0.994140625,
+          "sad_probability": 0.5214817523956299,
+          "mood_kl": 0.08031316101551056,
+          "topic_kl": 0.014232214540243149
+        },
+        "projection_edit": {
+          "mood_accuracy": 0.95703125,
+          "topic_accuracy": 0.9921875,
+          "sad_probability": 0.4563586711883545,
+          "mood_kl": 0.03819222375750542,
+          "topic_kl": 0.00022347888443619013
+        }
+      }
+    },
+    {
+      "seed": 2,
+      "layer": 2,
+      "selected_neuron": 52,
+      "conditions": {
+        "baseline": {
+          "mood_accuracy": 0.91015625,
+          "topic_accuracy": 0.689453125,
+          "sad_probability": 0.5639073848724365,
+          "mood_kl": 0.0,
+          "topic_kl": 0.0
+        },
+        "mood_0.5": {
+          "mood_accuracy": 0.904296875,
+          "topic_accuracy": 0.685546875,
+          "sad_probability": 0.5977911949157715,
+          "mood_kl": 0.025631725788116455,
+          "topic_kl": 0.0015345109859481454
+        },
+        "mood_1": {
+          "mood_accuracy": 0.86328125,
+          "topic_accuracy": 0.685546875,
+          "sad_probability": 0.6339144110679626,
+          "mood_kl": 0.11035698652267456,
+          "topic_kl": 0.006088021211326122
+        },
+        "mood_2": {
+          "mood_accuracy": 0.798828125,
+          "topic_accuracy": 0.677734375,
+          "sad_probability": 0.6996047496795654,
+          "mood_kl": 0.4190511703491211,
+          "topic_kl": 0.024153657257556915
+        },
+        "mood_4": {
+          "mood_accuracy": 0.716796875,
+          "topic_accuracy": 0.6875,
+          "sad_probability": 0.7828052043914795,
+          "mood_kl": 1.065522313117981,
+          "topic_kl": 0.08924435079097748
+        },
+        "random_2": {
+          "mood_accuracy": 0.935546875,
+          "topic_accuracy": 0.70703125,
+          "sad_probability": 0.57354736328125,
+          "mood_kl": 0.04296007379889488,
+          "topic_kl": 0.03538250923156738
+        },
+        "topic_2": {
+          "mood_accuracy": 0.896484375,
+          "topic_accuracy": 0.765625,
+          "sad_probability": 0.5628204941749573,
+          "mood_kl": 0.05352405831217766,
+          "topic_kl": 0.3413850665092468
+        },
+        "negative_mood_2": {
+          "mood_accuracy": 0.921875,
+          "topic_accuracy": 0.689453125,
+          "sad_probability": 0.4737723767757416,
+          "mood_kl": 0.24699175357818604,
+          "topic_kl": 0.0361926332116127
+        },
+        "top_neuron_5": {
+          "mood_accuracy": 0.796875,
+          "topic_accuracy": 0.685546875,
+          "sad_probability": 0.7065210938453674,
+          "mood_kl": 0.4852178990840912,
+          "topic_kl": 0.14282135665416718
+        },
+        "projection_edit": {
+          "mood_accuracy": 0.953125,
+          "topic_accuracy": 0.6875,
+          "sad_probability": 0.5342710018157959,
+          "mood_kl": 0.051452282816171646,
+          "topic_kl": 0.00995768141001463
+        }
+      }
+    },
+    {
+      "seed": 3,
+      "layer": 2,
+      "selected_neuron": 20,
+      "conditions": {
+        "baseline": {
+          "mood_accuracy": 0.8203125,
+          "topic_accuracy": 0.673828125,
+          "sad_probability": 0.39023640751838684,
+          "mood_kl": 0.0,
+          "topic_kl": 0.0
+        },
+        "mood_0.5": {
+          "mood_accuracy": 0.87109375,
+          "topic_accuracy": 0.650390625,
+          "sad_probability": 0.44468793272972107,
+          "mood_kl": 0.04601442441344261,
+          "topic_kl": 0.006169259548187256
+        },
+        "mood_1": {
+          "mood_accuracy": 0.84375,
+          "topic_accuracy": 0.634765625,
+          "sad_probability": 0.5141104459762573,
+          "mood_kl": 0.1983812153339386,
+          "topic_kl": 0.022038020193576813
+        },
+        "mood_2": {
+          "mood_accuracy": 0.80859375,
+          "topic_accuracy": 0.646484375,
+          "sad_probability": 0.6882139444351196,
+          "mood_kl": 0.8798972368240356,
+          "topic_kl": 0.06376368552446365
+        },
+        "mood_4": {
+          "mood_accuracy": 0.51953125,
+          "topic_accuracy": 0.697265625,
+          "sad_probability": 0.9697288274765015,
+          "mood_kl": 3.330425977706909,
+          "topic_kl": 0.12387873232364655
+        },
+        "random_2": {
+          "mood_accuracy": 0.884765625,
+          "topic_accuracy": 0.755859375,
+          "sad_probability": 0.42826491594314575,
+          "mood_kl": 0.09006793051958084,
+          "topic_kl": 0.07673235237598419
+        },
+        "topic_2": {
+          "mood_accuracy": 0.86328125,
+          "topic_accuracy": 0.8046875,
+          "sad_probability": 0.39942365884780884,
+          "mood_kl": 0.023040316998958588,
+          "topic_kl": 0.6331738233566284
+        },
+        "negative_mood_2": {
+          "mood_accuracy": 0.67578125,
+          "topic_accuracy": 0.71875,
+          "sad_probability": 0.2193806767463684,
+          "mood_kl": 0.5401805639266968,
+          "topic_kl": 0.0879177451133728
+        },
+        "top_neuron_5": {
+          "mood_accuracy": 0.716796875,
+          "topic_accuracy": 0.650390625,
+          "sad_probability": 0.7971591353416443,
+          "mood_kl": 1.4012598991394043,
+          "topic_kl": 0.10864466428756714
+        },
+        "projection_edit": {
+          "mood_accuracy": 0.81640625,
+          "topic_accuracy": 0.654296875,
+          "sad_probability": 0.3858405649662018,
+          "mood_kl": 0.053806181997060776,
+          "topic_kl": 0.012052140198647976
+        }
+      }
+    },
+    {
+      "seed": 4,
+      "layer": 2,
+      "selected_neuron": 31,
+      "conditions": {
+        "baseline": {
+          "mood_accuracy": 0.931640625,
+          "topic_accuracy": 0.822265625,
+          "sad_probability": 0.45156168937683105,
+          "mood_kl": 0.0,
+          "topic_kl": 0.0
+        },
+        "mood_0.5": {
+          "mood_accuracy": 0.958984375,
+          "topic_accuracy": 0.818359375,
+          "sad_probability": 0.47408556938171387,
+          "mood_kl": 0.016462523490190506,
+          "topic_kl": 0.005621077958494425
+        },
+        "mood_1": {
+          "mood_accuracy": 0.966796875,
+          "topic_accuracy": 0.81640625,
+          "sad_probability": 0.4931866526603699,
+          "mood_kl": 0.061030205339193344,
+          "topic_kl": 0.022504370659589767
+        },
+        "mood_2": {
+          "mood_accuracy": 0.974609375,
+          "topic_accuracy": 0.787109375,
+          "sad_probability": 0.5252490043640137,
+          "mood_kl": 0.2148086130619049,
+          "topic_kl": 0.09235438704490662
+        },
+        "mood_4": {
+          "mood_accuracy": 0.9140625,
+          "topic_accuracy": 0.7421875,
+          "sad_probability": 0.5996204614639282,
+          "mood_kl": 0.7173053622245789,
+          "topic_kl": 0.28614479303359985
+        },
+        "random_2": {
+          "mood_accuracy": 0.931640625,
+          "topic_accuracy": 0.828125,
+          "sad_probability": 0.4523063898086548,
+          "mood_kl": 0.002167646773159504,
+          "topic_kl": 0.003784988773986697
+        },
+        "topic_2": {
+          "mood_accuracy": 0.92578125,
+          "topic_accuracy": 0.708984375,
+          "sad_probability": 0.4431619644165039,
+          "mood_kl": 0.010012251324951649,
+          "topic_kl": 0.2727135419845581
+        },
+        "negative_mood_2": {
+          "mood_accuracy": 0.8125,
+          "topic_accuracy": 0.818359375,
+          "sad_probability": 0.3390336036682129,
+          "mood_kl": 0.31224560737609863,
+          "topic_kl": 0.038408875465393066
+        },
+        "top_neuron_5": {
+          "mood_accuracy": 0.978515625,
+          "topic_accuracy": 0.74609375,
+          "sad_probability": 0.5274664759635925,
+          "mood_kl": 0.16359567642211914,
+          "topic_kl": 0.1553981900215149
+        },
+        "projection_edit": {
+          "mood_accuracy": 0.904296875,
+          "topic_accuracy": 0.78515625,
+          "sad_probability": 0.4150802493095398,
+          "mood_kl": 0.12963314354419708,
+          "topic_kl": 0.13188683986663818
+        }
+      }
+    }
+  ]
+}

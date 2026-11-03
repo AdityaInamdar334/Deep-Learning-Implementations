@@ -1,0 +1,22 @@
+test_absent_query_falls_back (test_lab.MemoryTests.test_absent_query_falls_back) ... ok
+test_address_weights_normalized (test_lab.MemoryTests.test_address_weights_normalized) ... ok
+test_baseline_output_valid (test_lab.MemoryTests.test_baseline_output_valid) ... ok
+test_benchmark_deterministic (test_lab.MemoryTests.test_benchmark_deterministic) ... ok
+test_benchmark_summary (test_lab.MemoryTests.test_benchmark_summary) ... ok
+test_capacity_aliases_some_contexts (test_lab.MemoryTests.test_capacity_aliases_some_contexts) ... ok
+test_corruption_changes_all_at_rate_one (test_lab.MemoryTests.test_corruption_changes_all_at_rate_one) ... ok
+test_lora_can_fit_low_rank_delta (test_lab.MemoryTests.test_lora_can_fit_low_rank_delta) ... ok
+test_lora_initially_preserves_base (test_lab.MemoryTests.test_lora_initially_preserves_base) ... ok
+test_memory_exact_known_queries (test_lab.MemoryTests.test_memory_exact_known_queries) ... ok
+test_memory_write_is_independent_of_batching (test_lab.MemoryTests.test_memory_write_is_independent_of_batching) ... ok
+test_reset_clears_all (test_lab.MemoryTests.test_reset_clears_all) ... ok
+test_slot_shapes (test_lab.MemoryTests.test_slot_shapes) ... ok
+test_task_uses_balanced_labels (test_lab.MemoryTests.test_task_uses_balanced_labels) ... ok
+test_tiny_dt_no_current_action_leakage (test_lab.MemoryTests.test_tiny_dt_no_current_action_leakage) ... ok
+test_tiny_dt_shapes (test_lab.MemoryTests.test_tiny_dt_shapes) ... ok
+test_tiny_dt_training_smoke (test_lab.MemoryTests.test_tiny_dt_training_smoke) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.965s
+
+OK
