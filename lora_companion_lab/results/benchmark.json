@@ -1,0 +1,498 @@
+{
+  "timestamp": "2026-11-04 13:03:33",
+  "runtime_seconds": 0.629,
+  "parameter_scaling": {
+    "GPT-2 Small": {
+      "total_model_params": 124439808,
+      "layers": 12,
+      "d_model": 768,
+      "rank_scaling": [
+        {
+          "rank": 1,
+          "params_per_layer": 3072,
+          "total_adapter_params": 36864,
+          "trainable_percent": 0.0296,
+          "param_reduction_factor": 3375.6,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 0.28,
+          "memory_reduction_factor": 3375.6
+        },
+        {
+          "rank": 2,
+          "params_per_layer": 6144,
+          "total_adapter_params": 73728,
+          "trainable_percent": 0.0592,
+          "param_reduction_factor": 1687.8,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 0.56,
+          "memory_reduction_factor": 1687.8
+        },
+        {
+          "rank": 4,
+          "params_per_layer": 12288,
+          "total_adapter_params": 147456,
+          "trainable_percent": 0.1185,
+          "param_reduction_factor": 843.9,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 1.12,
+          "memory_reduction_factor": 843.9
+        },
+        {
+          "rank": 8,
+          "params_per_layer": 24576,
+          "total_adapter_params": 294912,
+          "trainable_percent": 0.237,
+          "param_reduction_factor": 422.0,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 2.25,
+          "memory_reduction_factor": 422.0
+        },
+        {
+          "rank": 16,
+          "params_per_layer": 49152,
+          "total_adapter_params": 589824,
+          "trainable_percent": 0.474,
+          "param_reduction_factor": 211.0,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 4.5,
+          "memory_reduction_factor": 211.0
+        },
+        {
+          "rank": 32,
+          "params_per_layer": 98304,
+          "total_adapter_params": 1179648,
+          "trainable_percent": 0.948,
+          "param_reduction_factor": 105.5,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 9.0,
+          "memory_reduction_factor": 105.5
+        },
+        {
+          "rank": 64,
+          "params_per_layer": 196608,
+          "total_adapter_params": 2359296,
+          "trainable_percent": 1.8959,
+          "param_reduction_factor": 52.7,
+          "full_adamw_mem_mb": 949.4,
+          "lora_adamw_mem_mb": 18.0,
+          "memory_reduction_factor": 52.7
+        }
+      ]
+    },
+    "GPT-2 Medium": {
+      "total_model_params": 354823168,
+      "layers": 24,
+      "d_model": 1024,
+      "rank_scaling": [
+        {
+          "rank": 1,
+          "params_per_layer": 4096,
+          "total_adapter_params": 98304,
+          "trainable_percent": 0.0277,
+          "param_reduction_factor": 3609.4,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 0.75,
+          "memory_reduction_factor": 3609.4
+        },
+        {
+          "rank": 2,
+          "params_per_layer": 8192,
+          "total_adapter_params": 196608,
+          "trainable_percent": 0.0554,
+          "param_reduction_factor": 1804.7,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 1.5,
+          "memory_reduction_factor": 1804.7
+        },
+        {
+          "rank": 4,
+          "params_per_layer": 16384,
+          "total_adapter_params": 393216,
+          "trainable_percent": 0.1108,
+          "param_reduction_factor": 902.4,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 3.0,
+          "memory_reduction_factor": 902.4
+        },
+        {
+          "rank": 8,
+          "params_per_layer": 32768,
+          "total_adapter_params": 786432,
+          "trainable_percent": 0.2216,
+          "param_reduction_factor": 451.2,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 6.0,
+          "memory_reduction_factor": 451.2
+        },
+        {
+          "rank": 16,
+          "params_per_layer": 65536,
+          "total_adapter_params": 1572864,
+          "trainable_percent": 0.4433,
+          "param_reduction_factor": 225.6,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 12.0,
+          "memory_reduction_factor": 225.6
+        },
+        {
+          "rank": 32,
+          "params_per_layer": 131072,
+          "total_adapter_params": 3145728,
+          "trainable_percent": 0.8866,
+          "param_reduction_factor": 112.8,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 24.0,
+          "memory_reduction_factor": 112.8
+        },
+        {
+          "rank": 64,
+          "params_per_layer": 262144,
+          "total_adapter_params": 6291456,
+          "trainable_percent": 1.7731,
+          "param_reduction_factor": 56.4,
+          "full_adamw_mem_mb": 2707.09,
+          "lora_adamw_mem_mb": 48.0,
+          "memory_reduction_factor": 56.4
+        }
+      ]
+    },
+    "GPT-2 Large": {
+      "total_model_params": 774030080,
+      "layers": 36,
+      "d_model": 1280,
+      "rank_scaling": [
+        {
+          "rank": 1,
+          "params_per_layer": 5120,
+          "total_adapter_params": 184320,
+          "trainable_percent": 0.0238,
+          "param_reduction_factor": 4199.4,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 1.41,
+          "memory_reduction_factor": 4199.4
+        },
+        {
+          "rank": 2,
+          "params_per_layer": 10240,
+          "total_adapter_params": 368640,
+          "trainable_percent": 0.0476,
+          "param_reduction_factor": 2099.7,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 2.81,
+          "memory_reduction_factor": 2099.7
+        },
+        {
+          "rank": 4,
+          "params_per_layer": 20480,
+          "total_adapter_params": 737280,
+          "trainable_percent": 0.0953,
+          "param_reduction_factor": 1049.8,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 5.62,
+          "memory_reduction_factor": 1049.8
+        },
+        {
+          "rank": 8,
+          "params_per_layer": 40960,
+          "total_adapter_params": 1474560,
+          "trainable_percent": 0.1905,
+          "param_reduction_factor": 524.9,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 11.25,
+          "memory_reduction_factor": 524.9
+        },
+        {
+          "rank": 16,
+          "params_per_layer": 81920,
+          "total_adapter_params": 2949120,
+          "trainable_percent": 0.381,
+          "param_reduction_factor": 262.5,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 22.5,
+          "memory_reduction_factor": 262.5
+        },
+        {
+          "rank": 32,
+          "params_per_layer": 163840,
+          "total_adapter_params": 5898240,
+          "trainable_percent": 0.762,
+          "param_reduction_factor": 131.2,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 45.0,
+          "memory_reduction_factor": 131.2
+        },
+        {
+          "rank": 64,
+          "params_per_layer": 327680,
+          "total_adapter_params": 11796480,
+          "trainable_percent": 1.524,
+          "param_reduction_factor": 65.6,
+          "full_adamw_mem_mb": 5905.38,
+          "lora_adamw_mem_mb": 90.0,
+          "memory_reduction_factor": 65.6
+        }
+      ]
+    },
+    "GPT-2 XL": {
+      "total_model_params": 1557611200,
+      "layers": 48,
+      "d_model": 1600,
+      "rank_scaling": [
+        {
+          "rank": 1,
+          "params_per_layer": 6400,
+          "total_adapter_params": 307200,
+          "trainable_percent": 0.0197,
+          "param_reduction_factor": 5070.3,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 2.34,
+          "memory_reduction_factor": 5070.3
+        },
+        {
+          "rank": 2,
+          "params_per_layer": 12800,
+          "total_adapter_params": 614400,
+          "trainable_percent": 0.0394,
+          "param_reduction_factor": 2535.2,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 4.69,
+          "memory_reduction_factor": 2535.2
+        },
+        {
+          "rank": 4,
+          "params_per_layer": 25600,
+          "total_adapter_params": 1228800,
+          "trainable_percent": 0.0789,
+          "param_reduction_factor": 1267.6,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 9.38,
+          "memory_reduction_factor": 1267.6
+        },
+        {
+          "rank": 8,
+          "params_per_layer": 51200,
+          "total_adapter_params": 2457600,
+          "trainable_percent": 0.1578,
+          "param_reduction_factor": 633.8,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 18.75,
+          "memory_reduction_factor": 633.8
+        },
+        {
+          "rank": 16,
+          "params_per_layer": 102400,
+          "total_adapter_params": 4915200,
+          "trainable_percent": 0.3156,
+          "param_reduction_factor": 316.9,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 37.5,
+          "memory_reduction_factor": 316.9
+        },
+        {
+          "rank": 32,
+          "params_per_layer": 204800,
+          "total_adapter_params": 9830400,
+          "trainable_percent": 0.6311,
+          "param_reduction_factor": 158.4,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 75.0,
+          "memory_reduction_factor": 158.4
+        },
+        {
+          "rank": 64,
+          "params_per_layer": 409600,
+          "total_adapter_params": 19660800,
+          "trainable_percent": 1.2622,
+          "param_reduction_factor": 79.2,
+          "full_adamw_mem_mb": 11883.63,
+          "lora_adamw_mem_mb": 150.0,
+          "memory_reduction_factor": 79.2
+        }
+      ]
+    }
+  },
+  "gradient_audit": {
+    "init_output_max_discrepancy": 0.0,
+    "base_weight_frozen": true,
+    "b_grad_norm_step0": 0.007394,
+    "a_grad_nonzero_elements_step0": 0,
+    "deadlock_control": {
+      "a_grad_when_both_zero": 0.0,
+      "b_grad_when_both_zero": 0.0,
+      "is_deadlocked": true
+    }
+  },
+  "parity_audit": {
+    "standard_linear_discrepancies": [
+      {
+        "batch_size": 1,
+        "seq_len": 16,
+        "max_abs_error": 4.5299530029296875e-06,
+        "mean_abs_error": 2.888670849188202e-07
+      },
+      {
+        "batch_size": 1,
+        "seq_len": 64,
+        "max_abs_error": 4.5299530029296875e-06,
+        "mean_abs_error": 2.8859594181085413e-07
+      },
+      {
+        "batch_size": 1,
+        "seq_len": 256,
+        "max_abs_error": 4.76837158203125e-06,
+        "mean_abs_error": 2.8799806273127615e-07
+      },
+      {
+        "batch_size": 4,
+        "seq_len": 16,
+        "max_abs_error": 3.933906555175781e-06,
+        "mean_abs_error": 2.856849334875733e-07
+      },
+      {
+        "batch_size": 4,
+        "seq_len": 64,
+        "max_abs_error": 4.5299530029296875e-06,
+        "mean_abs_error": 2.8728695156132744e-07
+      },
+      {
+        "batch_size": 4,
+        "seq_len": 256,
+        "max_abs_error": 4.5299530029296875e-06,
+        "mean_abs_error": 2.881169223201141e-07
+      },
+      {
+        "batch_size": 16,
+        "seq_len": 16,
+        "max_abs_error": 5.364418029785156e-06,
+        "mean_abs_error": 2.876327869216766e-07
+      },
+      {
+        "batch_size": 16,
+        "seq_len": 64,
+        "max_abs_error": 5.4836273193359375e-06,
+        "mean_abs_error": 2.877321776395547e-07
+      },
+      {
+        "batch_size": 16,
+        "seq_len": 256,
+        "max_abs_error": 5.602836608886719e-06,
+        "mean_abs_error": 2.8749363423230534e-07
+      }
+    ],
+    "max_overall_parity_error": 5.602836608886719e-06,
+    "transposed_gpt2_parity_error": 0.000244140625,
+    "zero_latency_merge_verified": true
+  },
+  "convergence_simulation": {
+    "rank_1": {
+      "rank": 1,
+      "trainable_params": 192,
+      "initial_loss": 252.29099,
+      "step_30_loss": 313.60638,
+      "step_60_loss": 271.6012,
+      "final_loss": 195.703949,
+      "loss_trajectory": [
+        252.29099,
+        316.03476,
+        285.44681,
+        313.60638,
+        272.93033,
+        317.92593,
+        271.6012,
+        324.33545,
+        285.22803,
+        245.97348,
+        261.04221,
+        228.54414
+      ]
+    },
+    "rank_2": {
+      "rank": 2,
+      "trainable_params": 384,
+      "initial_loss": 251.7345,
+      "step_30_loss": 243.57947,
+      "step_60_loss": 208.44485,
+      "final_loss": 150.884125,
+      "loss_trajectory": [
+        251.7345,
+        308.75873,
+        294.97092,
+        243.57947,
+        245.91803,
+        285.02899,
+        208.44485,
+        205.26007,
+        219.66989,
+        241.47749,
+        204.63466,
+        230.25162
+      ]
+    },
+    "rank_4": {
+      "rank": 4,
+      "trainable_params": 768,
+      "initial_loss": 334.75171,
+      "step_30_loss": 223.75111,
+      "step_60_loss": 288.33273,
+      "final_loss": 128.278,
+      "loss_trajectory": [
+        334.75171,
+        277.37415,
+        254.35876,
+        223.75111,
+        192.60234,
+        243.51208,
+        288.33273,
+        185.70802,
+        170.86328,
+        168.41199,
+        119.36166,
+        162.97198
+      ]
+    },
+    "rank_8": {
+      "rank": 8,
+      "trainable_params": 1536,
+      "initial_loss": 359.42444,
+      "step_30_loss": 277.43506,
+      "step_60_loss": 117.13147,
+      "final_loss": 21.690643,
+      "loss_trajectory": [
+        359.42444,
+        293.58325,
+        231.81256,
+        277.43506,
+        191.51463,
+        217.00168,
+        117.13147,
+        121.31725,
+        89.19423,
+        47.51018,
+        54.0001,
+        26.55516
+      ]
+    },
+    "rank_16": {
+      "rank": 16,
+      "trainable_params": 3072,
+      "initial_loss": 348.7883,
+      "step_30_loss": 222.98216,
+      "step_60_loss": 83.51049,
+      "final_loss": 1.991875,
+      "loss_trajectory": [
+        348.7883,
+        210.45102,
+        256.20245,
+        222.98216,
+        137.50793,
+        88.28911,
+        83.51049,
+        31.45203,
+        18.58526,
+        12.04039,
+        5.90179,
+        2.5979
+      ]
+    }
+  }
+}

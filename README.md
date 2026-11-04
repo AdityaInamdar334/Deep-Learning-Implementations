@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-16-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-17-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -42,6 +42,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [gMLP and Spatial Gating](./gmlp_spatial_gating_lab) | Attention-free token mixing, causal masking, and generalization to unseen token positions. |
 | [Vision Transformers](./vit_patch_lab) | Patch embedding, learned positional encodings, classification tokens, and CNN comparisons. |
 | [Activation Steering and Interpretability](./llm_steering_interpretability_lab) | Residual-stream steering, neuron interventions, projection edits, and KL-based damage checks. |
+| [LoRA from Scratch](./lora_companion_lab) | Low-rank adapter factorizations, asymmetric step-0 gradient dynamics, and zero-latency weight merging. |
 | [Primer EZ Transformer](./primer_ez_transformer_lab) | Squared ReLU, causal Multi-DConv-Head Attention, time-to-quality efficiency, and structural shift. |
 | [Hourglass Transformer](./hourglass_transformer_lab) | Hierarchical token shortening, causal right-shift downsampling, and length extrapolation. |
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
@@ -124,9 +125,10 @@ Medium-Implementations/
 ├── distributed_science_agent_lab/
 ├── dt_mem_working_memory_lab/
 ├── frontier_monitor_lab/
-├── hourglass_transformer_lab/
 ├── gmlp_spatial_gating_lab/
+├── hourglass_transformer_lab/
 ├── llm_steering_interpretability_lab/
+├── lora_companion_lab/
 ├── primer_ez_transformer_lab/
 ├── qwenputer_educational_lab/
 ├── roast_room_decision_lab/
