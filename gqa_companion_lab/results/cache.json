@@ -1,0 +1,41 @@
+[
+  {
+    "kv_heads": 8,
+    "query_heads": 8,
+    "cache_shape": [
+      2,
+      8,
+      64,
+      16
+    ],
+    "cache_bytes": 524288,
+    "cache_MiB": 0.5,
+    "parameters": 858880
+  },
+  {
+    "kv_heads": 2,
+    "query_heads": 8,
+    "cache_shape": [
+      2,
+      2,
+      64,
+      16
+    ],
+    "cache_bytes": 131072,
+    "cache_MiB": 0.125,
+    "parameters": 759808
+  },
+  {
+    "kv_heads": 1,
+    "query_heads": 8,
+    "cache_shape": [
+      2,
+      1,
+      64,
+      16
+    ],
+    "cache_bytes": 65536,
+    "cache_MiB": 0.0625,
+    "parameters": 743296
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "initial_byte_nll": 3.4999806342586393,
+  "final_byte_nll": 3.4999806342586393,
+  "evaluated_target_bytes": 1984,
+  "training_target_bytes": 0,
+  "num_query_heads": 8,
+  "num_kv_heads": 2,
+  "parameters": 759808,
+  "training_seconds": 8.28099973659846e-06,
+  "data_sha256": "f6e7834737080043a0066db687e731706cb2abebf5b5a9568896be6bded5bee1",
+  "arguments": {
+    "text": "demo.txt",
+    "kv_heads": 2,
+    "backend": "repeat",
+    "init": "../gqa_validation_runs/converted.pt",
+    "out": "../gqa_validation_runs/conversion_before",
+    "steps": 0,
+    "batch": 2,
+    "block": 32,
+    "eval_blocks": 64,
+    "lr": 0.0003,
+    "seed": 42,
+    "data_seed": 123,
+    "threads": 2,
+    "device": "cpu"
+  },
+  "torch_version": "2.15.0+cpu",
+  "python": "3.12.14"
+}
