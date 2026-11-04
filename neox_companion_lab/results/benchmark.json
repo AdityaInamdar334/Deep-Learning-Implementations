@@ -1,0 +1,136 @@
+{
+  "timestamp": "2026-11-04 13:48:46",
+  "runtime_seconds": 0.089,
+  "cache_benchmark": {
+    "parity_across_lengths": [
+      {
+        "seq_len": 8,
+        "max_abs_diff": 4.0978193283081055e-07,
+        "mean_abs_diff": 1.1482416084618308e-07,
+        "parity_passed": true
+      },
+      {
+        "seq_len": 16,
+        "max_abs_diff": 4.172325134277344e-07,
+        "mean_abs_diff": 1.2109197200516064e-07,
+        "parity_passed": true
+      },
+      {
+        "seq_len": 32,
+        "max_abs_diff": 4.172325134277344e-07,
+        "mean_abs_diff": 1.0822805052157491e-07,
+        "parity_passed": true
+      },
+      {
+        "seq_len": 64,
+        "max_abs_diff": 4.172325134277344e-07,
+        "mean_abs_diff": 1.2713155683741206e-07,
+        "parity_passed": true
+      },
+      {
+        "seq_len": 128,
+        "max_abs_diff": 5.364418029785156e-07,
+        "mean_abs_diff": 1.3576459423347842e-07,
+        "parity_passed": true
+      }
+    ],
+    "latency_benchmark": {
+      "prompt_length": 16,
+      "tokens_generated": 40,
+      "uncached_seconds": 0.0374,
+      "cached_seconds": 0.0179,
+      "speedup_factor": 2.08
+    }
+  },
+  "rotary_benchmark": {
+    "rotary_dimension": 8,
+    "head_dimension": 32,
+    "rotary_fraction": 0.25,
+    "norm_preservation_max_diff": 4.76837158203125e-07,
+    "unrotated_slice_pass_through_diff": 0.0,
+    "relative_position_decay": [
+      {
+        "offset": 0,
+        "cosine_similarity_with_pos0": 1.0
+      },
+      {
+        "offset": 10,
+        "cosine_similarity_with_pos0": 0.5572
+      },
+      {
+        "offset": 50,
+        "cosine_similarity_with_pos0": 0.6682
+      },
+      {
+        "offset": 100,
+        "cosine_similarity_with_pos0": 0.1048
+      },
+      {
+        "offset": 200,
+        "cosine_similarity_with_pos0": 0.327
+      }
+    ]
+  },
+  "architecture_comparison": [
+    {
+      "model": "NeoX-Lab (Byte)",
+      "layers": 4,
+      "hidden": 128,
+      "heads": 4,
+      "head_dim": 32,
+      "rotary_dim": 8,
+      "unrotated_dim": 24,
+      "total_params": 858880,
+      "parallel_residual": true,
+      "untied_embeddings": true
+    },
+    {
+      "model": "Pythia-70M",
+      "layers": 6,
+      "hidden": 512,
+      "heads": 8,
+      "head_dim": 64,
+      "rotary_dim": 16,
+      "unrotated_dim": 48,
+      "total_params": 70426624,
+      "parallel_residual": true,
+      "untied_embeddings": true
+    },
+    {
+      "model": "Pythia-160M",
+      "layers": 12,
+      "hidden": 768,
+      "heads": 12,
+      "head_dim": 64,
+      "rotary_dim": 16,
+      "unrotated_dim": 48,
+      "total_params": 162322944,
+      "parallel_residual": true,
+      "untied_embeddings": true
+    },
+    {
+      "model": "Pythia-410M",
+      "layers": 24,
+      "hidden": 1024,
+      "heads": 16,
+      "head_dim": 64,
+      "rotary_dim": 16,
+      "unrotated_dim": 48,
+      "total_params": 405334016,
+      "parallel_residual": true,
+      "untied_embeddings": true
+    },
+    {
+      "model": "GPT-NeoX-20B",
+      "layers": 44,
+      "hidden": 6144,
+      "heads": 64,
+      "head_dim": 96,
+      "rotary_dim": 24,
+      "unrotated_dim": 72,
+      "total_params": 20553000000,
+      "parallel_residual": true,
+      "untied_embeddings": true
+    }
+  ]
+}

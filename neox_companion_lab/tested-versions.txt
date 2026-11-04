@@ -1,0 +1,6 @@
+Python 3.12
+torch 2.15.0+cpu
+transformers 4.57.6
+safetensors 0.8.0
+tokenizers 0.22.2
+This is a record, not a complete cross-platform dependency lock.

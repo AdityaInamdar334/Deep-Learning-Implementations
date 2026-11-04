@@ -1,0 +1,39 @@
+{
+  "tiny_model": {
+    "initial_byte_nll": 5.578338123136951,
+    "final_byte_nll": 3.4068212124609176,
+    "data_sha256": "f6e7834737080043a0066db687e731706cb2abebf5b5a9568896be6bded5bee1",
+    "arguments": {
+      "text": "demo.txt",
+      "out": "/tmp/neox_smoke",
+      "steps": 30,
+      "batch": 2,
+      "block": 32,
+      "lr": 0.0003,
+      "seed": 42,
+      "device": "cpu",
+      "threads": 2
+    },
+    "torch_version": "2.15.0+cpu",
+    "python": "3.12.14"
+  },
+  "pretrained_bias": {
+    "before_token_nll": 4.692547182242076,
+    "after_token_nll": 4.606189250946045,
+    "data_sha256": "f6e7834737080043a0066db687e731706cb2abebf5b5a9568896be6bded5bee1",
+    "arguments": {
+      "model": "EleutherAI/pythia-70m",
+      "revision": null,
+      "prompt": "The researcher discovered that",
+      "tokens": 10,
+      "text": "demo.txt",
+      "steps": 2,
+      "block": 32,
+      "batch": 1,
+      "lr": 0.0003,
+      "out": "/tmp/neox_bias_smoke",
+      "device": "cpu"
+    },
+    "base_revision": "a39f36b100fe8a5377810d56c3f4789b9c53ac42"
+  }
+}
