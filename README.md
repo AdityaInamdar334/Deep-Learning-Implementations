@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-15-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-16-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -43,6 +43,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Vision Transformers](./vit_patch_lab) | Patch embedding, learned positional encodings, classification tokens, and CNN comparisons. |
 | [Activation Steering and Interpretability](./llm_steering_interpretability_lab) | Residual-stream steering, neuron interventions, projection edits, and KL-based damage checks. |
 | [Primer EZ Transformer](./primer_ez_transformer_lab) | Squared ReLU, causal Multi-DConv-Head Attention, time-to-quality efficiency, and structural shift. |
+| [Hourglass Transformer](./hourglass_transformer_lab) | Hierarchical token shortening, causal right-shift downsampling, and length extrapolation. |
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
 
@@ -123,6 +124,7 @@ Medium-Implementations/
 ├── distributed_science_agent_lab/
 ├── dt_mem_working_memory_lab/
 ├── frontier_monitor_lab/
+├── hourglass_transformer_lab/
 ├── gmlp_spatial_gating_lab/
 ├── llm_steering_interpretability_lab/
 ├── primer_ez_transformer_lab/

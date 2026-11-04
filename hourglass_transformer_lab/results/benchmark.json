@@ -1,0 +1,840 @@
+{
+  "methodology": "Synthetic repeat task. Fixed steps, not equal parameters or FLOPs. Unshifted is an intentionally invalid causal model.",
+  "settings": {
+    "seeds": 3,
+    "steps": 95,
+    "length": 48,
+    "width": 32,
+    "vocab": 32,
+    "batch_size": 12,
+    "lr": 0.002,
+    "eval_size": 128,
+    "output": "results/benchmark.json",
+    "only": null
+  },
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.10.0+cpu",
+    "threads": 2
+  },
+  "trials": [
+    {
+      "name": "vanilla_4",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 1.3488,
+      "mean_last_10_train_loss": 3.24952,
+      "in_distribution": {
+        "cross_entropy_nats": 3.226093,
+        "copy_region_accuracy": 0.135937,
+        "perplexity": 25.18107
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.364276,
+        "copy_region_accuracy": 0.090774,
+        "perplexity": 28.91256
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.209836,
+        "copy_region_accuracy": 0.138192,
+        "perplexity": 24.77502
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "vanilla_4",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 1.0816,
+      "mean_last_10_train_loss": 3.24627,
+      "in_distribution": {
+        "cross_entropy_nats": 3.246377,
+        "copy_region_accuracy": 0.137674,
+        "perplexity": 25.69708
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.388159,
+        "copy_region_accuracy": 0.089286,
+        "perplexity": 29.61139
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.229063,
+        "copy_region_accuracy": 0.148438,
+        "perplexity": 25.25598
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "vanilla_4",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 1.1553,
+      "mean_last_10_train_loss": 3.24087,
+      "in_distribution": {
+        "cross_entropy_nats": 3.242053,
+        "copy_region_accuracy": 0.125,
+        "perplexity": 25.58619
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.345123,
+        "copy_region_accuracy": 0.086496,
+        "perplexity": 28.36407
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.208905,
+        "copy_region_accuracy": 0.141778,
+        "perplexity": 24.75196
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k2",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.8648,
+      "mean_last_10_train_loss": 3.1133,
+      "in_distribution": {
+        "cross_entropy_nats": 3.073477,
+        "copy_region_accuracy": 0.219271,
+        "perplexity": 21.61694
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.351531,
+        "copy_region_accuracy": 0.105841,
+        "perplexity": 28.54641
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.070755,
+        "copy_region_accuracy": 0.210809,
+        "perplexity": 21.55817
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k2",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.8148,
+      "mean_last_10_train_loss": 3.1181,
+      "in_distribution": {
+        "cross_entropy_nats": 3.100472,
+        "copy_region_accuracy": 0.226215,
+        "perplexity": 22.20844
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.369458,
+        "copy_region_accuracy": 0.09933,
+        "perplexity": 29.06277
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.086798,
+        "copy_region_accuracy": 0.216573,
+        "perplexity": 21.90681
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k2",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7815,
+      "mean_last_10_train_loss": 3.08905,
+      "in_distribution": {
+        "cross_entropy_nats": 3.050172,
+        "copy_region_accuracy": 0.217882,
+        "perplexity": 21.11898
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.297419,
+        "copy_region_accuracy": 0.095982,
+        "perplexity": 27.04275
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.039778,
+        "copy_region_accuracy": 0.212474,
+        "perplexity": 20.90061
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k3",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7302,
+      "mean_last_10_train_loss": 3.07417,
+      "in_distribution": {
+        "cross_entropy_nats": 3.052768,
+        "copy_region_accuracy": 0.155035,
+        "perplexity": 21.17387
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.508247,
+        "copy_region_accuracy": 0.040179,
+        "perplexity": 33.38969
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.024689,
+        "copy_region_accuracy": 0.158043,
+        "perplexity": 20.5876
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k3",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7095,
+      "mean_last_10_train_loss": 3.09666,
+      "in_distribution": {
+        "cross_entropy_nats": 3.07187,
+        "copy_region_accuracy": 0.160243,
+        "perplexity": 21.58222
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.485824,
+        "copy_region_accuracy": 0.059152,
+        "perplexity": 32.64931
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.040283,
+        "copy_region_accuracy": 0.170594,
+        "perplexity": 20.91117
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k3",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.894,
+      "mean_last_10_train_loss": 3.08676,
+      "in_distribution": {
+        "cross_entropy_nats": 3.081679,
+        "copy_region_accuracy": 0.152604,
+        "perplexity": 21.79497
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.429247,
+        "copy_region_accuracy": 0.055432,
+        "perplexity": 30.8534
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.028734,
+        "copy_region_accuracy": 0.161245,
+        "perplexity": 20.67105
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k4",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.8431,
+      "mean_last_10_train_loss": 2.97175,
+      "in_distribution": {
+        "cross_entropy_nats": 2.947779,
+        "copy_region_accuracy": 0.173264,
+        "perplexity": 19.06357
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.446092,
+        "copy_region_accuracy": 0.079613,
+        "perplexity": 31.37753
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.906719,
+        "copy_region_accuracy": 0.174693,
+        "perplexity": 18.29667
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k4",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7644,
+      "mean_last_10_train_loss": 2.99917,
+      "in_distribution": {
+        "cross_entropy_nats": 2.969135,
+        "copy_region_accuracy": 0.185243,
+        "perplexity": 19.47507
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.416111,
+        "copy_region_accuracy": 0.086496,
+        "perplexity": 30.45076
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.925586,
+        "copy_region_accuracy": 0.188397,
+        "perplexity": 18.64514
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_k4",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7713,
+      "mean_last_10_train_loss": 2.98262,
+      "in_distribution": {
+        "cross_entropy_nats": 2.973334,
+        "copy_region_accuracy": 0.177083,
+        "perplexity": 19.55702
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.374467,
+        "copy_region_accuracy": 0.085193,
+        "perplexity": 29.2087
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.914795,
+        "copy_region_accuracy": 0.180456,
+        "perplexity": 18.44504
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_linear_k3",
+      "seed": 0,
+      "parameters": 42592,
+      "steps": 95,
+      "train_seconds": 0.9279,
+      "mean_last_10_train_loss": 2.42207,
+      "in_distribution": {
+        "cross_entropy_nats": 2.357121,
+        "copy_region_accuracy": 0.538715,
+        "perplexity": 10.5605
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.920309,
+        "copy_region_accuracy": 0.035342,
+        "perplexity": 50.41602
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.330809,
+        "copy_region_accuracy": 0.528048,
+        "perplexity": 10.28626
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_linear_k3",
+      "seed": 1,
+      "parameters": 42592,
+      "steps": 95,
+      "train_seconds": 1.1126,
+      "mean_last_10_train_loss": 2.42049,
+      "in_distribution": {
+        "cross_entropy_nats": 2.363754,
+        "copy_region_accuracy": 0.533333,
+        "perplexity": 10.63078
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.883492,
+        "copy_region_accuracy": 0.047061,
+        "perplexity": 48.59363
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.349862,
+        "copy_region_accuracy": 0.533043,
+        "perplexity": 10.48413
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_linear_k3",
+      "seed": 2,
+      "parameters": 42592,
+      "steps": 95,
+      "train_seconds": 0.9019,
+      "mean_last_10_train_loss": 2.38319,
+      "in_distribution": {
+        "cross_entropy_nats": 2.307512,
+        "copy_region_accuracy": 0.603125,
+        "perplexity": 10.04939
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.835671,
+        "copy_region_accuracy": 0.049293,
+        "perplexity": 46.32452
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.29679,
+        "copy_region_accuracy": 0.577869,
+        "perplexity": 9.94221
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_unshifted_UNSAFE",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.9561,
+      "mean_last_10_train_loss": 2.98722,
+      "in_distribution": {
+        "cross_entropy_nats": 2.975471,
+        "copy_region_accuracy": 0.155729,
+        "perplexity": 19.59884
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.042769,
+        "copy_region_accuracy": 0.153646,
+        "perplexity": 20.9632
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.954825,
+        "copy_region_accuracy": 0.156762,
+        "perplexity": 19.19836
+      },
+      "causal_leak_max_abs": 0.9539334
+    },
+    {
+      "name": "hourglass_unshifted_UNSAFE",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 1.0652,
+      "mean_last_10_train_loss": 3.02957,
+      "in_distribution": {
+        "cross_entropy_nats": 2.99274,
+        "copy_region_accuracy": 0.161979,
+        "perplexity": 19.94024
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.079173,
+        "copy_region_accuracy": 0.147507,
+        "perplexity": 21.74041
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.974022,
+        "copy_region_accuracy": 0.174052,
+        "perplexity": 19.57047
+      },
+      "causal_leak_max_abs": 0.7745854
+    },
+    {
+      "name": "hourglass_unshifted_UNSAFE",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.9135,
+      "mean_last_10_train_loss": 3.00313,
+      "in_distribution": {
+        "cross_entropy_nats": 2.993444,
+        "copy_region_accuracy": 0.149826,
+        "perplexity": 19.9543
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.037112,
+        "copy_region_accuracy": 0.135231,
+        "perplexity": 20.84496
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.956926,
+        "copy_region_accuracy": 0.159452,
+        "perplexity": 19.23875
+      },
+      "causal_leak_max_abs": 0.5524726
+    },
+    {
+      "name": "hourglass_no_skip",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7656,
+      "mean_last_10_train_loss": 2.75249,
+      "in_distribution": {
+        "cross_entropy_nats": 2.715117,
+        "copy_region_accuracy": 0.245833,
+        "perplexity": 15.10637
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.685677,
+        "copy_region_accuracy": 0.031064,
+        "perplexity": 39.87212
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.701865,
+        "copy_region_accuracy": 0.237705,
+        "perplexity": 14.90751
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_no_skip",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7225,
+      "mean_last_10_train_loss": 2.7634,
+      "in_distribution": {
+        "cross_entropy_nats": 2.715728,
+        "copy_region_accuracy": 0.241319,
+        "perplexity": 15.1156
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.633545,
+        "copy_region_accuracy": 0.044829,
+        "perplexity": 37.84675
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.701732,
+        "copy_region_accuracy": 0.242444,
+        "perplexity": 14.90553
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_no_skip",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.7664,
+      "mean_last_10_train_loss": 2.77662,
+      "in_distribution": {
+        "cross_entropy_nats": 2.773969,
+        "copy_region_accuracy": 0.232639,
+        "perplexity": 16.02211
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.573552,
+        "copy_region_accuracy": 0.051711,
+        "perplexity": 35.64297
+      },
+      "longer_context": {
+        "cross_entropy_nats": 2.710235,
+        "copy_region_accuracy": 0.2427,
+        "perplexity": 15.03281
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_factor_dropout",
+      "seed": 0,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.8019,
+      "mean_last_10_train_loss": 3.19013,
+      "in_distribution": {
+        "cross_entropy_nats": 3.13924,
+        "copy_region_accuracy": 0.147917,
+        "perplexity": 23.0863
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.339437,
+        "copy_region_accuracy": 0.083891,
+        "perplexity": 28.20323
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.118834,
+        "copy_region_accuracy": 0.146901,
+        "perplexity": 22.62
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_factor_dropout",
+      "seed": 1,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.9516,
+      "mean_last_10_train_loss": 3.2012,
+      "in_distribution": {
+        "cross_entropy_nats": 3.179597,
+        "copy_region_accuracy": 0.156076,
+        "perplexity": 24.03707
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.343909,
+        "copy_region_accuracy": 0.098958,
+        "perplexity": 28.32966
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.160865,
+        "copy_region_accuracy": 0.15958,
+        "perplexity": 23.591
+      },
+      "causal_leak_max_abs": 0.0
+    },
+    {
+      "name": "hourglass_factor_dropout",
+      "seed": 2,
+      "parameters": 36320,
+      "steps": 95,
+      "train_seconds": 0.8039,
+      "mean_last_10_train_loss": 3.18256,
+      "in_distribution": {
+        "cross_entropy_nats": 3.169482,
+        "copy_region_accuracy": 0.144444,
+        "perplexity": 23.79517
+      },
+      "period_shift": {
+        "cross_entropy_nats": 3.293275,
+        "copy_region_accuracy": 0.088542,
+        "perplexity": 26.93091
+      },
+      "longer_context": {
+        "cross_entropy_nats": 3.131976,
+        "copy_region_accuracy": 0.149206,
+        "perplexity": 22.91923
+      },
+      "causal_leak_max_abs": 0.0
+    }
+  ],
+  "summary": {
+    "hourglass_factor_dropout": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.85247,
+        "std": 0.08586
+      },
+      "familiar_accuracy": {
+        "mean": 14.9479,
+        "std": 0.59712
+      },
+      "shifted_accuracy": {
+        "mean": 9.04637,
+        "std": 0.77151
+      },
+      "longer_accuracy": {
+        "mean": 15.18957,
+        "std": 0.67539
+      },
+      "familiar_ppl": {
+        "mean": 23.63951,
+        "std": 0.49413
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "hourglass_k2": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.82037,
+        "std": 0.04193
+      },
+      "familiar_accuracy": {
+        "mean": 22.11227,
+        "std": 0.44644
+      },
+      "shifted_accuracy": {
+        "mean": 10.03843,
+        "std": 0.50134
+      },
+      "longer_accuracy": {
+        "mean": 21.32853,
+        "std": 0.29664
+      },
+      "familiar_ppl": {
+        "mean": 21.64812,
+        "std": 0.5454
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "hourglass_k3": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.7779,
+        "std": 0.10108
+      },
+      "familiar_accuracy": {
+        "mean": 15.59607,
+        "std": 0.39027
+      },
+      "shifted_accuracy": {
+        "mean": 5.15877,
+        "std": 1.00537
+      },
+      "longer_accuracy": {
+        "mean": 16.3294,
+        "std": 0.65216
+      },
+      "familiar_ppl": {
+        "mean": 21.51702,
+        "std": 0.31564
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "hourglass_k4": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.79293,
+        "std": 0.04358
+      },
+      "familiar_accuracy": {
+        "mean": 17.853,
+        "std": 0.61192
+      },
+      "shifted_accuracy": {
+        "mean": 8.37673,
+        "std": 0.36563
+      },
+      "longer_accuracy": {
+        "mean": 18.1182,
+        "std": 0.68808
+      },
+      "familiar_ppl": {
+        "mean": 19.36522,
+        "std": 0.26443
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "hourglass_linear_k3": {
+      "params": {
+        "mean": 42592,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.9808,
+        "std": 0.11488
+      },
+      "familiar_accuracy": {
+        "mean": 55.8391,
+        "std": 3.88341
+      },
+      "shifted_accuracy": {
+        "mean": 4.38987,
+        "std": 0.74939
+      },
+      "longer_accuracy": {
+        "mean": 54.632,
+        "std": 2.74361
+      },
+      "familiar_ppl": {
+        "mean": 10.41356,
+        "std": 0.31733
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "hourglass_no_skip": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.7515,
+        "std": 0.02512
+      },
+      "familiar_accuracy": {
+        "mean": 23.99303,
+        "std": 0.67057
+      },
+      "shifted_accuracy": {
+        "mean": 4.25347,
+        "std": 1.0513
+      },
+      "longer_accuracy": {
+        "mean": 24.09497,
+        "std": 0.28129
+      },
+      "familiar_ppl": {
+        "mean": 15.41469,
+        "std": 0.52606
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    },
+    "hourglass_unshifted_UNSAFE": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 0.97827,
+        "std": 0.07824
+      },
+      "familiar_accuracy": {
+        "mean": 15.58447,
+        "std": 0.60773
+      },
+      "shifted_accuracy": {
+        "mean": 14.54613,
+        "std": 0.93764
+      },
+      "longer_accuracy": {
+        "mean": 16.3422,
+        "std": 0.93036
+      },
+      "familiar_ppl": {
+        "mean": 19.83113,
+        "std": 0.20129
+      },
+      "causal_diff": {
+        "mean": 0.76033,
+        "std": 0.20111
+      }
+    },
+    "vanilla_4": {
+      "params": {
+        "mean": 36320,
+        "std": 0.0
+      },
+      "train_seconds": {
+        "mean": 1.19523,
+        "std": 0.138
+      },
+      "familiar_accuracy": {
+        "mean": 13.28703,
+        "std": 0.6871
+      },
+      "shifted_accuracy": {
+        "mean": 8.8852,
+        "std": 0.21718
+      },
+      "longer_accuracy": {
+        "mean": 14.28027,
+        "std": 0.51993
+      },
+      "familiar_ppl": {
+        "mean": 25.48811,
+        "std": 0.27163
+      },
+      "causal_diff": {
+        "mean": 0.0,
+        "std": 0.0
+      }
+    }
+  }
+}
