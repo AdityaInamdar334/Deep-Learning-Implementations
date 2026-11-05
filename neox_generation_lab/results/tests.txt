@@ -1,0 +1,20 @@
+test_cached_logits_match_full_prefix (__main__.Tests.test_cached_logits_match_full_prefix) ... ok
+test_causality (__main__.Tests.test_causality) ... ok
+test_checkpoint_reload (__main__.Tests.test_checkpoint_reload) ... ok
+test_chunked_prefill (__main__.Tests.test_chunked_prefill) ... ok
+test_eos (__main__.Tests.test_eos) ... ok
+test_fresh_request (__main__.Tests.test_fresh_request) ... ok
+test_greedy_equivalence (__main__.Tests.test_greedy_equivalence) ... ok
+test_interleaved_requests (__main__.Tests.test_interleaved_requests) ... ok
+test_last_only_projection (__main__.Tests.test_last_only_projection) ... ok
+test_pending_final_token (__main__.Tests.test_pending_final_token) ... ok
+test_requires_eval (__main__.Tests.test_requires_eval) ... ok
+test_sampling_reproducibility_and_topk (__main__.Tests.test_sampling_reproducibility_and_topk) ... ok
+test_utf8_stream (__main__.Tests.test_utf8_stream) ... ok
+test_wrong_history_changes_output (__main__.Tests.test_wrong_history_changes_output) ... ok
+test_zero_budget_and_bounds (__main__.Tests.test_zero_budget_and_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.687s
+
+OK

@@ -1,0 +1,133 @@
+{
+  "arguments": {
+    "checkpoint": null,
+    "device": "cpu",
+    "prompt_tokens": 64,
+    "tokens": 32,
+    "repeats": 7,
+    "out": "results/benchmark.json"
+  },
+  "python": "3.12.14",
+  "torch": "2.15.0+cpu",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.39",
+  "threads": 2,
+  "dtype": "float32",
+  "parameters": 273216,
+  "results": [
+    {
+      "cached": false,
+      "median_total_ms": 56.382662000032724,
+      "median_first_token_ms": 1.738163000482018,
+      "median_decode_mean_ms": 1.769837935494105,
+      "raw": [
+        {
+          "total_ms": 70.53186500070296,
+          "first_token_ms": 2.275658000144176,
+          "decode_mean_ms": 2.2008804516219476,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        },
+        {
+          "total_ms": 56.382662000032724,
+          "first_token_ms": 1.4906059996064869,
+          "decode_mean_ms": 1.769837935494105,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        },
+        {
+          "total_ms": 56.10384100054944,
+          "first_token_ms": 1.8723310004133964,
+          "decode_mean_ms": 1.7485015483954716,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        },
+        {
+          "total_ms": 69.01724399995146,
+          "first_token_ms": 1.580188999469101,
+          "decode_mean_ms": 2.174522419350509,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        },
+        {
+          "total_ms": 53.77210900041973,
+          "first_token_ms": 1.738163000482018,
+          "decode_mean_ms": 1.6776363225642033,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        },
+        {
+          "total_ms": 54.608436999842525,
+          "first_token_ms": 1.6490809994138544,
+          "decode_mean_ms": 1.7074898709794186,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        },
+        {
+          "total_ms": 57.2867810005846,
+          "first_token_ms": 1.7719030001899227,
+          "decode_mean_ms": 1.7899392903106468,
+          "input_positions": 2544,
+          "final_cache_bytes": 0
+        }
+      ]
+    },
+    {
+      "cached": true,
+      "median_total_ms": 23.476557999856595,
+      "median_first_token_ms": 1.8952549999085022,
+      "median_decode_mean_ms": 0.7056444516028052,
+      "raw": [
+        {
+          "total_ms": 24.67199799957598,
+          "first_token_ms": 2.475463999871863,
+          "decode_mean_ms": 0.715027677430161,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        },
+        {
+          "total_ms": 23.476557999856595,
+          "first_token_ms": 1.574640999933763,
+          "decode_mean_ms": 0.7056444516028052,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        },
+        {
+          "total_ms": 24.64005999991059,
+          "first_token_ms": 2.124695000020438,
+          "decode_mean_ms": 0.7254434193518753,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        },
+        {
+          "total_ms": 27.6841360000617,
+          "first_token_ms": 2.0000000004074536,
+          "decode_mean_ms": 0.8276133548274482,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        },
+        {
+          "total_ms": 21.355567999307823,
+          "first_token_ms": 1.8952549999085022,
+          "decode_mean_ms": 0.6269434193346833,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        },
+        {
+          "total_ms": 22.145959000226867,
+          "first_token_ms": 1.4648090000264347,
+          "decode_mean_ms": 0.6662755161326664,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        },
+        {
+          "total_ms": 21.00829499977408,
+          "first_token_ms": 1.4475829993898515,
+          "decode_mean_ms": 0.6301417096760669,
+          "input_positions": 95,
+          "final_cache_bytes": 145920
+        }
+      ]
+    }
+  ],
+  "scope": "Batch one; fixed token count; random or user-loaded weights. Includes tensor creation, greedy selection, tracing, per-token synchronization. Excludes load, tokenization, printing. Cache bytes are logical tensor bytes, not peak memory."
+}

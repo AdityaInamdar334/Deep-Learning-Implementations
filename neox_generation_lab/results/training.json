@@ -1,0 +1,9 @@
+{
+  "steps": 200,
+  "initial_validation_byte_nll": 5.61307458955098,
+  "final_validation_byte_nll": 0.15327257959823298,
+  "evaluated_target_bytes": 1968,
+  "data_sha256": "2f8f1a5196ef0b58e96e70d16e1a4d60227b39044912f8d513fb9cfbf81b45bc",
+  "torch_version": "2.15.0+cpu",
+  "note": "Synthetic repetitive text; pipeline validation only. EOS not trained in this corpus."
+}

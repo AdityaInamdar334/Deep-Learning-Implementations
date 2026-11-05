@@ -1,0 +1,578 @@
+[
+  {
+    "step": 0,
+    "input_tokens": 10,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 11,
+    "token": 115
+  },
+  {
+    "step": 1,
+    "input_tokens": 11,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 12,
+    "token": 116
+  },
+  {
+    "step": 2,
+    "input_tokens": 12,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 13,
+    "token": 111
+  },
+  {
+    "step": 3,
+    "input_tokens": 13,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 14,
+    "token": 114
+  },
+  {
+    "step": 4,
+    "input_tokens": 14,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 15,
+    "token": 101
+  },
+  {
+    "step": 5,
+    "input_tokens": 15,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 16,
+    "token": 115
+  },
+  {
+    "step": 6,
+    "input_tokens": 16,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 17,
+    "token": 32
+  },
+  {
+    "step": 7,
+    "input_tokens": 17,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 18,
+    "token": 107
+  },
+  {
+    "step": 8,
+    "input_tokens": 18,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 19,
+    "token": 101
+  },
+  {
+    "step": 9,
+    "input_tokens": 19,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 20,
+    "token": 121
+  },
+  {
+    "step": 10,
+    "input_tokens": 20,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 21,
+    "token": 115
+  },
+  {
+    "step": 11,
+    "input_tokens": 21,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 22,
+    "token": 32
+  },
+  {
+    "step": 12,
+    "input_tokens": 22,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 23,
+    "token": 97
+  },
+  {
+    "step": 13,
+    "input_tokens": 23,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 24,
+    "token": 110
+  },
+  {
+    "step": 14,
+    "input_tokens": 24,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 25,
+    "token": 100
+  },
+  {
+    "step": 15,
+    "input_tokens": 25,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 26,
+    "token": 32
+  },
+  {
+    "step": 16,
+    "input_tokens": 26,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 27,
+    "token": 118
+  },
+  {
+    "step": 17,
+    "input_tokens": 27,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 28,
+    "token": 97
+  },
+  {
+    "step": 18,
+    "input_tokens": 28,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 29,
+    "token": 108
+  },
+  {
+    "step": 19,
+    "input_tokens": 29,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 30,
+    "token": 117
+  },
+  {
+    "step": 20,
+    "input_tokens": 30,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 31,
+    "token": 101
+  },
+  {
+    "step": 21,
+    "input_tokens": 31,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 32,
+    "token": 115
+  },
+  {
+    "step": 22,
+    "input_tokens": 32,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 33,
+    "token": 32
+  },
+  {
+    "step": 23,
+    "input_tokens": 33,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 34,
+    "token": 102
+  },
+  {
+    "step": 24,
+    "input_tokens": 34,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 35,
+    "token": 114
+  },
+  {
+    "step": 25,
+    "input_tokens": 35,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 36,
+    "token": 111
+  },
+  {
+    "step": 26,
+    "input_tokens": 36,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 37,
+    "token": 109
+  },
+  {
+    "step": 27,
+    "input_tokens": 37,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 38,
+    "token": 32
+  },
+  {
+    "step": 28,
+    "input_tokens": 38,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 39,
+    "token": 112
+  },
+  {
+    "step": 29,
+    "input_tokens": 39,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 40,
+    "token": 114
+  },
+  {
+    "step": 30,
+    "input_tokens": 40,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 41,
+    "token": 101
+  },
+  {
+    "step": 31,
+    "input_tokens": 41,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 42,
+    "token": 118
+  },
+  {
+    "step": 32,
+    "input_tokens": 42,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 43,
+    "token": 105
+  },
+  {
+    "step": 33,
+    "input_tokens": 43,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 44,
+    "token": 111
+  },
+  {
+    "step": 34,
+    "input_tokens": 44,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 45,
+    "token": 117
+  },
+  {
+    "step": 35,
+    "input_tokens": 45,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 46,
+    "token": 115
+  },
+  {
+    "step": 36,
+    "input_tokens": 46,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 47,
+    "token": 32
+  },
+  {
+    "step": 37,
+    "input_tokens": 47,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 48,
+    "token": 116
+  },
+  {
+    "step": 38,
+    "input_tokens": 48,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 49,
+    "token": 111
+  },
+  {
+    "step": 39,
+    "input_tokens": 49,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 50,
+    "token": 107
+  },
+  {
+    "step": 40,
+    "input_tokens": 50,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 51,
+    "token": 101
+  },
+  {
+    "step": 41,
+    "input_tokens": 51,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 52,
+    "token": 110
+  },
+  {
+    "step": 42,
+    "input_tokens": 52,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 53,
+    "token": 115
+  },
+  {
+    "step": 43,
+    "input_tokens": 53,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 54,
+    "token": 32
+  },
+  {
+    "step": 44,
+    "input_tokens": 54,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 55,
+    "token": 116
+  },
+  {
+    "step": 45,
+    "input_tokens": 55,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 56,
+    "token": 111
+  },
+  {
+    "step": 46,
+    "input_tokens": 56,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 57,
+    "token": 107
+  },
+  {
+    "step": 47,
+    "input_tokens": 57,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 58,
+    "token": 101
+  },
+  {
+    "step": 48,
+    "input_tokens": 58,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 59,
+    "token": 110
+  },
+  {
+    "step": 49,
+    "input_tokens": 59,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 60,
+    "token": 115
+  },
+  {
+    "step": 50,
+    "input_tokens": 60,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 61,
+    "token": 46
+  },
+  {
+    "step": 51,
+    "input_tokens": 61,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 62,
+    "token": 10
+  },
+  {
+    "step": 52,
+    "input_tokens": 62,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 63,
+    "token": 84
+  },
+  {
+    "step": 53,
+    "input_tokens": 63,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 64,
+    "token": 104
+  },
+  {
+    "step": 54,
+    "input_tokens": 64,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 65,
+    "token": 101
+  },
+  {
+    "step": 55,
+    "input_tokens": 65,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 66,
+    "token": 32
+  },
+  {
+    "step": 56,
+    "input_tokens": 66,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 67,
+    "token": 101
+  },
+  {
+    "step": 57,
+    "input_tokens": 67,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 68,
+    "token": 119
+  },
+  {
+    "step": 58,
+    "input_tokens": 68,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 69,
+    "token": 105
+  },
+  {
+    "step": 59,
+    "input_tokens": 69,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 70,
+    "token": 111
+  },
+  {
+    "step": 60,
+    "input_tokens": 70,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 71,
+    "token": 100
+  },
+  {
+    "step": 61,
+    "input_tokens": 71,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 72,
+    "token": 101
+  },
+  {
+    "step": 62,
+    "input_tokens": 72,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 73,
+    "token": 114
+  },
+  {
+    "step": 63,
+    "input_tokens": 73,
+    "cache_before": 0,
+    "cache_after": 0,
+    "cache_bytes": 0,
+    "output_length": 74,
+    "token": 32
+  }
+]

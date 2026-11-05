@@ -1,0 +1,13 @@
+{
+  "bytes": 2214592512,
+  "GiB": 2.0625,
+  "MiB": 2112.0,
+  "assumptions": {
+    "layers": 44,
+    "heads": 64,
+    "head_dim": 96,
+    "tokens": 2048,
+    "batch": 1,
+    "bytes_per_element": 2
+  }
+}

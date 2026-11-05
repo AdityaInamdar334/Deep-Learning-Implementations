@@ -1,0 +1,360 @@
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
+The cache stores keys and values from previous tokens.
+A model reads the prompt before it generates a continuation.
+Each new token extends the sequence by one position.
+The researcher checks the logits before measuring the speed.
+A fresh request starts with a fresh cache.
+The decoder reuses previous work and computes new attention.
