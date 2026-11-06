@@ -257,3 +257,4 @@ benchmark_auditing_lab/
 5. **OpenAI (2026).** *Why SWE-bench Verified No Longer Measures Frontier Coding Capabilities.* February 23, 2026.
 6. **OpenAI (2026).** *Separating Signal From Noise in Coding Evaluations.* July 8, 2026.
 7. **Artificial Analysis (2026).** *Announcing Artificial Analysis Intelligence Index v5.* October 27, 2026.
+

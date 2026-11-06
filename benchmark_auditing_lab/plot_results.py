@@ -230,3 +230,4 @@ if __name__ == "__main__":
     plot_deepquestion_cognitive_collapse()
     plot_epoch_benchmark_registry()
     print("All 5 figures successfully generated in figures/")
+

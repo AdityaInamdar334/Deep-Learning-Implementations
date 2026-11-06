@@ -195,3 +195,4 @@ def create_synthetic_scicode_suite(num_problems: int = 65, seed: int = 42) -> Li
         problems.append(TaskProblem(id=f"P{p_idx:02d}", title=f"Scientific Problem {p_idx}", domain=domain, subproblems=subs))
 
     return problems
+

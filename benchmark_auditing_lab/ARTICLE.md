@@ -298,3 +298,4 @@ For years, the machine learning community defaulted to assuming the first hypoth
 11. **Epoch AI (2026).** *Benchmark Reviews: Methodology and Included Benchmarks.* [https://epoch.ai/data/benchmark-reviews-documentation/methodology](https://epoch.ai/data/benchmark-reviews-documentation/methodology)
 12. **Artificial Analysis (2026).** *Announcing Artificial Analysis Intelligence Index v5.* October 27, 2026. [https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5](https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v5)
 13. **Epoch AI (2026).** *Terminal-Bench 4.0.0: Benchmark Review.* September 4, 2026. [https://epoch.ai/benchmarks/terminal-bench-4/review](https://epoch.ai/benchmarks/terminal-bench-4/review)
+

@@ -95,3 +95,4 @@ def create_standard_cognitive_suite() -> List[CognitiveQuestion]:
                 q_idx += 1
 
     return suite
+

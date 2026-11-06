@@ -134,3 +134,4 @@ def get_historical_epoch_registry() -> List[ReviewAssessment]:
             "HLE-Diamond (1000-Task)", "2026-10-27", True, True, 100, 8, 0.06, 0.02, False, "Low"
         ),
     ]
+

@@ -1,0 +1,412 @@
+{
+  "capacity_matrix": [
+    {
+      "model": "Kimi K3.1 Pro",
+      "precision_bits": 8,
+      "context_tokens": 8192,
+      "weight_gb": 2699.0,
+      "kv_gb": 0.5,
+      "total_needed_gb": 3107.5,
+      "h100_gpus": 39,
+      "h100_nodes": 5,
+      "h100_headroom_gb": 92.5,
+      "h200_gpus": 21,
+      "h200_nodes": 3
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "precision_bits": 8,
+      "context_tokens": 131072,
+      "weight_gb": 2699.0,
+      "kv_gb": 8.4,
+      "total_needed_gb": 3115.3,
+      "h100_gpus": 39,
+      "h100_nodes": 5,
+      "h100_headroom_gb": 84.7,
+      "h200_gpus": 21,
+      "h200_nodes": 3
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "precision_bits": 8,
+      "context_tokens": 1048576,
+      "weight_gb": 2699.0,
+      "kv_gb": 67.0,
+      "total_needed_gb": 3173.9,
+      "h100_gpus": 40,
+      "h100_nodes": 5,
+      "h100_headroom_gb": 26.1,
+      "h200_gpus": 22,
+      "h200_nodes": 3
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "precision_bits": 4,
+      "context_tokens": 8192,
+      "weight_gb": 1349.5,
+      "kv_gb": 0.5,
+      "total_needed_gb": 1554.0,
+      "h100_gpus": 20,
+      "h100_nodes": 3,
+      "h100_headroom_gb": 366.0,
+      "h200_gpus": 11,
+      "h200_nodes": 2
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "precision_bits": 4,
+      "context_tokens": 131072,
+      "weight_gb": 1349.5,
+      "kv_gb": 8.4,
+      "total_needed_gb": 1561.9,
+      "h100_gpus": 20,
+      "h100_nodes": 3,
+      "h100_headroom_gb": 358.1,
+      "h200_gpus": 11,
+      "h200_nodes": 2
+    },
+    {
+      "model": "Kimi K3.1 Pro",
+      "precision_bits": 4,
+      "context_tokens": 1048576,
+      "weight_gb": 1349.5,
+      "kv_gb": 67.0,
+      "total_needed_gb": 1620.4,
+      "h100_gpus": 21,
+      "h100_nodes": 3,
+      "h100_headroom_gb": 299.6,
+      "h200_gpus": 11,
+      "h200_nodes": 2
+    },
+    {
+      "model": "Mistral Large 4",
+      "precision_bits": 8,
+      "context_tokens": 8192,
+      "weight_gb": 1012.1,
+      "kv_gb": 0.6,
+      "total_needed_gb": 1168.7,
+      "h100_gpus": 15,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 111.3,
+      "h200_gpus": 8,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Mistral Large 4",
+      "precision_bits": 8,
+      "context_tokens": 131072,
+      "weight_gb": 1012.1,
+      "kv_gb": 10.1,
+      "total_needed_gb": 1178.2,
+      "h100_gpus": 15,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 101.8,
+      "h200_gpus": 8,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Mistral Large 4",
+      "precision_bits": 8,
+      "context_tokens": 1048576,
+      "weight_gb": 1012.1,
+      "kv_gb": 81.0,
+      "total_needed_gb": 1249.1,
+      "h100_gpus": 16,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 30.9,
+      "h200_gpus": 9,
+      "h200_nodes": 2
+    },
+    {
+      "model": "Mistral Large 4",
+      "precision_bits": 4,
+      "context_tokens": 8192,
+      "weight_gb": 506.1,
+      "kv_gb": 0.6,
+      "total_needed_gb": 590.7,
+      "h100_gpus": 8,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 49.3,
+      "h200_gpus": 4,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Mistral Large 4",
+      "precision_bits": 4,
+      "context_tokens": 131072,
+      "weight_gb": 506.1,
+      "kv_gb": 10.1,
+      "total_needed_gb": 600.2,
+      "h100_gpus": 8,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 39.8,
+      "h200_gpus": 5,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Mistral Large 4",
+      "precision_bits": 4,
+      "context_tokens": 1048576,
+      "weight_gb": 506.1,
+      "kv_gb": 81.0,
+      "total_needed_gb": 671.1,
+      "h100_gpus": 9,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 608.9,
+      "h200_gpus": 5,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Tencent Hy4",
+      "precision_bits": 8,
+      "context_tokens": 8192,
+      "weight_gb": 742.2,
+      "kv_gb": 0.4,
+      "total_needed_gb": 862.6,
+      "h100_gpus": 11,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 417.4,
+      "h200_gpus": 6,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Tencent Hy4",
+      "precision_bits": 8,
+      "context_tokens": 131072,
+      "weight_gb": 742.2,
+      "kv_gb": 6.4,
+      "total_needed_gb": 868.6,
+      "h100_gpus": 11,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 411.4,
+      "h200_gpus": 6,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Tencent Hy4",
+      "precision_bits": 8,
+      "context_tokens": 1048576,
+      "weight_gb": 742.2,
+      "kv_gb": 51.2,
+      "total_needed_gb": 913.4,
+      "h100_gpus": 12,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 366.6,
+      "h200_gpus": 7,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Tencent Hy4",
+      "precision_bits": 4,
+      "context_tokens": 8192,
+      "weight_gb": 371.1,
+      "kv_gb": 0.4,
+      "total_needed_gb": 431.5,
+      "h100_gpus": 6,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 208.5,
+      "h200_gpus": 3,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Tencent Hy4",
+      "precision_bits": 4,
+      "context_tokens": 131072,
+      "weight_gb": 371.1,
+      "kv_gb": 6.4,
+      "total_needed_gb": 437.5,
+      "h100_gpus": 6,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 202.5,
+      "h200_gpus": 3,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Tencent Hy4",
+      "precision_bits": 4,
+      "context_tokens": 1048576,
+      "weight_gb": 371.1,
+      "kv_gb": 51.2,
+      "total_needed_gb": 482.3,
+      "h100_gpus": 7,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 157.7,
+      "h200_gpus": 4,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Inkling 2 Small",
+      "precision_bits": 8,
+      "context_tokens": 8192,
+      "weight_gb": 572.6,
+      "kv_gb": 1.5,
+      "total_needed_gb": 670.1,
+      "h100_gpus": 9,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 609.9,
+      "h200_gpus": 5,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Inkling 2 Small",
+      "precision_bits": 8,
+      "context_tokens": 131072,
+      "weight_gb": 572.6,
+      "kv_gb": 24.0,
+      "total_needed_gb": 692.6,
+      "h100_gpus": 9,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 587.4,
+      "h200_gpus": 5,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Inkling 2 Small",
+      "precision_bits": 8,
+      "context_tokens": 1048576,
+      "weight_gb": 572.6,
+      "kv_gb": 192.0,
+      "total_needed_gb": 860.6,
+      "h100_gpus": 11,
+      "h100_nodes": 2,
+      "h100_headroom_gb": 419.4,
+      "h200_gpus": 6,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Inkling 2 Small",
+      "precision_bits": 4,
+      "context_tokens": 8192,
+      "weight_gb": 286.3,
+      "kv_gb": 1.5,
+      "total_needed_gb": 335.8,
+      "h100_gpus": 5,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 304.2,
+      "h200_gpus": 3,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Inkling 2 Small",
+      "precision_bits": 4,
+      "context_tokens": 131072,
+      "weight_gb": 286.3,
+      "kv_gb": 24.0,
+      "total_needed_gb": 358.3,
+      "h100_gpus": 5,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 281.7,
+      "h200_gpus": 3,
+      "h200_nodes": 1
+    },
+    {
+      "model": "Inkling 2 Small",
+      "precision_bits": 4,
+      "context_tokens": 1048576,
+      "weight_gb": 286.3,
+      "kv_gb": 192.0,
+      "total_needed_gb": 526.3,
+      "h100_gpus": 7,
+      "h100_nodes": 1,
+      "h100_headroom_gb": 113.7,
+      "h200_gpus": 4,
+      "h200_nodes": 1
+    }
+  ],
+  "version_gap_analysis": {
+    "claude_vs_kimi": {
+      "model_a": "Claude Opus 5.5 (Closed Baseline)",
+      "model_b": "Kimi K3.1 Pro",
+      "model_a_v5": 58.0,
+      "model_b_v5": 46.0,
+      "true_v5_same_version_gap": 12.0,
+      "model_a_v4": 61.0,
+      "manufactured_cross_version_gap": 15.0,
+      "fallacy_inflation_points": 3.0
+    },
+    "kimi_vs_mistral": {
+      "model_a": "Kimi K3.1 Pro",
+      "model_b": "Mistral Large 4",
+      "model_a_v5": 46.0,
+      "model_b_v5": 26.0,
+      "true_v5_same_version_gap": 20.0,
+      "model_a_v4": 55.0,
+      "manufactured_cross_version_gap": 29.0,
+      "fallacy_inflation_points": 9.0
+    }
+  },
+  "task_economics": {
+    "Claude Opus 5.5 (Closed Baseline)": {
+      "tokens_generated": 125000,
+      "task_duration_seconds": 3571.4,
+      "compute_cost_usd": 19.8413
+    },
+    "Kimi K3.1 Pro": {
+      "tokens_generated": 140000,
+      "task_duration_seconds": 4000.0,
+      "compute_cost_usd": 22.2222
+    },
+    "Tencent Hy4": {
+      "tokens_generated": 115000,
+      "task_duration_seconds": 3285.7,
+      "compute_cost_usd": 18.254
+    },
+    "Inkling 2 Small": {
+      "tokens_generated": 154000,
+      "task_duration_seconds": 4400.0,
+      "compute_cost_usd": 24.4444
+    },
+    "Mistral Large 4": {
+      "tokens_generated": 110000,
+      "task_duration_seconds": 3142.9,
+      "compute_cost_usd": 17.4603
+    }
+  },
+  "index_snapshots": {
+    "Claude Opus 5.5 (Closed Baseline)": {
+      "model_name": "Claude Opus 5.5 (Closed Baseline)",
+      "v4_score": 61.0,
+      "v5_score": 58.0,
+      "avg_tokens_per_task": 125000,
+      "eval_time_minutes": 18.5,
+      "cost_per_task_usd": 4.2,
+      "is_open_weights_released": false
+    },
+    "Kimi K3.1 Pro": {
+      "model_name": "Kimi K3.1 Pro",
+      "v4_score": 55.0,
+      "v5_score": 46.0,
+      "avg_tokens_per_task": 140000,
+      "eval_time_minutes": 36.0,
+      "cost_per_task_usd": 3.68,
+      "is_open_weights_released": true
+    },
+    "Tencent Hy4": {
+      "model_name": "Tencent Hy4",
+      "v4_score": null,
+      "v5_score": 35.0,
+      "avg_tokens_per_task": 115000,
+      "eval_time_minutes": 24.0,
+      "cost_per_task_usd": 2.1,
+      "is_open_weights_released": false
+    },
+    "Inkling 2 Small": {
+      "model_name": "Inkling 2 Small",
+      "v4_score": null,
+      "v5_score": 31.0,
+      "avg_tokens_per_task": 154000,
+      "eval_time_minutes": 20.8,
+      "cost_per_task_usd": 1.85,
+      "is_open_weights_released": false
+    },
+    "Mistral Large 4": {
+      "model_name": "Mistral Large 4",
+      "v4_score": 38.0,
+      "v5_score": 26.0,
+      "avg_tokens_per_task": 110000,
+      "eval_time_minutes": 15.2,
+      "cost_per_task_usd": 1.55,
+      "is_open_weights_released": true
+    }
+  }
+}
