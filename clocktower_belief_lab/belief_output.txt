@@ -1,0 +1,4 @@
+No poison: Demon probability after survival = 0.0%
+Independent poison: Demon probability after survival = 4.1%
+Targeted poison: Demon probability after survival = 25.5%
+All scenarios begin at 30%; all poison probabilities are hypothetical.

@@ -221,3 +221,4 @@ if __name__ == "__main__":
     plot_state_machine()
     plot_test_validation_matrix()
     print("All figures successfully generated in figures/")
+

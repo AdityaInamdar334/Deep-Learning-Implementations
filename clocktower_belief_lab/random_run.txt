@@ -1,0 +1,4 @@
+
+GOOD — The Demon is dead.  (days: 5)
+cost $0.00 over 0 calls, 0.0 min; tokens: 0.00M cached, 0.00M written, 0K uncached, 0K output
+logs: ../Clocktower_Lab/random_game

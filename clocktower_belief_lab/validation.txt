@@ -1,0 +1,16 @@
+test_counts (test_lab.AuditTests.test_counts) ... ok
+test_pairs (test_lab.AuditTests.test_pairs) ... ok
+test_published_point_estimates (test_lab.AuditTests.test_published_point_estimates) ... ok
+test_bad_probability (test_lab.BeliefTests.test_bad_probability) ... ok
+test_brier_perfect (test_lab.BeliefTests.test_brier_perfect) ... ok
+test_current_demon_matters (test_lab.BeliefTests.test_current_demon_matters) ... ok
+test_impossible_evidence (test_lab.BeliefTests.test_impossible_evidence) ... ok
+test_normalization (test_lab.BeliefTests.test_normalization) ... ok
+test_poison_keeps_demon_possible (test_lab.BeliefTests.test_poison_keeps_demon_possible) ... ok
+test_targeted_poison_differs (test_lab.BeliefTests.test_targeted_poison_differs) ... ok
+test_working_slayer_rules_out_demon (test_lab.BeliefTests.test_working_slayer_rules_out_demon) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.011s
+
+OK

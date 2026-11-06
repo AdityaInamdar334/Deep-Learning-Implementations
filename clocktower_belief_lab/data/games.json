@@ -1,0 +1,5020 @@
+[
+  {
+    "path": "v16/f2-astra-v-opus55/game-01",
+    "pair": "f2-astra-v-opus55/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-astra-v-opus55/game-01-swap",
+    "pair": "f2-astra-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-astra-v-sol61/game-01",
+    "pair": "f2-astra-v-sol61/game-01",
+    "good": "gpt-6-astra",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-astra-v-sol61/game-01-swap",
+    "pair": "f2-astra-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable5-v-astra/game-01",
+    "pair": "f2-fable5-v-astra/game-01",
+    "good": "claude-fable-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-fable5-v-astra/game-01-swap",
+    "pair": "f2-fable5-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-fable5-v-fable51/game-01",
+    "pair": "f2-fable5-v-fable51/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable5-v-fable51/game-01-swap",
+    "pair": "f2-fable5-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable5-v-gpt56sol/game-01",
+    "pair": "f2-fable5-v-gpt56sol/game-01",
+    "good": "claude-fable-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-fable5-v-gpt56sol/game-01-swap",
+    "pair": "f2-fable5-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-fable5-v-opus55/game-01",
+    "pair": "f2-fable5-v-opus55/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-fable5-v-opus55/game-01-swap",
+    "pair": "f2-fable5-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-fable5-v-sol61/game-01",
+    "pair": "f2-fable5-v-sol61/game-01",
+    "good": "claude-fable-5",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable5-v-sol61/game-01-swap",
+    "pair": "f2-fable5-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable51-v-astra/game-01",
+    "pair": "f2-fable51-v-astra/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-fable51-v-astra/game-01-swap",
+    "pair": "f2-fable51-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-fable51-v-opus55/game-01",
+    "pair": "f2-fable51-v-opus55/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable51-v-opus55/game-01-swap",
+    "pair": "f2-fable51-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-fable51-v-sol61/game-01",
+    "pair": "f2-fable51-v-sol61/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-fable51-v-sol61/game-01-swap",
+    "pair": "f2-fable51-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt54-v-astra/game-01",
+    "pair": "f2-gpt54-v-astra/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt54-v-astra/game-01-swap",
+    "pair": "f2-gpt54-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt54-v-fable5/game-01",
+    "pair": "f2-gpt54-v-fable5/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt54-v-fable5/game-01-swap",
+    "pair": "f2-gpt54-v-fable5/game-01",
+    "good": "claude-fable-5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt54-v-fable51/game-01",
+    "pair": "f2-gpt54-v-fable51/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt54-v-fable51/game-01-swap",
+    "pair": "f2-gpt54-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt54-v-gpt55/game-01",
+    "pair": "f2-gpt54-v-gpt55/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt54-v-gpt55/game-01-swap",
+    "pair": "f2-gpt54-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt54-v-gpt56sol/game-01",
+    "pair": "f2-gpt54-v-gpt56sol/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt54-v-gpt56sol/game-01-swap",
+    "pair": "f2-gpt54-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt54-v-opus47/game-01",
+    "pair": "f2-gpt54-v-opus47/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-7",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt54-v-opus47/game-01-swap",
+    "pair": "f2-gpt54-v-opus47/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt54-v-opus55/game-01",
+    "pair": "f2-gpt54-v-opus55/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt54-v-opus55/game-01-swap",
+    "pair": "f2-gpt54-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt54-v-sol61/game-01",
+    "pair": "f2-gpt54-v-sol61/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt54-v-sol61/game-01-swap",
+    "pair": "f2-gpt54-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt55-v-astra/game-01",
+    "pair": "f2-gpt55-v-astra/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt55-v-astra/game-01-swap",
+    "pair": "f2-gpt55-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt55-v-fable5/game-01",
+    "pair": "f2-gpt55-v-fable5/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt55-v-fable5/game-01-swap",
+    "pair": "f2-gpt55-v-fable5/game-01",
+    "good": "claude-fable-5",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt55-v-fable51/game-01",
+    "pair": "f2-gpt55-v-fable51/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt55-v-fable51/game-01-swap",
+    "pair": "f2-gpt55-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt55-v-gpt56sol/game-01",
+    "pair": "f2-gpt55-v-gpt56sol/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt55-v-gpt56sol/game-01-swap",
+    "pair": "f2-gpt55-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt55-v-opus55/game-01",
+    "pair": "f2-gpt55-v-opus55/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt55-v-opus55/game-01-swap",
+    "pair": "f2-gpt55-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt55-v-sol61/game-01",
+    "pair": "f2-gpt55-v-sol61/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt55-v-sol61/game-01-swap",
+    "pair": "f2-gpt55-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-astra/game-01",
+    "pair": "f2-gpt56sol-v-astra/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-astra/game-01-swap",
+    "pair": "f2-gpt56sol-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-fable51/game-01",
+    "pair": "f2-gpt56sol-v-fable51/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-fable51/game-01-swap",
+    "pair": "f2-gpt56sol-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-opus55/game-01",
+    "pair": "f2-gpt56sol-v-opus55/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-opus55/game-01-swap",
+    "pair": "f2-gpt56sol-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-sol61/game-01",
+    "pair": "f2-gpt56sol-v-sol61/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-gpt56sol-v-sol61/game-01-swap",
+    "pair": "f2-gpt56sol-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus46-v-astra/game-01",
+    "pair": "f2-opus46-v-astra/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus46-v-astra/game-01-swap",
+    "pair": "f2-opus46-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus46-v-fable5/game-01",
+    "pair": "f2-opus46-v-fable5/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus46-v-fable5/game-01-swap",
+    "pair": "f2-opus46-v-fable5/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus46-v-fable51/game-01",
+    "pair": "f2-opus46-v-fable51/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus46-v-fable51/game-01-swap",
+    "pair": "f2-opus46-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus46-v-gpt54/game-01",
+    "pair": "f2-opus46-v-gpt54/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus46-v-gpt54/game-01-swap",
+    "pair": "f2-opus46-v-gpt54/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus46-v-gpt55/game-01",
+    "pair": "f2-opus46-v-gpt55/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus46-v-gpt55/game-01-swap",
+    "pair": "f2-opus46-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-6",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus46-v-gpt56sol/game-01",
+    "pair": "f2-opus46-v-gpt56sol/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus46-v-gpt56sol/game-01-swap",
+    "pair": "f2-opus46-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus46-v-opus47/game-01",
+    "pair": "f2-opus46-v-opus47/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus46-v-opus47/game-01-swap",
+    "pair": "f2-opus46-v-opus47/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus46-v-opus55/game-01",
+    "pair": "f2-opus46-v-opus55/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus46-v-opus55/game-01-swap",
+    "pair": "f2-opus46-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus46-v-sol61/game-01",
+    "pair": "f2-opus46-v-sol61/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus46-v-sol61/game-01-swap",
+    "pair": "f2-opus46-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus47-v-astra/game-01",
+    "pair": "f2-opus47-v-astra/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus47-v-astra/game-01-swap",
+    "pair": "f2-opus47-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus47-v-fable5/game-01",
+    "pair": "f2-opus47-v-fable5/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus47-v-fable5/game-01-swap",
+    "pair": "f2-opus47-v-fable5/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus47-v-fable51/game-01",
+    "pair": "f2-opus47-v-fable51/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus47-v-fable51/game-01-swap",
+    "pair": "f2-opus47-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus47-v-gpt55/game-01",
+    "pair": "f2-opus47-v-gpt55/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus47-v-gpt55/game-01-swap",
+    "pair": "f2-opus47-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus47-v-gpt56sol/game-01",
+    "pair": "f2-opus47-v-gpt56sol/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus47-v-gpt56sol/game-01-swap",
+    "pair": "f2-opus47-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus47-v-opus55/game-01",
+    "pair": "f2-opus47-v-opus55/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus47-v-opus55/game-01-swap",
+    "pair": "f2-opus47-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v16/f2-opus47-v-sol61/game-01",
+    "pair": "f2-opus47-v-sol61/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus47-v-sol61/game-01-swap",
+    "pair": "f2-opus47-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v16/f2-opus55-v-sol61/game-01",
+    "pair": "f2-opus55-v-sol61/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v16/f2-opus55-v-sol61/game-01-swap",
+    "pair": "f2-opus55-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-01",
+    "pair": "f3-astra-v-opus55/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-01-swap",
+    "pair": "f3-astra-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-02",
+    "pair": "f3-astra-v-opus55/game-02",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-02-swap",
+    "pair": "f3-astra-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-03",
+    "pair": "f3-astra-v-opus55/game-03",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-03-swap",
+    "pair": "f3-astra-v-opus55/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-04",
+    "pair": "f3-astra-v-opus55/game-04",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-astra-v-opus55/game-04-swap",
+    "pair": "f3-astra-v-opus55/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-astra-v-sol61/game-01",
+    "pair": "f3-astra-v-sol61/game-01",
+    "good": "gpt-6-astra",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-astra-v-sol61/game-01-swap",
+    "pair": "f3-astra-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-astra-v-sol61/game-02",
+    "pair": "f3-astra-v-sol61/game-02",
+    "good": "gpt-6-astra",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-astra-v-sol61/game-02-swap",
+    "pair": "f3-astra-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-astra-v-sol61/game-03",
+    "pair": "f3-astra-v-sol61/game-03",
+    "good": "gpt-6-astra",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-astra-v-sol61/game-03-swap",
+    "pair": "f3-astra-v-sol61/game-03",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-01",
+    "pair": "f3-fable5-v-fable51/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-01-swap",
+    "pair": "f3-fable5-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-02",
+    "pair": "f3-fable5-v-fable51/game-02",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-02-swap",
+    "pair": "f3-fable5-v-fable51/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-03",
+    "pair": "f3-fable5-v-fable51/game-03",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-03-swap",
+    "pair": "f3-fable5-v-fable51/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-04",
+    "pair": "f3-fable5-v-fable51/game-04",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable5-v-fable51/game-04-swap",
+    "pair": "f3-fable5-v-fable51/game-04",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable5-v-gpt56sol/game-01",
+    "pair": "f3-fable5-v-gpt56sol/game-01",
+    "good": "claude-fable-5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable5-v-gpt56sol/game-01-swap",
+    "pair": "f3-fable5-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable5-v-gpt56sol/game-02",
+    "pair": "f3-fable5-v-gpt56sol/game-02",
+    "good": "claude-fable-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable5-v-gpt56sol/game-02-swap",
+    "pair": "f3-fable5-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable5-v-gpt56sol/game-03",
+    "pair": "f3-fable5-v-gpt56sol/game-03",
+    "good": "claude-fable-5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable5-v-gpt56sol/game-03-swap",
+    "pair": "f3-fable5-v-gpt56sol/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-astra/game-01",
+    "pair": "f3-fable51-v-astra/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-astra/game-01-swap",
+    "pair": "f3-fable51-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-01",
+    "pair": "f3-fable51-v-opus55/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-01-swap",
+    "pair": "f3-fable51-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-02",
+    "pair": "f3-fable51-v-opus55/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-02-swap",
+    "pair": "f3-fable51-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-03",
+    "pair": "f3-fable51-v-opus55/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-03-swap",
+    "pair": "f3-fable51-v-opus55/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-04",
+    "pair": "f3-fable51-v-opus55/game-04",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable51-v-opus55/game-04-swap",
+    "pair": "f3-fable51-v-opus55/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-01",
+    "pair": "f3-fable51-v-sol61/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-01-swap",
+    "pair": "f3-fable51-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-02",
+    "pair": "f3-fable51-v-sol61/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-02-swap",
+    "pair": "f3-fable51-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-03",
+    "pair": "f3-fable51-v-sol61/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-03-swap",
+    "pair": "f3-fable51-v-sol61/game-03",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-04",
+    "pair": "f3-fable51-v-sol61/game-04",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-fable51-v-sol61/game-04-swap",
+    "pair": "f3-fable51-v-sol61/game-04",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-01",
+    "pair": "f3-gpt54-v-gpt55/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-01-swap",
+    "pair": "f3-gpt54-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-02",
+    "pair": "f3-gpt54-v-gpt55/game-02",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-02-swap",
+    "pair": "f3-gpt54-v-gpt55/game-02",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-03",
+    "pair": "f3-gpt54-v-gpt55/game-03",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-03-swap",
+    "pair": "f3-gpt54-v-gpt55/game-03",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-04",
+    "pair": "f3-gpt54-v-gpt55/game-04",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt55/game-04-swap",
+    "pair": "f3-gpt54-v-gpt55/game-04",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-01",
+    "pair": "f3-gpt54-v-gpt56sol/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-01-swap",
+    "pair": "f3-gpt54-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-02",
+    "pair": "f3-gpt54-v-gpt56sol/game-02",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-02-swap",
+    "pair": "f3-gpt54-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-03",
+    "pair": "f3-gpt54-v-gpt56sol/game-03",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-03-swap",
+    "pair": "f3-gpt54-v-gpt56sol/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-04",
+    "pair": "f3-gpt54-v-gpt56sol/game-04",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-gpt56sol/game-04-swap",
+    "pair": "f3-gpt54-v-gpt56sol/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus47/game-01",
+    "pair": "f3-gpt54-v-opus47/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus47/game-01-swap",
+    "pair": "f3-gpt54-v-opus47/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus48/game-01",
+    "pair": "f3-gpt54-v-opus48/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-8",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus48/game-01-swap",
+    "pair": "f3-gpt54-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.4",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus48/game-02",
+    "pair": "f3-gpt54-v-opus48/game-02",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus48/game-02-swap",
+    "pair": "f3-gpt54-v-opus48/game-02",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus55/game-01",
+    "pair": "f3-gpt54-v-opus55/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus55/game-01-swap",
+    "pair": "f3-gpt54-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus55/game-02",
+    "pair": "f3-gpt54-v-opus55/game-02",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt54-v-opus55/game-02-swap",
+    "pair": "f3-gpt54-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt55-v-gpt56sol/game-01",
+    "pair": "f3-gpt55-v-gpt56sol/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt55-v-gpt56sol/game-01-swap",
+    "pair": "f3-gpt55-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt55-v-gpt56sol/game-02",
+    "pair": "f3-gpt55-v-gpt56sol/game-02",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt55-v-gpt56sol/game-02-swap",
+    "pair": "f3-gpt55-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-01",
+    "pair": "f3-gpt55-v-opus48/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-01-swap",
+    "pair": "f3-gpt55-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-02",
+    "pair": "f3-gpt55-v-opus48/game-02",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-02-swap",
+    "pair": "f3-gpt55-v-opus48/game-02",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-03",
+    "pair": "f3-gpt55-v-opus48/game-03",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-03-swap",
+    "pair": "f3-gpt55-v-opus48/game-03",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-04",
+    "pair": "f3-gpt55-v-opus48/game-04",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus48/game-04-swap",
+    "pair": "f3-gpt55-v-opus48/game-04",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus55/game-01",
+    "pair": "f3-gpt55-v-opus55/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus55/game-01-swap",
+    "pair": "f3-gpt55-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus55/game-02",
+    "pair": "f3-gpt55-v-opus55/game-02",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt55-v-opus55/game-02-swap",
+    "pair": "f3-gpt55-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-01",
+    "pair": "f3-gpt56sol-v-astra/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-01-swap",
+    "pair": "f3-gpt56sol-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-02",
+    "pair": "f3-gpt56sol-v-astra/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-02-swap",
+    "pair": "f3-gpt56sol-v-astra/game-02",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-03",
+    "pair": "f3-gpt56sol-v-astra/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-03-swap",
+    "pair": "f3-gpt56sol-v-astra/game-03",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-04",
+    "pair": "f3-gpt56sol-v-astra/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-astra/game-04-swap",
+    "pair": "f3-gpt56sol-v-astra/game-04",
+    "good": "gpt-6-astra",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-01",
+    "pair": "f3-gpt56sol-v-fable51/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-01-swap",
+    "pair": "f3-gpt56sol-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-02",
+    "pair": "f3-gpt56sol-v-fable51/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-02-swap",
+    "pair": "f3-gpt56sol-v-fable51/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-03",
+    "pair": "f3-gpt56sol-v-fable51/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-03-swap",
+    "pair": "f3-gpt56sol-v-fable51/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-04",
+    "pair": "f3-gpt56sol-v-fable51/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-fable51/game-04-swap",
+    "pair": "f3-gpt56sol-v-fable51/game-04",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-01",
+    "pair": "f3-gpt56sol-v-opus55/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-01-swap",
+    "pair": "f3-gpt56sol-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-02",
+    "pair": "f3-gpt56sol-v-opus55/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-02-swap",
+    "pair": "f3-gpt56sol-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-03",
+    "pair": "f3-gpt56sol-v-opus55/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-03-swap",
+    "pair": "f3-gpt56sol-v-opus55/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-04",
+    "pair": "f3-gpt56sol-v-opus55/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-opus55/game-04-swap",
+    "pair": "f3-gpt56sol-v-opus55/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-01",
+    "pair": "f3-gpt56sol-v-sol61/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-01-swap",
+    "pair": "f3-gpt56sol-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-02",
+    "pair": "f3-gpt56sol-v-sol61/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-02-swap",
+    "pair": "f3-gpt56sol-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-03",
+    "pair": "f3-gpt56sol-v-sol61/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-03-swap",
+    "pair": "f3-gpt56sol-v-sol61/game-03",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-04",
+    "pair": "f3-gpt56sol-v-sol61/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-gpt56sol-v-sol61/game-04-swap",
+    "pair": "f3-gpt56sol-v-sol61/game-04",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt54/game-01",
+    "pair": "f3-opus46-v-gpt54/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt54/game-01-swap",
+    "pair": "f3-opus46-v-gpt54/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt54/game-02",
+    "pair": "f3-opus46-v-gpt54/game-02",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt54/game-02-swap",
+    "pair": "f3-opus46-v-gpt54/game-02",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-01",
+    "pair": "f3-opus46-v-gpt55/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-01-swap",
+    "pair": "f3-opus46-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-02",
+    "pair": "f3-opus46-v-gpt55/game-02",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-02-swap",
+    "pair": "f3-opus46-v-gpt55/game-02",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-03",
+    "pair": "f3-opus46-v-gpt55/game-03",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-03-swap",
+    "pair": "f3-opus46-v-gpt55/game-03",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-6",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-04",
+    "pair": "f3-opus46-v-gpt55/game-04",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt55/game-04-swap",
+    "pair": "f3-opus46-v-gpt55/game-04",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-01",
+    "pair": "f3-opus46-v-gpt56sol/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-01-swap",
+    "pair": "f3-opus46-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-02",
+    "pair": "f3-opus46-v-gpt56sol/game-02",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-02-swap",
+    "pair": "f3-opus46-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-03",
+    "pair": "f3-opus46-v-gpt56sol/game-03",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-03-swap",
+    "pair": "f3-opus46-v-gpt56sol/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-04",
+    "pair": "f3-opus46-v-gpt56sol/game-04",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-gpt56sol/game-04-swap",
+    "pair": "f3-opus46-v-gpt56sol/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-opus47/game-01",
+    "pair": "f3-opus46-v-opus47/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-opus-4-7",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-opus47/game-01-swap",
+    "pair": "f3-opus46-v-opus47/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-opus55/game-01",
+    "pair": "f3-opus46-v-opus55/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-opus55/game-01-swap",
+    "pair": "f3-opus46-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-6",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-01",
+    "pair": "f3-opus46-v-sol61/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-01-swap",
+    "pair": "f3-opus46-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-02",
+    "pair": "f3-opus46-v-sol61/game-02",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-02-swap",
+    "pair": "f3-opus46-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-03",
+    "pair": "f3-opus46-v-sol61/game-03",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-03-swap",
+    "pair": "f3-opus46-v-sol61/game-03",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-04",
+    "pair": "f3-opus46-v-sol61/game-04",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus46-v-sol61/game-04-swap",
+    "pair": "f3-opus46-v-sol61/game-04",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-fable51/game-01",
+    "pair": "f3-opus47-v-fable51/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-fable51/game-01-swap",
+    "pair": "f3-opus47-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-fable51/game-02",
+    "pair": "f3-opus47-v-fable51/game-02",
+    "good": "claude-opus-4-7",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus47-v-fable51/game-02-swap",
+    "pair": "f3-opus47-v-fable51/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus47-v-fable51/game-03",
+    "pair": "f3-opus47-v-fable51/game-03",
+    "good": "claude-opus-4-7",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-fable51/game-03-swap",
+    "pair": "f3-opus47-v-fable51/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-gpt56sol/game-01",
+    "pair": "f3-opus47-v-gpt56sol/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-gpt56sol/game-01-swap",
+    "pair": "f3-opus47-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-gpt56sol/game-02",
+    "pair": "f3-opus47-v-gpt56sol/game-02",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus47-v-gpt56sol/game-02-swap",
+    "pair": "f3-opus47-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-01",
+    "pair": "f3-opus47-v-opus48/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-01-swap",
+    "pair": "f3-opus47-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-02",
+    "pair": "f3-opus47-v-opus48/game-02",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-02-swap",
+    "pair": "f3-opus47-v-opus48/game-02",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-03",
+    "pair": "f3-opus47-v-opus48/game-03",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-03-swap",
+    "pair": "f3-opus47-v-opus48/game-03",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-04",
+    "pair": "f3-opus47-v-opus48/game-04",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-opus48/game-04-swap",
+    "pair": "f3-opus47-v-opus48/game-04",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-opus55/game-01",
+    "pair": "f3-opus47-v-opus55/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-opus55/game-01-swap",
+    "pair": "f3-opus47-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-opus55/game-02",
+    "pair": "f3-opus47-v-opus55/game-02",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-opus55/game-02-swap",
+    "pair": "f3-opus47-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus47-v-sol61/game-01",
+    "pair": "f3-opus47-v-sol61/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus47-v-sol61/game-01-swap",
+    "pair": "f3-opus47-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-01",
+    "pair": "f3-opus55-v-sol61/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-01-swap",
+    "pair": "f3-opus55-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-02",
+    "pair": "f3-opus55-v-sol61/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-02-swap",
+    "pair": "f3-opus55-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-03",
+    "pair": "f3-opus55-v-sol61/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-03-swap",
+    "pair": "f3-opus55-v-sol61/game-03",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-04",
+    "pair": "f3-opus55-v-sol61/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3-opus55-v-sol61/game-04-swap",
+    "pair": "f3-opus55-v-sol61/game-04",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-01",
+    "pair": "f3b-astra-v-opus55/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-01-swap",
+    "pair": "f3b-astra-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-02",
+    "pair": "f3b-astra-v-opus55/game-02",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-02-swap",
+    "pair": "f3b-astra-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-03",
+    "pair": "f3b-astra-v-opus55/game-03",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-03-swap",
+    "pair": "f3b-astra-v-opus55/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-04",
+    "pair": "f3b-astra-v-opus55/game-04",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-astra-v-opus55/game-04-swap",
+    "pair": "f3b-astra-v-opus55/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-fable5-v-fable51/game-01",
+    "pair": "f3b-fable5-v-fable51/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-fable5-v-fable51/game-01-swap",
+    "pair": "f3b-fable5-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-fable5-v-fable51/game-02",
+    "pair": "f3b-fable5-v-fable51/game-02",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-fable5-v-fable51/game-02-swap",
+    "pair": "f3b-fable5-v-fable51/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-fable5-v-fable51/game-03",
+    "pair": "f3b-fable5-v-fable51/game-03",
+    "good": "claude-fable-5",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-fable5-v-fable51/game-03-swap",
+    "pair": "f3b-fable5-v-fable51/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-01",
+    "pair": "f3b-gpt54-v-gpt55/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-01-swap",
+    "pair": "f3b-gpt54-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-02",
+    "pair": "f3b-gpt54-v-gpt55/game-02",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-02-swap",
+    "pair": "f3b-gpt54-v-gpt55/game-02",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-03",
+    "pair": "f3b-gpt54-v-gpt55/game-03",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-03-swap",
+    "pair": "f3b-gpt54-v-gpt55/game-03",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-04",
+    "pair": "f3b-gpt54-v-gpt55/game-04",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt55/game-04-swap",
+    "pair": "f3b-gpt54-v-gpt55/game-04",
+    "good": "gpt-5.5",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-01",
+    "pair": "f3b-gpt54-v-gpt56sol/game-01",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-01-swap",
+    "pair": "f3b-gpt54-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-02",
+    "pair": "f3b-gpt54-v-gpt56sol/game-02",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-02-swap",
+    "pair": "f3b-gpt54-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-03",
+    "pair": "f3b-gpt54-v-gpt56sol/game-03",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-03-swap",
+    "pair": "f3b-gpt54-v-gpt56sol/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-04",
+    "pair": "f3b-gpt54-v-gpt56sol/game-04",
+    "good": "gpt-5.4",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-gpt56sol/game-04-swap",
+    "pair": "f3b-gpt54-v-gpt56sol/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-5.4",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt54-v-opus48/game-01",
+    "pair": "f3b-gpt54-v-opus48/game-01",
+    "good": "gpt-5.4",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt54-v-opus48/game-01-swap",
+    "pair": "f3b-gpt54-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.4",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-01",
+    "pair": "f3b-gpt55-v-opus48/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-01-swap",
+    "pair": "f3b-gpt55-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-02",
+    "pair": "f3b-gpt55-v-opus48/game-02",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-02-swap",
+    "pair": "f3b-gpt55-v-opus48/game-02",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-03",
+    "pair": "f3b-gpt55-v-opus48/game-03",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-03-swap",
+    "pair": "f3b-gpt55-v-opus48/game-03",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-04",
+    "pair": "f3b-gpt55-v-opus48/game-04",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt55-v-opus48/game-04-swap",
+    "pair": "f3b-gpt55-v-opus48/game-04",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-01",
+    "pair": "f3b-gpt56sol-v-fable51/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-01-swap",
+    "pair": "f3b-gpt56sol-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-02",
+    "pair": "f3b-gpt56sol-v-fable51/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-02-swap",
+    "pair": "f3b-gpt56sol-v-fable51/game-02",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-03",
+    "pair": "f3b-gpt56sol-v-fable51/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-03-swap",
+    "pair": "f3b-gpt56sol-v-fable51/game-03",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-04",
+    "pair": "f3b-gpt56sol-v-fable51/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-fable-5-1",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-fable51/game-04-swap",
+    "pair": "f3b-gpt56sol-v-fable51/game-04",
+    "good": "claude-fable-5-1",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-01",
+    "pair": "f3b-gpt56sol-v-opus55/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-01-swap",
+    "pair": "f3b-gpt56sol-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-02",
+    "pair": "f3b-gpt56sol-v-opus55/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-02-swap",
+    "pair": "f3b-gpt56sol-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-03",
+    "pair": "f3b-gpt56sol-v-opus55/game-03",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-03-swap",
+    "pair": "f3b-gpt56sol-v-opus55/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-04",
+    "pair": "f3b-gpt56sol-v-opus55/game-04",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-opus55/game-04-swap",
+    "pair": "f3b-gpt56sol-v-opus55/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-sol61/game-01",
+    "pair": "f3b-gpt56sol-v-sol61/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-gpt56sol-v-sol61/game-01-swap",
+    "pair": "f3b-gpt56sol-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-opus46-v-gpt56sol/game-01",
+    "pair": "f3b-opus46-v-gpt56sol/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus46-v-gpt56sol/game-01-swap",
+    "pair": "f3b-opus46-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus46-v-gpt56sol/game-02",
+    "pair": "f3b-opus46-v-gpt56sol/game-02",
+    "good": "claude-opus-4-6",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus46-v-gpt56sol/game-02-swap",
+    "pair": "f3b-opus46-v-gpt56sol/game-02",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-6",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-01",
+    "pair": "f3b-opus47-v-opus48/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-01-swap",
+    "pair": "f3b-opus47-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-02",
+    "pair": "f3b-opus47-v-opus48/game-02",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-02-swap",
+    "pair": "f3b-opus47-v-opus48/game-02",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-03",
+    "pair": "f3b-opus47-v-opus48/game-03",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-03-swap",
+    "pair": "f3b-opus47-v-opus48/game-03",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-04",
+    "pair": "f3b-opus47-v-opus48/game-04",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus47-v-opus48/game-04-swap",
+    "pair": "f3b-opus47-v-opus48/game-04",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-7",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-01",
+    "pair": "f3b-opus55-v-sol61/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-01-swap",
+    "pair": "f3b-opus55-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-02",
+    "pair": "f3b-opus55-v-sol61/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-02-swap",
+    "pair": "f3b-opus55-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-03",
+    "pair": "f3b-opus55-v-sol61/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-03-swap",
+    "pair": "f3b-opus55-v-sol61/game-03",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-04",
+    "pair": "f3b-opus55-v-sol61/game-04",
+    "good": "claude-opus-5-5",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f3b-opus55-v-sol61/game-04-swap",
+    "pair": "f3b-opus55-v-sol61/game-04",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      true,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f4-opus46-v-opus48/game-01",
+    "pair": "f4-opus46-v-opus48/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-opus-4-8",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f4-opus46-v-opus48/game-01-swap",
+    "pair": "f4-opus46-v-opus48/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-4-6",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f4-opus47-v-astra/game-01",
+    "pair": "f4-opus47-v-astra/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f4-opus47-v-astra/game-01-swap",
+    "pair": "f4-opus47-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f4-opus48-v-astra/game-01",
+    "pair": "f4-opus48-v-astra/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-6-astra",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f4-opus48-v-astra/game-01-swap",
+    "pair": "f4-opus48-v-astra/game-01",
+    "good": "gpt-6-astra",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f4-opus48-v-fable5/game-01",
+    "pair": "f4-opus48-v-fable5/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-fable-5",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f4-opus48-v-fable5/game-01-swap",
+    "pair": "f4-opus48-v-fable5/game-01",
+    "good": "claude-fable-5",
+    "evil": "claude-opus-4-8",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f4-opus48-v-fable51/game-01",
+    "pair": "f4-opus48-v-fable51/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-fable-5-1",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f4-opus48-v-fable51/game-01-swap",
+    "pair": "f4-opus48-v-fable51/game-01",
+    "good": "claude-fable-5-1",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f4-opus48-v-gpt56sol/game-01",
+    "pair": "f4-opus48-v-gpt56sol/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-5.6-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f4-opus48-v-gpt56sol/game-01-swap",
+    "pair": "f4-opus48-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f4-opus48-v-opus55/game-01",
+    "pair": "f4-opus48-v-opus55/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f4-opus48-v-opus55/game-01-swap",
+    "pair": "f4-opus48-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f4-opus48-v-sol61/game-01",
+    "pair": "f4-opus48-v-sol61/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f4-opus48-v-sol61/game-01-swap",
+    "pair": "f4-opus48-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus46-v-opus47/game-01",
+    "pair": "f5-opus46-v-opus47/game-01",
+    "good": "claude-opus-4-6",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus46-v-opus47/game-01-swap",
+    "pair": "f5-opus46-v-opus47/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-4-6",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      false
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus47-v-gpt55/game-01",
+    "pair": "f5-opus47-v-gpt55/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f5-opus47-v-gpt55/game-01-swap",
+    "pair": "f5-opus47-v-gpt55/game-01",
+    "good": "gpt-5.5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f5-opus47-v-gpt56sol/game-01",
+    "pair": "f5-opus47-v-gpt56sol/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-5.6-sol",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus47-v-gpt56sol/game-01-swap",
+    "pair": "f5-opus47-v-gpt56sol/game-01",
+    "good": "gpt-5.6-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus47-v-opus55/game-01",
+    "pair": "f5-opus47-v-opus55/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f5-opus47-v-opus55/game-01-swap",
+    "pair": "f5-opus47-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f5-opus47-v-sol61/game-01",
+    "pair": "f5-opus47-v-sol61/game-01",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f5-opus47-v-sol61/game-01-swap",
+    "pair": "f5-opus47-v-sol61/game-01",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f5-opus47-v-sol61/game-02",
+    "pair": "f5-opus47-v-sol61/game-02",
+    "good": "claude-opus-4-7",
+    "evil": "gpt-6.1-sol",
+    "won": false,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f5-opus47-v-sol61/game-02-swap",
+    "pair": "f5-opus47-v-sol61/game-02",
+    "good": "gpt-6.1-sol",
+    "evil": "claude-opus-4-7",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f5-opus48-v-opus55/game-01",
+    "pair": "f5-opus48-v-opus55/game-01",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f5-opus48-v-opus55/game-01-swap",
+    "pair": "f5-opus48-v-opus55/game-01",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      true,
+      false,
+      true
+    ],
+    "players": 12
+  },
+  {
+    "path": "v17/f5-opus48-v-opus55/game-02",
+    "pair": "f5-opus48-v-opus55/game-02",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-5-5",
+    "won": false,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus48-v-opus55/game-02-swap",
+    "pair": "f5-opus48-v-opus55/game-02",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      false,
+      true
+    ],
+    "players": 10
+  },
+  {
+    "path": "v17/f5-opus48-v-opus55/game-03",
+    "pair": "f5-opus48-v-opus55/game-03",
+    "good": "claude-opus-4-8",
+    "evil": "claude-opus-5-5",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  },
+  {
+    "path": "v17/f5-opus48-v-opus55/game-03-swap",
+    "pair": "f5-opus48-v-opus55/game-03",
+    "good": "claude-opus-5-5",
+    "evil": "claude-opus-4-8",
+    "won": true,
+    "minions": [
+      false,
+      true,
+      false
+    ],
+    "players": 11
+  }
+]

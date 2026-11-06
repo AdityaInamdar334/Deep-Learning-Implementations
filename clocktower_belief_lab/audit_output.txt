@@ -1,0 +1,6 @@
+Games: 386; evil wins: 129
+All published rounded rating point estimates match: True
+Published intervals are provided, not re-estimated by this command.
+Two model-level summaries from public metadata:
+  gpt-6-astra: good 27/27; evil 17/27
+  gpt-6.1-sol: good 34/37; evil 19/37

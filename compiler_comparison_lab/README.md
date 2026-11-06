@@ -269,3 +269,4 @@ OK
 1. **Mytkowicz, T., Diwan, A., Hauswirth, M., & Sweeney, P. F. (2009).** *Producing wrong data without doing anything obviously wrong!* ACM SIGPLAN Notices, 44(3), 265-276. ASPLOS 2009. (Detailed study on measurement bias, link-order, and thermal artifacts in hardware benchmarks).
 2. **Kalibera, T., & Jones, R. (2013).** *Rigorous benchmarking in reasonable time.* ACM SIGPLAN Notices, 48(11), 63-74. OOPSLA 2013.
 3. **Barford, L. A. (2014).** *Non-parametric statistical methods for software performance evaluation.* Software: Practice and Experience, 44(5), 589-613.
+

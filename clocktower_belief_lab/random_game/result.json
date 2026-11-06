@@ -1,0 +1,63 @@
+{
+  "winner": "good",
+  "reason": "The Demon is dead.",
+  "stopped": null,
+  "days": 5,
+  "seed": 1,
+  "starting": {
+    "Alex": "Monk",
+    "Blair": "Scarlet Woman",
+    "Casey": "Empath",
+    "Drew": "Spy",
+    "Ellis": "Ravenkeeper",
+    "Frankie": "Imp",
+    "Gray": "Chef",
+    "Harper": "Mayor",
+    "Indigo": "Saint",
+    "Jules": "Librarian",
+    "Kit": "Soldier"
+  },
+  "final": {
+    "Alex": "Monk",
+    "Blair": "Imp",
+    "Casey": "Empath",
+    "Drew": "Spy",
+    "Ellis": "Ravenkeeper",
+    "Frankie": "Imp",
+    "Gray": "Chef",
+    "Harper": "Mayor",
+    "Indigo": "Saint",
+    "Jules": "Librarian",
+    "Kit": "Soldier"
+  },
+  "bluffs": [
+    "Washerwoman",
+    "Fortune Teller",
+    "Investigator"
+  ],
+  "red_herring": null,
+  "drunk_as": null,
+  "cost": 0,
+  "calls": 0,
+  "tokens": {
+    "input": 0,
+    "cache_read": 0,
+    "cache_write": 0,
+    "output": 0
+  },
+  "seconds": 0.1,
+  "errors": [],
+  "models": {
+    "Alex": "random",
+    "Blair": "random",
+    "Casey": "random",
+    "Drew": "random",
+    "Ellis": "random",
+    "Frankie": "random",
+    "Gray": "random",
+    "Harper": "random",
+    "Indigo": "random",
+    "Jules": "random",
+    "Kit": "random"
+  }
+}

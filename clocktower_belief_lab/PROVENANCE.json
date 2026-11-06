@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/dwarkeshsp/clocktower",
+  "commit": "c5d9696b42212f4bd4a99c0b5de831fa0643110b",
+  "retrieved": "2026-11-06",
+  "sha256": {
+    "vendor/ratings.py": "dcfe2065201a77c610174a404d6c5c46e1b7ce987a3f4177bf13f7bd7c346cff",
+    "data/games.json": "2cf7322eedb36d2168c1866162c673f3f072d54a38fdf5c4a3e063825645ae71",
+    "data/published_ratings.json": "bcb38f23306157a658e3a38286d79c7ab24b39fd9ad12f99d4e95cdbcb873c69",
+    "data/models.json": "bfc69ab0a286f2aba8129b876c4e617d392f0299180f9a9df3f09f3607a5d9c1"
+  }
+}

@@ -1,0 +1,83 @@
+..................................................................................................../workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v16/f2-a-v-o/game-01/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v16/f2-a-v-o/game-01/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v16/f2-a-v-b/game-01/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v16/f2-a-v-b/game-01/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:45: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v16/f2-a-v-b/game-01/events.jsonl' mode='r' encoding='UTF-8'>
+  setup = next(json.loads(l) for l in open(d + '/events.jsonl') if '"kind": "setup"' in l)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-02/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-02/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-01-swap/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-01-swap/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:45: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-01-swap/events.jsonl' mode='r' encoding='UTF-8'>
+  setup = next(json.loads(l) for l in open(d + '/events.jsonl') if '"kind": "setup"' in l)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-01/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-01/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:45: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpa992r736/v17/f3-a-v-b/game-01/events.jsonl' mode='r' encoding='UTF-8'>
+  setup = next(json.loads(l) for l in open(d + '/events.jsonl') if '"kind": "setup"' in l)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+......./workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpoolku0uu/v17/b2-mixB/game-01-swap/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpoolku0uu/v17/b2-mixB/game-01-swap/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:45: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpoolku0uu/v17/b2-mixB/game-01-swap/events.jsonl' mode='r' encoding='UTF-8'>
+  setup = next(json.loads(l) for l in open(d + '/events.jsonl') if '"kind": "setup"' in l)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpoolku0uu/v17/b2-mixA/game-01/result.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:40: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpoolku0uu/v17/b2-mixA/game-01/config.json' mode='r' encoding='UTF-8'>
+  r = json.load(open(d + '/result.json')); c = json.load(open(d + '/config.json'))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/scratch/233b4fd8d265/clocktower_source/clocktower/ratings.py:45: ResourceWarning: unclosed file <_io.TextIOWrapper name='/tmp/tmpoolku0uu/v17/b2-mixA/game-01/events.jsonl' mode='r' encoding='UTF-8'>
+  setup = next(json.loads(l) for l in open(d + '/events.jsonl') if '"kind": "setup"' in l)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.......................
+----------------------------------------------------------------------
+Ran 130 tests in 14.847s
+
+OK
+Built /tmp/tmp8yrwp31n/dist: 2 games (2 exported, 0.0 MB gzipped), site 0.5 MB
+
+GOOD — The Demon is dead.  (days: 4)
+cost $0.00 over 0 calls, 0.0 min; tokens: 0.00M cached, 0.00M written, 0K uncached, 0K output
+logs: /tmp/tmpf2n3p34t/20261106-045125-IerXr15tZLzW-625f8856
+
+GOOD — The Demon is dead.  (days: 5)
+cost $0.00 over 0 calls, 0.0 min; tokens: 0.00M cached, 0.00M written, 0K uncached, 0K output
+logs: /tmp/tmpzot8fx13/games/20261106-045127-VUEy3665jVVL-9d71e393
+
+NO WINNER — halted: STOP file in /tmp/tmpl7yc4uoh/games/20261106-045129-bfBAiCsc3cut-9cb2f51f  (days: 2)
+cost $0.00 over 0 calls, 0.0 min; tokens: 0.00M cached, 0.00M written, 0K uncached, 0K output
+logs: /tmp/tmpl7yc4uoh/games/20261106-045129-bfBAiCsc3cut-9cb2f51f
+
+GOOD — The Demon is dead.  (days: 11)
+cost $0.00 over 0 calls, 0.1 min; tokens: 0.00M cached, 0.00M written, 0K uncached, 0K output
+logs: /tmp/tmpl7yc4uoh/games/20261106-045129-bfBAiCsc3cut-9cb2f51f
+
+NO WINNER — halted: STOP file in /tmp/tmp0a2_r8ke/20261106-045132-TsA-4GDM0V_j-a987ff5f  (days: 2)
+cost $0.00 over 0 calls, 0.0 min; tokens: 0.00M cached, 0.00M written, 0K uncached, 0K output
+logs: /tmp/tmp0a2_r8ke/20261106-045132-TsA-4GDM0V_j-a987ff5f
