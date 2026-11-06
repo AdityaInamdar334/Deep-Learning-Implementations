@@ -1,0 +1,98 @@
+{
+  "scicode_audit": {
+    "num_problems": 65,
+    "num_subproblems": 302,
+    "defective_subproblems": 133,
+    "defective_problems": 56,
+    "subproblem_acc_original": 74.83,
+    "subproblem_acc_verified": 100.0,
+    "whole_problem_acc_original": 29.23,
+    "whole_problem_acc_verified": 100.0
+  },
+  "cognitive_complexity": {
+    "Frontier-Reasoning-Model": {
+      "RECALL": 100.0,
+      "APPLICATION": 76.0,
+      "ANALYSIS": 76.0,
+      "SYNTHESIS": 48.0
+    },
+    "Standard-Chat-Model": {
+      "RECALL": 100.0,
+      "APPLICATION": 68.0,
+      "ANALYSIS": 64.0,
+      "SYNTHESIS": 24.0
+    },
+    "Memorizer-Model": {
+      "RECALL": 100.0,
+      "APPLICATION": 64.0,
+      "ANALYSIS": 44.0,
+      "SYNTHESIS": 4.0
+    }
+  },
+  "epoch_registry": [
+    {
+      "benchmark": "SciCode (Original)",
+      "release_date": "2026-08-15",
+      "sample_size": 65,
+      "defects": 59,
+      "verdict": "Flawed",
+      "rationale": "Score-affecting defects affected 90.8% of inspected sample (threshold: 20.0%)."
+    },
+    {
+      "benchmark": "Humanity's Last Exam (HLE)",
+      "release_date": "2026-08-11",
+      "sample_size": 48,
+      "defects": 22,
+      "verdict": "Flawed",
+      "rationale": "Score-affecting defects affected 45.8% of inspected sample (threshold: 20.0%)."
+    },
+    {
+      "benchmark": "SWE-bench Verified (Audited Failures)",
+      "release_date": "2026-02-23",
+      "sample_size": 138,
+      "defects": 82,
+      "verdict": "Flawed",
+      "rationale": "Score-affecting defects affected 59.4% of inspected sample (threshold: 20.0%)."
+    },
+    {
+      "benchmark": "SWE-bench Pro (Public Split)",
+      "release_date": "2026-07-08",
+      "sample_size": 731,
+      "defects": 219,
+      "verdict": "Flawed",
+      "rationale": "Score-affecting defects affected 30.0% of inspected sample (threshold: 20.0%)."
+    },
+    {
+      "benchmark": "Terminal-Bench 4.0.0",
+      "release_date": "2026-09-04",
+      "sample_size": 66,
+      "defects": 30,
+      "verdict": "Flawed",
+      "rationale": "Score-affecting defects affected 45.5% of inspected sample (threshold: 20.0%). Evaluator infrastructure enables reward hacking/signal spoofing."
+    },
+    {
+      "benchmark": "GPQA Diamond Clean",
+      "release_date": "2026-05-10",
+      "sample_size": 189,
+      "defects": 9,
+      "verdict": "Verified",
+      "rationale": "Defect rate (4.8%) is below the 20.0% threshold."
+    },
+    {
+      "benchmark": "FrontierCode 2.0 (Private)",
+      "release_date": "2026-10-27",
+      "sample_size": 132,
+      "defects": 0,
+      "verdict": "Not enough info",
+      "rationale": "Benchmark tasks or scoring harness cannot be independently inspected."
+    },
+    {
+      "benchmark": "HLE-Diamond (1000-Task)",
+      "release_date": "2026-10-27",
+      "sample_size": 100,
+      "defects": 8,
+      "verdict": "Verified",
+      "rationale": "Defect rate (8.0%) is below the 20.0% threshold."
+    }
+  ]
+}
