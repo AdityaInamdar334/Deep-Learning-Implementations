@@ -1,0 +1,5 @@
+Accepted mandate: Correct one spelling error in README.
+Trigger inputs received: 1
+Mandate after outsider comment: Correct one spelling error in README.
+Final outcome: completed
+No model was called and no external message was sent.

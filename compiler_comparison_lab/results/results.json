@@ -1,0 +1,238 @@
+{
+  "cwd": "/Users/aditya/Deep-Learning-Implementations /compiler_comparison_lab",
+  "commands": {
+    "reference": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-u",
+      "workload.py"
+    ],
+    "candidate": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-O",
+      "workload.py"
+    ],
+    "fast": [
+      "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+      "-OO",
+      "-B",
+      "workload.py"
+    ]
+  },
+  "runs": [
+    {
+      "name": "reference",
+      "round": 1,
+      "seconds": 0.06412612507119775,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-1"
+    },
+    {
+      "name": "candidate",
+      "round": 1,
+      "seconds": 0.06587766692973673,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-1"
+    },
+    {
+      "name": "fast",
+      "round": 1,
+      "seconds": 0.06612929201219231,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-1"
+    },
+    {
+      "name": "candidate",
+      "round": 2,
+      "seconds": 0.06337691599037498,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-2"
+    },
+    {
+      "name": "fast",
+      "round": 2,
+      "seconds": 0.06401687499601394,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-2"
+    },
+    {
+      "name": "reference",
+      "round": 2,
+      "seconds": 0.05931716598570347,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-2"
+    },
+    {
+      "name": "fast",
+      "round": 3,
+      "seconds": 0.06199499999638647,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-3"
+    },
+    {
+      "name": "reference",
+      "round": 3,
+      "seconds": 0.06165308295749128,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-3"
+    },
+    {
+      "name": "candidate",
+      "round": 3,
+      "seconds": 0.062129000085406005,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-3"
+    },
+    {
+      "name": "reference",
+      "round": 4,
+      "seconds": 0.06121458299458027,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-4"
+    },
+    {
+      "name": "candidate",
+      "round": 4,
+      "seconds": 0.0618114999961108,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-4"
+    },
+    {
+      "name": "fast",
+      "round": 4,
+      "seconds": 0.06301670800894499,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-4"
+    },
+    {
+      "name": "candidate",
+      "round": 5,
+      "seconds": 0.06273120804689825,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-5"
+    },
+    {
+      "name": "fast",
+      "round": 5,
+      "seconds": 0.06364599999506027,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-5"
+    },
+    {
+      "name": "reference",
+      "round": 5,
+      "seconds": 0.06144133396446705,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-5"
+    },
+    {
+      "name": "fast",
+      "round": 6,
+      "seconds": 0.06531716603785753,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-6"
+    },
+    {
+      "name": "reference",
+      "round": 6,
+      "seconds": 0.06302820809651166,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-6"
+    },
+    {
+      "name": "candidate",
+      "round": 6,
+      "seconds": 0.06537512503564358,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-6"
+    },
+    {
+      "name": "reference",
+      "round": 7,
+      "seconds": 0.06404641596600413,
+      "exit": 0,
+      "timeout": false,
+      "log": "reference-7"
+    },
+    {
+      "name": "candidate",
+      "round": 7,
+      "seconds": 0.06768237496726215,
+      "exit": 0,
+      "timeout": false,
+      "log": "candidate-7"
+    },
+    {
+      "name": "fast",
+      "round": 7,
+      "seconds": 0.0712935000192374,
+      "exit": 0,
+      "timeout": false,
+      "log": "fast-7"
+    }
+  ],
+  "summary": {
+    "reference": {
+      "median_seconds": 0.06165308295749128,
+      "stable_output": true,
+      "matches_reference": true,
+      "valid": true,
+      "run_times": [
+        0.06412612507119775,
+        0.05931716598570347,
+        0.06165308295749128,
+        0.06121458299458027,
+        0.06144133396446705,
+        0.06302820809651166,
+        0.06404641596600413
+      ]
+    },
+    "candidate": {
+      "median_seconds": 0.06337691599037498,
+      "stable_output": true,
+      "matches_reference": true,
+      "valid": true,
+      "run_times": [
+        0.06587766692973673,
+        0.06337691599037498,
+        0.062129000085406005,
+        0.0618114999961108,
+        0.06273120804689825,
+        0.06537512503564358,
+        0.06768237496726215
+      ]
+    },
+    "fast": {
+      "median_seconds": 0.06401687499601394,
+      "stable_output": true,
+      "matches_reference": true,
+      "valid": true,
+      "run_times": [
+        0.06612929201219231,
+        0.06401687499601394,
+        0.06199499999638647,
+        0.06301670800894499,
+        0.06364599999506027,
+        0.06531716603785753,
+        0.0712935000192374
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+(node:13) ExperimentalWarning: Transform Types is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ stable event IDs prevent duplicate intake (4.80913ms)
+✔ unauthorized new work never reaches the assessor (1.125995ms)
+✔ accepted work snapshots a mandate and starts an assignment (2.138308ms)
+✔ subscribed outsider context cannot rewrite the stored mandate (3.671234ms)
+✔ a policy version change makes an old assessment unavailable (1.08235ms)
+✔ explicit invalidation replaces an evaluation (2.070201ms)
+✔ preparation failure rolls back ticket acceptance (1.359803ms)
+✔ ready work without followed completion threads ends (2.445846ms)
+✔ bot followup cannot resume completed work (1.024038ms)
+✔ authorized human followup can resume completed work (1.888165ms)
+✔ a human stop prevents automatic ticket resumption (1.718251ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 494.743243
