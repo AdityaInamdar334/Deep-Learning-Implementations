@@ -1,0 +1,6 @@
+num_experts,top_k,tokens,stored_params,active_params_per_token,estimated_expert_and_router_MACs_per_token,weights_MB_float32,elapsed_ms_CPU_median,output_max_abs_delta_vs_all_experts,router_max_to_min_load
+16,1,128,263168,17408,17408,1.0527,0.47,2.70332265,4.667
+16,2,128,263168,33792,33792,1.0527,0.833,2.07403255,2.273
+16,4,128,263168,66560,66560,1.0527,1.564,1.05057573,1.75
+16,8,128,263168,132096,132096,1.0527,3.268,0.37394416,1.407
+16,16,128,263168,263168,263168,1.0527,5.503,3.6e-07,1.0

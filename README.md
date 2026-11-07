@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-25-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-26-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -43,6 +43,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 
 | Lab | What it explores |
 | --- | --- |
+| [MoE Architecture & Routing Mechanics](./moe_frontier_lab) | NumPy top-k routing implementation, active arithmetic vs stored weight scaling, and CPU dispatch dynamics. |
 | [Trillion-Parameter MoE Serving & Capacity](./trillion_moe_serving_lab) | Sparse Mixture-of-Experts memory planning, KV-cache scaling at 1M tokens, MLA compression, and benchmark version traps. |
 | [gMLP and Spatial Gating](./gmlp_spatial_gating_lab) | Attention-free token mixing, causal masking, and generalization to unseen token positions. |
 | [Grouped-Query Attention (GQA)](./gqa_companion_lab) | Multi-Query vs Grouped-Query attention, KV-cache scaling, and checkpoint mean-pooling. |
@@ -141,6 +142,7 @@ Deep-Learning-Implementations/
 ├── hourglass_transformer_lab/
 ├── llm_steering_interpretability_lab/
 ├── lora_companion_lab/
+├── moe_frontier_lab/
 ├── neox_companion_lab/
 ├── neox_generation_lab/
 ├── primer_ez_transformer_lab/

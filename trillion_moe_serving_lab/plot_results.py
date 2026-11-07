@@ -250,3 +250,4 @@ if __name__ == "__main__":
     plot_benchmark_version_trap()
     plot_task_economics_verbosity()
     print("All 5 figures successfully generated in figures/")
+

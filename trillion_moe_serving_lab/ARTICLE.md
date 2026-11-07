@@ -269,3 +269,4 @@ for model, params_b in MODELS.items():
 12. Artificial Analysis (2026). *Mistral Large 4 Analysis.* [https://artificialanalysis.ai/models/mistral-large-4](https://artificialanalysis.ai/models/mistral-large-4)
 13. Mistral AI (2026). *Mistral Ecosystem Open-Weight License.* [https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-FP8/blob/main/LICENSE](https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-FP8/blob/main/LICENSE)
 14. Moonshot AI (2026). *Kimi K3.1 Pro License.* [https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE](https://huggingface.co/moonshotai/Kimi-K3.1-Pro/blob/main/LICENSE)
+
