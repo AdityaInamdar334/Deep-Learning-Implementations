@@ -1,0 +1,5 @@
+{
+  "version": "1.12.10",
+  "status": "later_backport_not_verified_by_cited_bulletin",
+  "action": "Do not assume the CVEs were fixed. Request vendor confirmation or upgrade to supported 1.13.x."
+}

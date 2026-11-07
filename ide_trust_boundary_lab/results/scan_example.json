@@ -1,0 +1,6 @@
+{
+  "scanned_root": "/mnt/data/ide-trust-boundary-lab/fixtures",
+  "checks_performed": 7,
+  "findings": [],
+  "assessment": "Review findings manually. No findings does NOT prove a host is clean."
+}

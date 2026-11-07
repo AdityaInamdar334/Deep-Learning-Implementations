@@ -1,0 +1,14 @@
+{
+  "clean": {
+    "artifact": "fixtures/publisher-clean.txt",
+    "expected_sha256": "d608e9057f5614ced43d2a098282dc1e1fe42f9ef1314e59f013ef87613ba1e1",
+    "observed_sha256": "d608e9057f5614ced43d2a098282dc1e1fe42f9ef1314e59f013ef87613ba1e1",
+    "matches_trusted_manifest": true
+  },
+  "same_identity_modified": {
+    "artifact": "fixtures/mirror-different-bytes.txt",
+    "expected_sha256": "d608e9057f5614ced43d2a098282dc1e1fe42f9ef1314e59f013ef87613ba1e1",
+    "observed_sha256": "80ab69b09de2a5c13b474f75240ecfa41ab92769499860ed867670042bebe342",
+    "matches_trusted_manifest": false
+  }
+}

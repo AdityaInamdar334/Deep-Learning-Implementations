@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-27-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-28-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -28,6 +28,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 
 | Lab | What it explores |
 | --- | --- |
+| [IDE Trust Boundary Lab](./ide_trust_boundary_lab) | Publisher ID vs content provenance, Win32 canonicalization bypasses, Langflow vulnerability triage, and read-only IOC detection. |
 | [Benchmark Auditing & Evaluation Integrity](./benchmark_auditing_lab) | Measurement layer defects, multi-step cascading recovery, Bloom's cognitive complexity collapse, and the rebuilt evaluation stack. |
 | [Clocktower Evidence & Belief Updates](./clocktower_belief_lab) | Social deduction benchmarks, Bayesian belief updating under targeted information poisoning, and paired game ratings. |
 | [Superagent Context, Authority & Lifecycle](./superagent_lifecycle_lab) | Admission boundaries, immutable mandates against prompt injection, policy cache invalidation, and human stop interlocks. |
@@ -141,6 +142,7 @@ Deep-Learning-Implementations/
 ├── gmlp_spatial_gating_lab/
 ├── gqa_companion_lab/
 ├── hourglass_transformer_lab/
+├── ide_trust_boundary_lab/
 ├── llm_steering_interpretability_lab/
 ├── lora_companion_lab/
 ├── moe_frontier_lab/

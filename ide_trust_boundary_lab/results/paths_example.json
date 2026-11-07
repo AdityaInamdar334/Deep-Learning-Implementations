@@ -1,0 +1,15 @@
+{
+  "protected.conf": {
+    "naive_blocked": true,
+    "canonical_blocked": true
+  },
+  "protected.conf.": {
+    "naive_blocked": false,
+    "canonical_blocked": true
+  },
+  "protected.conf ": {
+    "naive_blocked": false,
+    "canonical_blocked": true
+  },
+  "caveat": "Pure string toy; never substitute for OS path authorization."
+}

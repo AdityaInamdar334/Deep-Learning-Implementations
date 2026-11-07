@@ -1,0 +1,4 @@
+publisher: example.vendor
+name: sample.editor-extension
+version: 1.0.0
+content: harmless altered fixture, no executable code

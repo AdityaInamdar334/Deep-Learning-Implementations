@@ -1,0 +1,5 @@
+{
+  "version": "1.12.8",
+  "status": "affected_in_IBM_bulletin",
+  "action": "Isolate and upgrade using vendor guidance; 1.13.0 is named as a fixed release."
+}
