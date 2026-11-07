@@ -1,0 +1,4 @@
+condition,test_accuracy
+original,1.0
+permuted_with_correct_labels,1.0
+shuffled_weights,0.2575

@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-26-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-27-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -55,6 +55,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Primer EZ Transformer](./primer_ez_transformer_lab) | Squared ReLU, causal Multi-DConv-Head Attention, time-to-quality efficiency, and structural shift. |
 | [Hourglass Transformer](./hourglass_transformer_lab) | Hierarchical token shortening, causal right-shift downsampling, and length extrapolation. |
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
+| [Weight-Space Reading Audit](./weight_space_reading_audit_lab) | Auditing whether LLMs read weight space vs memorize labels; output permutation, shuffle controls, and hidden symmetries. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
 
 ### Learning, memory, and forecasting
@@ -155,7 +156,8 @@ Deep-Learning-Implementations/
 ├── timesfm3_forecasting_lab/
 ├── trillion_moe_serving_lab/
 ├── vit_patch_lab/
-└── weight_space_programming_lab/
+├── weight_space_programming_lab/
+└── weight_space_reading_audit_lab/
 ```
 
 Individual labs generally contain a Python package or scripts, a `tests/` directory, `requirements.txt`, and their own `README.md`. Some also include benchmark artifacts and a companion article. The specific layout is documented inside each folder.

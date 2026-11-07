@@ -1,0 +1,42 @@
+No tools. Compute the intermediate ReLU activations and output logits exactly. Show matrix arithmetic and do not infer semantic labels.
+{
+  "x": [
+    1.0,
+    -2.0
+  ],
+  "w1": [
+    [
+      1.0,
+      -1.0,
+      2.0
+    ],
+    [
+      0.5,
+      2.0,
+      -1.0
+    ]
+  ],
+  "b1": [
+    0.5,
+    -0.25,
+    0.0
+  ],
+  "w2": [
+    [
+      1.0,
+      -2.0
+    ],
+    [
+      -1.0,
+      0.5
+    ],
+    [
+      2.0,
+      1.0
+    ]
+  ],
+  "b2": [
+    0.1,
+    -0.2
+  ]
+}
