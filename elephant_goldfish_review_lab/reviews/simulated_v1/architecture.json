@@ -1,0 +1,14 @@
+{
+  "reviewer": "architecture",
+  "status": "completed",
+  "spec_sha256": "1afed13d5983628fa51572f8d8d1f0e96a559651645d3d29b3a1d52634c4966c",
+  "findings": [
+    {
+      "id": "AR-01",
+      "severity": "minor",
+      "evidence": "Architecture: no existing queue or worker design named",
+      "recommendation": "Compare direct calls, existing job queue, and outbox with evidence from the repo"
+    }
+  ],
+  "_note": "SYNTHETIC DEMO ONLY. Not outputs from real LLM reviewers."
+}

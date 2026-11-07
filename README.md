@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-28-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-29-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -28,6 +28,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 
 | Lab | What it explores |
 | --- | --- |
+| [Elephant-Goldfish Design Review Lab](./elephant_goldfish_review_lab) | Fresh-agent zero-context design reviews, SHA-256 specification binding, and fail-closed gate evaluation. |
 | [IDE Trust Boundary Lab](./ide_trust_boundary_lab) | Publisher ID vs content provenance, Win32 canonicalization bypasses, Langflow vulnerability triage, and read-only IOC detection. |
 | [Benchmark Auditing & Evaluation Integrity](./benchmark_auditing_lab) | Measurement layer defects, multi-step cascading recovery, Bloom's cognitive complexity collapse, and the rebuilt evaluation stack. |
 | [Clocktower Evidence & Belief Updates](./clocktower_belief_lab) | Social deduction benchmarks, Bayesian belief updating under targeted information poisoning, and paired game ratings. |
@@ -138,6 +139,7 @@ Deep-Learning-Implementations/
 ├── compiler_comparison_lab/
 ├── distributed_science_agent_lab/
 ├── dt_mem_working_memory_lab/
+├── elephant_goldfish_review_lab/
 ├── frontier_monitor_lab/
 ├── gmlp_spatial_gating_lab/
 ├── gqa_companion_lab/

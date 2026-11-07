@@ -1,0 +1,14 @@
+{
+  "reviewer": "readiness",
+  "status": "completed",
+  "spec_sha256": "1afed13d5983628fa51572f8d8d1f0e96a559651645d3d29b3a1d52634c4966c",
+  "findings": [
+    {
+      "id": "RD-01",
+      "severity": "major",
+      "evidence": "Implementation Plan: \"Endpoint location TBD\" with no file mapping or data model",
+      "recommendation": "Inspect repository and define concrete files, table schema and acceptance tests"
+    }
+  ],
+  "_note": "SYNTHETIC DEMO ONLY. Not outputs from real LLM reviewers."
+}

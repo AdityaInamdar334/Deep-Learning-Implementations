@@ -1,0 +1,50 @@
+{
+  "verdict": "NO-GO: UNRESOLVED CRITICAL FINDINGS",
+  "spec_sha256": "1afed13d5983628fa51572f8d8d1f0e96a559651645d3d29b3a1d52634c4966c",
+  "reviewer_status": {
+    "naive_reader": "COMPLETED",
+    "architecture": "COMPLETED",
+    "operational": "COMPLETED",
+    "security": "COMPLETED",
+    "readiness": "COMPLETED"
+  },
+  "failures": [],
+  "findings": [
+    {
+      "reviewer": "naive_reader",
+      "id": "NR-01",
+      "severity": "major",
+      "evidence": "Architecture: \"Retry on failure\"; the spec never says how many times or what failure means",
+      "recommendation": "Specify retry limits, timeout, and success criteria"
+    },
+    {
+      "reviewer": "architecture",
+      "id": "AR-01",
+      "severity": "minor",
+      "evidence": "Architecture: no existing queue or worker design named",
+      "recommendation": "Compare direct calls, existing job queue, and outbox with evidence from the repo"
+    },
+    {
+      "reviewer": "operational",
+      "id": "OP-01",
+      "severity": "major",
+      "evidence": "Failure Modes: \"Use exponential backoff. TODO: choose when to stop\"",
+      "recommendation": "Specify max attempts, dead-letter behavior, backpressure and how to avoid duplicate side effects"
+    },
+    {
+      "reviewer": "security",
+      "id": "SEC-01",
+      "severity": "blocker",
+      "evidence": "Architecture: \"call the webhook URL stored on the customer account\" with no URL validation/authentication",
+      "recommendation": "Define ownership authorization, outbound URL restrictions (SSRF protection), signed messages, and secret handling"
+    },
+    {
+      "reviewer": "readiness",
+      "id": "RD-01",
+      "severity": "major",
+      "evidence": "Implementation Plan: \"Endpoint location TBD\" with no file mapping or data model",
+      "recommendation": "Inspect repository and define concrete files, table schema and acceptance tests"
+    }
+  ],
+  "blocking_count": 4
+}

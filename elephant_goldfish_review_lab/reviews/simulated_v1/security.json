@@ -1,0 +1,14 @@
+{
+  "reviewer": "security",
+  "status": "completed",
+  "spec_sha256": "1afed13d5983628fa51572f8d8d1f0e96a559651645d3d29b3a1d52634c4966c",
+  "findings": [
+    {
+      "id": "SEC-01",
+      "severity": "blocker",
+      "evidence": "Architecture: \"call the webhook URL stored on the customer account\" with no URL validation/authentication",
+      "recommendation": "Define ownership authorization, outbound URL restrictions (SSRF protection), signed messages, and secret handling"
+    }
+  ],
+  "_note": "SYNTHETIC DEMO ONLY. Not outputs from real LLM reviewers."
+}

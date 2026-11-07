@@ -1,0 +1,14 @@
+{
+  "reviewer": "naive_reader",
+  "status": "completed",
+  "spec_sha256": "1afed13d5983628fa51572f8d8d1f0e96a559651645d3d29b3a1d52634c4966c",
+  "findings": [
+    {
+      "id": "NR-01",
+      "severity": "major",
+      "evidence": "Architecture: \"Retry on failure\"; the spec never says how many times or what failure means",
+      "recommendation": "Specify retry limits, timeout, and success criteria"
+    }
+  ],
+  "_note": "SYNTHETIC DEMO ONLY. Not outputs from real LLM reviewers."
+}
