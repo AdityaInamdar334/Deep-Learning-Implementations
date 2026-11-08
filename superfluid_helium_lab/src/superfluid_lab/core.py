@@ -142,3 +142,4 @@ def requires_pressure_to_freeze(pressure_bar: float) -> bool:
         True if pressure is sufficient to permit solidification (P >= 25.3 bar).
     """
     return pressure_bar >= P_SOLIDIFICATION_MIN_BAR
+

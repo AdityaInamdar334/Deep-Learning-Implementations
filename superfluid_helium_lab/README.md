@@ -247,3 +247,4 @@ superfluid_helium_lab/
 ## License
 
 This lab is released under the open-source [MIT License](LICENSE).
+

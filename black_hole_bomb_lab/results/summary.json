@@ -1,0 +1,33 @@
+{
+  "data_provenance": "Published values cited; all trajectories are mathematical toy output, not experimental measurements",
+  "published_parameters": {
+    "growth_rate_s_inverse": 0.081,
+    "growth_rate_error_s_inverse": 0.001,
+    "plateau_mm": 3.0599999999999996,
+    "plateau_error_mm": 0.05,
+    "measured_frequency_hz": 3.47,
+    "observed_frequency_drift_magnitude_hz": 0.098,
+    "saturation_time_approx_s": 80
+  },
+  "toy_parameters": {
+    "initial_amplitude_um": 20.0,
+    "model": "Stuart-Landau envelope, logistic energy transfer, non-paper coefficients",
+    "secondary_decay_s_inverse": 0.65
+  },
+  "estimated_circulation_quanta": 120879,
+  "mode_1_toy_amplitudes_mm": {
+    "0": 0.02,
+    "25": 0.15134002277531167,
+    "45": 0.7427723794839123,
+    "65": 2.400075158002887,
+    "80": 2.9790718554514806,
+    "95": 3.0526092581778763,
+    "110": 3.0593471865740063
+  },
+  "toy_bicoherence": {
+    "coherent": 0.9999999999999999,
+    "random_phase": 0.13082276570022985,
+    "segments": 128,
+    "frequency_hz": 3.5
+  }
+}
