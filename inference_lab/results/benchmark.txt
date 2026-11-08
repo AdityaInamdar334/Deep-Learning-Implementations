@@ -1,0 +1,4 @@
+prefix   16 | TTFT p50 4.078 ms | TPOT p50 4.1869505714285715 ms | 220.6 output tokens/s
+prefix  128 | TTFT p50 5.069 ms | TPOT p50 5.303752428571429 ms | 184.0 output tokens/s
+prefix  512 | TTFT p50 13.638 ms | TPOT p50 14.715835142857143 ms | 63.0 output tokens/s
+Recorded results/cpu_reference.json

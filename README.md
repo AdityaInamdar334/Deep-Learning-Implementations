@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-31-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-32-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -59,6 +59,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
 | [Weight-Space Reading Audit](./weight_space_reading_audit_lab) | Auditing whether LLMs read weight space vs memorize labels; output permutation, shuffle controls, and hidden symmetries. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
+| [Inference Server Foundations](./inference_lab) | Full-prefix recomputation baseline, token position accounting, single-request greedy decoding, and TTFT/TPOT latency profiles. |
 
 ### Learning, memory, and forecasting
 
@@ -153,6 +154,7 @@ Deep-Learning-Implementations/
 ├── gqa_companion_lab/
 ├── hourglass_transformer_lab/
 ├── ide_trust_boundary_lab/
+├── inference_lab/
 ├── llm_steering_interpretability_lab/
 ├── lora_companion_lab/
 ├── moe_frontier_lab/

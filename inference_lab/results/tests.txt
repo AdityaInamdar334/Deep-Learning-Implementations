@@ -1,0 +1,10 @@
+test_causal_prefix_invariance (test_run.BaselineChecks.test_causal_prefix_invariance) ... ok
+test_eos_and_single_token_metric (test_run.BaselineChecks.test_eos_and_single_token_metric) ... ok
+test_fixed_length_matches_cached_reference (test_run.BaselineChecks.test_fixed_length_matches_cached_reference) ... Passing a tuple of `past_key_values` is deprecated and will be removed in Transformers v4.53.0. You should pass an instance of `Cache` instead, e.g. `past_key_values=DynamicCache.from_legacy_cache(past_key_values)`.
+ok
+test_nearest_rank_tail (test_run.BaselineChecks.test_nearest_rank_tail) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.206s
+
+OK

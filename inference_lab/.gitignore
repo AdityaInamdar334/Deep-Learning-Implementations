@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# Bundled tiny toy model fixture (652 KB)
+!fixture/model.safetensors
