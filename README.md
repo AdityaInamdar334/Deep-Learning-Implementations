@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-29-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-30-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -67,6 +67,12 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Decision Transformers with Memory](./dt_mem_working_memory_lab) | Content-addressable working memory, task adaptation, and low-rank fine-tuning concepts. |
 | [Sleep-Inspired Continual Learning](./sleep_framework_lab) | Replay, frozen-backbone expansion, distillation, and catastrophic forgetting. |
 | [TimesFM-3 Forecasting](./timesfm3_forecasting_lab) | Multivariate forecasting, rolling-origin evaluation, strong baselines, and distribution shift. |
+
+### Physics, quantum systems, and scientific computing
+
+| Lab | What it explores |
+| --- | --- |
+| [Superfluid Helium Physics Lab](./superfluid_helium_lab) | Lambda phase transitions, Bose-Einstein condensate vs superfluid density fractions, Landau critical velocity ($v_c \approx 58.4$ m/s), phonon-roton dispersion, and two-fluid hydrodynamics. |
 
 **Where to begin?** If you're interested in architecture, start with [Vision Transformers](./vit_patch_lab) or [gMLP](./gmlp_spatial_gating_lab). For systems engineering, try [Agent Cost Optimization](./agent_cost_optimization_lab). For evaluation methodology, explore [Frontier Model Monitoring](./frontier_monitor_lab) or [TimesFM-3 Forecasting](./timesfm3_forecasting_lab).
 
@@ -157,6 +163,7 @@ Deep-Learning-Implementations/
 ├── spikelab_bounded_agent_lab/
 ├── spotify_shunt_routing_lab/
 ├── superagent_lifecycle_lab/
+├── superfluid_helium_lab/
 ├── timesfm3_forecasting_lab/
 ├── trillion_moe_serving_lab/
 ├── vit_patch_lab/

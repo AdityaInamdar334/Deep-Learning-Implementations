@@ -1,0 +1,31 @@
+{
+  "query_parameters": {
+    "temperature_k": 1.9,
+    "pressure_bar": 1.0
+  },
+  "phase_classification": {
+    "phase": "Helium II (Superfluid)",
+    "is_superfluid": true,
+    "boiling_point_1atm_k": 4.222,
+    "lambda_point_svp_k": 2.1768
+  },
+  "two_fluid_fractions": {
+    "superfluid_fraction_rho_s_over_rho": 0.5331,
+    "normal_fraction_rho_n_over_rho": 0.4669,
+    "bec_condensate_fraction_n0": 0.04,
+    "interpretation": "Superfluidity does not require a 100% single-particle condensate. Strong repulsive hard-core interactions deplete the ground-state BEC fraction to ~7.5% at low T, while macroscopic superfluid density fraction rho_s/rho approaches 100%."
+  },
+  "excitation_spectrum_and_critical_velocity": {
+    "acoustic_sound_speed_c_s_m_per_s": 238.3,
+    "roton_gap_delta_over_kb_k": 8.65,
+    "roton_momentum_p0_over_hbar_inv_angstrom": 1.91,
+    "landau_critical_velocity_vc_m_per_s": 58.39,
+    "roton_minimum_momentum_p_star_kg_m_per_s": "2.0763e-24",
+    "second_sound_velocity_c2_m_per_s": 12.93
+  },
+  "quantum_zero_point_solidification": {
+    "solidification_possible_at_query_pressure": false,
+    "minimum_solidification_pressure_bar": 25.3,
+    "mechanism": "Helium-4 remains liquid down to absolute zero at ambient pressure because large quantum zero-point kinetic energy prevents lattice crystallization unless compressed to >= 25.3 bar."
+  }
+}
