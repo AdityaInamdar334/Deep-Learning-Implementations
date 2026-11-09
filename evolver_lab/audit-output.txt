@@ -1,0 +1,7 @@
+Both pass 265; fail to pass 15; pass to fail 1; both fail 39
+Net improvement: 4.375 percentage points
+All pairs: reduction from rounded means = 24.24%
+Both pass: reduction from rounded means = 17.57%
+Illustration: 20% useful retrievals, 38 attempts to break even
+Illustration: 50% useful retrievals, 11 attempts to break even
+Illustration: 80% useful retrievals, 7 attempts to break even

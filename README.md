@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-32-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-33-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -39,6 +39,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [SpikeGuard Bounded Agent Lab](./spikelab_bounded_agent_lab) | Bounded tool contracts, spike-timing tiling (STTC), surrogate statistics, and independent scientific evaluation. |
 | [Roast Room Decision Lab](./roast_room_decision_lab) | Multi-agent councils, correlated errors, conformity dynamics, and non-compensatory ruin caps. |
 | [Frontier Model Monitoring](./frontier_monitor_lab) | Layered monitors, independent telemetry, escalation thresholds, and failure under distribution shift. |
+| [Evolver Experiential Agent Memory](./evolver_lab) | Procedural Gene/Capsule distillation, the 320 paired-outcome benchmark matrix, break-even token economics, and lexical recall verification vulnerabilities. |
 | [Spotify Shunt Routing](./spotify_shunt_routing_lab) | Delegating context-heavy tasks to cheaper workers, with token, latency, and information-loss tradeoffs. |
 
 ### Model architectures and representation learning
@@ -149,6 +150,7 @@ Deep-Learning-Implementations/
 ├── distributed_science_agent_lab/
 ├── dt_mem_working_memory_lab/
 ├── elephant_goldfish_review_lab/
+├── evolver_lab/
 ├── frontier_monitor_lab/
 ├── gmlp_spatial_gating_lab/
 ├── gqa_companion_lab/

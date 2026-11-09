@@ -1,0 +1,4 @@
+Only injected unknown 0.00
+Different reply unused 0.00
+Promised action used 1.00
+Negated action used 1.00
