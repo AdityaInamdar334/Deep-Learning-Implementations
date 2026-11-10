@@ -1,0 +1,5 @@
+v1.0.0: 10 grilling lines; 17 manifest entries; 34 skills/**/SKILL.md files
+v1.1.0: 12 grilling lines; 21 manifest entries; 38 skills/**/SKILL.md files
+v1.2.0: 22 grilling lines; 25 manifest entries; 35 skills/**/SKILL.md files
+v1.3.0: 28 grilling lines; 27 manifest entries; 37 skills/**/SKILL.md files
+v1.3.2: 30 grilling lines; 27 manifest entries; 38 skills/**/SKILL.md files

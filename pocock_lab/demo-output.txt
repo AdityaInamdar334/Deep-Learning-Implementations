@@ -1,0 +1,12 @@
+--- baseline
++++ mutant
+@@ -8,7 +8,7 @@
+         return self.state
+ 
+     def claim(self):
+-        if self.state != "queued":
++        if self.state == "running":
+             return False
+         self.state = "running"
+         return True
+Baseline passed. Mutant caught: worker claimed a cancelled run
