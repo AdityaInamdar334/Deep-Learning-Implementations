@@ -1,0 +1,31 @@
+Qwen2.5-1.5B-Instruct | AIME24 | 3.3 | 3.3 | numeric tie
+Qwen2.5-1.5B-Instruct | AIME25 | None | None | all collapsed
+Qwen2.5-1.5B-Instruct | AMC | 32.3 | 33.6 | lower
+Qwen2.5-1.5B-Instruct | MATH500 | 62.9 | 62.3 | higher
+Qwen2.5-1.5B-Instruct | GPQA-D | 28.8 | 23.5 | higher
+Qwen2.5-1.5B-Instruct | MMLU-Pro Math | 45.3 | 10.9 | higher
+Qwen2.5-3B-Instruct | AIME24 | 13.3 | 16.7 | lower
+Qwen2.5-3B-Instruct | AIME25 | 3.3 | 3.3 | numeric tie
+Qwen2.5-3B-Instruct | AMC | 45.8 | 44.8 | higher
+Qwen2.5-3B-Instruct | MATH500 | 73.3 | 70.9 | higher
+Qwen2.5-3B-Instruct | GPQA-D | 28.8 | 28.8 | numeric tie
+Qwen2.5-3B-Instruct | MMLU-Pro Math | 64.7 | 46.4 | higher
+Qwen2.5-7B-Instruct | AIME24 | 20.0 | 20.0 | numeric tie
+Qwen2.5-7B-Instruct | AIME25 | 13.3 | 17.4 | lower
+Qwen2.5-7B-Instruct | AMC | 53.0 | 52.7 | higher
+Qwen2.5-7B-Instruct | MATH500 | 80.3 | 79.5 | higher
+Qwen2.5-7B-Instruct | GPQA-D | 35.8 | 36.9 | lower
+Qwen2.5-7B-Instruct | MMLU-Pro Math | 77.2 | 76.1 | higher
+Qwen2.5-Math-1.5B-Instruct | AIME24 | 23.5 | 19.1 | higher
+Qwen2.5-Math-1.5B-Instruct | AIME25 | 13.3 | 15.2 | lower
+Qwen2.5-Math-1.5B-Instruct | AMC | 55.9 | 53.7 | higher
+Qwen2.5-Math-1.5B-Instruct | MATH500 | 78.2 | 77.9 | higher
+Qwen2.5-Math-1.5B-Instruct | GPQA-D | 29.5 | 28.4 | higher
+Qwen2.5-Math-1.5B-Instruct | MMLU-Pro Math | 69.2 | 71.0 | lower
+Llama-3.2-3B-Instruct | AIME24 | 16.7 | 13.3 | higher
+Llama-3.2-3B-Instruct | AIME25 | None | None | all collapsed
+Llama-3.2-3B-Instruct | AMC | 34.6 | 29.9 | higher
+Llama-3.2-3B-Instruct | MATH500 | 58.4 | 57.4 | higher
+Llama-3.2-3B-Instruct | GPQA-D | 28.0 | 27.9 | higher
+Llama-3.2-3B-Instruct | MMLU-Pro Math | 45.8 | 35.8 | higher
+{'numeric tie': 4, 'all collapsed': 2, 'lower': 6, 'higher': 18}

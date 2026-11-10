@@ -1,0 +1,11 @@
+test_binary_symmetry (__main__.Checks.test_binary_symmetry) ... ok
+test_conflict (__main__.Checks.test_conflict) ... ok
+test_differentiation (__main__.Checks.test_differentiation) ... ok
+test_equal_at_reference (__main__.Checks.test_equal_at_reference) ... ok
+test_more_votes_can_hurt (__main__.Checks.test_more_votes_can_hurt) ... ok
+test_score_selection (__main__.Checks.test_score_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

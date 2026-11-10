@@ -1,0 +1,9 @@
+ 1 rollouts | p=.60: 0.6000 | p=.40: 0.4000
+ 9 rollouts | p=.60: 0.7334 | p=.40: 0.2666
+33 rollouts | p=.60: 0.8789 | p=.40: 0.1211
+65 rollouts | p=.60: 0.9490 | p=.40: 0.0510
+kappa=0.5625: weights [0.51, 0.356, 0.134], residual 0.301
+kappa=0.8750: weights [0.451, 0.358, 0.191], residual 0.341
+Frequency winner: A trajectory-score winner: B
+unanimous: skip fresh pairs
+replay cached completions
