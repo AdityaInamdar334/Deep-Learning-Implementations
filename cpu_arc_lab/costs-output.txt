@@ -1,0 +1,8 @@
+MATH-500       88.7x reported; 31 future hits (rounded inputs)
+AIME 2024     262.4x reported; 13 future hits (rounded inputs)
+AIME 2025     291.1x reported; 13 future hits (rounded inputs)
+AIME 2026     281.4x reported; 13 future hits (rounded inputs)
+GPQA Diamond   38.1x reported; 26 future hits (rounded inputs)
+GSM8K          16.3x reported; 90 future hits (rounded inputs)
+MMLU-Pro       22.9x reported; 43 future hits (rounded inputs)
+SciBench       83.0x reported; 30 future hits (rounded inputs)

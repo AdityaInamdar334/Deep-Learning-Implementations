@@ -1,0 +1,11 @@
+test_bad_input (__main__.CacheTests.test_bad_input) ... ok
+test_combined (__main__.CacheTests.test_combined) ... ok
+test_new_parameters (__main__.CacheTests.test_new_parameters) ... ok
+test_oracle (__main__.CacheTests.test_oracle) ... ok
+test_phrasing (__main__.CacheTests.test_phrasing) ... ok
+test_semantic_boundary (__main__.CacheTests.test_semantic_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.030s
+
+OK

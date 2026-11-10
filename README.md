@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-34-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-35-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -62,6 +62,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Weight-Space Reading Audit](./weight_space_reading_audit_lab) | Auditing whether LLMs read weight space vs memorize labels; output permutation, shuffle controls, and hidden symmetries. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
 | [Inference Server Foundations](./inference_lab) | Full-prefix recomputation baseline, token position accounting, single-request greedy decoding, and TTFT/TPOT latency profiles. |
+| [CPU-ARC Procedural Reasoning Caches](./cpu_arc_lab) | NVIDIA's executable procedural caching, 16.3x to 291.1x invocation cost reduction, break-even economics across 8 benchmarks, and semantic boundary qualifier enforcement. |
 
 ### Learning, memory, and forecasting
 
@@ -148,6 +149,7 @@ Deep-Learning-Implementations/
 ├── black_hole_bomb_lab/
 ├── clocktower_belief_lab/
 ├── compiler_comparison_lab/
+├── cpu_arc_lab/
 ├── distributed_science_agent_lab/
 ├── dt_mem_working_memory_lab/
 ├── elephant_goldfish_review_lab/
