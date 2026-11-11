@@ -64,6 +64,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [LLM Inference Server from Scratch (Episodes 1–5)](./inference_lab) | Full-prefix recomputation baseline, static KV caching, dynamic left-padded batching, vLLM PagedAttention virtual memory, and Orca continuous iteration-level scheduling. |
 | [BitDecoding-FP4 Attention & KV Quantization](./fp4-attention-lab) | Collective weight underflow in microscaling FP4 KV caches, E4M3FN scale grids, small-block repair rules, and dual-residual query quantization. |
 | [CPU-ARC Procedural Reasoning Caches](./cpu_arc_lab) | NVIDIA's executable procedural caching, 16.3x to 291.1x invocation cost reduction, break-even economics across 8 benchmarks, and semantic boundary qualifier enforcement. |
+| [Intent-Aware KV Prefix Caching (IAC)](./iac-lab) | Conversational continuation probabilities, return delay geometric windows, intent-conditioned eviction, and behavioral distribution shift. |
 
 ### Learning, memory, and forecasting
 
@@ -162,6 +163,7 @@ Deep-Learning-Implementations/
 ├── gmlp_spatial_gating_lab/
 ├── gqa_companion_lab/
 ├── hourglass_transformer_lab/
+├── iac-lab/
 ├── ide_trust_boundary_lab/
 ├── inference_lab/
 ├── llm_steering_interpretability_lab/
