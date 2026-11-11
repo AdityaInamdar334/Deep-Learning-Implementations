@@ -73,6 +73,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Sleep-Inspired Continual Learning](./sleep_framework_lab) | Replay, frozen-backbone expansion, distillation, and catastrophic forgetting. |
 | [TimesFM-3 Forecasting](./timesfm3_forecasting_lab) | Multivariate forecasting, rolling-origin evaluation, strong baselines, and distribution shift. |
 | [Majority-Vote Reliability in Test-Time RL](./vote_lab) | Majority-vote pseudo-label amplification vs collapse, PC-Dr.DPO prompt-conditional robust temperature, unanimous replay, and Table 1 benchmark audit. |
+| [Maya a1 Option-Order Sensitivity Audit](./maya_option_order_lab) | Multiple-choice positional bias, cyclic permutation flip rates, slot priors via identical options, and parallel layout order-invariance. |
 
 ### Physics, quantum systems, and scientific computing
 
@@ -165,6 +166,7 @@ Deep-Learning-Implementations/
 ├── inference_lab/
 ├── llm_steering_interpretability_lab/
 ├── lora_companion_lab/
+├── maya_option_order_lab/
 ├── moe_frontier_lab/
 ├── neox_companion_lab/
 ├── neox_generation_lab/

@@ -1,0 +1,31 @@
+{
+  "note": "Synthetic position-confounded training set, NOT a Laya model or Maya paper replication",
+  "no_shuffle": {
+    "params": {
+      "content_weight": 5.541766551921135,
+      "slot_bias": [
+        1.226391470990916,
+        -0.5784853551588822,
+        -0.6479061158320201
+      ]
+    },
+    "evaluation": {
+      "flip_rate": 0.47333333333333333,
+      "mean_accuracy": 0.8044444444444473
+    }
+  },
+  "shuffle": {
+    "params": {
+      "content_weight": 7.0072314354993726,
+      "slot_bias": [
+        -0.07460922358955721,
+        0.08507517071492258,
+        -0.010465947125365116
+      ]
+    },
+    "evaluation": {
+      "flip_rate": 0.03333333333333333,
+      "mean_accuracy": 0.9844444444444485
+    }
+  }
+}
