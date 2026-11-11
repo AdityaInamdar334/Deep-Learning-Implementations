@@ -1,0 +1,36 @@
+{
+  "model": "fixture",
+  "device": "cpu",
+  "threads": 1,
+  "policy": "dynamic batching with left-padding and KV cache",
+  "sweep": [
+    {
+      "batch_size": 1,
+      "avg_throughput_tok_per_s": 5672.727663454789,
+      "p50_total_ms": 0.849625,
+      "p50_ttft_ms": 0.193083,
+      "avg_tokens_per_batch": 5
+    },
+    {
+      "batch_size": 2,
+      "avg_throughput_tok_per_s": 5980.135295762807,
+      "p50_total_ms": 1.00125,
+      "p50_ttft_ms": 0.232875,
+      "avg_tokens_per_batch": 6
+    },
+    {
+      "batch_size": 4,
+      "avg_throughput_tok_per_s": 11481.604131373246,
+      "p50_total_ms": 1.042375,
+      "p50_ttft_ms": 0.273083,
+      "avg_tokens_per_batch": 12
+    },
+    {
+      "batch_size": 8,
+      "avg_throughput_tok_per_s": 22744.524374992496,
+      "p50_total_ms": 1.36,
+      "p50_ttft_ms": 0.336,
+      "avg_tokens_per_batch": 32
+    }
+  ]
+}

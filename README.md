@@ -61,7 +61,8 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
 | [Weight-Space Reading Audit](./weight_space_reading_audit_lab) | Auditing whether LLMs read weight space vs memorize labels; output permutation, shuffle controls, and hidden symmetries. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
-| [Inference Server Foundations](./inference_lab) | Full-prefix recomputation baseline, token position accounting, single-request greedy decoding, and TTFT/TPOT latency profiles. |
+| [LLM Inference Server from Scratch (Episodes 1–5)](./inference_lab) | Full-prefix recomputation baseline, static KV caching, dynamic left-padded batching, vLLM PagedAttention virtual memory, and Orca continuous iteration-level scheduling. |
+| [BitDecoding-FP4 Attention & KV Quantization](./fp4-attention-lab) | Collective weight underflow in microscaling FP4 KV caches, E4M3FN scale grids, small-block repair rules, and dual-residual query quantization. |
 | [CPU-ARC Procedural Reasoning Caches](./cpu_arc_lab) | NVIDIA's executable procedural caching, 16.3x to 291.1x invocation cost reduction, break-even economics across 8 benchmarks, and semantic boundary qualifier enforcement. |
 
 ### Learning, memory, and forecasting
@@ -155,6 +156,7 @@ Deep-Learning-Implementations/
 ├── dt_mem_working_memory_lab/
 ├── elephant_goldfish_review_lab/
 ├── evolver_lab/
+├── fp4-attention-lab/
 ├── frontier_monitor_lab/
 ├── gmlp_spatial_gating_lab/
 ├── gqa_companion_lab/

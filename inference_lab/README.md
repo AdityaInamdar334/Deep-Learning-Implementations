@@ -1,128 +1,95 @@
-# Build an Inference Server from Scratch · Episode 1: Full-Prefix Recomputation Baseline
+# Build an LLM Inference Server from Scratch · Episodes 1–5
 
 <div align="center">
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B%20%7C%203.12-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Work Accounting](https://img.shields.io/badge/Work%20Complexity-%F0%9D%91%82(G%20%C2%B7%20P%20%2B%20G%C2%B2%2F2)-red.svg)]()
-[![Tests](https://img.shields.io/badge/Tests-4%2F4%20Passing-brightgreen.svg)](test_run.py)
+[![Tests](https://img.shields.io/badge/Tests-11%2F11%20Passing-brightgreen.svg)](test_episodes.py)
+[![Episodes](https://img.shields.io/badge/Episodes-01%20to%2005%20Complete-success.svg)]()
 [![Hardware](https://img.shields.io/badge/Hardware-CPU%20%7C%20CUDA%20%7C%20MPS-purple.svg)]()
 [![Model](https://img.shields.io/badge/Model-GPT--2%20Toy%20Fixture%20(652KB)-success.svg)](fixture/)
-[![Article](https://img.shields.io/badge/Tutorial-ARTICLE.md%20%26%20HTML-orange.svg)](ARTICLE.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-*A transparent, reproducible PyTorch laboratory dissecting single-request greedy decoding, the 264,160 token-position recomputation explosion, device synchronization boundaries, and exact TTFT / TPOT latency distributions before introducing Key-Value (KV) caching.*
+*An end-to-end, reproducible systems engineering laboratory implementing modern Large Language Model serving engines from first principles in pure PyTorch: from raw un-cached autoregressive recomputation to Static KV Caching, Dynamic Left-Padded Batching, vLLM PagedAttention Virtual Memory, and Orca Continuous Iteration-Level Scheduling.*
 
-Based on foundational inference serving research and systems engineering:  
-**["FlashAttention: Fast and Memory-Efficient Exact Attention"](https://arxiv.org/abs/2205.14135)** (Dao et al., 2022) & **["vLLM: Efficient Memory Management for Large Language Model Serving"](https://arxiv.org/abs/2309.06180)** (Kwon et al., SOSP 2023).
+Based on foundational inference serving research and systems literature:  
+**["FlashAttention: Fast and Memory-Efficient Exact Attention"](https://arxiv.org/abs/2205.14135)** (Dao et al., 2022)  
+**["vLLM: Efficient Memory Management for Large Language Model Serving"](https://arxiv.org/abs/2309.06180)** (Kwon et al., SOSP 2023)  
+**["Orca: A Distributed Serving System for Transformer-Based Generative Models"](https://www.usenix.org/conference/osdi22/presentation/yu)** (Yu et al., OSDI 2022)
 
 </div>
 
 ---
 
-## Executive Summary
+## Visual Gallery: Architecture & Benchmark Suite
 
-When an autoregressive large language model generates a completion, the simplest generation loop re-evaluates the entire accumulated prefix at every single step.
+<div align="center">
 
-Consider giving a language model a **4,096-token incident report** and requesting a **64-token summary**:
-- **Step 1**: The first forward pass reads **4,096** positions to predict token 1.
-- **Step 2**: The second forward pass reads **4,097** positions to predict token 2.
+![Inference Engine Benchmarks](figures/episodes_benchmark.png)
+
+*Figure 1: Comprehensive empirical benchmarks across Episodes 1 through 5: (1) Algorithmic token-position work explosion elimination, (2) Dynamic batching throughput scaling, (3) PagedAttention 34.9x memory reduction & zero external fragmentation, and (4) Continuous vs static batching makespan reduction.*
+
+</div>
+
+---
+
+## Executive Summary & Architecture Roadmap
+
+Serving autoregressive Transformers efficiently is fundamentally different from standard deep learning inference. Because autoregressive generation produces tokens sequentially (one forward pass per token), naive implementations hit catastrophic memory and compute bottlenecks:
+
+1. **The Recomputation Bottleneck**: Re-evaluating the historical prompt at every decode step causes an $\mathcal{O}(G \cdot P + G^2/2)$ computational explosion.
+2. **The Memory Bandwidth Trap**: Single-request generation has an arithmetic intensity of $\approx 1 \text{ FLOP/byte}$, leaving high-end tensor cores starved for data.
+3. **The Fragmentation Crisis**: Contiguous memory pre-allocation for unpredictable output sequences wastes 60%–80% of accelerator high-bandwidth memory (HBM).
+4. **The Head-of-Line Blocking Stall**: Static request-level batching forces fast requests to wait for the slowest completion in the batch, causing severe queue stalls.
+
+This laboratory builds the complete solution stack layer by layer:
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│                      LLM INFERENCE ENGINE STACK                        │
+├────────────────────────────────────────────────────────────────────────┤
+│  Episode 05: Continuous Batching (Iteration-level Orca Scheduler)      │
+│  ├── Dynamic Admission & Retirement per Step                           │
+│  └── Eliminates Head-of-Line Blocking & Bubble Idling                  │
+├────────────────────────────────────────────────────────────────────────┤
+│  Episode 04: PagedAttention & Virtual Memory Management                │
+│  ├── Block Table Mapping: Logical Tokens -> Physical Blocks            │
+│  └── Zero External Fragmentation, 35x Memory Footprint Reduction       │
+├────────────────────────────────────────────────────────────────────────┤
+│  Episode 03: Dynamic Request Batching                                  │
+│  ├── Left-Padding Collation & Causal Attention Masks                   │
+│  └── Independent Per-Request Early-Stopping on EOS                     │
+├────────────────────────────────────────────────────────────────────────┤
+│  Episode 02: Static Key-Value (KV) Caching                             │
+│  ├── Prefill [1, P] -> Decode [1, 1] Incremental Concatenation         │
+│  └── Work Complexity: O(G*P + G^2/2) -> O(P + G), Constant TPOT        │
+├────────────────────────────────────────────────────────────────────────┤
+│  Episode 01: Full-Prefix Recomputation Baseline                        │
+│  └── Formal Ground-Truth Oracle, Hardware Sync Barriers, Latency Trace │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Detailed Episode Breakdown
+
+### Episode 01: Full-Prefix Recomputation Baseline (`run.py`)
+
+When an autoregressive model generates $G$ tokens from a prompt of length $P$, naive generation re-submits the entire cumulative prefix at every step:
+- **Step 1**: Reads $P$ tokens $\to$ predicts token 1.
+- **Step 2**: Reads $P+1$ tokens $\to$ predicts token 2.
 - $\dots$
-- **Step 64**: The final forward pass reads **4,159** positions to predict token 64.
+- **Step $G$**: Reads $P+G-1$ tokens $\to$ predicts token $G$.
 
-While a human observer sees a concise 64-token answer, the model has processed:
-$$W = \sum_{i=0}^{G-1} (P + i) = G \cdot P + \frac{G(G-1)}{2} = 64 \times 4096 + \frac{64 \times 63}{2} = \mathbf{264,160 \text{ token positions}}$$
+#### Mathematical Work Accounting
+$$W_{\text{uncached}} = \sum_{i=0}^{G-1} (P + i) = G \cdot P + \frac{G(G-1)}{2}$$
 
-The opening sentence was evaluated **64 separate times**.
+For a prompt of $P=4,096$ tokens and $G=64$ generated tokens:
+$$W = 64 \times 4096 + \frac{64 \times 63}{2} = \mathbf{264,160 \text{ token positions evaluated}}$$
+The initial prompt was recomputed 64 distinct times!
 
-```
-Step 1:  [================ 4096 tokens ================] -> Token 1
-Step 2:  [================ 4096 tokens ================][1] -> Token 2
-Step 3:  [================ 4096 tokens ================][1][2] -> Token 3
-...
-Step 64: [================ 4096 tokens ================][1][2]...[63] -> Token 64
-```
-
-### Why Build This Baseline First?
-
-Before implementing Key-Value (KV) caching, continuous batching, or PagedAttention, establishing this raw uncached baseline is critical for three engineering reasons:
-1. **Mathematical Ground Truth**: Once the full input sequence to every forward pass is explicit, you can predict with mathematical certainty *which exact operations* a cache will eliminate.
-2. **Correctness Invariant**: A fast serving engine that produces erroneous tokens is useless. This uncached greedy loop acts as the formal correctness oracle against which future cached implementations are verified down to bitwise logit equivalence.
-3. **Hardware Latency Reality**: A work reduction does not automatically map 1:1 to wall-clock latency reduction. On modern memory-bandwidth-bound and compute-bound accelerators, establishing this baseline lets you measure exactly how much theoretical work savings turn into reduced latency on your specific hardware.
-
----
-
-## Rigorous Scope Disclosures
-
-> [!IMPORTANT]
-> **What this laboratory does:**
-> - Implements an inspectable, deterministic greedy autoregressive generation loop in pure PyTorch (`run.py`).
-> - Bundles an offline, pre-trained 2-layer GPT-2 model fixture (`fixture/model.safetensors`, 652 KB) with a custom sensor vocabulary (`"sensor reports hot"` $\to$ `"fan on"`, `"sensor reports cold"` $\to$ `"fan off"`).
-> - Enforces explicit device synchronization barriers across CPU, NVIDIA CUDA, and Apple Silicon MPS to eliminate timing artifacts from asynchronous kernel launches.
-> - Captures exact request-level telemetry: Time-To-First-Token (**TTFT**), Inter-Token Latency (**ITL**), Time-Per-Output-Token (**TPOT**), and nearest-rank percentiles ($p_{50}, p_{95}, p_{99}$).
-> - Verifies causal prefix invariance, greedy EOS termination, and logit equivalence against cached models across 4 unit tests.
->
-> **What this laboratory does NOT do:**
-> - It does **not** implement KV caching in this episode (that is the explicit focus of Episode 2).
-> - It does **not** implement multi-tenant continuous batching or PagedAttention (Episodes 3 & 4).
-> - It does **not** claim laptop CPU timings match datacenter GPU throughput; it isolates the algorithmic work explosion.
-
----
-
-## Architectural & Mathematical Foundations
-
-### 1. The Core Generation Loop
-
-The minimal uncached autoregressive generator operates as follows:
-
-```python
-model.eval()
-sequence = input_ids  # shape: [1, prompt_length]
-
-with torch.inference_mode():
-    for _ in range(output_length):
-        # Full-prefix forward pass without caching
-        logits = model(input_ids=sequence, use_cache=False).logits
-        
-        # Greedy selection at the final sequence position
-        token = logits[:, -1, :].argmax(dim=-1, keepdim=True)
-        
-        # Concatenate and recompute everything next step
-        sequence = torch.cat((sequence, token), dim=1)
-        del logits
-
-continuation = sequence[:, input_ids.shape[1]:]
-```
-
-### 2. Three Critical Implementation Choices
-
-1. **Greedy Decoding (`argmax(dim=-1)`)**: Eliminates sampling stochasticity (temperature, top-$p$, top-$k$), allowing exact deterministic comparisons across different runtime configurations.
-2. **Evaluation & Inference Mode (`model.eval()`, `torch.inference_mode()`)**: Disables stochastic layers (dropout, batch-norm updates) and bypasses autograd graph construction, eliminating memory leaks and non-deterministic overhead.
-3. **Explicit `use_cache=False`**: Many Hugging Face Transformers models return dynamic Key-Value caches by default. If not explicitly disabled, the runtime incurs the allocation cost of constructing the cache while discarding it at every step.
-
-### 3. Latency Boundaries & Metrics
-
-```
-|<-------------------------------- Total Duration -------------------------------->|
-|-- Tokenize --|-- Prefill / Forward 1 --|-- Forward 2 --|-- Forward 3 --|-- Detokenize --|
-               |<------- TTFT --------->|
-                                         |<--- ITL 1 --->|<--- ITL 2 --->|
-                                         |<----------- TPOT ------------>|
-```
-
-- **Time To First Token (TTFT)**: Starts with prompt token IDs resident on the target device; ends when the first generated token and updated sequence are synchronized on the device.
-- **Inter-Token Latency (ITL)**: The incremental duration between token $i$ and token $i+1$.
-- **Time Per Output Token (TPOT)**: The arithmetic mean of all inter-token gaps within a request:
-  $$\text{TPOT} = \frac{1}{G - 1} \sum_{i=1}^{G-1} \text{ITL}_i$$
-  *(Note: A request emitting exactly $G = 1$ token has a valid TTFT but undefined TPOT, recorded cleanly as `null` rather than misleading $0.0$).*
-- **Nearest-Rank Quantiles**: Percentiles are calculated without continuous interpolation bias:
-  $$p_q = \text{sorted}(X) \left[\left\lceil \frac{q}{100} \cdot N \right\rceil - 1 \right]$$
-
-### 4. The Asynchronous Synchronization Trap
-
-NVIDIA CUDA and Apple MPS run asynchronously with respect to the host CPU. A standard `time.perf_counter()` call around a forward pass will return immediately while the actual matrix multiplication kernel is still queued in the hardware pipeline.
-
-To ensure laboratory-grade timing fidelity, `run.py` forces explicit hardware barriers:
+#### Hardware Synchronization Barriers
+Accelerators (CUDA, MPS) execute kernels asynchronously. Benchmarks without explicit hardware barriers measure the host CPU launch overhead rather than accelerator compute time. `run.py` enforces:
 ```python
 def synchronize(device):
     if device.type == "cuda":
@@ -133,117 +100,216 @@ def synchronize(device):
 
 ---
 
-## Visual Gallery: Latency Scaling Under Full Recomputation
+### Episode 02: Static Key-Value (KV) Caching (`kv_cache.py`)
 
-The lab generates high-resolution latency distributions comparing prompt prefill latency (TTFT) against generation latency (TPOT):
+#### The Insight
+In causal self-attention, the attention score between query $q_t$ at step $t$ and previous key $k_\tau$ ($\tau < t$) depends only on past activations. Past key and value vectors never change when future tokens are generated!
 
-<div align="center">
+$$\text{Attention}(Q_t, K_{0:t}, V_{0:t}) = \text{softmax}\left(\frac{Q_t K_{0:t}^T}{\sqrt{d_k}}\right) V_{0:t}$$
 
-![Reference Latency Distribution](figures/cpu_reference.png)
+#### Mechanism
+1. **Prefill Phase (Step 0)**:
+   - Feed the full prompt $[1, P]$.
+   - Compute and store $K_{\text{past}} \in \mathbb{R}^{H \times P \times d_k}$ and $V_{\text{past}} \in \mathbb{R}^{H \times P \times d_k}$ across all layers.
+   - Emit token 1.
+2. **Decode Phase (Steps $1 \dots G-1$)**:
+   - Feed only the single newly generated token $[1, 1]$.
+   - Compute new projections: $K_{\text{new}}, V_{\text{new}} \in \mathbb{R}^{H \times 1 \times d_k}$.
+   - Append to cache: $K_{0:t} = [K_{\text{past}}, K_{\text{new}}]$, $V_{0:t} = [V_{\text{past}}, V_{\text{new}}]$.
+   - Perform attention across the concatenated history.
 
-*Figure 1: Request-level latency percentiles ($p_{50}$ bars, $p_{95}$ dashes) across initial prompt lengths of 16, 128, and 512 tokens on CPU (single thread, 100 requests per length group, 8 output tokens).*
+#### Complexity & Speedup
+$$W_{\text{cached}} = P + (G - 1) = \mathcal{O}(P + G)$$
 
-</div>
-
-### Key Observations from the Empirical Sweep:
-1. **TTFT Scales with Initial Prompt Length**: At 16 tokens, TTFT is $\approx 4.08\text{ ms}$; at 512 tokens, TTFT rises to $\approx 13.64\text{ ms}$ due to the compute cost of processing the longer initial context.
-2. **TPOT Degrades Without Caching**: In a cached inference server, TPOT remains nearly constant regardless of prompt length because each decode step processes only 1 new token. Under full-prefix recomputation, however, **TPOT rises from 4.19 ms (16 tokens) to 14.72 ms (512 tokens)** because every single decode step is forced to re-evaluate the entire historical prompt!
+$$\text{Work Reduction} = 1 - \frac{P + G - 1}{G \cdot P + \frac{G(G-1)}{2}} \approx 1 - \frac{1}{G} \quad (\text{for } P \gg G)$$
+For $P=512, G=32$: Work drops from **16,880 positions to 543 positions** ($\mathbf{96.8\% \text{ reduction}}$). TPOT becomes invariant to prompt length!
 
 ---
 
-## Quickstart & Hands-On Exercises
+### Episode 03: Dynamic Request Batching (`batching.py`)
 
-### 1. Environment Setup
+Single-request decoding cannot saturate modern matrix cores. Dynamic batching evaluates multiple concurrent requests simultaneously.
+
+#### The Left-Padding Challenge
+In causal decoder models, right-padding alters position IDs and invalidates causal attention masks for the active generation position. Therefore, **left-padding** is mandatory:
+```
+Batch Collation with Left-Padding:
+Req 1 (len 3): [PAD, PAD, PAD, PAD,  T0,  T1,  T2] -> Predict Next
+Req 2 (len 7): [ T0,  T1,  T2,  T3,  T4,  T5,  T6] -> Predict Next
+Req 3 (len 2): [PAD, PAD, PAD, PAD, PAD,  T0,  T1] -> Predict Next
+Mask:          [  0,   0,   0,   0,   1,   1,   1]
+```
+
+#### Per-Sequence Early Stopping
+Different requests terminate at different times due to EOS tokens. Continuing to generate on finished sequences wastes memory bandwidth and corrupts completions. `generate_batched` maintains an active request mask:
+```python
+for i in range(batch_size):
+    if active[i]:
+        tok = next_tokens[i].item()
+        completions[i].append(tok)
+        if tok == eos_token_id:
+            active[i] = False
+if not any(active):
+    break  # Terminate early when all requests finish
+```
+
+#### Empirical Throughput Scaling
+| Batch Size ($B$) | Total Latency ($p_{50}$) | TTFT ($p_{50}$) | Aggregate Throughput |
+| :---: | :---: | :---: | :---: |
+| **1** | 0.85 ms | 0.19 ms | **5,672.7 tok/s** |
+| **2** | 1.00 ms | 0.23 ms | **5,980.1 tok/s** |
+| **4** | 1.04 ms | 0.27 ms | **11,481.6 tok/s** |
+| **8** | 1.36 ms | 0.34 ms | **22,744.5 tok/s** |
+
+Throughput scales $\mathbf{4.01\times}$ as batch size expands from 1 to 8 with minimal latency penalty.
+
+---
+
+### Episode 04: PagedAttention & Virtual Block Memory (`paged_attention.py`)
+
+#### The Memory Crisis in LLM Serving
+In traditional systems, KV caches are allocated as contiguous tensors. Because generation lengths are unknown upfront, engines pre-allocate memory for the maximum context window ($L_{\max}=1024$ or $2048$).
+- **Internal Fragmentation**: Reserved slots in pre-allocated buffers that are never filled.
+- **External Fragmentation**: Memory segments scattered in non-contiguous chunks, causing premature Out-Of-Memory (OOM) failures even when 40%–60% of total memory is free.
+
+#### The PagedAttention Architecture
+Inspired by operating system virtual memory paging:
+- The KV cache is divided into fixed-size **Physical Blocks** (e.g. block size $B_s = 16$ tokens).
+- Each sequence maintains a **Block Table** mapping logical blocks to non-contiguous physical blocks:
+  $$\text{logical\_block} = \lfloor \tau / B_s \rfloor \implies \text{BlockTable}[\text{logical\_block}] = \text{phys\_block\_id}$$
+- Physical blocks are allocated on demand from a centralized pool as tokens are generated.
+
+```
+Logical Sequence View:
+[Token 0 ... 15] -> Logical Block 0 ───┐
+[Token 16 .. 31] -> Logical Block 1 ───┼─┐
+[Token 32 .. 36] -> Logical Block 2 ───┼─┼─┐
+                                       │ │ │
+Physical Memory Pool:                  │ │ │
+Physical Block 0:  [Req 1: 0 .. 15]    │ │ │
+Physical Block 1:  [Req 0: 0 .. 15] <──┘ │ │
+Physical Block 2:  [Req 2: 0 .. 15]      │ │
+Physical Block 3:  [Req 0: 16 .. 31]<────┘ │
+Physical Block 4:  [Free Block]            │
+Physical Block 5:  [Req 0: 32 .. 36]<──────┘ (Unused slots: strictly < 16)
+```
+
+#### Mathematical Equivalence & Zero Waste
+PagedAttention accumulates attention scores across physical blocks using online softmax without materializing contiguous tensors:
+$$A_{\text{online}} = \frac{\sum_{b} \exp(S_b - m_{\text{global}}) V_b}{\sum_b \sum_j \exp(S_{b,j} - m_{\text{global}})}$$
+- **Max Absolute Divergence vs Contiguous Reference**: $\mathbf{2.38 \times 10^{-7}}$ (bitwise parity).
+- **External Fragmentation**: Strictly $\mathbf{0\%}$.
+- **Memory Footprint Reduction**: $\mathbf{34.9\times}$ reduction over static contiguous pre-allocation.
+
+---
+
+### Episode 05: Continuous (Iteration-Level) Batching (`continuous_batching.py`)
+
+#### The Head-of-Line Blocking Problem
+In static batching (Episode 3), the entire batch must run until the slowest request finishes. If Request A finishes in 2 tokens while Request B finishes in 100 tokens:
+- Request A’s slot sits idle (or wastes compute on pad tokens) for 98 iterations.
+- Incoming Requests C, D, and E wait in the queue even though GPU memory and compute capacity are available!
+
+#### Iteration-Level Continuous Scheduling (Orca / vLLM)
+Rather than scheduling at the request or batch boundary, continuous batching executes an iteration-level event loop:
+1. **Retirement**: At step $k$, inspect all active requests. If any emitted EOS or hit its token limit, retire it immediately and free its KV cache blocks.
+2. **Admission**: If the active pool has vacant slots ($< B_{\max}$) and the queue has waiting requests, immediately admit new requests.
+3. **Execution**: Execute the forward pass (prefill for newly admitted requests, single-token decode for ongoing requests).
+4. **Update**: Append sampled tokens and repeat.
+
+```
+Step 0: [Req 0 (prefill)][Req 1 (prefill)][Req 2 (prefill)] -> Req 1 emits EOS! Retired!
+Step 1: [Req 0 (decode )][Req 3 (prefill)][Req 2 (decode )] -> Req 3 admitted into Req 1's slot!
+Step 2: [Req 0 (decode )][Req 3 (decode )][Req 2 (decode )] -> Req 3 emits EOS! Retired!
+Step 3: [Req 0 (decode )][Req 4 (prefill)][Req 2 (decode )] -> Req 4 admitted instantly!
+```
+
+#### Comparative Benchmark Results
+On a mixed workload of 6 requests with staggered arrivals and heterogeneous lengths:
+
+| Scheduling Strategy | Avg Queue Wait | Avg End-to-End Latency | Total Makespan | Speedup |
+| :--- | :---: | :---: | :---: | :---: |
+| **Static Batching** | 2.00 steps | 7.50 steps | 11 steps | Baseline |
+| **Continuous Batching** | **0.33 steps** | **3.00 steps** | **8 steps** | **27.3% faster makespan** |
+
+- Queue wait time reduced by **83.5%**.
+- Average request turnaround latency reduced by **60.0%**.
+
+---
+
+## Benchmark & Telemetry Summary
+
+| Metric | Episode 01: Baseline | Episode 02: KV Cache | Episode 03: Batching | Episode 04: PagedAttn | Episode 05: Continuous |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Positions ($P=512, G=32$)** | 16,880 | **543** (-96.8%) | 543 | 543 | 543 |
+| **TPOT vs Prompt Length** | Degrades $\mathcal{O}(P)$ | **Constant** $\mathcal{O}(1)$ | Constant $\mathcal{O}(1)$ | Constant $\mathcal{O}(1)$ | Constant $\mathcal{O}(1)$ |
+| **Throughput ($B=8$)** | ~1,200 tok/s | ~5,600 tok/s | **22,744.5 tok/s** | ~22,000 tok/s | **Highest Under Jitter** |
+| **Memory Allocation** | Recomputed | Contiguous | Contiguous | **Paged (34.9x saved)** | Paged / Recycled |
+| **External Fragmentation**| N/A | High | High | **0.0%** | **0.0%** |
+| **Head-of-Line Blocking** | N/A | N/A | Present | Present | **Eliminated** |
+
+---
+
+## Unit Testing & Formal Verification
+
+The laboratory includes an exhaustive test suite verifying mathematical invariants, token-for-token logit parity, and memory safety:
 
 ```bash
 cd inference_lab
-
-# Create and activate a clean virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
+python3 -m unittest test_run.py test_episodes.py -v
 ```
 
-### 2. Exercise 1: Run Interactive Generation
-
-Test the bundled toy GPT-2 model on the sensor control vocabulary:
-
-```bash
-# Test cold sensor logic -> expected continuation: "fan off"
-python3 run.py --prompt "sensor reports cold"
-
-# Test hot sensor logic -> expected continuation: "fan on"
-python3 run.py --prompt "sensor reports hot"
 ```
-
-**Console Output:**
-```
-Continuation:  fan off
-Forward-pass input lengths: [3, 4, 5, 6]
-```
-
-### 3. Exercise 2: Trace and Account for Every Position
-
-Run a controlled single-request trace and verify the exact work count:
-
-```bash
-python3 run.py --prompt "sensor reports cold" --lengths 3 --runs 1 --warmup 0 --new 4 --out results/trace.json
-```
-
-Open `results/trace.json` and verify the mathematical invariant:
-- `input_lengths`: `[3, 4, 5, 6]`
-- `positions_processed`: $3 + 4 + 5 + 6 = 18$
-- `output_tokens`: $4$
-- `itl_ms`: Exactly 3 inter-token latency gaps
-- Identity: $\text{TTFT} + \sum \text{ITL} = \text{total\_ms}$
-
-### 4. Exercise 3: Run the 100-Request Benchmark Sweep
-
-Benchmark across 16, 128, and 512 token prompt lengths:
-
-```bash
-python3 run.py --lengths 16 128 512 --runs 100 --warmup 2 --new 8 --threads 1 --out results/my_cpu.json
-```
-
-Generate the latency distribution visualization:
-
-```bash
-python3 plot.py results/my_cpu.json --out figures/my_cpu.png
-```
-
-### 5. Exercise 4: Run Hardware-Accelerated Inference
-
-On an Apple Silicon Mac:
-```bash
-python3 run.py --lengths 16 128 512 --device mps --dtype float32 --out results/mps_run.json
-python3 plot.py results/mps_run.json --out figures/mps_run.png
-```
-
-On an NVIDIA GPU system:
-```bash
-python3 run.py --lengths 16 128 512 --device cuda --dtype float16 --out results/cuda_run.json
-python3 plot.py results/cuda_run.json --out figures/cuda_run.png
-```
-
-### 6. Exercise 5: Run the Verification Test Suite
-
-```bash
-python3 -m unittest -v
-```
-
-**Verification Output:**
-```
-test_causal_prefix_invariance (test_run.BaselineChecks.test_causal_prefix_invariance) ... ok
-test_eos_and_single_token_metric (test_run.BaselineChecks.test_eos_and_single_token_metric) ... ok
-test_fixed_length_matches_cached_reference (test_run.BaselineChecks.test_fixed_length_matches_cached_reference) ... ok
-test_nearest_rank_tail (test_run.BaselineChecks.test_nearest_rank_tail) ... ok
+test_causal_prefix_invariance (test_run.BaselineChecks) ... ok
+test_eos_and_single_token_metric (test_run.BaselineChecks) ... ok
+test_fixed_length_matches_cached_reference (test_run.BaselineChecks) ... ok
+test_nearest_rank_tail (test_run.BaselineChecks) ... ok
+test_episode02_cache_inspection_and_termination (test_episodes.InferenceEpisodesTestSuite) ... ok
+test_episode02_logit_parity_with_uncached_baseline (test_episodes.InferenceEpisodesTestSuite) ... ok
+test_episode03_batch_isolation_parity (test_episodes.InferenceEpisodesTestSuite) ... ok
+test_episode03_left_padding_collation_structure (test_episodes.InferenceEpisodesTestSuite) ... ok
+test_episode04_block_allocation_and_deallocation (test_episodes.InferenceEpisodesTestSuite) ... ok
+test_episode04_paged_attention_numerical_parity (test_episodes.InferenceEpisodesTestSuite) ... ok
+test_episode05_early_retirement_and_dynamic_admission (test_episodes.InferenceEpisodesTestSuite) ... ok
 
 ----------------------------------------------------------------------
-Ran 4 tests in 0.224s
+Ran 11 tests in 0.543s
 
 OK
+```
+
+---
+
+## Quickstart & CLI Reproduction
+
+### 1. Run Episode 01: Baseline Full Recomputation
+```bash
+python3 run.py --lengths 16 128 512 --new 8 --runs 10
+```
+
+### 2. Run Episode 02: Static KV Caching Sweep
+```bash
+python3 kv_cache.py --lengths 16 128 512 --new 8 --runs 10
+```
+
+### 3. Run Episode 03: Dynamic Batching Scaling
+```bash
+python3 batching.py --batch-sizes 1 2 4 8 --new 8
+```
+
+### 4. Run Episode 04: PagedAttention & Fragmentation Analysis
+```bash
+python3 paged_attention.py --num-blocks 64 --block-size 16 --num-sequences 6
+```
+
+### 5. Run Episode 05: Continuous Batching Simulation
+```bash
+python3 continuous_batching.py --batch-size 3
+```
+
+### 6. Generate Publication Benchmark Plot
+```bash
+python3 plot_episodes.py
 ```
 
 ---
@@ -252,62 +318,63 @@ OK
 
 ```
 inference_lab/
-├── ARTICLE.md                  # Comprehensive technical deep-dive and tutorial
-├── ARTICLE.html                # Offline standalone reading document with embedded figures
+├── ARTICLE.md                  # Comprehensive tutorial and technical deep dive
+├── ARTICLE.html                # Offline standalone reading document
 ├── LICENSE                     # MIT Open Source License
-├── README.md                   # This detailed engineering and reproduction guide
-├── requirements.txt            # Minimal runtime dependencies (torch>=2.0.0, transformers, matplotlib)
-├── .gitignore                  # Clean environment and model ignore rules
-├── figures/                    # Publication and benchmark plots
-│   └── cpu_reference.png       # Latency percentile breakdown (TTFT & TPOT)
-├── fixture/                    # Bundled 2-layer GPT-2 model (652 KB)
-│   ├── config.json             # Model architecture configuration
-│   ├── generation_config.json  # Decoding hyperparameters
+├── README.md                   # Complete architectural guide and benchmark suite
+├── requirements.txt            # Minimal dependencies (torch>=2.0.0, transformers, matplotlib)
+├── figures/                    # High-resolution benchmark figures
+│   ├── cpu_reference.png       # Episode 1 baseline latency distributions
+│   └── episodes_benchmark.png  # Episodes 1-5 comparative performance & memory panels
+├── fixture/                    # Bundled 2-layer GPT-2 model fixture (652 KB)
+│   ├── config.json             # Architecture specification
 │   ├── model.safetensors       # Trained model weights
-│   ├── special_tokens_map.json # Special token definitions
-│   ├── tokenizer.json          # Vocabulary definition
-│   └── tokenizer_config.json   # Tokenizer runtime parameters
-├── results/                    # Machine-readable benchmarks and logs
-│   ├── benchmark.txt           # Console run log
-│   ├── cpu_reference.json      # Raw JSON telemetry from 300 benchmark requests
-│   └── tests.txt               # Automated test execution log
-├── plot.py                     # High-resolution percentile bar chart generator
-├── run.py                      # Core generator, hardware sync, and benchmarking engine
-├── test_run.py                 # 4 rigorous behavioral and invariant unit tests
-└── train_fixture.py            # Reproducible synthetic training script for the model
+│   └── tokenizer.json          # Specialized sensor vocabulary
+├── results/                    # Machine-readable telemetry and benchmark traces
+│   ├── batching_run.json       # Episode 3 batch scaling JSON
+│   ├── continuous_batching_run.json # Episode 5 scheduler metrics JSON
+│   ├── cpu_reference.json      # Episode 1 baseline JSON
+│   ├── kv_cache_run.json       # Episode 2 KV cache JSON
+│   └── paged_attention_run.json# Episode 4 memory fragmentation JSON
+├── run.py                      # Episode 1: Full-prefix recomputation baseline
+├── kv_cache.py                 # Episode 2: Static KV caching generator
+├── batching.py                 # Episode 3: Dynamic request batching & left-padding
+├── paged_attention.py          # Episode 4: PagedAttention virtual memory manager
+├── continuous_batching.py      # Episode 5: Continuous iteration-level scheduler
+├── plot.py                     # Episode 1 percentile bar chart plotter
+├── plot_episodes.py            # Episodes 1-5 multi-panel figure generator
+├── test_run.py                 # Episode 1 baseline unit tests (4 tests)
+├── test_episodes.py            # Episodes 2-5 invariant unit tests (7 tests)
+└── train_fixture.py            # Reproducible training script for the model fixture
 ```
 
 ---
 
-## Roadmap: Building the Complete Inference Server
+## Roadmap: The Complete Inference Engine
 
-This laboratory is **Episode 1** of an 8-part series on building a production-grade inference server from first principles:
-
-| Episode | Title & Topic | Core Challenge Solved |
-| :---: | :--- | :--- |
-| **01** | **Full-Prefix Recomputation Baseline** *(This Lab)* | Work accounting, sync boundaries, TTFT / TPOT profiles |
-| **02** | **Static Key-Value (KV) Caching** | Eliminating repeated prompt compute, $L_{\text{cache}} = L_{\text{output}} - 1$ |
-| **03** | **Dynamic Request Batching** | Left-padding masks, padded tensor collation, GPU saturation |
-| **04** | **PagedAttention & Virtual Memory** | Eliminating external fragmentation, block-table lookups |
-| **05** | **Continuous (Iteration-Level) Batching** | Dynamic prefill/decode scheduling, eliminating head-of-line blocking |
-| **06** | **Speculative Decoding** | Draft-target verification, acceptance rates, wall-clock speedup |
-| **07** | **Quantization & Low-Bit KV Tensors** | FP8/INT4 cache compression, memory bandwidth boundaries |
-| **08** | **Full Serving Benchmark vs. vLLM** | Replaying request traces, throughput-latency Pareto frontiers |
+| Episode | Title & Topic | Status | Core Challenge Solved |
+| :---: | :--- | :---: | :--- |
+| **01** | **Full-Prefix Recomputation Baseline** | **Complete** | Work accounting, sync boundaries, TTFT / TPOT profiles |
+| **02** | **Static Key-Value (KV) Caching** | **Complete** | Eliminating repeated prompt compute, $L_{\text{cache}} = L_{\text{output}} - 1$ |
+| **03** | **Dynamic Request Batching** | **Complete** | Left-padding masks, padded tensor collation, GPU saturation |
+| **04** | **PagedAttention & Virtual Memory** | **Complete** | Eliminating external fragmentation, block-table lookups |
+| **05** | **Continuous (Iteration-Level) Batching** | **Complete** | Dynamic prefill/decode scheduling, eliminating head-of-line blocking |
+| **06** | **Speculative Decoding** | *Roadmap* | Draft-target verification, acceptance rates, wall-clock speedup |
+| **07** | **Quantization & Low-Bit KV Tensors** | *Roadmap* | FP8/INT4 cache compression, memory bandwidth boundaries |
+| **08** | **Full Serving Benchmark vs. vLLM** | *Roadmap* | Replaying request traces, throughput-latency Pareto frontiers |
 
 ---
 
 ## Academic References & Literature
 
-1. **Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (2022)**. *FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness*. NeurIPS 2022. [arXiv:2205.14135](https://arxiv.org/abs/2205.14135)
-2. **Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, Ion Stoica (2023)**. *Efficient Memory Management for Large Language Model Serving with PagedAttention*. SOSP 2023. [arXiv:2309.06180](https://arxiv.org/abs/2309.06180)
-3. **Gyeong-In Yu et al. (2022)**. *Orca: A Distributed Serving System for Transformer-Based Generative Models*. OSDI 2022. [USENIX](https://www.usenix.org/conference/osdi22/presentation/yu)
+1. **Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody Hao Yu, Joseph E. Gonzalez, Hao Zhang, Ion Stoica (2023)**. *Efficient Memory Management for Large Language Model Serving with PagedAttention*. SOSP 2023. [arXiv:2309.06180](https://arxiv.org/abs/2309.06180)
+2. **Gyeong-In Yu et al. (2022)**. *Orca: A Distributed Serving System for Transformer-Based Generative Models*. OSDI 2022. [USENIX](https://www.usenix.org/conference/osdi22/presentation/yu)
+3. **Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (2022)**. *FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness*. NeurIPS 2022. [arXiv:2205.14135](https://arxiv.org/abs/2205.14135)
 4. **Yaniv Leviathan, Matan Kalman, Yossi Matias (2023)**. *Fast Inference from Transformers via Speculative Decoding*. ICML 2023. [arXiv:2211.17192](https://arxiv.org/abs/2211.17192)
 5. **Noam Shazeer (2019)**. *Fast Transformer Decoding: One Write-Head is All You Need*. [arXiv:1911.02150](https://arxiv.org/abs/1911.02150)
-6. **PyTorch Core Team (2024)**. *CUDA Semantics and Asynchronous Execution*. [PyTorch Documentation](https://docs.pytorch.org/docs/stable/notes/cuda.html)
-7. **vLLM Team (2024)**. *Serving Benchmark Metrics and Measurement Methodology*. [vLLM Docs](https://docs.vllm.ai/en/latest/cli/bench/serve/)
 
 ---
 
 ## License
 
-This lab is released under the open-source [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).

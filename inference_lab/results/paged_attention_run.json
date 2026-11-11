@@ -1,0 +1,11 @@
+{
+  "active_sequences": 6,
+  "active_tokens": 134,
+  "paged_allocated_slots": 176,
+  "paged_internal_frag_slots": 42,
+  "paged_internal_frag_pct": 23.863636363636363,
+  "contiguous_reserved_slots": 6144,
+  "contiguous_frag_pct": 97.81901041666667,
+  "memory_saved_bytes": 3055616,
+  "memory_reduction_ratio": 34.90909090909091
+}

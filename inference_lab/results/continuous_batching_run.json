@@ -1,0 +1,13 @@
+{
+  "continuous_batching": {
+    "makespan_steps": 8,
+    "avg_queue_wait_steps": 0.3333333333333333,
+    "avg_latency_steps": 3
+  },
+  "static_batching": {
+    "makespan_steps": 11,
+    "avg_queue_wait_steps": 2,
+    "avg_latency_steps": 7.5
+  },
+  "makespan_speedup_pct": 27.27272727272727
+}
