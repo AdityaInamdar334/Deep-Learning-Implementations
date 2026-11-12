@@ -65,6 +65,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [BitDecoding-FP4 Attention & KV Quantization](./fp4-attention-lab) | Collective weight underflow in microscaling FP4 KV caches, E4M3FN scale grids, small-block repair rules, and dual-residual query quantization. |
 | [CPU-ARC Procedural Reasoning Caches](./cpu_arc_lab) | NVIDIA's executable procedural caching, 16.3x to 291.1x invocation cost reduction, break-even economics across 8 benchmarks, and semantic boundary qualifier enforcement. |
 | [Intent-Aware KV Prefix Caching (IAC)](./iac-lab) | Conversational continuation probabilities, return delay geometric windows, intent-conditioned eviction, and behavioral distribution shift. |
+| [Clustered Attention Head Dropout](./head-mask-lab) | Multi-step reasoning breakdown under spatiotemporally concentrated vs diffuse attention head failure, cortical off-states, and McNemar exact paired tests. |
 
 ### Learning, memory, and forecasting
 
@@ -162,6 +163,7 @@ Deep-Learning-Implementations/
 ├── frontier_monitor_lab/
 ├── gmlp_spatial_gating_lab/
 ├── gqa_companion_lab/
+├── head-mask-lab/
 ├── hourglass_transformer_lab/
 ├── iac-lab/
 ├── ide_trust_boundary_lab/
