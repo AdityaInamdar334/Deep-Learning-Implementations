@@ -60,6 +60,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Hourglass Transformer](./hourglass_transformer_lab) | Hierarchical token shortening, causal right-shift downsampling, and length extrapolation. |
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
 | [Weight-Space Reading Audit](./weight_space_reading_audit_lab) | Auditing whether LLMs read weight space vs memorize labels; output permutation, shuffle controls, and hidden symmetries. |
+| [Neural Weight Topology Dynamics](./neural-weight-topology-lab) | Persistent homology of neural network weight evolution, Vietoris–Rips $H_0/H_1$ filtration, $\mathbb{F}_2$ boundary reduction, and non-stationary supervision. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
 | [LLM Inference Server from Scratch (Episodes 1–5)](./inference_lab) | Full-prefix recomputation baseline, static KV caching, dynamic left-padded batching, vLLM PagedAttention virtual memory, and Orca continuous iteration-level scheduling. |
 | [BitDecoding-FP4 Attention & KV Quantization](./fp4-attention-lab) | Collective weight underflow in microscaling FP4 KV caches, E4M3FN scale grids, small-block repair rules, and dual-residual query quantization. |
@@ -174,6 +175,7 @@ Deep-Learning-Implementations/
 ├── moe_frontier_lab/
 ├── neox_companion_lab/
 ├── neox_generation_lab/
+├── neural-weight-topology-lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
 ├── qwenputer_educational_lab/
