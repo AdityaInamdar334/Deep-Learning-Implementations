@@ -56,6 +56,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [LoRA from Scratch](./lora_companion_lab) | Low-rank adapter factorizations, asymmetric step-0 gradient dynamics, and zero-latency weight merging. |
 | [GPT-NeoX from Scratch](./neox_companion_lab) | Parallel residual blocks, partial RoPE (25%), fused QKV layouts, and causal KV-cache parity. |
 | [GPT-NeoX Autoregressive Generation](./neox_generation_lab) | KV-cache prefill vs incremental decoding, request isolation, and sampling dynamics. |
+| [GPT-NeoX LLM.int8() Mixed Precision](./neox-int8-lab) | Emergent outlier feature decomposition (6.7B+), row-wise INT8 with INT32 accumulation, scale inflation, and bitsandbytes integration. |
 | [Primer EZ Transformer](./primer_ez_transformer_lab) | Squared ReLU, causal Multi-DConv-Head Attention, time-to-quality efficiency, and structural shift. |
 | [Hourglass Transformer](./hourglass_transformer_lab) | Hierarchical token shortening, causal right-shift downsampling, and length extrapolation. |
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
@@ -175,6 +176,7 @@ Deep-Learning-Implementations/
 ├── moe_frontier_lab/
 ├── neox_companion_lab/
 ├── neox_generation_lab/
+├── neox-int8-lab/
 ├── neural-weight-topology-lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
