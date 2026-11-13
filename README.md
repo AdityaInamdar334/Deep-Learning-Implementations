@@ -69,6 +69,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Intent-Aware KV Prefix Caching (IAC)](./iac-lab) | Conversational continuation probabilities, return delay geometric windows, intent-conditioned eviction, and behavioral distribution shift. |
 | [Clustered Attention Head Dropout](./head-mask-lab) | Multi-step reasoning breakdown under spatiotemporally concentrated vs diffuse attention head failure, cortical off-states, and McNemar exact paired tests. |
 | [Denoising Diffusion Probabilistic Models (DDPM)](./ddpm-lab) | Forward Gaussian Markov chains, exact analytical Bayesian oracles, Tweedie's score formula, and reverse sampling from scratch. |
+| [Latent Diffusion 0.18215 Scaling Dynamics](./latent-lab) | The mathematical necessity of the 0.18215 latent scale in Stable Diffusion, autoencoder round-trip contract masking, and 22x error explosion under unscaled latents. |
 
 ### Learning, memory, and forecasting
 
@@ -172,6 +173,7 @@ Deep-Learning-Implementations/
 ├── iac-lab/
 ├── ide_trust_boundary_lab/
 ├── inference_lab/
+├── latent-lab/
 ├── llm_steering_interpretability_lab/
 ├── lora_companion_lab/
 ├── maya_option_order_lab/
