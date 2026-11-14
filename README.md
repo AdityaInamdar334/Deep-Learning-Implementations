@@ -70,6 +70,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Clustered Attention Head Dropout](./head-mask-lab) | Multi-step reasoning breakdown under spatiotemporally concentrated vs diffuse attention head failure, cortical off-states, and McNemar exact paired tests. |
 | [Denoising Diffusion Probabilistic Models (DDPM)](./ddpm-lab) | Forward Gaussian Markov chains, exact analytical Bayesian oracles, Tweedie's score formula, and reverse sampling from scratch. |
 | [Latent Diffusion 0.18215 Scaling Dynamics](./latent-lab) | The mathematical necessity of the 0.18215 latent scale in Stable Diffusion, autoencoder round-trip contract masking, and 22x error explosion under unscaled latents. |
+| [Stable Diffusion U-Net Attention & Tiling](./attention-lab) | Spatial self-attention vs text cross-attention memory asymmetry, 16x quadratic resolution explosion, and FlashAttention online tiled reduction. |
 
 ### Learning, memory, and forecasting
 
@@ -154,6 +155,7 @@ Deep-Learning-Implementations/
 ├── LICENSE
 ├── .gitignore
 ├── agent_cost_optimization_lab/
+├── attention-lab/
 ├── benchmark_auditing_lab/
 ├── black_hole_bomb_lab/
 ├── clocktower_belief_lab/
