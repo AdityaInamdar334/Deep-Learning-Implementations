@@ -1,0 +1,1 @@
+Read RET-3. Send summary for the general rule or a JSON string with itemClass, daysSinceDelivery (integer), sealed (boolean) from a successful lookup. Returns eligibility and reason.

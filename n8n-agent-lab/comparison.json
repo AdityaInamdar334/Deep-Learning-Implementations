@@ -1,0 +1,22 @@
+{
+  "record": {
+    "status": "found",
+    "id": "DEMO-1044",
+    "itemClass": "hygiene",
+    "daysSinceDelivery": 4,
+    "sealed": false
+  },
+  "alteredInputResult": {
+    "version": "RET-3",
+    "status": "evaluated",
+    "eligible": true,
+    "reason": "within_policy"
+  },
+  "checkedById": {
+    "id": "DEMO-1044",
+    "version": "RET-3",
+    "status": "evaluated",
+    "eligible": false,
+    "reason": "seal_open"
+  }
+}

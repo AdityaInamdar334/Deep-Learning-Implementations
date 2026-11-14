@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-36-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-47-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -42,6 +42,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Evolver Experiential Agent Memory](./evolver_lab) | Procedural Gene/Capsule distillation, the 320 paired-outcome benchmark matrix, break-even token economics, and lexical recall verification vulnerabilities. |
 | [Pocock Skills & Contract Audit Lab](./pocock_lab) | Matt Pocock's skills repository evolution (v1.0.0 to v1.3.2), batched interview dependency grouping, and mutation testing for state-machine cancellation contracts. |
 | [Spotify Shunt Routing](./spotify_shunt_routing_lab) | Delegating context-heavy tasks to cheaper workers, with token, latency, and information-loss tradeoffs. |
+| [n8n AI Agent Tool Calling Architecture](./n8n-agent-lab) | Split-tool vs atomic by-ID architectures, LLM parameter drift between chained tools, and fail-closed returns agent workflows. |
 
 ### Model architectures and representation learning
 
@@ -182,6 +183,7 @@ Deep-Learning-Implementations/
 ├── lora_companion_lab/
 ├── maya_option_order_lab/
 ├── moe_frontier_lab/
+├── n8n-agent-lab/
 ├── neox_companion_lab/
 ├── neox_generation_lab/
 ├── neox-int8-lab/

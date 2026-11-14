@@ -1,0 +1,1 @@
+Read one synthetic order. Send the exact DEMO-#### order ID as a single plain string. Returns status and recorded facts.

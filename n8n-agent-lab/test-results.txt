@@ -1,0 +1,16 @@
+✔ the two actual tool nodes connect to the agent (0.869381ms)
+✔ DEMO-1042 (0.92799ms)
+✔ DEMO-1043 (0.295075ms)
+✔ DEMO-1044 (0.216957ms)
+✔ DEMO-1045 (0.104047ms)
+✔ unknown, malformed and normalized IDs (0.159982ms)
+✔ summary is available without an order (0.204739ms)
+✔ bad and subtly mistyped input fails closed (0.442057ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 99.699684

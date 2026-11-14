@@ -1,0 +1,1 @@
+Check one recorded synthetic order under RET-3. Send one supplied DEMO-#### ID as a plain string, or summary for the general policy. Returns the observed ID and decision. Read only.
