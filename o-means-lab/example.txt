@@ -1,0 +1,7 @@
+route   comparisons/row   winner agreement   fixed-center excess loss   trained held-out loss
+dense            256.00            100.00%                    0.00%                  6.6173
+    1             33.51             59.96%                   15.92%                  6.6534
+    2             51.73             77.73%                    6.68%                  6.5906
+    4             87.87             93.36%                    1.05%                  6.5179
+    8            156.70             99.80%                    0.01%                  6.5911
+   16            272.00            100.00%                    0.00%                  6.6173
