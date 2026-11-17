@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-52-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-53-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -78,6 +78,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Two-Level Cluster Routing (o-means)](./o-means-lab) | IVF-style two-level coarse-to-fine Voronoi cells, multi-probe candidate routing, boundary missed-winner dynamics, and implicit codebook regularization. |
 | [Local Inference Duel: Ollama vs llama.cpp](./local-inference-duel-lab) | Controlled GGUF byte parity, raw text completion without template bias, prefill vs decode throughput telemetry, and memory contention. |
 | [The 8GB Context Window Lab](./context-window-8gb-lab) | Configured context vs actual prompt scaling, GQA KV-cache memory preallocation cliffs, uncached prefill vs decode telemetry, and needle retrieval on consumer VRAM. |
+| [Quantization Quality Lab: Q4_K_M vs Q8_0 vs F16](./quantization-quality-lab) | Single-checkpoint precision evaluation across Q4, Q8, and F16 GGUFs, strict JSON schema compliance, throughput trade-offs, and VRAM scaling. |
 
 ### Learning, memory, and forecasting
 
@@ -200,6 +201,7 @@ Deep-Learning-Implementations/
 ├── o-means-lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
+├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
 ├── roast_room_decision_lab/
 ├── sleep_framework_lab/

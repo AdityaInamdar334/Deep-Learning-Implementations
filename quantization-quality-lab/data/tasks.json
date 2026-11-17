@@ -1,0 +1,17 @@
+[
+  {"id":"arithmetic_1","category":"arithmetic","grader":"integer","expected":396,"prompt":"Calculate (17 * 23) + 5. Respond with only the integer."},
+  {"id":"arithmetic_2","category":"arithmetic","grader":"integer","expected":103,"prompt":"A lab has 144 samples. 17 were rejected, and 24 more were rejected in a second review. How many remain? Respond with only the integer."},
+  {"id":"arithmetic_3","category":"arithmetic","grader":"integer","expected":57,"prompt":"A researcher collected 18 observations on Monday, 27 on Tuesday, and 12 on Wednesday. How many in total? Respond with only the integer."},
+  {"id":"logic_1","category":"reasoning","grader":"exact","expected":"C","prompt":"Three devices A, B, and C are in a line. A is to the left of B. C is to the right of B. Which device is rightmost? Reply with a single letter."},
+  {"id":"logic_2","category":"reasoning","grader":"exact","expected":"no","prompt":"All red widgets are metal. Some metal widgets are heavy. Can we conclude that all red widgets are heavy? Answer only yes or no."},
+  {"id":"logic_3","category":"reasoning","grader":"exact","expected":"B","prompt":"A=5, B=7, C=6. Choose the letter with the largest value. Return only one uppercase letter."},
+  {"id":"json_1","category":"extraction","grader":"json","expected":{"ticket":"INC-104","severity":"high","resolved":false},"prompt":"Extract ticket, severity and resolved from this record: 'Ticket INC-104; severity HIGH; resolution pending'. Output exactly one compact JSON object with keys ticket (string), severity (lowercase string), resolved (boolean), and no other text."},
+  {"id":"json_2","category":"extraction","grader":"json","expected":{"service":"api","latency_ms":87,"healthy":true},"prompt":"Extract from log: 'service=api latency_ms=87 health=ok'. Return only JSON with exact keys service (string), latency_ms (integer), healthy (boolean)."},
+  {"id":"json_3","category":"extraction","grader":"json","expected":{"city":"Pune","temperature_c":31,"rain":false},"prompt":"Extract structured fields from: 'Pune was 31 C, and no rain was observed.' Return only compact JSON with exactly city (string), temperature_c (integer), rain (boolean)."},
+  {"id":"format_1","category":"instruction","grader":"exact","expected":"ALPHA","prompt":"Return the uppercase spelling of alpha. Do not output punctuation, explanations, or quotation marks."},
+  {"id":"format_2","category":"instruction","grader":"exact","expected":"PASS","prompt":"Reply with the single word PASS in uppercase, with no other characters."},
+  {"id":"format_3","category":"instruction","grader":"exact","expected":"blue","prompt":"Given colors red, blue, green, output only the second color in lowercase."},
+  {"id":"evidence_1","category":"grounding","grader":"exact","expected":"2026-12-04","prompt":"Project notes: The prototype is due 2026-12-01. The code freeze is 2026-12-04. The demonstration is 2026-12-10. What is the code-freeze date? Answer exactly YYYY-MM-DD."},
+  {"id":"evidence_2","category":"grounding","grader":"exact","expected":"Mira","prompt":"Report: Jo designed the dashboard. Mira checked data integrity. Lee wrote the deployment scripts. Who checked data integrity? Return only their first name."},
+  {"id":"evidence_3","category":"grounding","grader":"exact","expected":"unknown","prompt":"Excerpt: The dataset contains 250 examples from two cameras and was recorded in March. What was the camera manufacturer's name? If not stated, reply exactly unknown."}
+]
