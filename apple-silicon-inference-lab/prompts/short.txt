@@ -1,0 +1,1 @@
+Explain how autoregressive decoding differs from prompt prefill in a locally running transformer model. Use four sentences.
