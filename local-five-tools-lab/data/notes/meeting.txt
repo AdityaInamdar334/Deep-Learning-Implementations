@@ -1,0 +1,5 @@
+Orion planning meeting
+Date: 2026-11-12
+Owner: Platform Engineering
+Decision: Keep the CLI authentication tests in the staging environment.
+Next action: Review approval boundaries for report creation.
