@@ -1,0 +1,6 @@
+[
+  {"id":"extract","prompt":"Extract the user ID from: User 12345 logged in. Reply with only the digits.","expected_substring":"12345"},
+  {"id":"arithmetic","prompt":"Compute 17 * 23. Reply with only the integer.","expected_substring":"391"},
+  {"id":"summary","prompt":"Summarize this in one sentence: A small team built a local inference server. It handles requests without a cloud API, but it still needs sufficient RAM and careful evaluation.","expected_substring":"local"},
+  {"id":"explain","prompt":"In two short sentences, explain the difference between prompt processing and token generation in a local language model.","expected_substring":"token"}
+]
