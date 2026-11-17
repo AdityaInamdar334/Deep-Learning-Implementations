@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-51-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-52-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -77,6 +77,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [e-means: Outperforming k-means](./emeans-lab) | Mini-batch exponential moving average (EMA) updates, dead-cluster donor revival, power-law step/batch scaling laws, and Euclidean distortion vs manifold ARI. |
 | [Two-Level Cluster Routing (o-means)](./o-means-lab) | IVF-style two-level coarse-to-fine Voronoi cells, multi-probe candidate routing, boundary missed-winner dynamics, and implicit codebook regularization. |
 | [Local Inference Duel: Ollama vs llama.cpp](./local-inference-duel-lab) | Controlled GGUF byte parity, raw text completion without template bias, prefill vs decode throughput telemetry, and memory contention. |
+| [The 8GB Context Window Lab](./context-window-8gb-lab) | Configured context vs actual prompt scaling, GQA KV-cache memory preallocation cliffs, uncached prefill vs decode telemetry, and needle retrieval on consumer VRAM. |
 
 ### Learning, memory, and forecasting
 
@@ -167,6 +168,7 @@ Deep-Learning-Implementations/
 ├── black_hole_bomb_lab/
 ├── clocktower_belief_lab/
 ├── compiler_comparison_lab/
+├── context-window-8gb-lab/
 ├── cpu_arc_lab/
 ├── ddpm-lab/
 ├── distributed_science_agent_lab/
