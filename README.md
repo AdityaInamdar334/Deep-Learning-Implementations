@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-58-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-59-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -84,6 +84,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Local LLM Diagnostics: Why Your Local Model Is Slow](./local-llm-diagnostics-lab) | Automated stream profiler, time-to-first-text (TTFT), prefill vs decode bottleneck detection, CPU layer offloading, and GPU memory pressure. |
 | [Apple Silicon Local Inference: MLX vs Ollama vs llama.cpp](./apple-silicon-inference-lab) | Client-observed TTFT streaming latency, GGUF vs MLX 4-bit formats, unified memory dynamics, and Metal kernel throughput. |
 | [Private Speech Recognition: whisper.cpp](./offline-whisper-lab) | Zero-telemetry offline speech-to-text, 2D dynamic programming Word Error Rate (WER), Real-Time Factor (RTF), and SRT subtitle extraction. |
+| [One GPU, Five Users: Concurrency & Queuing](./one-gpu-five-users-lab) | Closed-loop concurrency scaling (1–16 users), Ollama NUM_PARALLEL saturation, p95 latency cliffs, and aggregate vs per-user throughput. |
 
 ### Learning, memory, and forecasting
 
@@ -209,6 +210,7 @@ Deep-Learning-Implementations/
 ├── neural-weight-topology-lab/
 ├── o-means-lab/
 ├── offline-whisper-lab/
+├── one-gpu-five-users-lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
 ├── quantization-quality-lab/
