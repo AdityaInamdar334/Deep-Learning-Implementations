@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-56-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-57-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -44,6 +44,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Spotify Shunt Routing](./spotify_shunt_routing_lab) | Delegating context-heavy tasks to cheaper workers, with token, latency, and information-loss tradeoffs. |
 | [n8n AI Agent Tool Calling Architecture](./n8n-agent-lab) | Split-tool vs atomic by-ID architectures, LLM parameter drift between chained tools, and fail-closed returns agent workflows. |
 | [Five Tools, One 4B Local Model](./local-five-tools-lab) | Small-model tool calling fidelity, AST-safe arithmetic, path traversal sandboxing, human write approval gates, and prompt injection defense. |
+| [AI Attractor & Model-to-Model Dialogue](./ai-attractor-lab) | Autonomous two-instance recursive dialogue, conversational entropy collapse, mutual sycophancy, and semantic attractor drift. |
 
 ### Model architectures and representation learning
 
@@ -166,6 +167,7 @@ Deep-Learning-Implementations/
 ├── LICENSE
 ├── .gitignore
 ├── agent_cost_optimization_lab/
+├── ai-attractor-lab/
 ├── amd-first-run/
 ├── apple-silicon-inference-lab/
 ├── attention-lab/
