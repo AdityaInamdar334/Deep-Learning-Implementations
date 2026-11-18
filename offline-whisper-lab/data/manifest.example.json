@@ -1,0 +1,12 @@
+[
+  {
+    "id": "clean_reading",
+    "audio": "clean.wav",
+    "reference": "clean.txt"
+  },
+  {
+    "id": "technical_terms",
+    "audio": "technical.wav",
+    "reference": "technical.txt"
+  }
+]

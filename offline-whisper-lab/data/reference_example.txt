@@ -1,0 +1,1 @@
+Today I am testing a private speech recognition system on my laptop. The audio stays on my computer. I want to measure transcription errors and processing time.
