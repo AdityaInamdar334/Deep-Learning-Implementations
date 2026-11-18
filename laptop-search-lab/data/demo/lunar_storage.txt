@@ -1,0 +1,3 @@
+Lunar storage runbook
+
+Cold storage data is replicated in three regions. Restore requests must use the operations portal.

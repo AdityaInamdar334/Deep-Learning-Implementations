@@ -1,0 +1,3 @@
+Cobalt design notes
+
+The header uses a 12-column grid. The primary interface font is Inter.

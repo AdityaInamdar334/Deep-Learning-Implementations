@@ -1,0 +1,3 @@
+Glacier research diary
+
+The team used Spearman correlation because the data was non-normal. Analysis scripts are stored in the experiments directory.

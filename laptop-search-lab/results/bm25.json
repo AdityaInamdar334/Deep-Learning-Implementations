@@ -1,0 +1,676 @@
+{
+  "summary": {
+    "recall": 1.0,
+    "mrr": 0.9861,
+    "ndcg": 0.9897,
+    "queries": 36,
+    "mode": "bm25",
+    "k": 5,
+    "mean_latency_ms": 0.268
+  },
+  "queries": [
+    {
+      "id": "Q01",
+      "query": "When does the Cedar production deployment window begin?",
+      "category": "exact",
+      "gold": [
+        "cedar_release.md"
+      ],
+      "ranked": [
+        "cedar_release.md",
+        "violet_tests.pdf",
+        "harbor_guide.md",
+        "fable_review.txt",
+        "saffron_budget.md"
+      ],
+      "latency_ms": 0.433,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q02",
+      "query": "How long does the Maple archive remain available?",
+      "category": "paraphrase",
+      "gold": [
+        "maple_backup.txt"
+      ],
+      "ranked": [
+        "maple_backup.txt",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "glacier_notes.txt",
+        "cobalt_design.txt"
+      ],
+      "latency_ms": 0.341,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q03",
+      "query": "What is Birch API request rate limit?",
+      "category": "exact",
+      "gold": [
+        "birch_api.pdf"
+      ],
+      "ranked": [
+        "birch_api.pdf",
+        "spruce_incident.pdf",
+        "cinder_api.md",
+        "saffron_budget.md",
+        "orbit_mobile.md"
+      ],
+      "latency_ms": 0.245,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q04",
+      "query": "When is the Oak accessibility audit scheduled?",
+      "category": "exact",
+      "gold": [
+        "oak_roadmap.md"
+      ],
+      "ranked": [
+        "oak_roadmap.md",
+        "silver_compliance.txt",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "cobalt_design.txt"
+      ],
+      "latency_ms": 0.33,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q05",
+      "query": "Who is alerted after three failed Pine health checks?",
+      "category": "paraphrase",
+      "gold": [
+        "pine_oncall.txt"
+      ],
+      "ranked": [
+        "pine_oncall.txt",
+        "lunar_storage.txt",
+        "cinder_api.md",
+        "atlas_database.md",
+        "harbor_guide.md"
+      ],
+      "latency_ms": 0.264,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q06",
+      "query": "What is the Ash contract retention duration?",
+      "category": "paraphrase",
+      "gold": [
+        "ash_legal.pdf"
+      ],
+      "ranked": [
+        "ash_legal.pdf",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "cobalt_design.txt",
+        "nebula_research.txt"
+      ],
+      "latency_ms": 0.301,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q07",
+      "query": "Who can sign off on small Quartz invoices?",
+      "category": "paraphrase",
+      "gold": [
+        "quartz_invoice.md"
+      ],
+      "ranked": [
+        "quartz_invoice.md",
+        "ember_incident.txt",
+        "pine_oncall.txt",
+        "aurora_meetings.md",
+        "delta_training.pdf"
+      ],
+      "latency_ms": 0.304,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q08",
+      "query": "How many people participated in the Nebula pilot?",
+      "category": "paraphrase",
+      "gold": [
+        "nebula_research.txt"
+      ],
+      "ranked": [
+        "nebula_research.txt",
+        "pebble_release.txt",
+        "tundra_data.md",
+        "lunar_storage.txt",
+        "atlas_database.md"
+      ],
+      "latency_ms": 0.272,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q09",
+      "query": "What day is the Delta new-hire workshop held?",
+      "category": "exact",
+      "gold": [
+        "delta_training.pdf"
+      ],
+      "ranked": [
+        "delta_training.pdf",
+        "silver_compliance.txt",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "cobalt_design.txt"
+      ],
+      "latency_ms": 0.267,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q10",
+      "query": "Where are Atlas warehouse snapshots stored?",
+      "category": "paraphrase",
+      "gold": [
+        "atlas_database.md"
+      ],
+      "ranked": [
+        "atlas_database.md",
+        "tundra_data.md",
+        "aurora_meetings.md",
+        "glacier_notes.txt",
+        "nova_analytics.pdf"
+      ],
+      "latency_ms": 0.196,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q11",
+      "query": "What caused the Ember internal service outage?",
+      "category": "paraphrase",
+      "gold": [
+        "ember_incident.txt"
+      ],
+      "ranked": [
+        "spruce_incident.pdf",
+        "ember_incident.txt",
+        "orbit_mobile.md",
+        "saffron_budget.md",
+        "onyx_notes.pdf"
+      ],
+      "latency_ms": 0.24,
+      "recall": 1.0,
+      "mrr": 0.5,
+      "ndcg": 0.6309297535714575
+    },
+    {
+      "id": "Q12",
+      "query": "Does Juniper require another verification factor for admins?",
+      "category": "paraphrase",
+      "gold": [
+        "juniper_security.pdf"
+      ],
+      "ranked": [
+        "juniper_security.pdf",
+        "mint_support.md",
+        "maple_backup.txt",
+        "quartz_invoice.md",
+        "cedar_release.md"
+      ],
+      "latency_ms": 0.291,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q13",
+      "query": "What is the quarterly Saffron cloud spending limit?",
+      "category": "paraphrase",
+      "gold": [
+        "saffron_budget.md"
+      ],
+      "ranked": [
+        "saffron_budget.md",
+        "birch_api.pdf",
+        "onyx_notes.pdf",
+        "cobalt_design.txt",
+        "nebula_research.txt"
+      ],
+      "latency_ms": 0.259,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q14",
+      "query": "What font is specified for the Cobalt interface?",
+      "category": "exact",
+      "gold": [
+        "cobalt_design.txt"
+      ],
+      "ranked": [
+        "cobalt_design.txt",
+        "oak_roadmap.md",
+        "fable_review.txt",
+        "nova_analytics.pdf",
+        "harbor_guide.md"
+      ],
+      "latency_ms": 0.307,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q15",
+      "query": "When do Violet integration tests execute?",
+      "category": "paraphrase",
+      "gold": [
+        "violet_tests.pdf"
+      ],
+      "ranked": [
+        "violet_tests.pdf",
+        "harbor_guide.md"
+      ],
+      "latency_ms": 0.174,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q16",
+      "query": "How many phases are there in Coral interviews?",
+      "category": "paraphrase",
+      "gold": [
+        "coral_recruiting.md"
+      ],
+      "ranked": [
+        "coral_recruiting.md",
+        "tundra_data.md",
+        "pebble_release.txt",
+        "aurora_meetings.md",
+        "glacier_notes.txt"
+      ],
+      "latency_ms": 0.338,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q17",
+      "query": "How many locations hold Lunar cold backups?",
+      "category": "paraphrase",
+      "gold": [
+        "lunar_storage.txt"
+      ],
+      "ranked": [
+        "lunar_storage.txt",
+        "maple_backup.txt"
+      ],
+      "latency_ms": 0.189,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q18",
+      "query": "How often does the Nova dashboard update?",
+      "category": "paraphrase",
+      "gold": [
+        "nova_analytics.pdf"
+      ],
+      "ranked": [
+        "nova_analytics.pdf",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "glacier_notes.txt",
+        "cobalt_design.txt"
+      ],
+      "latency_ms": 0.288,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q19",
+      "query": "What is the oldest Android version supported by Orbit?",
+      "category": "paraphrase",
+      "gold": [
+        "orbit_mobile.md"
+      ],
+      "ranked": [
+        "orbit_mobile.md",
+        "pebble_release.txt",
+        "quartz_invoice.md",
+        "saffron_budget.md",
+        "onyx_notes.pdf"
+      ],
+      "latency_ms": 0.275,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q20",
+      "query": "How many reviewers approve Fable database modifications?",
+      "category": "paraphrase",
+      "gold": [
+        "fable_review.txt"
+      ],
+      "ranked": [
+        "fable_review.txt",
+        "atlas_database.md"
+      ],
+      "latency_ms": 0.188,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q21",
+      "query": "What happens to low-priority Raven alerts?",
+      "category": "paraphrase",
+      "gold": [
+        "raven_alert.pdf"
+      ],
+      "ranked": [
+        "raven_alert.pdf",
+        "pine_oncall.txt",
+        "ash_legal.pdf",
+        "meadow_policy.pdf"
+      ],
+      "latency_ms": 0.197,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q22",
+      "query": "What is the first reply target for normal Mint support tickets?",
+      "category": "paraphrase",
+      "gold": [
+        "mint_support.md"
+      ],
+      "ranked": [
+        "mint_support.md",
+        "oak_roadmap.md",
+        "glacier_notes.txt",
+        "pebble_release.txt",
+        "fable_review.txt"
+      ],
+      "latency_ms": 0.305,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q23",
+      "query": "Which method combines Opal search rankings?",
+      "category": "paraphrase",
+      "gold": [
+        "opal_search.txt"
+      ],
+      "ranked": [
+        "opal_search.txt"
+      ],
+      "latency_ms": 0.173,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q24",
+      "query": "Which tool versions the Topaz training data?",
+      "category": "exact",
+      "gold": [
+        "topaz_pipeline.pdf"
+      ],
+      "ranked": [
+        "topaz_pipeline.pdf",
+        "willow_ml.txt",
+        "tundra_data.md",
+        "lunar_storage.txt",
+        "delta_training.pdf"
+      ],
+      "latency_ms": 0.233,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q25",
+      "query": "When does the Aurora team hold its weekly sync?",
+      "category": "paraphrase",
+      "gold": [
+        "aurora_meetings.md"
+      ],
+      "ranked": [
+        "aurora_meetings.md",
+        "quartz_invoice.md",
+        "onyx_notes.pdf",
+        "glacier_notes.txt",
+        "saffron_budget.md"
+      ],
+      "latency_ms": 0.388,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q26",
+      "query": "Which document format is required for Silver audit exports?",
+      "category": "paraphrase",
+      "gold": [
+        "silver_compliance.txt"
+      ],
+      "ranked": [
+        "silver_compliance.txt",
+        "juniper_security.pdf",
+        "oak_roadmap.md",
+        "nova_analytics.pdf",
+        "ash_legal.pdf"
+      ],
+      "latency_ms": 0.272,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q27",
+      "query": "What batch size does the Helios benchmark use?",
+      "category": "exact",
+      "gold": [
+        "helios_gpu.pdf"
+      ],
+      "ranked": [
+        "helios_gpu.pdf",
+        "lunar_storage.txt",
+        "spruce_incident.pdf",
+        "nova_analytics.pdf",
+        "onyx_notes.pdf"
+      ],
+      "latency_ms": 0.269,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q28",
+      "query": "Which timezone is used for Tundra timestamps?",
+      "category": "exact",
+      "gold": [
+        "tundra_data.md"
+      ],
+      "ranked": [
+        "tundra_data.md",
+        "glacier_notes.txt",
+        "fable_review.txt",
+        "oak_roadmap.md",
+        "nova_analytics.pdf"
+      ],
+      "latency_ms": 0.346,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q29",
+      "query": "Which Pebble version introduced pagination?",
+      "category": "paraphrase",
+      "gold": [
+        "pebble_release.txt"
+      ],
+      "ranked": [
+        "pebble_release.txt",
+        "orbit_mobile.md"
+      ],
+      "latency_ms": 0.17,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q30",
+      "query": "What component triggered the Spruce request errors?",
+      "category": "paraphrase",
+      "gold": [
+        "spruce_incident.pdf"
+      ],
+      "ranked": [
+        "spruce_incident.pdf",
+        "birch_api.pdf",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "glacier_notes.txt"
+      ],
+      "latency_ms": 0.236,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q31",
+      "query": "How long is the old Harbor environment retained after a swap?",
+      "category": "paraphrase",
+      "gold": [
+        "harbor_guide.md"
+      ],
+      "ranked": [
+        "harbor_guide.md",
+        "ash_legal.pdf",
+        "maple_backup.txt",
+        "cinder_api.md",
+        "atlas_database.md"
+      ],
+      "latency_ms": 0.293,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q32",
+      "query": "Why did Glacier researchers choose Spearman correlation?",
+      "category": "paraphrase",
+      "gold": [
+        "glacier_notes.txt"
+      ],
+      "ranked": [
+        "glacier_notes.txt"
+      ],
+      "latency_ms": 0.182,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q33",
+      "query": "How soon must Meadow employees submit travel expenses?",
+      "category": "paraphrase",
+      "gold": [
+        "meadow_policy.pdf"
+      ],
+      "ranked": [
+        "meadow_policy.pdf",
+        "lunar_storage.txt",
+        "fable_review.txt",
+        "silver_compliance.txt",
+        "ash_legal.pdf"
+      ],
+      "latency_ms": 0.221,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q34",
+      "query": "What units does the Cinder retry-after header use?",
+      "category": "paraphrase",
+      "gold": [
+        "cinder_api.md"
+      ],
+      "ranked": [
+        "cinder_api.md",
+        "lunar_storage.txt",
+        "cobalt_design.txt",
+        "atlas_database.md",
+        "pine_oncall.txt"
+      ],
+      "latency_ms": 0.262,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q35",
+      "query": "How is the Willow classifier evaluated across folds?",
+      "category": "paraphrase",
+      "gold": [
+        "willow_ml.txt"
+      ],
+      "ranked": [
+        "willow_ml.txt",
+        "saffron_budget.md",
+        "onyx_notes.pdf",
+        "cobalt_design.txt",
+        "nebula_research.txt"
+      ],
+      "latency_ms": 0.354,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    },
+    {
+      "id": "Q36",
+      "query": "When is the Onyx design freeze?",
+      "category": "exact",
+      "gold": [
+        "onyx_notes.pdf"
+      ],
+      "ranked": [
+        "onyx_notes.pdf",
+        "cobalt_design.txt",
+        "saffron_budget.md",
+        "nebula_research.txt",
+        "orbit_mobile.md"
+      ],
+      "latency_ms": 0.227,
+      "recall": 1.0,
+      "mrr": 1.0,
+      "ndcg": 1.0
+    }
+  ]
+}

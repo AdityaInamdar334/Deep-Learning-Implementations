@@ -1,0 +1,3 @@
+Willow ML notebook
+
+The baseline classifier is logistic regression. Training uses stratified five-fold validation.

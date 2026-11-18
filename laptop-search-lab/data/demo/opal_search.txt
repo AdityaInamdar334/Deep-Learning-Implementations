@@ -1,0 +1,3 @@
+Opal search experiment
+
+The lexical baseline uses BM25. The hybrid ranking uses reciprocal rank fusion with rank constant 60.

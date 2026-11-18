@@ -1,0 +1,3 @@
+Maple backup runbook
+
+The encrypted archive is retained for 45 days. Restores require a signed ticket. Nightly backups finish at 02:00 UTC.

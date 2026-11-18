@@ -1,0 +1,3 @@
+Nebula research notes
+
+The pilot study enrolled 48 participants. The main outcome is mean response latency.

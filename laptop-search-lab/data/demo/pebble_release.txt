@@ -1,0 +1,3 @@
+Pebble release notes
+
+The library added pagination support in version 2.4. Deprecated flags are removed in version 3.0.

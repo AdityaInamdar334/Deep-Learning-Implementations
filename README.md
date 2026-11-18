@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-59-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-60-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -46,6 +46,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Five Tools, One 4B Local Model](./local-five-tools-lab) | Small-model tool calling fidelity, AST-safe arithmetic, path traversal sandboxing, human write approval gates, and prompt injection defense. |
 | [AI Attractor & Model-to-Model Dialogue](./ai-attractor-lab) | Autonomous two-instance recursive dialogue, conversational entropy collapse, mutual sycophancy, and semantic attractor drift. |
 | [1,000-Document Local RAG & Grounding](./local-rag-1000-lab) | SQLite FTS5 vs FAISS dense retrieval, cross-encoder reranking, evidence-bearing Recall@k, citation hallucination audits, and unanswerable abstention. |
+| [Search Everything on Your Laptop](./laptop-search-lab) | Local-only read-only document search, SQLite FTS5 BM25, SentenceTransformers dense retrieval, Reciprocal Rank Fusion, and PDF page provenance. |
 
 ### Model architectures and representation learning
 
@@ -194,6 +195,7 @@ Deep-Learning-Implementations/
 ├── iac-lab/
 ├── ide_trust_boundary_lab/
 ├── inference_lab/
+├── laptop-search-lab/
 ├── latent-lab/
 ├── llm_steering_interpretability_lab/
 ├── local-five-tools-lab/

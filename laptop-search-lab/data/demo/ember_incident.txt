@@ -1,0 +1,3 @@
+Ember incident report
+
+The root cause was an expired TLS certificate on the internal gateway. Recovery took 37 minutes.

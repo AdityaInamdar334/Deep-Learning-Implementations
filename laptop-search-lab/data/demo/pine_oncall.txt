@@ -1,0 +1,3 @@
+Pine on-call handbook
+
+Page the reliability engineer after three failed health probes. Escalation goes to the amber duty group.

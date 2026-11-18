@@ -1,0 +1,3 @@
+Fable code review
+
+Two engineers must review production database changes. A single reviewer is allowed for documentation-only updates.

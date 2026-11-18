@@ -1,0 +1,36 @@
+{"id": "Q01", "query": "When does the Cedar production deployment window begin?", "relevant_paths": ["cedar_release.md"], "category": "exact"}
+{"id": "Q02", "query": "How long does the Maple archive remain available?", "relevant_paths": ["maple_backup.txt"], "category": "paraphrase"}
+{"id": "Q03", "query": "What is Birch API request rate limit?", "relevant_paths": ["birch_api.pdf"], "category": "exact"}
+{"id": "Q04", "query": "When is the Oak accessibility audit scheduled?", "relevant_paths": ["oak_roadmap.md"], "category": "exact"}
+{"id": "Q05", "query": "Who is alerted after three failed Pine health checks?", "relevant_paths": ["pine_oncall.txt"], "category": "paraphrase"}
+{"id": "Q06", "query": "What is the Ash contract retention duration?", "relevant_paths": ["ash_legal.pdf"], "category": "paraphrase"}
+{"id": "Q07", "query": "Who can sign off on small Quartz invoices?", "relevant_paths": ["quartz_invoice.md"], "category": "paraphrase"}
+{"id": "Q08", "query": "How many people participated in the Nebula pilot?", "relevant_paths": ["nebula_research.txt"], "category": "paraphrase"}
+{"id": "Q09", "query": "What day is the Delta new-hire workshop held?", "relevant_paths": ["delta_training.pdf"], "category": "exact"}
+{"id": "Q10", "query": "Where are Atlas warehouse snapshots stored?", "relevant_paths": ["atlas_database.md"], "category": "paraphrase"}
+{"id": "Q11", "query": "What caused the Ember internal service outage?", "relevant_paths": ["ember_incident.txt"], "category": "paraphrase"}
+{"id": "Q12", "query": "Does Juniper require another verification factor for admins?", "relevant_paths": ["juniper_security.pdf"], "category": "paraphrase"}
+{"id": "Q13", "query": "What is the quarterly Saffron cloud spending limit?", "relevant_paths": ["saffron_budget.md"], "category": "paraphrase"}
+{"id": "Q14", "query": "What font is specified for the Cobalt interface?", "relevant_paths": ["cobalt_design.txt"], "category": "exact"}
+{"id": "Q15", "query": "When do Violet integration tests execute?", "relevant_paths": ["violet_tests.pdf"], "category": "paraphrase"}
+{"id": "Q16", "query": "How many phases are there in Coral interviews?", "relevant_paths": ["coral_recruiting.md"], "category": "paraphrase"}
+{"id": "Q17", "query": "How many locations hold Lunar cold backups?", "relevant_paths": ["lunar_storage.txt"], "category": "paraphrase"}
+{"id": "Q18", "query": "How often does the Nova dashboard update?", "relevant_paths": ["nova_analytics.pdf"], "category": "paraphrase"}
+{"id": "Q19", "query": "What is the oldest Android version supported by Orbit?", "relevant_paths": ["orbit_mobile.md"], "category": "paraphrase"}
+{"id": "Q20", "query": "How many reviewers approve Fable database modifications?", "relevant_paths": ["fable_review.txt"], "category": "paraphrase"}
+{"id": "Q21", "query": "What happens to low-priority Raven alerts?", "relevant_paths": ["raven_alert.pdf"], "category": "paraphrase"}
+{"id": "Q22", "query": "What is the first reply target for normal Mint support tickets?", "relevant_paths": ["mint_support.md"], "category": "paraphrase"}
+{"id": "Q23", "query": "Which method combines Opal search rankings?", "relevant_paths": ["opal_search.txt"], "category": "paraphrase"}
+{"id": "Q24", "query": "Which tool versions the Topaz training data?", "relevant_paths": ["topaz_pipeline.pdf"], "category": "exact"}
+{"id": "Q25", "query": "When does the Aurora team hold its weekly sync?", "relevant_paths": ["aurora_meetings.md"], "category": "paraphrase"}
+{"id": "Q26", "query": "Which document format is required for Silver audit exports?", "relevant_paths": ["silver_compliance.txt"], "category": "paraphrase"}
+{"id": "Q27", "query": "What batch size does the Helios benchmark use?", "relevant_paths": ["helios_gpu.pdf"], "category": "exact"}
+{"id": "Q28", "query": "Which timezone is used for Tundra timestamps?", "relevant_paths": ["tundra_data.md"], "category": "exact"}
+{"id": "Q29", "query": "Which Pebble version introduced pagination?", "relevant_paths": ["pebble_release.txt"], "category": "paraphrase"}
+{"id": "Q30", "query": "What component triggered the Spruce request errors?", "relevant_paths": ["spruce_incident.pdf"], "category": "paraphrase"}
+{"id": "Q31", "query": "How long is the old Harbor environment retained after a swap?", "relevant_paths": ["harbor_guide.md"], "category": "paraphrase"}
+{"id": "Q32", "query": "Why did Glacier researchers choose Spearman correlation?", "relevant_paths": ["glacier_notes.txt"], "category": "paraphrase"}
+{"id": "Q33", "query": "How soon must Meadow employees submit travel expenses?", "relevant_paths": ["meadow_policy.pdf"], "category": "paraphrase"}
+{"id": "Q34", "query": "What units does the Cinder retry-after header use?", "relevant_paths": ["cinder_api.md"], "category": "paraphrase"}
+{"id": "Q35", "query": "How is the Willow classifier evaluated across folds?", "relevant_paths": ["willow_ml.txt"], "category": "paraphrase"}
+{"id": "Q36", "query": "When is the Onyx design freeze?", "relevant_paths": ["onyx_notes.pdf"], "category": "exact"}
