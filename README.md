@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-60-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-61-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -96,6 +96,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [TimesFM-3 Forecasting](./timesfm3_forecasting_lab) | Multivariate forecasting, rolling-origin evaluation, strong baselines, and distribution shift. |
 | [Majority-Vote Reliability in Test-Time RL](./vote_lab) | Majority-vote pseudo-label amplification vs collapse, PC-Dr.DPO prompt-conditional robust temperature, unanimous replay, and Table 1 benchmark audit. |
 | [Maya a1 Option-Order Sensitivity Audit](./maya_option_order_lab) | Multiple-choice positional bias, cyclic permutation flip rates, slot priors via identical options, and parallel layout order-invariance. |
+| [World Models vs Pixel Prediction (JEPA)](./world-models-jepa-lab) | Latent-state transition learning, irreducible pixel entropy vs predictable dynamics, and action-conditioned planning without generative video decoders. |
 
 ### Physics, quantum systems, and scientific computing
 
@@ -228,7 +229,8 @@ Deep-Learning-Implementations/
 ├── vit_patch_lab/
 ├── vote_lab/
 ├── weight_space_programming_lab/
-└── weight_space_reading_audit_lab/
+├── weight_space_reading_audit_lab/
+└── world-models-jepa-lab/
 ```
 
 Individual labs generally contain a Python package or scripts, a `tests/` directory, `requirements.txt`, and their own `README.md`. Some also include benchmark artifacts and a companion article. The specific layout is documented inside each folder.

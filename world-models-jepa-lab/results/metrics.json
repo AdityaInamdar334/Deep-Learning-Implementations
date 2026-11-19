@@ -1,0 +1,77 @@
+{
+  "seed": 3,
+  "train_samples": 1000,
+  "test_samples": 200,
+  "background_noise_max": 0.25,
+  "latent_position_mae": 4.422573418594311e-15,
+  "rounded_position_accuracy": 1.0,
+  "pixel_persistence_mse": 0.012730011716485023,
+  "structured_pixel_prediction_mse": 0.005213330499827862,
+  "interpretation": "oracle states from simulator; not learned visual encoder or JEPA",
+  "planned_path": [
+    {
+      "action": 0,
+      "position": [
+        5.000000000000003,
+        3.999999999999998
+      ],
+      "distance": 4.999999999999999
+    },
+    {
+      "action": 0,
+      "position": [
+        6.000000000000006,
+        3.9999999999999956
+      ],
+      "distance": 4.242640687119284
+    },
+    {
+      "action": 2,
+      "position": [
+        6.000000000000011,
+        4.999999999999995
+      ],
+      "distance": 3.6055512754639834
+    },
+    {
+      "action": 0,
+      "position": [
+        7.000000000000015,
+        4.999999999999992
+      ],
+      "distance": 2.828427124746185
+    },
+    {
+      "action": 2,
+      "position": [
+        7.000000000000019,
+        5.99999999999999
+      ],
+      "distance": 2.2360679774997774
+    },
+    {
+      "action": 0,
+      "position": [
+        8.000000000000021,
+        5.999999999999988
+      ],
+      "distance": 1.4142135623730887
+    },
+    {
+      "action": 2,
+      "position": [
+        8.000000000000025,
+        6.999999999999986
+      ],
+      "distance": 0.9999999999999751
+    },
+    {
+      "action": 0,
+      "position": [
+        9.000000000000028,
+        6.999999999999982
+      ],
+      "distance": 3.351623381340333e-14
+    }
+  ]
+}
