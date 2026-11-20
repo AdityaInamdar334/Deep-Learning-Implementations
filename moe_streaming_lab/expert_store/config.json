@@ -1,0 +1,6 @@
+{
+  "n_experts": 32,
+  "hidden": 96,
+  "intermediate": 192,
+  "seed": 7
+}
