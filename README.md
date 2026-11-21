@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-64-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-65-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -107,6 +107,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | --- | --- |
 | [Superfluid Helium Physics Lab](./superfluid_helium_lab) | Lambda phase transitions, Bose-Einstein condensate vs superfluid density fractions, Landau critical velocity ($v_c \approx 58.4$ m/s), phonon-roton dispersion, and two-fluid hydrodynamics. |
 | [Black-Hole Bomb Nonlinear Dynamics Lab](./black_hole_bomb_lab) | Superradiant instability saturation, Stuart-Landau Stuart amplitude equations, harmonic mode generation ($A_2 \propto A_1^2$), and synthetic bicoherence phase-locking controls. |
+| [Shannon Entropy, Prefix Coding & Language Modeling](./shannon_entropy_lab) | Claude Shannon's source coding theorem, optimal Huffman prefix trees, cross-entropy penalties, and n-gram conditional entropy reduction. |
 
 **Where to begin?** If you're interested in architecture, start with [Vision Transformers](./vit_patch_lab) or [gMLP](./gmlp_spatial_gating_lab). For systems engineering, try [Agent Cost Optimization](./agent_cost_optimization_lab). For evaluation methodology, explore [Frontier Model Monitoring](./frontier_monitor_lab) or [TimesFM-3 Forecasting](./timesfm3_forecasting_lab).
 
@@ -225,6 +226,7 @@ Deep-Learning-Implementations/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
 ├── roast_room_decision_lab/
+├── shannon_entropy_lab/
 ├── sleep_framework_lab/
 ├── spikelab_bounded_agent_lab/
 ├── spotify_shunt_routing_lab/
