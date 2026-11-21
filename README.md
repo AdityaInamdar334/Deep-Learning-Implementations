@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-63-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-64-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -88,6 +88,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Apple Silicon Local Inference: MLX vs Ollama vs llama.cpp](./apple-silicon-inference-lab) | Client-observed TTFT streaming latency, GGUF vs MLX 4-bit formats, unified memory dynamics, and Metal kernel throughput. |
 | [Private Speech Recognition: whisper.cpp](./offline-whisper-lab) | Zero-telemetry offline speech-to-text, 2D dynamic programming Word Error Rate (WER), Real-Time Factor (RTF), and SRT subtitle extraction. |
 | [One GPU, Five Users: Concurrency & Queuing](./one-gpu-five-users-lab) | Closed-loop concurrency scaling (1–16 users), Ollama NUM_PARALLEL saturation, p95 latency cliffs, and aggregate vs per-user throughput. |
+| [C XOR Neural Network from Scratch](./c_xor_neural_network_lab) | Pure C11 2-4-1 MLP implementation, contiguous row-major matrix math, stabilized sigmoid, analytic backprop vs central finite differences, and gradient checking. |
 
 ### Learning, memory, and forecasting
 
@@ -179,6 +180,7 @@ Deep-Learning-Implementations/
 ├── attention-lab/
 ├── benchmark_auditing_lab/
 ├── black_hole_bomb_lab/
+├── c_xor_neural_network_lab/
 ├── clocktower_belief_lab/
 ├── compiler_comparison_lab/
 ├── context-window-8gb-lab/
