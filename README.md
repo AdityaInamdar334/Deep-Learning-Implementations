@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-68-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-69-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -91,6 +91,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Private Speech Recognition: whisper.cpp](./offline-whisper-lab) | Zero-telemetry offline speech-to-text, 2D dynamic programming Word Error Rate (WER), Real-Time Factor (RTF), and SRT subtitle extraction. |
 | [One GPU, Five Users: Concurrency & Queuing](./one-gpu-five-users-lab) | Closed-loop concurrency scaling (1–16 users), Ollama NUM_PARALLEL saturation, p95 latency cliffs, and aggregate vs per-user throughput. |
 | [C XOR Neural Network from Scratch](./c_xor_neural_network_lab) | Pure C11 2-4-1 MLP implementation, contiguous row-major matrix math, stabilized sigmoid, analytic backprop vs central finite differences, and gradient checking. |
+| [From Tensors to Circuits: Mini FPGA Compiler](./pytorch_fpga_companion_lab) | Int8 dot-product lane scheduling, cycle-by-cycle unrolling tradeoffs (1/2/4/8 lanes), behavioral SystemVerilog RTL codegen, and testbench verification. |
 
 ### Learning, memory, and forecasting
 
@@ -228,6 +229,7 @@ Deep-Learning-Implementations/
 ├── one-gpu-five-users-lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
+├── pytorch_fpga_companion_lab/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
 ├── roast_room_decision_lab/

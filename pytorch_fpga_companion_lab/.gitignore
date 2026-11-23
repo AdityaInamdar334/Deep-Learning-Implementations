@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*$py.class
+obj_dir/
+generated/sim
+.DS_Store
