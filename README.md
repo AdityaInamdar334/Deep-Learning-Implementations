@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-67-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-68-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -69,6 +69,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Weight-Space Programming](./weight_space_programming_lab) | Direct weight inspection, permutation symmetries, circuit compiling, and gradient-free model repair. |
 | [Weight-Space Reading Audit](./weight_space_reading_audit_lab) | Auditing whether LLMs read weight space vs memorize labels; output permutation, shuffle controls, and hidden symmetries. |
 | [Interpretable Weight-Space Programming (iWSP)](./iwsp_companion_lab) | Handcrafted zero-gradient networks, deterministic ReLU detectors, iterative Euclidean GCD blocks, and transparent neural compilation. |
+| [Self-Rewriting Weights & Rank-One Projection](./self_rewriting_weights_lab) | Rank-one directional projection edits $W' = W - \alpha u(u^\top W)$, orthogonal invariance, problem-clustered paired evaluation, and token-budget truncation controls. |
 | [Neural Weight Topology Dynamics](./neural-weight-topology-lab) | Persistent homology of neural network weight evolution, Vietoris–Rips $H_0/H_1$ filtration, $\mathbb{F}_2$ boundary reduction, and non-stationary supervision. |
 | [Qwenputer Educational Lab](./qwenputer_educational_lab) | Delta-rule-inspired addressable memory, binary logic, and a miniature RISC-V execution exercise. |
 | [LLM Inference Server from Scratch (Episodes 1–5)](./inference_lab) | Full-prefix recomputation baseline, static KV caching, dynamic left-padded batching, vLLM PagedAttention virtual memory, and Orca continuous iteration-level scheduling. |
@@ -230,6 +231,7 @@ Deep-Learning-Implementations/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
 ├── roast_room_decision_lab/
+├── self_rewriting_weights_lab/
 ├── shannon_entropy_lab/
 ├── sleep_framework_lab/
 ├── spikelab_bounded_agent_lab/
