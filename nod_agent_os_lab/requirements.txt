@@ -1,0 +1,2 @@
+# Pure Python standard library (Python 3.10+)
+# No external dependencies required.

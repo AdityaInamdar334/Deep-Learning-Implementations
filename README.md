@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-69-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-70-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -48,6 +48,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [1,000-Document Local RAG & Grounding](./local-rag-1000-lab) | SQLite FTS5 vs FAISS dense retrieval, cross-encoder reranking, evidence-bearing Recall@k, citation hallucination audits, and unanswerable abstention. |
 | [Search Everything on Your Laptop](./laptop-search-lab) | Local-only read-only document search, SQLite FTS5 BM25, SentenceTransformers dense retrieval, Reciprocal Rank Fusion, and PDF page provenance. |
 | [BotPsy 0.8B Offline Agent & Safety Gates](./botpsy_offline_agent_lab) | Sub-billion parameter local tool calling, schema-enforcing interceptors, bounded execution loops, and human approval interlocks. |
+| [Agent With Its Own Computer (Nod Architecture)](./nod_agent_os_lab) | Tool allowlists, read-vs-write approval gates, SQLite persistent memory, and immutable UTC audit trails inspired by n8n Nod. |
 
 ### Model architectures and representation learning
 
@@ -224,6 +225,7 @@ Deep-Learning-Implementations/
 ├── neox_generation_lab/
 ├── neox-int8-lab/
 ├── neural-weight-topology-lab/
+├── nod_agent_os_lab/
 ├── o-means-lab/
 ├── offline-whisper-lab/
 ├── one-gpu-five-users-lab/
