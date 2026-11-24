@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-73-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-74-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -116,6 +116,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Black-Hole Bomb Nonlinear Dynamics Lab](./black_hole_bomb_lab) | Superradiant instability saturation, Stuart-Landau Stuart amplitude equations, harmonic mode generation ($A_2 \propto A_1^2$), and synthetic bicoherence phase-locking controls. |
 | [Shannon Entropy, Prefix Coding & Language Modeling](./shannon_entropy_lab) | Claude Shannon's source coding theorem, optimal Huffman prefix trees, cross-entropy penalties, and n-gram conditional entropy reduction. |
 | [Lorenz Attractor & Stable/Unstable Manifolds](./lorenz_manifolds_lab) | Lorenz-63 chaotic flow (DOP853), exponential sensitivity to $10^{-8}$ perturbations, Jacobian saddle eigen-directions at the origin, and phase-space volume contraction. |
+| [From Proofs to Programs in Lean 4](./lean4_proofs_to_programs_lab) | Curry–Howard propositions-as-types, zero-`sorry` Lean 4 kernel proofs (`identity`, `add_zero`, `add_comm`, `double`), and executable Lake build packaging. |
 
 **Where to begin?** If you're interested in architecture, start with [Vision Transformers](./vit_patch_lab) or [gMLP](./gmlp_spatial_gating_lab). For systems engineering, try [Agent Cost Optimization](./agent_cost_optimization_lab). For evaluation methodology, explore [Frontier Model Monitoring](./frontier_monitor_lab) or [TimesFM-3 Forecasting](./timesfm3_forecasting_lab).
 
@@ -214,6 +215,7 @@ Deep-Learning-Implementations/
 ├── iwsp_companion_lab/
 ├── laptop-search-lab/
 ├── latent-lab/
+├── lean4_proofs_to_programs_lab/
 ├── llm_steering_interpretability_lab/
 ├── local-five-tools-lab/
 ├── local-inference-duel-lab/

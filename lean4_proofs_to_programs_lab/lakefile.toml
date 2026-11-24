@@ -1,0 +1,12 @@
+name = "lean4_proofs_to_programs_lab"
+version = "0.1.0"
+defaultTargets = ["lean4_lab"]
+
+[[lean_lib]]
+name = "Proofs"
+srcDir = "src"
+
+[[lean_exe]]
+name = "lean4_lab"
+root = "Main"
+srcDir = "src"
