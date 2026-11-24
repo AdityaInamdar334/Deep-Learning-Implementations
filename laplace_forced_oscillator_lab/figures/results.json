@@ -1,0 +1,39 @@
+{
+  "parameters": {
+    "m": 1.0,
+    "c": 0.6,
+    "k": 4.0,
+    "force": 1.0,
+    "omega": 1.2,
+    "x0": 0.0,
+    "v0": 0.0
+  },
+  "natural_poles": [
+    [
+      -0.3,
+      1.9773719933285188
+    ],
+    [
+      -0.3,
+      -1.9773719933285188
+    ]
+  ],
+  "forcing_poles": [
+    [
+      0.0,
+      1.2
+    ],
+    [
+      0.0,
+      -1.2
+    ]
+  ],
+  "steady_state_amplitude": 0.37603552349761676,
+  "phase_lag_radians": 0.2741674511196588,
+  "decay_envelope_rate": 0.3,
+  "damped_frequency": 1.977371993328519,
+  "transient_C": -0.36199095022624433,
+  "transient_D": -0.11670501632865542,
+  "numerical_max_error": 3.274908122463671e-12,
+  "one_percent_decay_envelope_time_seconds": 15.350567286626973
+}
