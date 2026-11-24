@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-70-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-73-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -49,6 +49,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Search Everything on Your Laptop](./laptop-search-lab) | Local-only read-only document search, SQLite FTS5 BM25, SentenceTransformers dense retrieval, Reciprocal Rank Fusion, and PDF page provenance. |
 | [BotPsy 0.8B Offline Agent & Safety Gates](./botpsy_offline_agent_lab) | Sub-billion parameter local tool calling, schema-enforcing interceptors, bounded execution loops, and human approval interlocks. |
 | [Agent With Its Own Computer (Nod Architecture)](./nod_agent_os_lab) | Tool allowlists, read-vs-write approval gates, SQLite persistent memory, and immutable UTC audit trails inspired by n8n Nod. |
+| [Intelligence as Finding Another Way (Detours & Optionality)](./intelligence_detours_lab) | Fixed-plan blockage vs adaptive online BFS replanning, belief-map updates, and finite-horizon reachable-state optionality counts. |
 
 ### Model architectures and representation learning
 
@@ -93,6 +94,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [One GPU, Five Users: Concurrency & Queuing](./one-gpu-five-users-lab) | Closed-loop concurrency scaling (1–16 users), Ollama NUM_PARALLEL saturation, p95 latency cliffs, and aggregate vs per-user throughput. |
 | [C XOR Neural Network from Scratch](./c_xor_neural_network_lab) | Pure C11 2-4-1 MLP implementation, contiguous row-major matrix math, stabilized sigmoid, analytic backprop vs central finite differences, and gradient checking. |
 | [From Tensors to Circuits: Mini FPGA Compiler](./pytorch_fpga_companion_lab) | Int8 dot-product lane scheduling, cycle-by-cycle unrolling tradeoffs (1/2/4/8 lanes), behavioral SystemVerilog RTL codegen, and testbench verification. |
+| [SwiGLU From Scratch: Geometry & Matched FFNs](./swiglu_from_scratch_lab) | ReLU vs unbounded SiLU activations, multiplicative gate-value surfaces, and equal-parameter $8d/3$ SwiGLU vs $4d$ plain FFN architectures. |
 
 ### Learning, memory, and forecasting
 
@@ -104,6 +106,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Majority-Vote Reliability in Test-Time RL](./vote_lab) | Majority-vote pseudo-label amplification vs collapse, PC-Dr.DPO prompt-conditional robust temperature, unanimous replay, and Table 1 benchmark audit. |
 | [Maya a1 Option-Order Sensitivity Audit](./maya_option_order_lab) | Multiple-choice positional bias, cyclic permutation flip rates, slot priors via identical options, and parallel layout order-invariance. |
 | [World Models vs Pixel Prediction (JEPA)](./world-models-jepa-lab) | Latent-state transition learning, irreducible pixel entropy vs predictable dynamics, and action-conditioned planning without generative video decoders. |
+| [From Demonstrations to Deployment: Physical AI Lab](./physical_ai_deployment_lab) | 2D ridge behavioral cloning, actuator clamping, and closed-loop feedback recovery vs open-loop replay under mid-rollout perturbations. |
 
 ### Physics, quantum systems, and scientific computing
 
@@ -207,6 +210,7 @@ Deep-Learning-Implementations/
 ├── iac-lab/
 ├── ide_trust_boundary_lab/
 ├── inference_lab/
+├── intelligence_detours_lab/
 ├── iwsp_companion_lab/
 ├── laptop-search-lab/
 ├── latent-lab/
@@ -229,6 +233,7 @@ Deep-Learning-Implementations/
 ├── o-means-lab/
 ├── offline-whisper-lab/
 ├── one-gpu-five-users-lab/
+├── physical_ai_deployment_lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
 ├── pytorch_fpga_companion_lab/
@@ -242,6 +247,7 @@ Deep-Learning-Implementations/
 ├── spotify_shunt_routing_lab/
 ├── superagent_lifecycle_lab/
 ├── superfluid_helium_lab/
+├── swiglu_from_scratch_lab/
 ├── timesfm3_forecasting_lab/
 ├── trillion_moe_serving_lab/
 ├── vit_patch_lab/
