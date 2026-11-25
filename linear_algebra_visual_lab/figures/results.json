@@ -1,0 +1,19 @@
+{
+  "eigenvalues": [
+    0.5566018867943396,
+    2.44339811320566
+  ],
+  "pca_first_component_explained_variance": 0.9331465113892911,
+  "pca_reconstruction_mse": 0.28319489490517546,
+  "condition_number": 99999.99999999999,
+  "original_solution": [
+    1.0,
+    1.0
+  ],
+  "perturbed_solution": [
+    1.0,
+    1.1
+  ],
+  "relative_input_change": 9.999999999500007e-07,
+  "relative_solution_change": 0.07071067811865481
+}
