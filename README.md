@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-81-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-82-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -99,6 +99,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [SwiGLU From Scratch: Geometry & Matched FFNs](./swiglu_from_scratch_lab) | ReLU vs unbounded SiLU activations, multiplicative gate-value surfaces, and equal-parameter $8d/3$ SwiGLU vs $4d$ plain FFN architectures. |
 | [Why Representation Matters (Concentric Rings)](./representation_learning_lab) | Identical NumPy logistic regression on Cartesian $(x, y)$ vs radial $r^2 = x^2 + y^2$ coordinates, demonstrating $49.8\%$ to $100.0\%$ separability without changing the classifier. |
 | [Linear Algebra Visual Lab (Eigenvectors, PCA & Conditioning)](./linear_algebra_visual_lab) | Symmetric matrix unit-circle geometry, SVD rank-1 PCA projection ($93.3\%$ variance), and $\kappa(A)=10^5$ perturbation amplification. |
+| [Probability & Information Theory Lab (Bayes, KL & Calibration)](./probability_information_lab) | Bayesian base-rate posteriors, KL divergence asymmetry, validation-fit temperature scaling (ECE $0.136 \to 0.010$), and Jacobian density transforms. |
 
 ### Learning, memory, and forecasting
 
@@ -250,6 +251,7 @@ Deep-Learning-Implementations/
 ├── physical_ai_deployment_lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
+├── probability_information_lab/
 ├── pytorch_fpga_companion_lab/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/

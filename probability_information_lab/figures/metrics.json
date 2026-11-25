@@ -1,0 +1,30 @@
+{
+  "example_test": {
+    "prevalence": 0.01,
+    "sensitivity": 0.95,
+    "specificity": 0.9,
+    "posterior_positive": 0.08755760368663597
+  },
+  "information": {
+    "bernoulli_entropy_half_bits": 1.0,
+    "kl_p_q_nats": 0.47108771191600396,
+    "kl_q_p_nats": 0.34342798040882355
+  },
+  "calibration": {
+    "temperature_fitted_on_validation": 2.6647928206370652,
+    "test_samples": 6000,
+    "uncalibrated": {
+      "log_loss": 0.6843133932471435,
+      "brier": 0.20267818352986824,
+      "ece_10_bins": 0.1361533268206179,
+      "accuracy": 0.7261666666666666
+    },
+    "calibrated": {
+      "log_loss": 0.5354937061116627,
+      "brier": 0.1803118769672925,
+      "ece_10_bins": 0.009903602057904214,
+      "accuracy": 0.7261666666666666
+    }
+  },
+  "description": "All results are synthetic educational examples, not medical or deployed-model validation."
+}
