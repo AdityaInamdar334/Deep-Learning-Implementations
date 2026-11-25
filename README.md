@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-79-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-80-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -97,6 +97,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [C XOR Neural Network from Scratch](./c_xor_neural_network_lab) | Pure C11 2-4-1 MLP implementation, contiguous row-major matrix math, stabilized sigmoid, analytic backprop vs central finite differences, and gradient checking. |
 | [From Tensors to Circuits: Mini FPGA Compiler](./pytorch_fpga_companion_lab) | Int8 dot-product lane scheduling, cycle-by-cycle unrolling tradeoffs (1/2/4/8 lanes), behavioral SystemVerilog RTL codegen, and testbench verification. |
 | [SwiGLU From Scratch: Geometry & Matched FFNs](./swiglu_from_scratch_lab) | ReLU vs unbounded SiLU activations, multiplicative gate-value surfaces, and equal-parameter $8d/3$ SwiGLU vs $4d$ plain FFN architectures. |
+| [Why Representation Matters (Concentric Rings)](./representation_learning_lab) | Identical NumPy logistic regression on Cartesian $(x, y)$ vs radial $r^2 = x^2 + y^2$ coordinates, demonstrating $49.8\%$ to $100.0\%$ separability without changing the classifier. |
 
 ### Learning, memory, and forecasting
 
@@ -250,6 +251,7 @@ Deep-Learning-Implementations/
 ├── pytorch_fpga_companion_lab/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
+├── representation_learning_lab/
 ├── roast_room_decision_lab/
 ├── rsi_evaluation_lab/
 ├── self_rewriting_weights_lab/

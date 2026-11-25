@@ -1,0 +1,8 @@
+{
+  "train_samples": 1400,
+  "test_samples": 600,
+  "raw_linear_test_accuracy": 0.49833333333333335,
+  "radial_linear_test_accuracy": 1.0,
+  "seed_train": 43,
+  "seed_test": 2026
+}
