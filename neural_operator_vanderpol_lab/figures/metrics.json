@@ -1,0 +1,21 @@
+{
+  "mu": 1.0,
+  "time_domain": [
+    0,
+    6.0
+  ],
+  "time_samples": 41,
+  "n_train": 192,
+  "n_test": 40,
+  "epochs": 180,
+  "heldout_rmse": 0.182487,
+  "mean_curve_baseline_rmse": 1.192287,
+  "architecture": "DeepONet branch/trunk, NOT a Fourier Neural Operator",
+  "heldout_first_four_rmse": [
+    0.249204,
+    0.23147,
+    0.159034,
+    0.168677
+  ],
+  "disclaimer": "Fixed 41-sensor training grid; no discretization invariance demonstrated."
+}

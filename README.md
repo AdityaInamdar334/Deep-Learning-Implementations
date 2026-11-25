@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-78-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-79-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -121,6 +121,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [From Proofs to Programs in Lean 4](./lean4_proofs_to_programs_lab) | Curry–Howard propositions-as-types, zero-`sorry` Lean 4 kernel proofs (`identity`, `add_zero`, `add_comm`, `double`), and executable Lake build packaging. |
 | [Laplace Transforms From Scratch: Poles & Springs](./laplace_transform_from_scratch_lab) | Unilateral Laplace integrals vs meromorphic continuation, regions of convergence ($\text{Re}(s) > \text{Re}(a)$), complex spiral paths, and residue-mode ODE reconstruction. |
 | [Forced Damped Oscillator & Transient Decomposition](./laplace_forced_oscillator_lab) | Analytic Laplace transient vs steady-state decomposition, system vs input pole maps, resonance curves, and $10^{-12}$ agreement with `solve_ivp`. |
+| [Van der Pol Solution Operator with DeepONet](./neural_operator_vanderpol_lab) | Nonlinear Van der Pol limit-cycle dynamics ($\mu = 1$), branch-trunk DeepONet operator learning on 41 forcing sensors + initial states, and held-out trajectory generalization. |
 
 **Where to begin?** If you're interested in architecture, start with [Vision Transformers](./vit_patch_lab) or [gMLP](./gmlp_spatial_gating_lab). For systems engineering, try [Agent Cost Optimization](./agent_cost_optimization_lab). For evaluation methodology, explore [Frontier Model Monitoring](./frontier_monitor_lab) or [TimesFM-3 Forecasting](./timesfm3_forecasting_lab).
 
@@ -237,6 +238,7 @@ Deep-Learning-Implementations/
 ├── neox_companion_lab/
 ├── neox_generation_lab/
 ├── neox-int8-lab/
+├── neural_operator_vanderpol_lab/
 ├── neural-weight-topology-lab/
 ├── nod_agent_os_lab/
 ├── o-means-lab/
