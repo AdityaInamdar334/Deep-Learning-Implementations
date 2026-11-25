@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-77-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-78-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -51,6 +51,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Agent With Its Own Computer (Nod Architecture)](./nod_agent_os_lab) | Tool allowlists, read-vs-write approval gates, SQLite persistent memory, and immutable UTC audit trails inspired by n8n Nod. |
 | [Intelligence as Finding Another Way (Detours & Optionality)](./intelligence_detours_lab) | Fixed-plan blockage vs adaptive online BFS replanning, belief-map updates, and finite-horizon reachable-state optionality counts. |
 | [RSI Evaluation Blind Spots](./rsi_evaluation_lab) | Synthetic 5-domain R&D bottleneck modeling, narrow vs full benchmark coverage divergence, evaluator judge bias, and dev vs holdout separation. |
+| [Capability & Oversight Pacing Lab](./ai_pacing_oversight_lab) | Synthetic capability-vs-oversight trajectory pacing, uncovered monitoring-gap modeling, and sensitivity across fast, paced, and oversight-invested regimes. |
 
 ### Model architectures and representation learning
 
@@ -188,6 +189,7 @@ Deep-Learning-Implementations/
 ├── .gitignore
 ├── agent_cost_optimization_lab/
 ├── ai-attractor-lab/
+├── ai_pacing_oversight_lab/
 ├── amd-first-run/
 ├── apple-silicon-inference-lab/
 ├── attention-lab/
