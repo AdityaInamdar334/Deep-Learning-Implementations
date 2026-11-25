@@ -1,0 +1,36 @@
+{
+  "disclaimer": "SYNTHETIC educational example; not Vals/METR data or a forecast",
+  "selected_domain_scores": [
+    {
+      "month": 0,
+      "narrow": 0.393,
+      "all_five": 0.318
+    },
+    {
+      "month": 6,
+      "narrow": 0.575,
+      "all_five": 0.451
+    },
+    {
+      "month": 12,
+      "narrow": 0.757,
+      "all_five": 0.584
+    },
+    {
+      "month": 18,
+      "narrow": 0.929,
+      "all_five": 0.712
+    }
+  ],
+  "narrow_all_domains_above_0_8_month": 18,
+  "all_domains_above_0_8_month": 68,
+  "judge_bias_example": {
+    "true_improvement": 0.04,
+    "estimated_improvement": 0.11000000000000001,
+    "evaluation_bias": 0.07
+  },
+  "evaluation_signals": {
+    "agent_dev_improvement": 0.04,
+    "independent_holdout_improvement": -0.01
+  }
+}

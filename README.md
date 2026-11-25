@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-76-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-77-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -50,6 +50,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [BotPsy 0.8B Offline Agent & Safety Gates](./botpsy_offline_agent_lab) | Sub-billion parameter local tool calling, schema-enforcing interceptors, bounded execution loops, and human approval interlocks. |
 | [Agent With Its Own Computer (Nod Architecture)](./nod_agent_os_lab) | Tool allowlists, read-vs-write approval gates, SQLite persistent memory, and immutable UTC audit trails inspired by n8n Nod. |
 | [Intelligence as Finding Another Way (Detours & Optionality)](./intelligence_detours_lab) | Fixed-plan blockage vs adaptive online BFS replanning, belief-map updates, and finite-horizon reachable-state optionality counts. |
+| [RSI Evaluation Blind Spots](./rsi_evaluation_lab) | Synthetic 5-domain R&D bottleneck modeling, narrow vs full benchmark coverage divergence, evaluator judge bias, and dev vs holdout separation. |
 
 ### Model architectures and representation learning
 
@@ -246,6 +247,7 @@ Deep-Learning-Implementations/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
 ├── roast_room_decision_lab/
+├── rsi_evaluation_lab/
 ├── self_rewriting_weights_lab/
 ├── shannon_entropy_lab/
 ├── sleep_framework_lab/
