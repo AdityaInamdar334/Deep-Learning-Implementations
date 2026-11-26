@@ -1,0 +1,8 @@
+Linear MSE: 0.25
+Exact XOR: [0. 1. 1. 0.]
+Max finite difference error: 1.1157230694891496e-10
+Trained NumPy MSE: 8.999608703649116e-28
+Trained NumPy predictions: [1.9095836e-14 1.0000000e+00 1.0000000e+00 2.0206059e-14]
+Affine stack training accuracies: [0.5, 0.5, 0.5, 0.5, 0.75]
+ReLU training accuracies: [1.0, 1.0, 1.0, 1.0, 1.0]
+Wrong logit gradients: BCE -0.9999545812606812 MSE -4.5393746404442936e-05

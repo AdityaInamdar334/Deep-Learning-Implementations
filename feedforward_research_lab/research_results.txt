@@ -1,0 +1,10 @@
+Tent composition 1: 2 affine pieces (analytic)
+Tent composition 2: 4 affine pieces (analytic)
+Tent composition 3: 8 affine pieces (analytic)
+Tent composition 4: 16 affine pieces (analytic)
+Sigmoid / Xavier: median input gradient norm=7.7125e-16; output=1.000
+Tanh / Xavier: median input gradient norm=0.1755; output=1.000
+ReLU / Xavier: median input gradient norm=0.000213317; output=1.000
+ReLU / He: median input gradient norm=0.873747; output=1.000
+Noisy XOR Affine: test accuracy mean=0.5859, sample SD=0.0482, seeds=[0.56982421875, 0.631591796875, 0.615478515625, 0.602783203125, 0.509765625]
+Noisy XOR ReLU: test accuracy mean=0.9395, sample SD=0.0013, seeds=[0.940185546875, 0.9384765625, 0.9404296875, 0.940673828125, 0.937744140625]
