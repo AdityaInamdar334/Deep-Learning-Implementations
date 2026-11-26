@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-87-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-88-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -105,6 +105,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Deep Feedforward Networks (Ch. 6 Lab)](./feedforward_research_lab) | Exact vs trained NumPy XOR backprop, BCE vs MSE saturation ($22{,}000\times$), tent-map depth folding, 24-layer Xavier vs He gradient norms, and noisy XOR generalization. |
 | [Regularization for Deep Learning (Ch. 7 Lab)](./regularization-lab) | 7-way controlled ablation (dropout, AdamW weight decay, Gaussian noise, label smoothing, Mixup, early stopping) tracking accuracy, NLL, and ECE across 3 seeds. |
 | [Optimization for Deep Models (Ch. 8 Lab)](./optimization-lab) | 7-optimizer quadratic canyon comparison (GD, Momentum, Nesterov, AdaGrad, RMSProp, Adam, Newton), 20-layer signal propagation, and 21-run Digits benchmark. |
+| [Convolutional Networks (Ch. 9 Lab)](./cnn-lab) | Exact `im2col`/unfold conv parity ($10^{-15}$), transposed-conv gradients, circular equivariance vs pooling aliasing, and 18-run shift/permutation ablations. |
 
 ### Learning, memory, and forecasting
 
@@ -207,6 +208,7 @@ Deep-Learning-Implementations/
 ├── botpsy_offline_agent_lab/
 ├── c_xor_neural_network_lab/
 ├── clocktower_belief_lab/
+├── cnn-lab/
 ├── compiler_comparison_lab/
 ├── context-window-8gb-lab/
 ├── cpu_arc_lab/
