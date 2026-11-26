@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-85-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-86-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -103,6 +103,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Numerical Computation Lab (Softmax, Float32 & KKT)](./numerical_computation_lab) | Log-sum-exp softmax stability, float32 precision absorption, ill-conditioned gradient descent vs Newton's step, and ball-constrained KKT least squares. |
 | [Generalization & Machine Learning Basics (Ch. 5 Lab)](./research-generalization-lab) | 15-experiment study of memorization vs generalization (shuffled labels), polynomial capacity, Ridge regularization, label corruption, MLE vs Bayes, and 5-fold CV. |
 | [Deep Feedforward Networks (Ch. 6 Lab)](./feedforward_research_lab) | Exact vs trained NumPy XOR backprop, BCE vs MSE saturation ($22{,}000\times$), tent-map depth folding, 24-layer Xavier vs He gradient norms, and noisy XOR generalization. |
+| [Regularization for Deep Learning (Ch. 7 Lab)](./regularization-lab) | 7-way controlled ablation (dropout, AdamW weight decay, Gaussian noise, label smoothing, Mixup, early stopping) tracking accuracy, NLL, and ECE across 3 seeds. |
 
 ### Learning, memory, and forecasting
 
@@ -260,6 +261,7 @@ Deep-Learning-Implementations/
 ├── pytorch_fpga_companion_lab/
 ├── quantization-quality-lab/
 ├── qwenputer_educational_lab/
+├── regularization-lab/
 ├── representation_learning_lab/
 ├── research-generalization-lab/
 ├── roast_room_decision_lab/
