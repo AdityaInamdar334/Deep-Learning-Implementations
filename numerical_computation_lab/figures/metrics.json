@@ -1,0 +1,50 @@
+{
+  "softmax": {
+    "logits": [
+      1000.0,
+      999.0,
+      998.0
+    ],
+    "naive": [
+      null,
+      null,
+      null
+    ],
+    "stable": [
+      0.6652409557747898,
+      0.24472847105478585,
+      0.09003057317037612
+    ],
+    "stable_log_probability_minus_1000": -1000.0,
+    "naive_log_probability_minus_1000": "-inf"
+  },
+  "float32": {
+    "1e8_plus_1_minus_1e8": 0.0,
+    "float64_equivalent": 1.0,
+    "float32_epsilon": 1.1920928955078125e-07
+  },
+  "optimization": {
+    "condition_number": 80.0,
+    "start_loss": 364.5,
+    "final_losses": {
+      "slow (\u03b7=0.005)": 1.1057962748559926,
+      "near threshold (\u03b7=0.024)": 0.0050022308211373125
+    },
+    "stability_bound_eta_less_than": 0.025,
+    "newton_one_step_loss": 0.0
+  },
+  "constrained_least_squares": {
+    "unconstrained_solution": [
+      2.0000000000000004,
+      0.9999999999999997
+    ],
+    "constrained_solution": [
+      0.8996788648867143,
+      0.4365523337197426
+    ],
+    "norm": 1.0,
+    "lambda": 3.464618257157651,
+    "stationarity_residual_norm": 8.881784197001252e-16,
+    "complementary_slackness": 7.692997921266211e-16
+  }
+}
