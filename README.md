@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-86-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-87-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -104,6 +104,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Generalization & Machine Learning Basics (Ch. 5 Lab)](./research-generalization-lab) | 15-experiment study of memorization vs generalization (shuffled labels), polynomial capacity, Ridge regularization, label corruption, MLE vs Bayes, and 5-fold CV. |
 | [Deep Feedforward Networks (Ch. 6 Lab)](./feedforward_research_lab) | Exact vs trained NumPy XOR backprop, BCE vs MSE saturation ($22{,}000\times$), tent-map depth folding, 24-layer Xavier vs He gradient norms, and noisy XOR generalization. |
 | [Regularization for Deep Learning (Ch. 7 Lab)](./regularization-lab) | 7-way controlled ablation (dropout, AdamW weight decay, Gaussian noise, label smoothing, Mixup, early stopping) tracking accuracy, NLL, and ECE across 3 seeds. |
+| [Optimization for Deep Models (Ch. 8 Lab)](./optimization-lab) | 7-optimizer quadratic canyon comparison (GD, Momentum, Nesterov, AdaGrad, RMSProp, Adam, Newton), 20-layer signal propagation, and 21-run Digits benchmark. |
 
 ### Learning, memory, and forecasting
 
@@ -254,6 +255,7 @@ Deep-Learning-Implementations/
 ├── o-means-lab/
 ├── offline-whisper-lab/
 ├── one-gpu-five-users-lab/
+├── optimization-lab/
 ├── physical_ai_deployment_lab/
 ├── pocock_lab/
 ├── primer_ez_transformer_lab/
