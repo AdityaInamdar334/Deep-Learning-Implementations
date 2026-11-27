@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-90-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-91-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -108,6 +108,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Optimizer Debugging & Gradient Diagnostics Lab](./optimizer-debug-lab) | Learning-rate regime probes (`0.0001` flatline vs `0.1` smooth vs `10.0` catapult spike), relative update-to-weight ratios, and exact $1/\sqrt{B}$ minibatch gradient noise scaling. |
 | [Convolutional Networks (Ch. 9 Lab)](./cnn-lab) | Exact `im2col`/unfold conv parity ($10^{-15}$), transposed-conv gradients, circular equivariance vs pooling aliasing, and 18-run shift/permutation ablations. |
 | [Sequence Modeling: BPTT, RNN/LSTM & Attention (Ch. 10 Lab)](./sequence-lab) | Manual BPTT parity ($10^{-17}$), vanishing/exploding gradient scaling, and $T=8\text{--}128$ long-range recall comparing RNN, GRU, LSTM, and dot-product attention. |
+| [Neural Memory: Selective Gating, Delta Overwrite & Parallel Scans](./neural-memory-lab) | Selective gating vs fixed decay (`100%` vs `49.8%` at `T=512`), delta-rule vs additive key overwrite, and Hillis–Steele associative prefix scan (`8.88e-16` error). |
 
 ### Learning, memory, and forecasting
 
@@ -252,6 +253,7 @@ Deep-Learning-Implementations/
 ├── neox_companion_lab/
 ├── neox_generation_lab/
 ├── neox-int8-lab/
+├── neural-memory-lab/
 ├── neural_operator_vanderpol_lab/
 ├── neural-weight-topology-lab/
 ├── nod_agent_os_lab/
