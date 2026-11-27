@@ -1,0 +1,65 @@
+{
+  "row": {
+    "accuracy": 1.0,
+    "overlap": 357
+  },
+  "group": {
+    "accuracy": 0.44625,
+    "overlap": 0
+  },
+  "threshold": {
+    "chosen": 0.035,
+    "default": {
+      "cost": 1384,
+      "fp": 4,
+      "fn": 69,
+      "tp": 15,
+      "tn": 2312,
+      "accuracy": 0.9695833333333334
+    },
+    "selected": {
+      "cost": 644,
+      "fp": 464,
+      "fn": 9,
+      "tp": 75,
+      "tn": 1852,
+      "accuracy": 0.8029166666666666
+    },
+    "all_negative": {
+      "cost": 1680,
+      "fp": 0,
+      "fn": 84,
+      "tp": 0,
+      "tn": 2316,
+      "accuracy": 0.965
+    },
+    "ap": 0.47142861637255556,
+    "prevalence": 0.035,
+    "brier": 0.02482900084270157
+  },
+  "selective": {
+    "threshold": 0.48,
+    "all": [
+      1.0,
+      0.9555555555555556
+    ],
+    "chosen": [
+      0.9638888888888889,
+      0.9740634005763689
+    ],
+    "validation": [
+      0.9554317548746518,
+      0.9825072886297376
+    ]
+  },
+  "search": {
+    "grid": 0.0009008100000000016,
+    "random_median": 0.00010646223806977273,
+    "random_win_fraction": 0.88
+  },
+  "debug": {
+    "tiny_accuracy": 1.0,
+    "tiny_loss": 0.0003080490860156715,
+    "gradient_max_error": 1.7873494351228203e-11
+  }
+}

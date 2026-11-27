@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-91-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-92-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -109,6 +109,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Convolutional Networks (Ch. 9 Lab)](./cnn-lab) | Exact `im2col`/unfold conv parity ($10^{-15}$), transposed-conv gradients, circular equivariance vs pooling aliasing, and 18-run shift/permutation ablations. |
 | [Sequence Modeling: BPTT, RNN/LSTM & Attention (Ch. 10 Lab)](./sequence-lab) | Manual BPTT parity ($10^{-17}$), vanishing/exploding gradient scaling, and $T=8\text{--}128$ long-range recall comparing RNN, GRU, LSTM, and dot-product attention. |
 | [Neural Memory: Selective Gating, Delta Overwrite & Parallel Scans](./neural-memory-lab) | Selective gating vs fixed decay (`100%` vs `49.8%` at `T=512`), delta-rule vs additive key overwrite, and Hillis–Steele associative prefix scan (`8.88e-16` error). |
+| [Practical ML Methodology (Ch. 11 Lab)](./ml-methodology-lab) | Group leakage (`100%` vs `44.6%`), asymmetric-cost thresholding (`1,384` to `644`), selective abstention, bias/variance learning curves, random vs grid search (`88%` win rate), and gradient checks. |
 
 ### Learning, memory, and forecasting
 
@@ -247,6 +248,7 @@ Deep-Learning-Implementations/
 ├── lora_companion_lab/
 ├── lorenz_manifolds_lab/
 ├── maya_option_order_lab/
+├── ml-methodology-lab/
 ├── moe_frontier_lab/
 ├── moe_streaming_lab/
 ├── n8n-agent-lab/
