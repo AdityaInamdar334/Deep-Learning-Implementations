@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-88-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-89-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -106,6 +106,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Regularization for Deep Learning (Ch. 7 Lab)](./regularization-lab) | 7-way controlled ablation (dropout, AdamW weight decay, Gaussian noise, label smoothing, Mixup, early stopping) tracking accuracy, NLL, and ECE across 3 seeds. |
 | [Optimization for Deep Models (Ch. 8 Lab)](./optimization-lab) | 7-optimizer quadratic canyon comparison (GD, Momentum, Nesterov, AdaGrad, RMSProp, Adam, Newton), 20-layer signal propagation, and 21-run Digits benchmark. |
 | [Convolutional Networks (Ch. 9 Lab)](./cnn-lab) | Exact `im2col`/unfold conv parity ($10^{-15}$), transposed-conv gradients, circular equivariance vs pooling aliasing, and 18-run shift/permutation ablations. |
+| [Sequence Modeling: BPTT, RNN/LSTM & Attention (Ch. 10 Lab)](./sequence-lab) | Manual BPTT parity ($10^{-17}$), vanishing/exploding gradient scaling, and $T=8\text{--}128$ long-range recall comparing RNN, GRU, LSTM, and dot-product attention. |
 
 ### Learning, memory, and forecasting
 
@@ -271,6 +272,7 @@ Deep-Learning-Implementations/
 ├── roast_room_decision_lab/
 ├── rsi_evaluation_lab/
 ├── self_rewriting_weights_lab/
+├── sequence-lab/
 ├── shannon_entropy_lab/
 ├── sleep_framework_lab/
 ├── spikelab_bounded_agent_lab/
