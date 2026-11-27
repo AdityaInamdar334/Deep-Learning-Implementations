@@ -1,0 +1,262 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Applied deep learning</title><style>body{max-width:740px;margin:40px auto;padding:20px;font:19px/1.65 Georgia,serif;color:#222}h1,h2,h3{font-family:system-ui;line-height:1.2}h1{font-size:38px}h2{margin-top:2em}pre{background:#f1f3f5;padding:16px;overflow:auto;font:14px/1.5 monospace}a{color:#155c85}button{padding:12px;font:16px system-ui;cursor:pointer}aside{font:14px system-ui;margin-bottom:25px}</style><aside><button onclick="copyArticle()">Copy formatted article</button> <span id="status">Insert PNGs at marked locations after pasting.</span></aside><main id="article"><h1>I Ran the Bigger Neural Network on Just 2% of the Inputs. Accuracy Barely Changed.</h1>
+<p><em>From model compression and mixture of experts to computer vision, speech recognition, and modern LLM inference: how researchers make deep learning more efficient without sacrificing its usefulness.</em></p>
+<p>I trained two neural networks on the same dataset. The larger one had 19,210 parameters; the smaller one had just 1,210. The larger achieved 97.87% test accuracy, and the smaller achieved 96.48%. Instead of choosing between them, I let the smaller network process every input and called the larger network only when the smaller one was uncertain. The resulting system achieved 97.31% accuracy while invoking the larger model on just 2.13% of test inputs, averaged across three seeds.</p>
+<p>This is a controlled handwritten-digit experiment, not a production benchmark. Yet it captures an idea that connects classical classifier cascades to modern mixture-of-experts systems: not every prediction requires the same computation. How much of a neural network do we actually need to execute?</p>
+<h2>Abstract</h2>
+<p>This tutorial revisits Chapter 12 of Goodfellow, Bengio and Courville (2016), covering hardware, distributed computation, compression, dynamic computation, vision, speech, language modeling, recommendation and knowledge representation. We extend its historical perspective with modern research on efficient inference and multimodal systems. A CPU-only companion lab trains nine classifiers across three seeds, evaluates weight rounding and confidence-based routing, verifies connectionist temporal classification (CTC) by enumerating alignments, implements smoothed bigrams and fits a synthetic recommendation matrix. We distinguish measured accuracy from estimated compute and storage, and do not claim GPU speedups or production performance.</p>
+<h2>1. Why computation became part of the research problem</h2>
+<p>Imagine deploying a speech recognizer to a phone. Training may consume thousands of accelerator hours, but a user expects a response before the conversation moves on. The model must coexist with other applications, fit into memory, and operate under a power budget. A benchmark score alone cannot tell us if it is usable.</p>
+<p>The original chapter traces the transition from optimized CPU implementations to general-purpose GPU computing. The central principle survives: the cost of an algorithm depends on how it maps to hardware. CPUs have sophisticated control flow and caches; GPUs organize many threads to exploit regular parallel computation. Neither is automatically faster. Small batches, transfers, launch overhead and irregular work can make CPUs competitive. Modern GPUs have caches too; historical descriptions of GPU memory behavior should not be read as universal contemporary hardware specifications.</p>
+<p>Consider a dense layer with input shape B × D and weight shape H × D. Its forward pass performs approximately 2BDH floating-point operations if a multiply and an addition count separately. At batch size one, the weight matrix may be streamed from memory for a single vector. At larger batch sizes the same weights can be reused across multiple examples. This changes arithmetic intensity, the ratio of operations to bytes transferred.</p>
+<p>The roofline model (Williams et al., 2009) gives an idealized upper bound:</p>
+<p><strong>Attainable FLOP/s ≤ min(peak FLOP/s, bandwidth × arithmetic intensity).</strong></p>
+<p>A workload can therefore be memory-bound even on a processor with tremendous arithmetic throughput. Kernel fusion removes intermediate memory traffic; tiling reuses data in faster memory. FlashAttention (Dao et al., 2022) applies this principle to exact attention, avoiding materialization of the full attention matrix in high-bandwidth memory. Its dense attention arithmetic still scales quadratically in sequence length. It is not a different attention approximation.</p>
+<pre><code class="language-python"># Approximate weight-only arithmetic intensity, not a profiler.
+B, D, H = 1, 4096, 4096
+flops = 2 * B * D * H
+weight_bytes = 2 * D * H  # BF16
+print(flops / weight_bytes)  # 1 FLOP/byte
+</code></pre>
+<p>This simplified example excludes activations and output traffic and assumes weights are read once. Increase B to 32 and the weight-only ratio becomes 32. Actual performance depends on cache behavior, alignment, kernels and device architecture. The lesson for a compiler engineer is to optimize data movement as well as arithmetic.</p>
+<h2>2. Training a model across machines</h2>
+<p>The chapter describes asynchronous SGD and parameter servers, including Hogwild (Recht et al., 2011) and DistBelief (Dean et al., 2012). These were important steps in scaling deep learning. Modern large-model training commonly uses synchronous collectives instead, combined with several kinds of parallelism.</p>
+<p>In data parallelism, workers hold replicas of the model, compute gradients on different examples and aggregate them. With equally sized local batches and mean-reduced losses, averaging gradients produces the gradient of the combined batch, subject to numerical differences and compatible model behavior. Unequal token counts require appropriate weighting. The effective batch size is local batch × workers × accumulation steps; increasing it also changes the optimization problem.</p>
+<p>Tensor parallelism splits individual operations across devices, for example dividing a linear projection's output channels. Pipeline parallelism distributes layers and schedules microbatches to reduce idle time. Expert parallelism places different experts on different devices and routes tokens between them. ZeRO (Rajbhandari et al., 2020) and fully sharded data parallelism reduce replicated optimizer, gradient and parameter storage. Megatron-LM (Shoeybi et al., 2019) and GPipe (Huang et al., 2019) illustrate complementary approaches.</p>
+<p>The costs are not interchangeable. Tensor parallelism introduces frequent collectives; pipeline parallelism incurs bubbles; expert parallelism incurs token dispatch and load imbalance. A fast single-device kernel does not guarantee a fast distributed training job.</p>
+<pre><code class="language-python"># Illustrative memory accounting, decimal GB.
+P = 1_000_000_000
+weights = 2 * P  # BF16
+moments = 8 * P  # two FP32 Adam moments
+print(weights / 1e9, moments / 1e9)
+</code></pre>
+<p>This is not total training memory. Gradients, master weights, activations, temporary buffers, communication and allocator overhead may all matter. Activation checkpointing trades recomputation for reduced saved activations (Chen et al., 2016). Mixed precision (Micikevicius et al., 2018) exploits low-precision arithmetic while preserving higher precision where needed. Specialized accelerators, including TPUs (Jouppi et al., 2017), use hardware designed for regular tensor operations. FPGAs offer configurable datapaths; ASICs trade flexibility for specialized efficiency. Real deployment should be evaluated with workload-specific latency, energy and quality measurements.</p>
+<h2>3. Can a smaller network learn what a larger one knows?</h2>
+<p>Model compression predates today's LLMs. Buciluă et al. (2006) investigated replacing expensive ensembles with smaller models trained to imitate them. Hinton, Vinyals and Dean (2015) made knowledge distillation a widely used technique by emphasizing soft target distributions.</p>
+<p>Suppose a teacher assigns probabilities 0.80, 0.15 and 0.05 to three classes. A hard label tells a student only that the first class is correct. The remaining probabilities may encode relationships learned by the teacher. Distillation tries to transfer that information.</p>
+<p>For teacher logits z and temperature T, the softened probabilities are softmax(z/T). We combine the ordinary label loss with a KL divergence from teacher to student:</p>
+<p><strong>L = α CE(y, student) + (1 − α) T² KL(p_teacher,T || p_student,T).</strong></p>
+<p>The T² factor compensates approximately for temperature-dependent gradient scaling. A higher temperature makes probabilities less concentrated, but neither higher temperature nor higher distillation weight guarantees better generalization.</p>
+<h3>Experiment 1: Train a teacher and two students</h3>
+<p>The lab uses scikit-learn's 1,797 8×8 digit images. The fixed stratified train/validation/test split is 1,078/359/360. We normalize by 16, train with AdamW for 60 epochs using batches of up to 64, and repeat seeds 11, 22 and 33. The teacher is 64→256→10; both students are 64→16→10, with matched initialization and minibatch ordering within each seed. The distillation temperature is 3 and α is 0.4. No hyperparameter sweep is performed.</p>
+<pre><code class="language-python">import torch
+from torch.nn import functional as F
+
+# teacher, student, x and y are provided by lab.py.
+with torch.no_grad():
+    soft_targets = (teacher(x) / 3).softmax(-1)
+logits = student(x)
+loss = 0.4 * F.cross_entropy(logits, y)
+loss += 0.6 * 9 * F.kl_div(
+    (logits / 3).log_softmax(-1), soft_targets,
+    reduction='batchmean'
+)
+</code></pre>
+<p>The teacher averaged 97.87% test accuracy. The ordinary student averaged 96.48%. The distilled student averaged 96.39%. The student has approximately 15.88 times fewer parameters. Distillation did not improve its mean accuracy in this particular recipe. This negative result matters: a useful technique is not a universal guarantee. Teacher calibration, temperature, student capacity, data diversity and optimization all influence transfer. A stronger study would choose temperature and loss weights using validation, evaluate across several independent splits, and report confidence intervals.</p>
+<p><strong>[Insert Figure 1: figures/distillation.png here]</strong></p>
+<p><em>Figure 1. Mean held-out accuracy of the teacher, ordinary student and distilled student across three seeds. The student uses 1,210 parameters versus 19,210 for the teacher.</em></p>
+<p>Other compression techniques include pruning, low-rank factorization and parameter sharing. Han et al. (2016) combined pruning, quantization and coding in Deep Compression. DistilBERT (Sanh et al., 2019) applied distillation to pretrained language models. LoRA (Hu et al., 2022) instead reduces trainable adaptation parameters; it is not automatically a reduction in the deployed base model's parameter count. After merging the low-rank update, the resulting dense weight can occupy the same storage as before.</p>
+<h2>4. What happens when we remove bits from the weights?</h2>
+<p>A float32 weight occupies four bytes. A four-bit code ideally occupies half a byte. But reducing precision is not the same as deleting information uniformly. A quantization scale tells us how to map real-valued weights onto representable integers.</p>
+<p>For symmetric per-output-channel quantization, let Q = 2^(b−1) − 1. For each row, s = max(abs(w))/Q, q = round(w/s), and reconstructed w = sq. We clamp to [−Q,Q]. This convention uses three levels at two bits, not four. Zero rows need a nonzero denominator safeguard.</p>
+<pre><code class="language-python">import torch
+
+def round_weights(w, bits):
+    qmax = 2**(bits - 1) - 1
+    scale = w.abs().amax(1, keepdim=True).clamp_min(1e-8) / qmax
+    codes = (w / scale).round().clamp(-qmax, qmax)
+    return codes * scale
+</code></pre>
+<h3>Experiment 2: Precision versus quality</h3>
+<p>We round the trained teacher's weights at 8, 4 and 2 bits and evaluate the reconstructed FP32 network. Biases remain FP32. Across three seeds the unmodified accuracy is 97.87%; 8-bit gives 97.78%, 4-bit gives 97.41%, and 2-bit gives 48.52%. The ideal packed payload for weights, FP32 per-row scales and biases is 21,072 bytes at 8 bits, 11,600 bytes at 4 bits and 6,864 bytes at 2 bits, compared with 76,840 bytes for original FP32 parameters.</p>
+<p><strong>[Insert Figure 2: figures/quantization.png here]</strong></p>
+<p><em>Figure 2. Weight-rounding sensitivity of the same teacher models. The experiment simulates quantization numerically; it does not execute packed integer kernels.</em></p>
+<p>The surprising result is not simply that four bits works. It is that two bits breaks this particular model while four bits preserves most of its accuracy. Different layers and architectures have different sensitivity. The ideal payload excludes serialization overhead, alignment and runtime workspaces. Actual tensors in this experiment remain float32, so no memory or latency speedup was measured.</p>
+<p>GPTQ (Frantar et al., 2023) uses approximate second-order information for post-training weight quantization. AWQ (Lin et al., 2024) uses activation information to protect important weight channels. SmoothQuant (Xiao et al., 2023) redistributes quantization difficulty between activations and weights. QLoRA (Dettmers et al., 2023) trains low-rank adapters through a quantized frozen base model. These methods address different problems: a quantized training representation, a weight-only inference format and an integer activation kernel should not be conflated.</p>
+<h2>5. Why execute every parameter for every input?</h2>
+<p>Viola and Jones (2001) used classifier cascades for fast object detection: cheap stages reject many irrelevant windows before expensive stages examine the survivors. The chapter also describes early mixture-of-experts research (Jacobs et al., 1991), where a gating network chooses or combines specialized predictors. Both ideas use input-dependent computation, but a cascade can defer to a more powerful model while an expert router chooses specialized subnetworks.</p>
+<h3>Experiment 3: Build a confidence-based cascade</h3>
+<p>Our ordinary student runs first. If its maximum predicted probability falls below a threshold, invoke the teacher and use the teacher prediction. For each seed we search thresholds 0 to 1 in increments of 0.01 on validation only, choosing the lowest teacher invocation fraction among thresholds with validation accuracy within one percentage point of the teacher. We then evaluate the frozen threshold on test.</p>
+<pre><code class="language-python">@torch.no_grad()
+def cascade(student, teacher, x, threshold):
+    p = student(x).softmax(-1)
+    pred = p.argmax(-1)
+    route = p.max(-1).values &lt; threshold
+    if route.any():
+        pred[route] = teacher(x[route]).argmax(-1)
+    return pred, route
+</code></pre>
+<p>The selected thresholds were 0.51, 0.58 and 0.33. On test, teacher invocation rates were 2.50%, 3.89% and 0%. Mean cascade accuracy was 97.31%, versus 97.87% for the teacher and 96.48% for the student. The largest model ran on only 2.13% of inputs on average. Our evaluation code computes teacher outputs for all examples to compare policies offline; the routing function above illustrates how to avoid that in a deployed system.</p>
+<p><strong>[Insert Figure 3: figures/cascade.png here]</strong></p>
+<p><em>Figure 3. Test accuracy of small model, large model and confidence cascade. The cascade invokes the teacher on 2.13% of inputs on average.</em></p>
+<p>Counting multiply-accumulates for the two dense layers gives 1,184 for the student and 18,944 for the teacher per input. The expected cascade count is 1,184 + 0.0212963 × 18,944 ≈ 1,587, roughly 8.38% of the teacher-only count. This is an analytical estimate, not measured speed: it excludes activations, softmax, indexing, scheduling and dispatch. Both models must be stored if resident. Confidence need not be calibrated, and rare hard inputs may concentrate errors in particular subgroups. Validate conditional policies under realistic distribution shifts.</p>
+<h3>From cascades to modern mixture of experts</h3>
+<p>A soft mixture computes a weighted sum of expert outputs, often evaluating every expert. Sparse MoE routes each token to a small subset. Shazeer et al. (2017) demonstrated sparsely gated MoE layers; Switch Transformers (Fedus et al., 2022) simplified routing to one expert per token. Mixtral (Jiang et al., 2024) uses sparse expert selection, and DeepSeek-V3 (DeepSeek-AI, 2024) combines sparse experts with other architectural and systems choices.</p>
+<p>For E experts and top-k routing, expert arithmetic may be roughly k/E of evaluating every expert of identical size. Shared attention and router costs remain. Total parameters do not shrink merely because fewer are active; expert weights must be available somewhere. Expert imbalance can overload devices and make dispatch expensive. Dropped tokens, capacity limits and communication can degrade quality or efficiency. Unlike the simple confidence cascade, a learned MoE router is trained jointly with the model, often with load-balancing objectives. Do not infer real MoE throughput from our digit results.</p>
+<p>Recent 2026 work directly addresses these tradeoffs. Elango et al. (2026) revisit efficiency–accuracy scaling in MoE architectures; Deng et al. (2026) formulate global expert-level mixed-precision allocation and router adaptation in GEMQ; Qin et al. (2026) investigate modality-adaptive quantization of vision-language experts in VEQ. Zhao et al. (2026) explore expert merging and bit-packed inference in PuzzleMoE, while Yang et al. (2026) study lossless compression and cache-affinity scheduling for on-device MoE in ZipMoE. These conference papers illustrate research directions, not results replicated by this lab. An additional September 2026 preprint examines sparse MoE backbones for retrieval under matched serving configurations. The key question is no longer merely how many parameters a model activates, but how reliably and cheaply those parameters can be made available.</p>
+<h2>6. Computer vision: the model is only part of the pipeline</h2>
+<p>Imagine the digit classifier is installed in a camera application. Its input is no longer a neatly centered 8×8 array. A camera produces different resolutions, illumination, compression artifacts and backgrounds. Training on clean images and deploying on arbitrary crops changes the input distribution. Before changing the architecture, define the input contract.</p>
+<p>A vision model may classify an entire image, detect bounding boxes, segment pixels, reconstruct missing content or generate a representation for retrieval. Classification accuracy cannot directly measure all these tasks. Detection uses metrics such as average precision at intersection-over-union thresholds; segmentation often uses IoU or Dice; restoration can use PSNR and perceptual measures. Evaluate the metric that reflects the actual deployment task.</p>
+<p>The textbook distinguishes global contrast normalization (GCN) and local contrast normalization (LCN). GCN subtracts the image mean and divides by its standard deviation with a safeguard against near-zero variance. LCN estimates these statistics in neighborhoods. A constant image maps to zero rather than producing a division error. Global normalization removes image-wide contrast and brightness information; local normalization emphasizes spatial variation and may also erase useful low-frequency content. Do not remove intensity when it carries information about the target.</p>
+<pre><code class="language-python">import torch
+
+def global_contrast(x, eps=1e-6):
+    # x: [batch, channels, height, width]
+    dims = (1, 2, 3)
+    centered = x - x.mean(dim=dims, keepdim=True)
+    rms = centered.square().mean(dim=dims, keepdim=True).sqrt()
+    return centered / rms.clamp_min(eps)
+</code></pre>
+<p>Modern preprocessing must match the pretrained model's expected channel order, resolution, range and normalization. An image scaled to [0,1] must not silently be interpreted as [0,255]. The training split alone should determine fitted preprocessing statistics. Augmentations are not universally label preserving: horizontal flips may be reasonable for dogs but not for text; rotating a digit can alter its identity. Mixup (Zhang et al., 2018) interpolates examples and labels, while CutMix (Yun et al., 2019) mixes image regions and labels. Both are training strategies, not substitutes for realistic test data.</p>
+<p>The historical progression from AlexNet (Krizhevsky et al., 2012) to residual networks (He et al., 2016) and Vision Transformers (Dosovitskiy et al., 2021) changed feature extraction. CLIP (Radford et al., 2021) learned aligned image and text representations through contrastive supervision. Segment Anything (Kirillov et al., 2023) introduced a promptable segmentation model. These are different objectives: a contrastive embedding is not inherently a pixel-level mask, and a segmentation foundation model does not automatically solve a domain-specific classification task.</p>
+<p>A two-stage vision system can use a detector to crop an object and a recognizer to transcribe it. As in the book's Street View example, an upstream crop that cuts off a digit can make downstream recognition impossible. A stronger recognizer cannot reconstruct evidence that was never supplied. This is why the original chapter's emphasis on complete pipelines still matters.</p>
+<h2>7. Speech recognition: learning without frame-level transcripts</h2>
+<p>Suppose a recording contains the word “cat.” We know the transcript, but we do not know which precise audio frame corresponds to each character. Audio has hundreds of frames; its transcript may have only a few tokens. Assigning labels to every frame would be expensive and sometimes ambiguous.</p>
+<p>Traditional ASR combined hidden Markov models for temporal structure with Gaussian mixtures for acoustic likelihoods. Deep neural networks improved acoustic modeling (Hinton et al., 2012), and end-to-end methods reduced the need for explicit phoneme alignments. Graves et al. (2006) introduced connectionist temporal classification, which sums over paths that collapse to a target sequence. The blank symbol represents frames not emitting a label. Repeated adjacent labels are merged before blanks are removed. Thus A, blank, A becomes AA, while A, A becomes A.</p>
+<p>For frame probabilities p_t and a target sequence y, CTC computes:</p>
+<p><strong>P(y | x) = Σ over paths π with collapse(π)=y of ∏ over frames t of p_t(π_t).</strong></p>
+<p>The CTC loss is the negative logarithm of this probability. The number of paths grows exponentially, so practical algorithms use dynamic programming. The conditional independence of frame emissions given encoder outputs is a modeling assumption; an encoder can itself use broad context.</p>
+<h3>Experiment 4: Verify CTC by enumeration</h3>
+<p>Our toy model uses three frames and symbols blank, A and B. Its probabilities are:</p>
+<pre><code class="language-python">import torch
+from torch.nn import functional as F
+p = torch.tensor([[.2, .7, .1],
+                  [.4, .5, .1],
+                  [.2, .2, .6]], dtype=torch.float64)
+loss = F.ctc_loss(p.log().unsqueeze(1), torch.tensor([1, 2]),
+                  torch.tensor([3]), torch.tensor([2]),
+                  reduction='sum')
+print(loss.item())
+</code></pre>
+<p>There are 27 possible frame paths, five of which collapse to AB. Enumerating these gives probability 0.494 and negative log-likelihood 0.7052197617942144. The implementation checks that PyTorch produces the same probability within 10⁻¹². This is a correctness demonstration, not an acoustic recognition benchmark. Try target AA to discover why an intervening blank is necessary.</p>
+<p>RNN-Transducer (Graves, 2012) adds a prediction network conditioned on emitted labels, making it useful in streaming systems. Conformer (Gulati et al., 2020) combines attention with convolution for acoustic modeling. wav2vec 2.0 (Baevski et al., 2020) uses self-supervised speech pretraining; Whisper (Radford et al., 2023) uses large-scale weak supervision and an encoder-decoder architecture. These advances do not remove deployment tradeoffs. A noncausal encoder may require future audio; streaming models must control lookahead. Measure word error rate (substitutions + deletions + insertions divided by reference words), real-time factor, endpoint latency and performance by accent and noise conditions. A 2026 audio-visual speech review (linked below) discusses incorporating visual and language-model context; it remains necessary to evaluate missing modalities and synchronization errors.</p>
+<h2>8. Language modeling: from counting words to predicting tokens</h2>
+<p>A simple language model is a probability distribution over sequences. The chain rule writes P(x₁,…,xₙ) as the product of conditional next-token probabilities. An n-gram model restricts the context to the previous n−1 tokens. Counting is cheap, but unseen contexts are unavoidable. Without smoothing, unseen sequences can receive zero probability and infinite negative log-likelihood.</p>
+<h3>Experiment 5: A bigram model in a few lines</h3>
+<pre><code class="language-python">from collections import Counter
+pairs = [('a','b'), ('a','b'), ('b','c'), ('c','a')]
+counts = Counter(pairs)
+vocab = ['a','b','c','d']
+context_count = sum(counts['a', w] for w in vocab)
+p = [(counts['a', w] + 1) / (context_count + len(vocab))
+     for w in vocab]
+print(p)  # [1/6, 1/2, 1/6, 1/6]
+</code></pre>
+<p>This is add-one smoothing, equivalent to a symmetric Dirichlet prior's posterior predictive distribution. It provides nonzero probabilities, but may overallocate mass to unseen events in large vocabularies. Kneser-Ney smoothing and backoff models use more informative statistics (Chen and Goodman, 1999).</p>
+<p>Neural language models introduced learned embeddings to share statistical strength across similar contexts (Bengio et al., 2003). A one-hot vector places every distinct word at the same Euclidean distance from every other word. A learned embedding provides a continuous geometry, although proximity does not guarantee synonymy or factual equivalence. Word2vec (Mikolov et al., 2013) and GloVe (Pennington et al., 2014) developed scalable word representations. Modern models often use subword or byte tokenization; the unit of perplexity is therefore important when comparing models.</p>
+<h3>The output layer is a computation problem</h3>
+<p>A vocabulary V and hidden width d require a dense output matrix of V × d weights. For V=128,000 and d=4,096 this is 524,288,000 weights. In BF16 the matrix alone occupies roughly 1.05 decimal GB, before weight tying or other model components. Weight tying can share input and output parameters, but does not remove the output projection arithmetic. Exact softmax requires the denominator across vocabulary entries.</p>
+<p>The chapter discusses several alternatives that still teach useful design principles. A shortlist handles frequent words with a neural model and assigns remaining probability to a tail model. Hierarchical softmax decomposes a word probability into conditional tree decisions. For a balanced binary tree, a known word requires O(log V) decisions, although finding the global argmax is not necessarily cheap. Adaptive softmax groups words by frequency to save computation (Grave et al., 2017). Importance sampling approximates contributions from negative words; self-normalized importance estimates are generally biased at finite sample size. Noise-contrastive estimation (Gutmann and Hyvärinen, 2010; Mnih and Teh, 2012) learns to distinguish data from noise; a ranking loss instead encourages true-token scores to exceed negatives by a margin. Neither is simply an exact softmax computed faster.</p>
+<p>Modern autoregressive LLMs typically still use dense output projections, often optimized with fused or chunked kernels. Perplexity is exp(mean token NLL); compare it on identical tokenization or use a common unit such as bits per byte. A model can achieve favorable perplexity yet fail at instruction following, factuality or tool use. The training objective and application objective are related, not identical.</p>
+<h2>9. Machine translation, attention and the cost of context</h2>
+<p>Early neural translation systems scored candidate phrases and later used an encoder-decoder architecture to generate variable-length target sequences (Cho et al., 2014; Sutskever et al., 2014). Compressing an entire source sentence into a fixed-size vector creates a bottleneck. Bahdanau et al. (2015) enabled the decoder to attend to different encoder states at each generation step. The Transformer (Vaswani et al., 2017) built its sequence transformations around attention rather than recurrence.</p>
+<p>Scaled dot-product attention computes softmax(QKᵀ/√d) V. Each query compares itself to keys, normalizes scores and mixes values. During causal generation, past keys and values can be cached. A KV cache avoids recomputing past projections but grows with sequence length. With L layers, H_kv key/value heads, head dimension D, T tokens and b bytes per scalar, cache payload per sequence is approximately 2 L H_kv D T b. For 32 layers, 8 KV heads, dimension 128, 32,768 tokens and BF16, the payload is exactly 4 GiB, excluding allocation overhead. This is an arithmetic example, not a specification for a particular model.</p>
+<p>Grouped-query attention (Ainslie et al., 2023) shares key/value heads across query heads, reducing cache size. PagedAttention (Kwon et al., 2023) manages cache blocks to improve allocation and serving efficiency. Speculative decoding (Leviathan et al., 2023) uses a draft model and target verification; its acceptance/correction procedure can preserve the target sampling distribution under its assumptions. These mechanisms solve different problems: cache allocation, model architecture and sequential generation cost. Measure prefill throughput, time to first token, time per output token and latency percentiles under realistic concurrency. A faster prefill may not improve decode latency.</p>
+<p>The 2026 literature on efficient vision-language inference extends these issues to visual tokens and modality-specific compression. Visual inputs can consume large context budgets even before text generation begins. Reducing visual tokens may help throughput but damage small-object recognition or OCR. A system should test those capabilities rather than relying solely on aggregate benchmarks.</p>
+<h2>10. Recommender systems: learning from what users actually see</h2>
+<p>A recommendation problem starts with a sparse user-item matrix. Most users have not rated most items. Replacing missing entries by zeros creates artificial negative labels. Instead, factorization estimates latent vectors from observed interactions. A simple predictor is r̂_ui = μ + b_u + b_i + p_uᵀq_i. Train it by minimizing squared error on observed pairs, with regularization as appropriate (Koren et al., 2009).</p>
+<h3>Experiment 6: Recover a synthetic preference matrix</h3>
+<p>The lab generates a noise-free 100×80 matrix as the product of two rank-four Gaussian factors. It holds out 1,600 entries and fits embeddings to the remaining 6,400 using Adam for 300 full-batch updates. It compares against predicting the training mean for every held-out entry.</p>
+<pre><code class="language-python"># Given user and item index tensors u, i and observed ratings r:
+pred = (user_embedding[u] * item_embedding[i]).sum(-1)
+loss = (pred - r).square().mean()
+</code></pre>
+<p>The mean baseline has test RMSE 1.912447; rank-four factorization obtains 7.85 × 10⁻⁷. This near-exact recovery is expected under a clean, correctly specified low-rank synthetic generator with dense observation coverage. Real user preferences are noisy, time-varying and much less completely observed. The result is not evidence of comparable real-world performance. Cold-start users and items cannot be addressed with ID embeddings alone; content features and contextual information help.</p>
+<p>Modern recommenders often use retrieval followed by ranking. Two-tower networks map users and items into a common embedding space, enabling approximate nearest-neighbor candidate retrieval. A more expensive ranker processes those candidates, using interaction features and calibrated predictions. This is another cascade: spend compute on a small candidate set. DLRM (Naumov et al., 2019) combines dense and sparse feature interactions. Ranking metrics such as Recall@K and NDCG complement rating error. The target must reflect user benefit rather than clicks alone; exposure bias and feedback loops can distort offline evaluation.</p>
+<h3>Exploration versus exploitation</h3>
+<p>If a system only recommends the item currently believed to be best, it may never observe a better alternative. Contextual bandits model this as choosing an action given context and observing only its reward (Li et al., 2010). An epsilon-greedy policy occasionally explores; other methods use uncertainty estimates. Logged propensity scores enable inverse propensity weighting for off-policy evaluation when there is overlap between logging and target policies. Extremely small propensities produce high variance. Doubly robust estimation (Dudík et al., 2011) combines a reward model and propensity correction under appropriate assumptions. Do not interpret offline clicks as unbiased evidence of satisfaction or deploy unconstrained exploration in high-stakes settings.</p>
+<h2>11. Knowledge representation: knowing where to look</h2>
+<p>The chapter concludes with relational embeddings and question answering. A knowledge graph represents facts as triples (subject, relation, object). TransE (Bordes et al., 2013) embeds entities and relations such that plausible triples approximately satisfy h + r ≈ t. It can rank candidate links, but a missing edge is not necessarily false. Negative sampling and filtered ranking are useful evaluation conventions, not proof of factual completeness.</p>
+<p>Retrieval-augmented generation (Lewis et al., 2020) combines a retriever with a generator to condition responses on external evidence. Dense passage retrieval (Karpukhin et al., 2020) learns question and passage embeddings. A real retrieval system needs document ingestion, chunking, indexing, access controls, metadata filtering, ranking and source attribution. The generator should be allowed to abstain when evidence is missing. A retrieved passage is not automatically correct, current or authorized to disclose.</p>
+<pre><code class="language-python">import numpy as np
+# Unit-normalized document vectors and query vector.
+scores = document_vectors @ query_vector
+indices = np.argsort(-scores)[:5]
+</code></pre>
+<p>Evaluate retrieval recall separately from answer quality. A good answer with a failed retriever might come from memorized knowledge, while a bad answer with correct retrieval might indicate a generation or context-integration problem. Recent research on efficient MoE retrievers explores whether sparse architectures can improve encoding efficiency at comparable retrieval quality; the September 2026 preprint cited below is evidence of an active direction, not a conclusion applicable to every retrieval service.</p>
+<h2>12. What should we measure before deploying?</h2>
+<p>The experiments suggest a repeatable design process. Start with a simple end-to-end baseline; define accuracy and application metrics, latency constraints, memory limits and acceptable failure modes. Then profile the actual workload. A matrix multiplication benchmark cannot reveal queueing delay, and a model-only parameter count cannot predict total process memory. Use fixed hardware and software versions, representative batch sizes and sequence lengths, warmup, synchronization on accelerators, repeated timing and percentile statistics. Separate cold starts from steady state. Report preprocessing and postprocessing costs as well as model execution.</p>
+<p>A compact model can reduce storage without reducing latency if its format lacks an efficient kernel. Sparse routing can reduce arithmetic while increasing communication. Distillation can fail, as our experiment demonstrates. A cascade can be inexpensive on average yet generate large tail latency if difficult requests require both models. In vision, audio and retrieval, upstream failures can cap the quality of downstream components. The right optimization depends on the bottleneck rather than the trendiest architecture.</p>
+<h2>13. Reproduce the experiments</h2>
+<p>Download the companion repository archive, extract it, and run:</p>
+<pre><code class="language-bash">python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python lab.py
+</code></pre>
+<p>On Windows, activate with <code>.venv\Scripts\activate</code>. The dataset ships with scikit-learn; no external data or GPU is required. Results and PNG figures are written beside the script. The three classifier configurations run across three seeds; quantization and routing evaluate the trained models rather than retraining them. CTC, bigrams and matrix factorization are independent small examples. The accompanying JSON includes per-seed measurements. Article snippets outside these experiments are explanatory and may require variables defined elsewhere.</p>
+<h2>Discussion and limitations</h2>
+<p>We have not trained a large language model, run a real speech corpus, profiled accelerators, implemented a production quantized kernel or measured real-world serving latency. The digits experiments use a single dataset split, three training seeds and fixed recipes. The routing threshold is selected on validation and evaluated on test, but the test accuracy target is not guaranteed. The arithmetic savings are theoretical, not a latency measurement. Our selected research references are representative rather than an exhaustive systematic review.</p>
+<p>The surprising result at the beginning of this article is not that large models are unnecessary. It is that the value of a model depends on when and how it is used. Neural networks became practical through joint advances in algorithms, representations, hardware and software. The next useful improvement may not require another billion parameters. It may require a better decision about where the computation should happen.</p>
+<h2>References</h2>
+<ul>
+<li>Goodfellow, I., Bengio, Y., &amp; Courville, A. (2016). Deep Learning, Chapter 12: Applications. <a href="https://www.deeplearningbook.org/contents/applications.html">MIT Press</a>.</li>
+<li>Williams, S., Waterman, A., &amp; Patterson, D. (2009). Roofline: An insightful visual performance model for multicore architectures. <a href="https://doi.org/10.1145/1498765.1498785">CACM</a>.</li>
+<li>Recht, B., et al. (2011). Hogwild!: A lock-free approach to parallelizing stochastic gradient descent. <a href="https://arxiv.org/abs/1106.5730">NeurIPS</a>.</li>
+<li>Dean, J., et al. (2012). Large scale distributed deep networks. <a href="https://research.google/pubs/large-scale-distributed-deep-networks/">NeurIPS</a>.</li>
+<li>Chen, T., et al. (2016). Training deep nets with sublinear memory cost. <a href="https://arxiv.org/abs/1604.06174">arXiv</a>.</li>
+<li>Micikevicius, P., et al. (2018). Mixed precision training. <a href="https://arxiv.org/abs/1710.03740">ICLR</a>.</li>
+<li>Jouppi, N. P., et al. (2017). In-datacenter performance analysis of a tensor processing unit. <a href="https://arxiv.org/abs/1704.04760">ISCA</a>.</li>
+<li>Shoeybi, M., et al. (2019). Megatron-LM: Training multi-billion parameter language models using model parallelism. <a href="https://arxiv.org/abs/1909.08053">arXiv</a>.</li>
+<li>Huang, Y., et al. (2019). GPipe: Efficient training of giant neural networks using pipeline parallelism. <a href="https://arxiv.org/abs/1811.06965">NeurIPS</a>.</li>
+<li>Rajbhandari, S., et al. (2020). ZeRO: Memory optimizations toward training trillion parameter models. <a href="https://arxiv.org/abs/1910.02054">SC</a>.</li>
+<li>Buciluă, C., Caruana, R., &amp; Niculescu-Mizil, A. (2006). Model compression. <a href="https://doi.org/10.1145/1150402.1150464">KDD</a>.</li>
+<li>Hinton, G., Vinyals, O., &amp; Dean, J. (2015). Distilling the knowledge in a neural network. <a href="https://arxiv.org/abs/1503.02531">arXiv</a>.</li>
+<li>Han, S., Mao, H., &amp; Dally, W. J. (2016). Deep compression. <a href="https://arxiv.org/abs/1510.00149">ICLR</a>.</li>
+<li>Sanh, V., et al. (2019). DistilBERT. <a href="https://arxiv.org/abs/1910.01108">arXiv</a>.</li>
+<li>Hu, E. J., et al. (2022). LoRA: Low-rank adaptation of large language models. <a href="https://arxiv.org/abs/2106.09685">ICLR</a>.</li>
+<li>Frantar, E., et al. (2023). GPTQ. <a href="https://arxiv.org/abs/2210.17323">ICLR</a>.</li>
+<li>Lin, J., et al. (2024). AWQ: Activation-aware weight quantization for LLM compression and acceleration. <a href="https://arxiv.org/abs/2306.00978">MLSys</a>.</li>
+<li>Xiao, G., et al. (2023). SmoothQuant. <a href="https://arxiv.org/abs/2211.10438">ICML</a>.</li>
+<li>Dettmers, T., et al. (2023). QLoRA. <a href="https://arxiv.org/abs/2305.14314">NeurIPS</a>.</li>
+<li>Viola, P., &amp; Jones, M. (2001). Rapid object detection using a boosted cascade of simple features. <a href="https://doi.org/10.1109/CVPR.2001.990517">CVPR</a>.</li>
+<li>Jacobs, R. A., et al. (1991). Adaptive mixtures of local experts. <a href="https://doi.org/10.1162/neco.1991.3.1.79">Neural Computation</a>.</li>
+<li>Shazeer, N., et al. (2017). Outrageously large neural networks: The sparsely-gated mixture-of-experts layer. <a href="https://arxiv.org/abs/1701.06538">ICLR</a>.</li>
+<li>Fedus, W., Zoph, B., &amp; Shazeer, N. (2022). Switch Transformers. <a href="https://arxiv.org/abs/2101.03961">JMLR</a>.</li>
+<li>Jiang, A. Q., et al. (2024). Mixtral of experts. <a href="https://arxiv.org/abs/2401.04088">arXiv</a>.</li>
+<li>DeepSeek-AI. (2024). DeepSeek-V3 technical report. <a href="https://arxiv.org/abs/2412.19437">arXiv</a>.</li>
+<li>Elango, V., et al. (2026). Revisiting efficiency–accuracy scaling in mixture-of-experts architectures. <a href="https://proceedings.mlr.press/v306/elango26a.html">ICML</a>.</li>
+<li>Deng, J., et al. (2026). GEMQ: Global expert-level mixed-precision quantization for MoE LLMs. <a href="https://proceedings.mlr.press/v306/deng26t.html">ICML</a>.</li>
+<li>Qin, G., et al. (2026). VEQ: Modality-adaptive quantization for MoE vision-language models. <a href="https://proceedings.mlr.press/v306/qin26d.html">ICML</a>.</li>
+<li>Zhao, Y., Wang, Z., &amp; Zhang, M. (2026). PuzzleMoE. <a href="https://proceedings.mlr.press/v306/zhao26ay.html">ICML</a>.</li>
+<li>Yang, Y., et al. (2026). ZipMoE. <a href="https://proceedings.mlr.press/v306/yang26ds.html">ICML</a>.</li>
+<li>Krizhevsky, A., Sutskever, I., &amp; Hinton, G. (2012). ImageNet classification with deep convolutional neural networks. <a href="https://doi.org/10.1145/3065386">NeurIPS</a>.</li>
+<li>He, K., et al. (2016). Deep residual learning for image recognition. <a href="https://arxiv.org/abs/1512.03385">CVPR</a>.</li>
+<li>Dosovitskiy, A., et al. (2021). An image is worth 16x16 words. <a href="https://arxiv.org/abs/2010.11929">ICLR</a>.</li>
+<li>Radford, A., et al. (2021). Learning transferable visual models from natural language supervision. <a href="https://arxiv.org/abs/2103.00020">ICML</a>.</li>
+<li>Kirillov, A., et al. (2023). Segment Anything. <a href="https://arxiv.org/abs/2304.02643">ICCV</a>.</li>
+<li>Zhang, H., et al. (2018). mixup: Beyond empirical risk minimization. <a href="https://arxiv.org/abs/1710.09412">ICLR</a>.</li>
+<li>Yun, S., et al. (2019). CutMix. <a href="https://arxiv.org/abs/1905.04899">ICCV</a>.</li>
+<li>Hinton, G., et al. (2012). Deep neural networks for acoustic modeling in speech recognition. <a href="https://doi.org/10.1109/MSP.2012.2205597">IEEE</a>.</li>
+<li>Graves, A., et al. (2006). Connectionist temporal classification. <a href="https://doi.org/10.1145/1143844.1143891">ICML</a>.</li>
+<li>Graves, A. (2012). Sequence transduction with recurrent neural networks. <a href="https://arxiv.org/abs/1211.3711">arXiv</a>.</li>
+<li>Gulati, A., et al. (2020). Conformer. <a href="https://arxiv.org/abs/2005.08100">Interspeech</a>.</li>
+<li>Baevski, A., et al. (2020). wav2vec 2.0. <a href="https://arxiv.org/abs/2006.11477">NeurIPS</a>.</li>
+<li>Radford, A., et al. (2023). Robust speech recognition via large-scale weak supervision. <a href="https://arxiv.org/abs/2212.04356">ICML</a>.</li>
+<li>Multimodal Audio-Visual Speech Recognition in the Era of Large Language Models (2026). <a href="https://link.springer.com/article/10.1007/s12559-026-10682-8">Review</a>.</li>
+<li>Chen, S. F., &amp; Goodman, J. (1999). An empirical study of smoothing techniques for language modeling. <a href="https://doi.org/10.1006/csla.1999.0128">Computer Speech &amp; Language</a>.</li>
+<li>Bengio, Y., et al. (2003). A neural probabilistic language model. <a href="https://jmlr.org/papers/v3/bengio03a.html">JMLR</a>.</li>
+<li>Mikolov, T., et al. (2013). Efficient estimation of word representations in vector space. <a href="https://arxiv.org/abs/1301.3781">arXiv</a>.</li>
+<li>Pennington, J., Socher, R., &amp; Manning, C. (2014). GloVe. <a href="https://aclanthology.org/D14-1162/">EMNLP</a>.</li>
+<li>Grave, E., et al. (2017). Efficient softmax approximation for GPUs. <a href="https://arxiv.org/abs/1609.04309">ICML</a>.</li>
+<li>Gutmann, M., &amp; Hyvärinen, A. (2010). Noise-contrastive estimation. <a href="https://proceedings.mlr.press/v9/gutmann10a.html">AISTATS</a>.</li>
+<li>Mnih, A., &amp; Teh, Y. W. (2012). A fast and simple algorithm for training neural probabilistic language models. <a href="https://arxiv.org/abs/1206.6426">ICML</a>.</li>
+<li>Cho, K., et al. (2014). Learning phrase representations using RNN encoder-decoder. <a href="https://arxiv.org/abs/1406.1078">EMNLP</a>.</li>
+<li>Sutskever, I., Vinyals, O., &amp; Le, Q. V. (2014). Sequence to sequence learning with neural networks. <a href="https://arxiv.org/abs/1409.3215">NeurIPS</a>.</li>
+<li>Bahdanau, D., Cho, K., &amp; Bengio, Y. (2015). Neural machine translation by jointly learning to align and translate. <a href="https://arxiv.org/abs/1409.0473">ICLR</a>.</li>
+<li>Vaswani, A., et al. (2017). Attention is all you need. <a href="https://arxiv.org/abs/1706.03762">NeurIPS</a>.</li>
+<li>Dao, T., et al. (2022). FlashAttention. <a href="https://arxiv.org/abs/2205.14135">NeurIPS</a>.</li>
+<li>Ainslie, J., et al. (2023). GQA: Training generalized multi-query transformer models from multi-head checkpoints. <a href="https://arxiv.org/abs/2305.13245">EMNLP</a>.</li>
+<li>Kwon, W., et al. (2023). Efficient memory management for large language model serving with PagedAttention. <a href="https://arxiv.org/abs/2309.06180">SOSP</a>.</li>
+<li>Leviathan, Y., Kalman, M., &amp; Matias, Y. (2023). Fast inference from transformers via speculative decoding. <a href="https://arxiv.org/abs/2211.17192">ICML</a>.</li>
+<li>Efficient Inference for Large Vision-Language Models: Bottlenecks, Techniques, and Prospects (2026). <a href="https://aclanthology.org/2026.findings-acl.1057/">Findings of ACL</a>.</li>
+<li>Koren, Y., Bell, R., &amp; Volinsky, C. (2009). Matrix factorization techniques for recommender systems. <a href="https://doi.org/10.1109/MC.2009.263">IEEE Computer</a>.</li>
+<li>Naumov, M., et al. (2019). Deep learning recommendation model for personalization and recommendation systems. <a href="https://arxiv.org/abs/1906.00091">arXiv</a>.</li>
+<li>Li, L., et al. (2010). A contextual-bandit approach to personalized news article recommendation. <a href="https://arxiv.org/abs/1003.0146">WWW</a>.</li>
+<li>Dudík, M., Langford, J., &amp; Li, L. (2011). Doubly robust policy evaluation and learning. <a href="https://arxiv.org/abs/1103.4601">ICML</a>.</li>
+<li>Bordes, A., et al. (2013). Translating embeddings for modeling multi-relational data. <a href="https://proceedings.neurips.cc/paper/2013/hash/1cecc7a77928ca8133fa24680a88d2f9-Abstract.html">NeurIPS</a>.</li>
+<li>Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. <a href="https://arxiv.org/abs/2005.11401">NeurIPS</a>.</li>
+<li>Karpukhin, V., et al. (2020). Dense passage retrieval for open-domain question answering. <a href="https://arxiv.org/abs/2004.04906">EMNLP</a>.</li>
+<li>Mixture-of-Experts Language Models Can Be Strong and Efficient Retrievers (2026). <a href="https://arxiv.org/abs/2609.13486">Preprint</a>.</li>
+<li>scikit-learn. <a href="https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_digits.html">Digits dataset documentation</a>.</li>
+</ul>
+</main><script>async function copyArticle(){const a=document.getElementById('article');try{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([a.innerHTML],{type:'text/html'}),'text/plain':new Blob([a.innerText],{type:'text/plain'})})]);document.getElementById('status').textContent='Copied. Paste into Medium.'}catch(e){const r=document.createRange();r.selectNodeContents(a);getSelection().removeAllRanges();getSelection().addRange(r);document.getElementById('status').textContent='Article selected. Press Ctrl/Cmd+C.'}}</script></html>

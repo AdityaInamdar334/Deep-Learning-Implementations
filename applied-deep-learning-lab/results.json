@@ -1,0 +1,151 @@
+{
+  "environment": {
+    "python": "3.13.5",
+    "torch": "2.10.0+cpu"
+  },
+  "split": [
+    1078,
+    359,
+    360
+  ],
+  "runs": [
+    {
+      "seed": 11,
+      "models": {
+        "teacher": {
+          "accuracy": 0.9777777791023254,
+          "parameters": 19210
+        },
+        "student": {
+          "accuracy": 0.9611111283302307,
+          "parameters": 1210
+        },
+        "distilled": {
+          "accuracy": 0.9666666388511658,
+          "parameters": 1210
+        }
+      },
+      "quantization": {
+        "8": {
+          "accuracy": 0.9777777791023254,
+          "ideal_payload_bytes": 21072
+        },
+        "4": {
+          "accuracy": 0.9666666388511658,
+          "ideal_payload_bytes": 11600
+        },
+        "2": {
+          "accuracy": 0.4472222328186035,
+          "ideal_payload_bytes": 6864
+        }
+      },
+      "cascade": {
+        "threshold": 0.51,
+        "test_accuracy": 0.9750000238418579,
+        "teacher_fraction": 0.02500000037252903
+      }
+    },
+    {
+      "seed": 22,
+      "models": {
+        "teacher": {
+          "accuracy": 0.9777777791023254,
+          "parameters": 19210
+        },
+        "student": {
+          "accuracy": 0.9638888835906982,
+          "parameters": 1210
+        },
+        "distilled": {
+          "accuracy": 0.9638888835906982,
+          "parameters": 1210
+        }
+      },
+      "quantization": {
+        "8": {
+          "accuracy": 0.9750000238418579,
+          "ideal_payload_bytes": 21072
+        },
+        "4": {
+          "accuracy": 0.9777777791023254,
+          "ideal_payload_bytes": 11600
+        },
+        "2": {
+          "accuracy": 0.6416666507720947,
+          "ideal_payload_bytes": 6864
+        }
+      },
+      "cascade": {
+        "threshold": 0.58,
+        "test_accuracy": 0.9750000238418579,
+        "teacher_fraction": 0.03888889029622078
+      }
+    },
+    {
+      "seed": 33,
+      "models": {
+        "teacher": {
+          "accuracy": 0.980555534362793,
+          "parameters": 19210
+        },
+        "student": {
+          "accuracy": 0.9694444537162781,
+          "parameters": 1210
+        },
+        "distilled": {
+          "accuracy": 0.9611111283302307,
+          "parameters": 1210
+        }
+      },
+      "quantization": {
+        "8": {
+          "accuracy": 0.980555534362793,
+          "ideal_payload_bytes": 21072
+        },
+        "4": {
+          "accuracy": 0.9777777791023254,
+          "ideal_payload_bytes": 11600
+        },
+        "2": {
+          "accuracy": 0.36666667461395264,
+          "ideal_payload_bytes": 6864
+        }
+      },
+      "cascade": {
+        "threshold": 0.33,
+        "test_accuracy": 0.9694444537162781,
+        "teacher_fraction": 0.0
+      }
+    }
+  ],
+  "summary": {
+    "teacher": 0.9787036975224813,
+    "student": 0.964814821879069,
+    "distilled": 0.9638888835906982,
+    "cascade_accuracy": 0.9731481671333313,
+    "teacher_fraction": 0.02129629688958327
+  },
+  "ctc": {
+    "paths": 5,
+    "probability": 0.494,
+    "loss": 0.7052197617942144
+  },
+  "ngram": {
+    "vocabulary": [
+      "a",
+      "b",
+      "c",
+      "d"
+    ],
+    "smoothed_probabilities": [
+      0.16666666666666666,
+      0.5,
+      0.16666666666666666,
+      0.16666666666666666
+    ]
+  },
+  "recommendation": {
+    "mean_baseline_rmse": 1.9124474898945376,
+    "factor_rmse": 7.852145265589116e-07
+  }
+}
