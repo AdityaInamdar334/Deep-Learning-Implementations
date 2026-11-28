@@ -1,0 +1,10 @@
+{
+  "total": 192,
+  "local": 0,
+  "deferred": 192,
+  "blocked": 0,
+  "correct_local": 0,
+  "threshold": 0.6918861730319904,
+  "local_accuracy": null,
+  "note": "Fallback is a deferral, not an executed or assumed-correct LLM. No external tools are invoked."
+}

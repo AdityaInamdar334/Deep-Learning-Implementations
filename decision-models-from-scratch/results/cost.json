@@ -1,0 +1,8 @@
+{
+  "baseline_frontier_tokens": 4480,
+  "hybrid_frontier_tokens": 1945.6000000000001,
+  "frontier_reduction": 0.5657142857142856,
+  "local_input_tokens": 1200,
+  "total_hybrid_tokens": 3145.6000000000004,
+  "note": "Analytical scenario, not measured token billing or latency."
+}

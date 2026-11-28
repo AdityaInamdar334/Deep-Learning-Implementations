@@ -1,0 +1,20 @@
+{
+  "biased": {
+    "permutation_accuracy": 0.7461111111111111,
+    "flip_rate": 0.5326666666666666,
+    "canonical_accuracy": 0.9329999999999999,
+    "coverage": 0.8346666666666667
+  },
+  "shuffled": {
+    "permutation_accuracy": 0.8238472222222222,
+    "flip_rate": 0.024666666666666667,
+    "canonical_accuracy": 0.8243333333333333,
+    "coverage": 0.418
+  },
+  "shared": {
+    "permutation_accuracy": 0.8266666666666667,
+    "flip_rate": 0.0,
+    "canonical_accuracy": 0.8266666666666667,
+    "coverage": 0.46466666666666673
+  }
+}

@@ -1,0 +1,1 @@
+{"state":{"message":"I was charged twice for my laptop"},"question":"Classify intent","options":[{"id":"billing","text":"billing"},{"id":"returns","text":"returns"},{"id":"account","text":"account"},{"id":"shipping","text":"shipping"}]}

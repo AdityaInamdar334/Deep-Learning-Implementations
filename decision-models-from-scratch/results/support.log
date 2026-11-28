@@ -1,0 +1,17 @@
+{
+  "Classify intent": {
+    "accuracy": 0.5,
+    "macro_f1": 0.41666666666666663,
+    "n": 192
+  },
+  "Choose next action": {
+    "accuracy": 0.6302083333333334,
+    "macro_f1": 0.2163122014940605,
+    "n": 192
+  },
+  "Escalate urgently?": {
+    "accuracy": 0.875,
+    "macro_f1": 0.5049419853889128,
+    "n": 192
+  }
+}

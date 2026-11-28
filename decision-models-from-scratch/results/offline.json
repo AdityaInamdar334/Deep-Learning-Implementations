@@ -1,0 +1,242 @@
+{
+  "seeds": [
+    7,
+    19,
+    42
+  ],
+  "runs": [
+    {
+      "biased": {
+        "canonical": {
+          "accuracy": 0.927,
+          "nll": 0.21947503089904785,
+          "brier": 0.1150107299145038,
+          "ece": 0.022780021995306036
+        },
+        "permutation_accuracy": 0.7401666666666666,
+        "flip_rate": 0.545,
+        "temperature": 0.9330329915368075,
+        "calibrated": {
+          "accuracy": 0.927,
+          "nll": 0.2221021205186844,
+          "brier": 0.11513458605322387,
+          "ece": 0.023691968917846674
+        },
+        "threshold": 0.8439381718635559,
+        "selective": {
+          "coverage": 0.847,
+          "accepted": 847,
+          "accepted_accuracy": 0.9693034238488784
+        }
+      },
+      "shuffled": {
+        "canonical": {
+          "accuracy": 0.827,
+          "nll": 0.397382527589798,
+          "brier": 0.23440567616447167,
+          "ece": 0.023728410720825207
+        },
+        "permutation_accuracy": 0.8201666666666667,
+        "flip_rate": 0.022,
+        "temperature": 1.0,
+        "calibrated": {
+          "accuracy": 0.827,
+          "nll": 0.397382527589798,
+          "brier": 0.23440567616447167,
+          "ece": 0.023728410720825207
+        },
+        "threshold": 0.9583575129508972,
+        "selective": {
+          "coverage": 0.391,
+          "accepted": 391,
+          "accepted_accuracy": 0.9872122762148338
+        }
+      },
+      "shared": {
+        "canonical": {
+          "accuracy": 0.821,
+          "nll": 0.4166606366634369,
+          "brier": 0.247161744708663,
+          "ece": 0.0408119224905968
+        },
+        "permutation_accuracy": 0.821,
+        "flip_rate": 0.0,
+        "temperature": 1.0,
+        "calibrated": {
+          "accuracy": 0.821,
+          "nll": 0.4166606366634369,
+          "brier": 0.247161744708663,
+          "ece": 0.0408119224905968
+        },
+        "threshold": 0.9540112018585205,
+        "selective": {
+          "coverage": 0.392,
+          "accepted": 392,
+          "accepted_accuracy": 0.9846938775510204
+        }
+      }
+    },
+    {
+      "biased": {
+        "canonical": {
+          "accuracy": 0.942,
+          "nll": 0.17129822075366974,
+          "brier": 0.08926302819270511,
+          "ece": 0.014460943579673771
+        },
+        "permutation_accuracy": 0.7580833333333333,
+        "flip_rate": 0.512,
+        "temperature": 1.1095694720678453,
+        "calibrated": {
+          "accuracy": 0.942,
+          "nll": 0.17258459329605103,
+          "brier": 0.08995077132087402,
+          "ece": 0.02100871327519416
+        },
+        "threshold": 0.8824463486671448,
+        "selective": {
+          "coverage": 0.797,
+          "accepted": 797,
+          "accepted_accuracy": 0.986198243412798
+        }
+      },
+      "shuffled": {
+        "canonical": {
+          "accuracy": 0.829,
+          "nll": 0.40677717328071594,
+          "brier": 0.23997411954318473,
+          "ece": 0.03192307376861574
+        },
+        "permutation_accuracy": 0.8305416666666666,
+        "flip_rate": 0.021,
+        "temperature": 1.0717734625362934,
+        "calibrated": {
+          "accuracy": 0.829,
+          "nll": 0.40554407238960266,
+          "brier": 0.23881662905493908,
+          "ece": 0.021517952054739012
+        },
+        "threshold": 0.9412403702735901,
+        "selective": {
+          "coverage": 0.441,
+          "accepted": 441,
+          "accepted_accuracy": 0.9863945578231292
+        }
+      },
+      "shared": {
+        "canonical": {
+          "accuracy": 0.835,
+          "nll": 0.3974301218986511,
+          "brier": 0.2347036374417814,
+          "ece": 0.03290394175052643
+        },
+        "permutation_accuracy": 0.835,
+        "flip_rate": 0.0,
+        "temperature": 1.0717734625362934,
+        "calibrated": {
+          "accuracy": 0.835,
+          "nll": 0.3967278003692627,
+          "brier": 0.23371502889386245,
+          "ece": 0.03291664198040965
+        },
+        "threshold": 0.8921769261360168,
+        "selective": {
+          "coverage": 0.532,
+          "accepted": 532,
+          "accepted_accuracy": 0.9680451127819549
+        }
+      }
+    },
+    {
+      "biased": {
+        "canonical": {
+          "accuracy": 0.93,
+          "nll": 0.18662795424461365,
+          "brier": 0.10084226151505081,
+          "ece": 0.020561535209417312
+        },
+        "permutation_accuracy": 0.7400833333333333,
+        "flip_rate": 0.541,
+        "temperature": 0.9330329915368075,
+        "calibrated": {
+          "accuracy": 0.93,
+          "nll": 0.18644803762435913,
+          "brier": 0.10087473952338033,
+          "ece": 0.019171542197465908
+        },
+        "threshold": 0.8223734498023987,
+        "selective": {
+          "coverage": 0.86,
+          "accepted": 860,
+          "accepted_accuracy": 0.977906976744186
+        }
+      },
+      "shuffled": {
+        "canonical": {
+          "accuracy": 0.817,
+          "nll": 0.41550034284591675,
+          "brier": 0.24413518522256633,
+          "ece": 0.029614018589258197
+        },
+        "permutation_accuracy": 0.8208333333333333,
+        "flip_rate": 0.031,
+        "temperature": 1.0352649238413776,
+        "calibrated": {
+          "accuracy": 0.817,
+          "nll": 0.4155810475349426,
+          "brier": 0.2437657924195349,
+          "ece": 0.02700594747066499
+        },
+        "threshold": 0.9244328737258911,
+        "selective": {
+          "coverage": 0.422,
+          "accepted": 422,
+          "accepted_accuracy": 0.990521327014218
+        }
+      },
+      "shared": {
+        "canonical": {
+          "accuracy": 0.824,
+          "nll": 0.4060894250869751,
+          "brier": 0.23823722397426314,
+          "ece": 0.027016238182783148
+        },
+        "permutation_accuracy": 0.824,
+        "flip_rate": 0.0,
+        "temperature": 1.0352649238413776,
+        "calibrated": {
+          "accuracy": 0.824,
+          "nll": 0.4062480330467224,
+          "brier": 0.237879214603238,
+          "ece": 0.02340939593315126
+        },
+        "threshold": 0.9116288423538208,
+        "selective": {
+          "coverage": 0.47,
+          "accepted": 470,
+          "accepted_accuracy": 0.9893617021276596
+        }
+      }
+    }
+  ],
+  "mean": {
+    "biased": {
+      "permutation_accuracy": 0.7461111111111111,
+      "flip_rate": 0.5326666666666666,
+      "canonical_accuracy": 0.9329999999999999,
+      "coverage": 0.8346666666666667
+    },
+    "shuffled": {
+      "permutation_accuracy": 0.8238472222222222,
+      "flip_rate": 0.024666666666666667,
+      "canonical_accuracy": 0.8243333333333333,
+      "coverage": 0.418
+    },
+    "shared": {
+      "permutation_accuracy": 0.8266666666666667,
+      "flip_rate": 0.0,
+      "canonical_accuracy": 0.8266666666666667,
+      "coverage": 0.46466666666666673
+    }
+  }
+}

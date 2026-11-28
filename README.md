@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-93-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-94-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -52,6 +52,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Intelligence as Finding Another Way (Detours & Optionality)](./intelligence_detours_lab) | Fixed-plan blockage vs adaptive online BFS replanning, belief-map updates, and finite-horizon reachable-state optionality counts. |
 | [RSI Evaluation Blind Spots](./rsi_evaluation_lab) | Synthetic 5-domain R&D bottleneck modeling, narrow vs full benchmark coverage divergence, evaluator judge bias, and dev vs holdout separation. |
 | [Capability & Oversight Pacing Lab](./ai_pacing_oversight_lab) | Synthetic capability-vs-oversight trajectory pacing, uncovered monitoring-gap modeling, and sensitivity across fast, paced, and oversight-invested regimes. |
+| [Decision Models from Scratch](./decision-models-from-scratch) | Typed customer-support decision engine (Jev/Laya/MAYA-inspired), permutation-equivariant shared scoring (`0.00%` vs `53.27%` flip rate), temperature scaling, confidence deferral gates, and optional Qwen3 LoRA readout. |
 
 ### Model architectures and representation learning
 
@@ -219,6 +220,7 @@ Deep-Learning-Implementations/
 ├── context-window-8gb-lab/
 ├── cpu_arc_lab/
 ├── ddpm-lab/
+├── decision-models-from-scratch/
 ├── distributed_science_agent_lab/
 ├── dt_mem_working_memory_lab/
 ├── elephant_goldfish_review_lab/

@@ -1,0 +1,12 @@
+test_budget (test_lab.TestLab.test_budget) ... ok
+test_equivariance (test_lab.TestLab.test_equivariance) ... ok
+test_gate (test_lab.TestLab.test_gate) ... ok
+test_loss (test_lab.TestLab.test_loss) ... ok
+test_policy (test_lab.TestLab.test_policy) ... ok
+test_split (test_lab.TestLab.test_split) ... ok
+test_targets (test_lab.TestLab.test_targets) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.039s
+
+OK
