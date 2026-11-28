@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/Framework-PyTorch-EE4C2C.svg)](https://pytorch.org/)
-[![Labs](https://img.shields.io/badge/Research%20Labs-94-238636.svg)](#research-labs)
+[![Labs](https://img.shields.io/badge/Research%20Labs-95-238636.svg)](#research-labs)
 
 This repository brings together the companion code for my technical writing on deep learning, AI agents, and applied research. Each lab investigates a specific question through a small implementation, repeatable experiments, and an honest discussion of what the results do and do not show.
 
@@ -112,6 +112,7 @@ Most projects are intentionally smaller than the systems that inspired them. Unl
 | [Neural Memory: Selective Gating, Delta Overwrite & Parallel Scans](./neural-memory-lab) | Selective gating vs fixed decay (`100%` vs `49.8%` at `T=512`), delta-rule vs additive key overwrite, and Hillis–Steele associative prefix scan (`8.88e-16` error). |
 | [Practical ML Methodology (Ch. 11 Lab)](./ml-methodology-lab) | Group leakage (`100%` vs `44.6%`), asymmetric-cost thresholding (`1,384` to `644`), selective abstention, bias/variance learning curves, random vs grid search (`88%` win rate), and gradient checks. |
 | [Applied Deep Learning (Ch. 12 Lab)](./applied-deep-learning-lab) | Teacher/student distillation, INT8/INT4/INT2 weight quantization cliffs (`97.8%` to `48.5%`), confidence cascades (`2.1%` teacher routing), exact CTC enumeration parity, smoothed bigrams, and rank-4 matrix factorization. |
+| [Linear Factor Models from Scratch (Ch. 13 Lab)](./linear-factor-lab) | PCA nuisance-variance failure (`100%` vs `50.5%`), PPCA vs Factor Analysis heterogeneous noise, ICA (`0.9998` recovery), SFA (`0.9958` slow correlation), ISTA/dictionary learning, 3-seed SAEs, and identifiability invariance (`8.88e-16`). |
 
 ### Learning, memory, and forecasting
 
@@ -244,6 +245,7 @@ Deep-Learning-Implementations/
 ├── latent-lab/
 ├── lean4_proofs_to_programs_lab/
 ├── linear_algebra_visual_lab/
+├── linear-factor-lab/
 ├── llm_steering_interpretability_lab/
 ├── local-five-tools-lab/
 ├── local-inference-duel-lab/

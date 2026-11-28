@@ -1,0 +1,9 @@
+test_ista (test_lab.Tests.test_ista) ... ok
+test_ppca (test_lab.Tests.test_ppca) ... ok
+test_recovery (test_lab.Tests.test_recovery) ... ok
+test_sfa (test_lab.Tests.test_sfa) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK
