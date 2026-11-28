@@ -1,0 +1,10 @@
+test_memory (test_lab.Tests.test_memory) ... ok
+test_moe_dispatch (test_lab.Tests.test_moe_dispatch) ... ok
+test_moe_reference (test_lab.Tests.test_moe_reference) ... ok
+test_pointer_labels (test_lab.Tests.test_pointer_labels) ... ok
+test_shared_parameter_count (test_lab.Tests.test_shared_parameter_count) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.040s
+
+OK

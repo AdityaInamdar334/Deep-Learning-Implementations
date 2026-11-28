@@ -1,0 +1,146 @@
+[
+  {
+    "seed": 11,
+    "hops": 1,
+    "uniform_expected": 0.125,
+    "start_node": 0.109375,
+    "one_hop": 1.0,
+    "oracle": 1.0
+  },
+  {
+    "seed": 11,
+    "hops": 2,
+    "uniform_expected": 0.125,
+    "start_node": 0.24609375,
+    "one_hop": 0.24609375,
+    "oracle": 1.0
+  },
+  {
+    "seed": 11,
+    "hops": 3,
+    "uniform_expected": 0.125,
+    "start_node": 0.26171875,
+    "one_hop": 0.4296875,
+    "oracle": 1.0
+  },
+  {
+    "seed": 11,
+    "hops": 4,
+    "uniform_expected": 0.125,
+    "start_node": 0.328125,
+    "one_hop": 0.33984375,
+    "oracle": 1.0
+  },
+  {
+    "seed": 11,
+    "hops": 5,
+    "uniform_expected": 0.125,
+    "start_node": 0.14453125,
+    "one_hop": 0.53125,
+    "oracle": 1.0
+  },
+  {
+    "seed": 11,
+    "hops": 6,
+    "uniform_expected": 0.125,
+    "start_node": 0.30078125,
+    "one_hop": 0.30078125,
+    "oracle": 1.0
+  },
+  {
+    "seed": 22,
+    "hops": 1,
+    "uniform_expected": 0.125,
+    "start_node": 0.09765625,
+    "one_hop": 1.0,
+    "oracle": 1.0
+  },
+  {
+    "seed": 22,
+    "hops": 2,
+    "uniform_expected": 0.125,
+    "start_node": 0.21484375,
+    "one_hop": 0.2421875,
+    "oracle": 1.0
+  },
+  {
+    "seed": 22,
+    "hops": 3,
+    "uniform_expected": 0.125,
+    "start_node": 0.23046875,
+    "one_hop": 0.453125,
+    "oracle": 1.0
+  },
+  {
+    "seed": 22,
+    "hops": 4,
+    "uniform_expected": 0.125,
+    "start_node": 0.296875,
+    "one_hop": 0.35546875,
+    "oracle": 1.0
+  },
+  {
+    "seed": 22,
+    "hops": 5,
+    "uniform_expected": 0.125,
+    "start_node": 0.14453125,
+    "one_hop": 0.5234375,
+    "oracle": 1.0
+  },
+  {
+    "seed": 22,
+    "hops": 6,
+    "uniform_expected": 0.125,
+    "start_node": 0.265625,
+    "one_hop": 0.25390625,
+    "oracle": 1.0
+  },
+  {
+    "seed": 33,
+    "hops": 1,
+    "uniform_expected": 0.125,
+    "start_node": 0.1015625,
+    "one_hop": 1.0,
+    "oracle": 1.0
+  },
+  {
+    "seed": 33,
+    "hops": 2,
+    "uniform_expected": 0.125,
+    "start_node": 0.25390625,
+    "one_hop": 0.23046875,
+    "oracle": 1.0
+  },
+  {
+    "seed": 33,
+    "hops": 3,
+    "uniform_expected": 0.125,
+    "start_node": 0.2421875,
+    "one_hop": 0.42578125,
+    "oracle": 1.0
+  },
+  {
+    "seed": 33,
+    "hops": 4,
+    "uniform_expected": 0.125,
+    "start_node": 0.265625,
+    "one_hop": 0.3359375,
+    "oracle": 1.0
+  },
+  {
+    "seed": 33,
+    "hops": 5,
+    "uniform_expected": 0.125,
+    "start_node": 0.1484375,
+    "one_hop": 0.47265625,
+    "oracle": 1.0
+  },
+  {
+    "seed": 33,
+    "hops": 6,
+    "uniform_expected": 0.125,
+    "start_node": 0.34765625,
+    "one_hop": 0.27734375,
+    "oracle": 1.0
+  }
+]
